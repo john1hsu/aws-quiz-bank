@@ -1,0 +1,19 @@
+id: aws-000055
+product_area: cost-management
+true_statement: AWS Cost Explorer forecasts reach 18 months ahead at monthly granularity and 3 months ahead at daily granularity.
+false_statement: AWS Cost Explorer forecasts reach 12 months ahead at monthly granularity and 1 month ahead at daily granularity.
+explanation: Cost Explorer can project spend up to 18 months out by month, or up to 3 months out by day. The shorter horizons in the false statement understate both.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-cost-explorer.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d611b16168df4c05dce3bbf9a57c1d08c2a29c1e
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-cost-explorer
+difficulty: 2
+created: '2026-11-16'
+status: active

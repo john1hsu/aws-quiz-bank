@@ -1,0 +1,20 @@
+id: aws-000082
+product_area: migration-and-hybrid
+true_statement: AWS DMS requires the source or the target to be in Amazon RDS or on Amazon EC2; on-premises-to-on-premises replication is not supported.
+false_statement: AWS DMS supports on-premises-to-on-premises replication, provided the replication instance itself runs in AWS.
+explanation: DMS needs at least one endpoint inside AWS on RDS or EC2. Replicating between two on-premises databases is outside what the service supports.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-database-migration-service.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 9605fe1f1b0b82b1b813addb4de6823fcf8b6f36
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-database-migration-service
+- kt:amazon-rds
+difficulty: 2
+created: '2026-11-16'
+status: active

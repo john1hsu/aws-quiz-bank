@@ -1,0 +1,17 @@
+id: aws-000007
+product_area: architecture-practice
+true_statement: 'The AWS Well-Architected Framework has six pillars: operational excellence, security, reliability, performance efficiency, cost optimization and sustainability.'
+false_statement: 'The AWS Well-Architected Framework has five pillars: operational excellence, security, reliability, performance efficiency and cost optimization.'
+explanation: The framework currently defines six pillars, and sustainability, which targets energy and resource use, is one of them. A five-pillar list leaves sustainability out.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/aws-well-architected-framework.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 5c5340742ff340054bc6e763ce30e8262b4aa91d
+verified_on: '2026-11-08'
+feature_status: concept
+concepts:
+- kt:aws-well-architected-framework
+difficulty: 1
+created: '2026-11-16'
+status: active

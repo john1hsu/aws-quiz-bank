@@ -1,0 +1,18 @@
+id: aws-000050
+product_area: compute
+true_statement: The separate AWS Auto Scaling service supports only target tracking, while scheduled and step scaling policies are offered by EC2 Auto Scaling.
+false_statement: EC2 Auto Scaling supports only target tracking, while scheduled and step scaling policies are offered by the separate AWS Auto Scaling service.
+explanation: AWS Auto Scaling coordinates scaling plans across resource types using target tracking alone. Auto Scaling groups, with their scheduled and step policies, live in EC2 Auto Scaling.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/amazon-ec2-auto-scaling.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d8a1701b151b6d081f4258b93ca9150ddbe26ab0
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:amazon-ec2-auto-scaling
+- kt:aws-auto-scaling
+difficulty: 3
+created: '2026-11-16'
+status: active

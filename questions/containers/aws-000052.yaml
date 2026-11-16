@@ -1,0 +1,18 @@
+id: aws-000052
+product_area: containers
+true_statement: Load balancer target groups for AWS Fargate tasks must use the ip target type, because a task has no EC2 instance to register.
+false_statement: Load balancer target groups for AWS Fargate tasks must use the instance target type, because each task is registered through its host EC2 instance.
+explanation: Every Fargate task runs in awsvpc mode with its own network interface and IP address, and there is no customer-visible instance. Target groups therefore register tasks by IP.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/aws-fargate.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 7ac0cae70b1512109159a59adedbecc5264ac137
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-fargate
+- kt:amazon-ecs
+difficulty: 2
+created: '2026-11-16'
+status: active

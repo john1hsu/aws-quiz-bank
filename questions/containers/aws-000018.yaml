@@ -1,0 +1,20 @@
+id: aws-000018
+product_area: containers
+true_statement: The Amazon ECS Managed Instances management fee still applies when the underlying EC2 capacity is covered by Savings Plans, Reserved Instances or Spot.
+false_statement: The Amazon ECS Managed Instances management fee is waived when the underlying EC2 capacity is covered by Savings Plans, Reserved Instances or Spot.
+explanation: Managed Instances charges a per-instance management fee on top of the EC2 price regardless of purchase option. Discounted EC2 capacity lowers the instance cost but leaves that fee in place.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/amazon-ecs.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 32f9d25246b46f92bf89bd6249f884a0f2f7ce64
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-ecs
+- kt:ecs-managed-instances
+difficulty: 3
+created: '2026-11-16'
+status: active

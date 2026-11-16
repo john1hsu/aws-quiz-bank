@@ -1,0 +1,21 @@
+id: aws-000079
+product_area: identity-and-access
+true_statement: Only an IAM Identity Center organization instance, not an account instance, can manage permissions across multiple AWS accounts.
+false_statement: Only an IAM Identity Center account instance, not an organization instance, can manage permissions across multiple AWS accounts.
+explanation: The organization instance lives in the Organizations management account and supports every feature, including multi-account permissions. Account instances are tied to one account and Region for isolated application use.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/iam-identity-center.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: fdec55d7f00b98f45fe0dae57fa181bb379932e6
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:iam-identity-center
+- kt:aws-organizations
+difficulty: 2
+created: '2026-11-16'
+status: active

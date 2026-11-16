@@ -1,0 +1,19 @@
+id: aws-000094
+product_area: public-sector-and-compliance
+true_statement: AWS GovCloud (US) is FedRAMP Certified Class D (formerly High baseline), while AWS US East-West is Class C (formerly Moderate baseline) (as of 2026-11).
+false_statement: AWS US East-West is FedRAMP Certified Class D (formerly High baseline), while AWS GovCloud (US) is Class C (formerly Moderate baseline) (as of 2026-11).
+explanation: GovCloud holds the higher Class D certification suitable for high-impact workloads. The commercial US East and West Regions are certified at Class C, the former Moderate baseline.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/fedramp-on-aws.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: a2d8149797d54ae572123323f3cdd22f031bf7c9
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:fedramp-on-aws
+- kt:aws-govcloud-us
+- kt:aws-regions
+difficulty: 2
+created: '2026-11-16'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000083
+product_area: migration-and-hybrid
+true_statement: AWS DMS creates only tables, primary keys and sometimes unique indexes, while views, stored procedures and functions are converted by DMS Schema Conversion.
+false_statement: AWS DMS replication tasks convert views, stored procedures and functions during full load, while DMS Schema Conversion creates only tables and primary keys.
+explanation: Data movement tasks create just enough schema to load data. Code objects are the job of DMS Schema Conversion, which flags what it cannot convert for manual work.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-database-migration-service.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 9605fe1f1b0b82b1b813addb4de6823fcf8b6f36
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-database-migration-service
+- kt:aws-schema-conversion-tool
+difficulty: 2
+created: '2026-11-16'
+status: active

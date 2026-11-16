@@ -1,0 +1,17 @@
+id: aws-000051
+product_area: compute
+true_statement: By default, an EC2 Auto Scaling warm pool is sized to the group's maximum capacity minus its desired capacity.
+false_statement: By default, an EC2 Auto Scaling warm pool is sized to the group's desired capacity minus its minimum capacity.
+explanation: The default warm pool holds enough pre-initialized instances to cover the headroom between desired and maximum capacity. That is the room the group could scale out into.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/amazon-ec2-auto-scaling.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d8a1701b151b6d081f4258b93ca9150ddbe26ab0
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:amazon-ec2-auto-scaling
+difficulty: 3
+created: '2026-11-16'
+status: active

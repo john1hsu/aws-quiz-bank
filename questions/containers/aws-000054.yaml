@@ -1,0 +1,18 @@
+id: aws-000054
+product_area: containers
+true_statement: On Amazon EKS, Fargate pods are scheduled only if they match a Fargate profile, and they run in private subnets.
+false_statement: On Amazon EKS, Fargate pods are scheduled only if they match a Fargate profile, and they run in public subnets.
+explanation: EKS uses Fargate profiles to decide which pods go to Fargate, and those pods must use private subnets. Pods that need public subnets, DaemonSets or EBS volumes belong on EC2 nodes.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/aws-fargate.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 7ac0cae70b1512109159a59adedbecc5264ac137
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-fargate
+- kt:amazon-eks
+difficulty: 3
+created: '2026-11-16'
+status: active

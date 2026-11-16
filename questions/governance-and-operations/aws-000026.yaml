@@ -1,0 +1,20 @@
+id: aws-000026
+product_area: governance-and-operations
+true_statement: Amazon CloudWatch monitors how resources and applications perform, while an audit trail of API calls is the job of AWS CloudTrail.
+false_statement: Amazon CloudWatch records an audit trail of API calls, while monitoring how resources and applications perform is the job of AWS CloudTrail.
+explanation: CloudWatch handles metrics, logs, alarms and dashboards for operational health. CloudTrail records who called which API, so the two roles are swapped in the false statement.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/amazon-cloudwatch.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: dee1c0ac089646be1514b3cc154b0f1ce65c9658
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-cloudwatch
+- kt:aws-cloudtrail
+difficulty: 1
+created: '2026-11-16'
+status: active

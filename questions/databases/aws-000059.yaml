@@ -1,0 +1,17 @@
+id: aws-000059
+product_area: databases
+true_statement: One DynamoDB write capacity unit covers one write of up to 1 KB, while one read capacity unit covers one strongly consistent read of up to 4 KB.
+false_statement: One DynamoDB write capacity unit covers one write of up to 4 KB, while one read capacity unit covers one strongly consistent read of up to 1 KB.
+explanation: Writes are sized in 1 KB units and reads in 4 KB units; an eventually consistent read uses half a unit. The false statement swaps the two sizes.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-dynamodb.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 1415e86aee14c02780095359f59c9b6b9834af7d
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:amazon-dynamodb
+difficulty: 2
+created: '2026-11-16'
+status: active

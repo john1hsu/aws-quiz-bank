@@ -1,0 +1,21 @@
+id: aws-000074
+product_area: governance-and-operations
+true_statement: In AWS Organizations, service control policies cap what IAM principals can do, while resource control policies cap what can be done to resources.
+false_statement: In AWS Organizations, resource control policies cap what IAM principals can do, while service control policies cap what can be done to resources.
+explanation: SCPs bound the permissions of principals and RCPs bound access to resources in member accounts. Neither type grants permissions; they only limit what other policies allow.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-organizations.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: e3a91bd214d4bebf7e8e59195ed28a83d7d5711e
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-organizations
+- kt:service-control-policies
+- kt:aws-iam
+difficulty: 3
+created: '2026-11-16'
+status: active

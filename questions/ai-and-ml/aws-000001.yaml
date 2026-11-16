@@ -1,0 +1,19 @@
+id: aws-000001
+product_area: ai-and-ml
+true_statement: Amazon Bedrock's Flex service tier for on-demand inference is priced at a 50% discount to the Standard tier (as of 2026-11).
+false_statement: Amazon Bedrock's Flex service tier for on-demand inference is priced at a 75% premium over the Standard tier (as of 2026-11).
+explanation: Flex trades latency guarantees for a 50% discount off Standard pricing. The 75% premium belongs to the Priority tier, which buys faster, preferred processing.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: cce21025c56675de5cd52c334702f4fd0f17bb5b
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-bedrock
+difficulty: 2
+created: '2026-11-16'
+status: active

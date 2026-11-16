@@ -1,0 +1,20 @@
+id: aws-000037
+product_area: ai-and-ml
+true_statement: When Amazon Bedrock Guardrails blocks an input, the model is never invoked and you pay only for the guardrail evaluation.
+false_statement: When Amazon Bedrock Guardrails blocks an input, the model is still invoked and you pay for both the guardrail evaluation and the inference.
+explanation: Inputs are checked before the model call, so a blocked prompt returns the configured blocked message without any inference charge. Inference is billed only when the input passes.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock-guardrails.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d1999db875f12541b984f433cbd314e645135ff8
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-bedrock-guardrails
+- kt:amazon-bedrock
+difficulty: 2
+created: '2026-11-16'
+status: active

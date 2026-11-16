@@ -1,0 +1,19 @@
+id: aws-000098
+product_area: security
+true_statement: A deleted AWS KMS key first enters a waiting period of 7 to 30 days, 30 by default, during which the deletion can be cancelled.
+false_statement: A deleted AWS KMS key first enters a waiting period of 1 to 7 days, 7 by default, during which the deletion can be cancelled.
+explanation: KMS schedules key deletion with a 7 to 30 day waiting window, defaulting to 30. Deleting imported key material, unlike deleting a key, takes effect immediately.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-kms.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 4fd2b737163ab3edeea24a97e2f146b5c36afe41
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-kms
+difficulty: 2
+created: '2026-11-16'
+status: active

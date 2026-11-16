@@ -1,0 +1,21 @@
+id: aws-000078
+product_area: identity-and-access
+true_statement: An AWS account can have at most 5,000 IAM users, and that quota cannot be raised.
+false_statement: An AWS account can have at most 500 IAM users, and that quota cannot be raised.
+explanation: The IAM user limit is a fixed 5,000 per account. Large workforces are meant to federate through an identity provider rather than create IAM users.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/aws-iam.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 8e0f650b6f270fa71b544d95881a2216790f9c96
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-iam
+- kt:iam-quotas
+difficulty: 2
+created: '2026-11-16'
+status: active

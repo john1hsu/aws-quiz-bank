@@ -1,0 +1,17 @@
+id: aws-000060
+product_area: databases
+true_statement: A DynamoDB global secondary index can use a different partition key from its table, while a local secondary index shares the table's partition key.
+false_statement: A DynamoDB local secondary index can use a different partition key from its table, while a global secondary index shares the table's partition key.
+explanation: GSIs define their own partition and sort key, giving a fully alternate access path. LSIs keep the table's partition key and vary only the sort key.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-dynamodb.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 1415e86aee14c02780095359f59c9b6b9834af7d
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:amazon-dynamodb
+difficulty: 2
+created: '2026-11-16'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000029
+product_area: networking-and-content-delivery
+true_statement: AWS recommends origin access control (OAC) to restrict a private S3 origin to CloudFront, and labels origin access identity (OAI) as legacy.
+false_statement: AWS recommends origin access identity (OAI) to restrict a private S3 origin to CloudFront, and labels origin access control (OAC) as legacy.
+explanation: OAC is the current mechanism and supports SSE-KMS objects, newer opt-in Regions and PUT/DELETE to S3. OAI is the older approach that AWS marks as legacy.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/amazon-cloudfront.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: f0c0f49436843b709f1cca6e15efb5db75ee262b
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:amazon-cloudfront
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-16'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000031
+product_area: security
+true_statement: CloudTrail event history is on by default and shows the past 90 days of management events in a Region at no CloudTrail charge.
+false_statement: CloudTrail event history is on by default and shows the past 365 days of management events in a Region at no CloudTrail charge.
+explanation: Event history is a free, immutable 90-day view of management events. Keeping activity longer, or capturing data events, requires a trail delivering to S3.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-cloudtrail.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d6e12c6631bdbc411d766f70cfc129807997c269
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-cloudtrail
+difficulty: 1
+created: '2026-11-16'
+status: active

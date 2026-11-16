@@ -1,0 +1,22 @@
+id: aws-000076
+product_area: identity-and-access
+true_statement: Within one account, IAM identity-based and resource-based policies combine as a union, while a permissions boundary intersects with identity-based policies.
+false_statement: Within one account, IAM identity-based and resource-based policies combine as an intersection, while a permissions boundary forms a union with identity-based policies.
+explanation: In the same account either an identity policy or a resource policy can allow a request. A permissions boundary is a ceiling, so the action must be allowed by both it and the identity policy.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/aws-iam.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 8e0f650b6f270fa71b544d95881a2216790f9c96
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-iam
+- kt:iam-policy-evaluation-logic
+- kt:permissions-boundaries
+difficulty: 3
+created: '2026-11-16'
+status: active

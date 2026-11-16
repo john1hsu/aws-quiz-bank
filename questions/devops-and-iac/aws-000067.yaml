@@ -1,0 +1,18 @@
+id: aws-000067
+product_area: devops-and-iac
+true_statement: A single AWS CloudFormation template can declare at most 500 resources, and that quota is not adjustable (as of 2026-11).
+false_statement: A single AWS CloudFormation template can declare at most 200 resources, and that quota is not adjustable (as of 2026-11).
+explanation: The per-template resource ceiling is 500; 200 is the limit for parameters, mappings and outputs. Reaching 500 resources is the usual cue to split into nested or separate stacks.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-cloudformation.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d791eccf032f7e84ebb9cfe57e554558d0f5b3ab
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-cloudformation
+- kt:cloudformation-quotas
+difficulty: 2
+created: '2026-11-16'
+status: active

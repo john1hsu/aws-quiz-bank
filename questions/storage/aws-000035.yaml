@@ -1,0 +1,17 @@
+id: aws-000035
+product_area: storage
+true_statement: After a successful PUT or DELETE in Amazon S3, subsequent reads and list operations reflect the change, with strong consistency at no extra cost.
+false_statement: After a successful PUT or DELETE in Amazon S3, reads and list operations are eventually consistent unless you pay extra for strong consistency.
+explanation: S3 provides strong read-after-write consistency for object operations in all Regions without an extra charge. Only bucket configuration changes are eventually consistent.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-s3.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 92cf2f32c07aff369ab39fe7aa8b63b87611ebfe
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-16'
+status: active

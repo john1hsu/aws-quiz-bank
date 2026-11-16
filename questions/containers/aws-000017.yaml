@@ -1,0 +1,20 @@
+id: aws-000017
+product_area: containers
+true_statement: An Amazon ECS service can be moved from a launch type to a capacity provider, but not directly from the EC2 launch type to the Fargate launch type.
+false_statement: An Amazon ECS service can be moved directly from the EC2 launch type to the Fargate launch type, but not from a launch type to a capacity provider.
+explanation: ECS supports switching a service from a launch type to a capacity provider strategy. Switching straight between two launch types such as EC2 and Fargate is not supported.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/amazon-ecs.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 32f9d25246b46f92bf89bd6249f884a0f2f7ce64
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-ecs
+- kt:aws-fargate
+difficulty: 3
+created: '2026-11-16'
+status: active

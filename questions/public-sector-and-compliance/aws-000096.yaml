@@ -1,0 +1,18 @@
+id: aws-000096
+product_area: public-sector-and-compliance
+true_statement: Commercial customers get AWS's FedRAMP Partner Package through AWS Artifact, while government employees and contractors request the package from the FedRAMP PMO.
+false_statement: Government employees and contractors get AWS's FedRAMP package through AWS Artifact, while commercial customers request the package from the FedRAMP PMO.
+explanation: AWS Artifact (or an account manager) is the route for commercial customers and partners. Government users go through the FedRAMP PMO, which also provides the Ongoing Certification Reports.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/fedramp-on-aws.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: a2d8149797d54ae572123323f3cdd22f031bf7c9
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:fedramp-on-aws
+- kt:aws-artifact
+difficulty: 3
+created: '2026-11-16'
+status: active

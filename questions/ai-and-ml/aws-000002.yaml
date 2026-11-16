@@ -1,0 +1,19 @@
+id: aws-000002
+product_area: ai-and-ml
+true_statement: Amazon Bedrock cross-Region inference does not support Provisioned Throughput.
+false_statement: Amazon Bedrock cross-Region inference does not support on-demand, per-token invocation.
+explanation: Inference profiles route on-demand requests to other Regions at no routing surcharge. Provisioned Throughput is the purchase option that cannot be combined with cross-Region inference.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: cce21025c56675de5cd52c334702f4fd0f17bb5b
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-bedrock
+difficulty: 3
+created: '2026-11-16'
+status: active

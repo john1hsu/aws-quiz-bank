@@ -1,0 +1,18 @@
+id: aws-000040
+product_area: analytics
+true_statement: AWS Glue runs serverless Spark jobs billed per DPU-hour, whereas Amazon EMR runs managed clusters billed per instance-hour.
+false_statement: Amazon EMR runs serverless Spark jobs billed per DPU-hour, whereas AWS Glue runs managed clusters billed per instance-hour.
+explanation: Glue has no cluster to size and charges for data processing units consumed. EMR gives framework and cluster control and is charged by the instance-hour, so the roles are reversed in the false statement.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/aws-glue.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 3d3bc19a34857d390c64d526353060af8aafb6d8
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-glue
+- kt:amazon-emr
+difficulty: 2
+created: '2026-11-16'
+status: active

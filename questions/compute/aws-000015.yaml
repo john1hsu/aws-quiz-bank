@@ -1,0 +1,21 @@
+id: aws-000015
+product_area: compute
+true_statement: Amazon EC2 On-Demand instance quotas are set per Region and measured in vCPUs rather than in numbers of instances.
+false_statement: Amazon EC2 On-Demand instance quotas are set per account globally and measured in numbers of running instances rather than vCPUs.
+explanation: EC2 quotas are Regional and count the vCPUs of running instances in a quota group. They are not a global count of instances, which is why one large instance can use up a small quota.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/amazon-ec2.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: fcee41b4e23f9d82d08ec63925d46324c99ad40c
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-ec2
+- kt:ec2-instance-quotas
+- kt:aws-regions
+difficulty: 2
+created: '2026-11-16'
+status: active

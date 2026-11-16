@@ -1,0 +1,21 @@
+id: aws-000087
+product_area: migration-and-hybrid
+true_statement: AWS Transform MGN is the name, since June 2026, of the service previously called AWS Application Migration Service.
+false_statement: AWS Transform MGN is the name, since June 2026, of the service previously called AWS Database Migration Service.
+explanation: AWS renamed Application Migration Service (MGN) to reflect its role as the replication engine behind AWS Transform. AWS Database Migration Service is a separate, database-level tool that kept its name.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-transform-mgn.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: f2fd58446acf4519d26370a3244747a3b4d409a0
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-transform-mgn
+- kt:aws-transform
+- kt:aws-database-migration-service
+difficulty: 1
+created: '2026-11-16'
+status: active

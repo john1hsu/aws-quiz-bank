@@ -1,0 +1,17 @@
+id: aws-000012
+product_area: certifications
+true_statement: The AIF-C01 exam has 65 questions, of which 50 are scored and 15 are unscored items trialled for future use.
+false_statement: The AIF-C01 exam has 65 questions, all of which are scored, with trial items delivered in a separate unscored section.
+explanation: Fifteen of the 65 questions are unscored trial items mixed into the exam and are not marked. Only the remaining 50 count toward the scaled score.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-ai-practitioner.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 933bfbe3fb99bcf638dd2eeef65b81a484da81bd
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:aws-certified-ai-practitioner
+difficulty: 1
+created: '2026-11-16'
+status: active

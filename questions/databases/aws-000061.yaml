@@ -1,0 +1,20 @@
+id: aws-000061
+product_area: databases
+true_statement: In an Amazon RDS Multi-AZ DB instance deployment the standby serves no reads, while a Multi-AZ DB cluster's two readers can serve reads.
+false_statement: In an Amazon RDS Multi-AZ DB cluster deployment the standbys serve no reads, while a Multi-AZ DB instance's standby can serve reads.
+explanation: The Multi-AZ DB instance keeps a synchronous standby purely for failover. The Multi-AZ DB cluster runs a writer and two readers across three AZs, and the readers accept read traffic.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-rds.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 555859e85501bc044e58eaec0f08a1df33cdb7a2
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-rds
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-16'
+status: active

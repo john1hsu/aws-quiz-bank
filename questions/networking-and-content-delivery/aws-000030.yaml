@@ -1,0 +1,17 @@
+id: aws-000030
+product_area: networking-and-content-delivery
+true_statement: CloudFront flat-rate plans have no overage charges; going past the plan's allowance can instead degrade performance.
+false_statement: CloudFront flat-rate plans bill overage per GB once the plan's allowance is used, with no change to performance.
+explanation: Flat-rate plans cap the monthly bill. Instead of charging for extra usage, CloudFront may reduce performance, for example by serving from fewer locations.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/amazon-cloudfront.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: f0c0f49436843b709f1cca6e15efb5db75ee262b
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:amazon-cloudfront
+difficulty: 2
+created: '2026-11-16'
+status: active

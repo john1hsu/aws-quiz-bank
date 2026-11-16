@@ -1,0 +1,17 @@
+id: aws-000005
+product_area: analytics
+true_statement: An Athena workgroup's per-query data scanned limit cancels any query that exceeds it, while per-workgroup hourly or daily thresholds only send an SNS alert.
+false_statement: An Athena workgroup's per-query data scanned limit only sends an SNS alert, while per-workgroup hourly or daily thresholds cancel any query that exceeds them.
+explanation: The single per-query control is the hard stop that cancels runaway queries. The hourly or daily workgroup thresholds are soft controls that raise an alarm and notify through Amazon SNS without stopping queries.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-athena.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 62c0b2b129cc98be44d1148131ea2e226e3625e6
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:amazon-athena
+difficulty: 2
+created: '2026-11-16'
+status: active

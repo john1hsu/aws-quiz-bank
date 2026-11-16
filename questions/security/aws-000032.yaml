@@ -1,0 +1,19 @@
+id: aws-000032
+product_area: security
+true_statement: CloudTrail trails created in the console are multi-Region, while single-Region trails can be created only with the CLI or API.
+false_statement: CloudTrail trails created in the console are single-Region, while multi-Region trails can be created only with the CLI or API.
+explanation: The console always creates multi-Region trails, which is the recommended practice. A single-Region trail is the CLI and API default and cannot be made in the console.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-cloudtrail.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d6e12c6631bdbc411d766f70cfc129807997c269
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-cloudtrail
+difficulty: 2
+created: '2026-11-16'
+status: active

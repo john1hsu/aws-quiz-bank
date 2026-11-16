@@ -1,0 +1,20 @@
+id: aws-000019
+product_area: cost-management
+true_statement: Compute Savings Plans apply to EC2, AWS Fargate and AWS Lambda usage, while EC2 Instance Savings Plans cover only EC2 in one instance family and Region.
+false_statement: EC2 Instance Savings Plans apply to EC2, AWS Fargate and AWS Lambda usage, while Compute Savings Plans cover only EC2 in one instance family and Region.
+explanation: Compute Savings Plans are the flexible type that floats across families, Regions and the serverless compute services. EC2 Instance Savings Plans give a deeper discount but are locked to one family in one Region and exclude Fargate and Lambda.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/savings-plans.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: be65e7d2c35c90f67de2a43a21207dffc446e9a5
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:savings-plans
+- kt:amazon-ec2
+- kt:aws-fargate
+- kt:aws-lambda
+difficulty: 2
+created: '2026-11-16'
+status: active

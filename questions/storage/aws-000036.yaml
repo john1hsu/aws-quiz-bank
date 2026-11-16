@@ -1,0 +1,17 @@
+id: aws-000036
+product_area: storage
+true_statement: Amazon S3 supports at least 3,500 PUT/COPY/POST/DELETE and 5,500 GET/HEAD requests per second per partitioned prefix.
+false_statement: Amazon S3 supports at least 5,500 PUT/COPY/POST/DELETE and 3,500 GET/HEAD requests per second per partitioned prefix.
+explanation: Reads get the higher per-prefix rate of 5,500 per second and writes 3,500 per second. Because prefixes are unlimited, spreading keys across prefixes raises total throughput.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-s3.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 92cf2f32c07aff369ab39fe7aa8b63b87611ebfe
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-16'
+status: active

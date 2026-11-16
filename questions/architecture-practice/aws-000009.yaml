@@ -1,0 +1,18 @@
+id: aws-000009
+product_area: architecture-practice
+true_statement: The Well-Architected Framework covers how a single workload is built and run; organization-wide cloud adoption planning is the job of the AWS Cloud Adoption Framework.
+false_statement: The Cloud Adoption Framework covers how a single workload is built and run; organization-wide cloud adoption planning is the job of the AWS Well-Architected Framework.
+explanation: Well-Architected reviews target individual workloads and their design trade-offs. The Cloud Adoption Framework addresses adopting the cloud across an organization, so the roles are reversed in the false statement.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/aws-well-architected-framework.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 5c5340742ff340054bc6e763ce30e8262b4aa91d
+verified_on: '2026-11-08'
+feature_status: concept
+concepts:
+- kt:aws-well-architected-framework
+- kt:aws-cloud-adoption-framework
+difficulty: 2
+created: '2026-11-16'
+status: active

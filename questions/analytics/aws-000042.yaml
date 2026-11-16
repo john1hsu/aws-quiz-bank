@@ -1,0 +1,17 @@
+id: aws-000042
+product_area: analytics
+true_statement: The first million AWS Glue Data Catalog metadata objects and the first million catalog requests each month are free (as of 2026-11).
+false_statement: The first 100,000 AWS Glue Data Catalog metadata objects and the first 100,000 catalog requests each month are free (as of 2026-11).
+explanation: The catalog's free tier covers one million objects and one million requests per month. Beyond that, storage is billed at $1.00 per 100,000 objects, which is where the 100,000 figure comes from.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/aws-glue.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 3d3bc19a34857d390c64d526353060af8aafb6d8
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-glue
+difficulty: 2
+created: '2026-11-16'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000100
+product_area: serverless-and-integration
+true_statement: AWS Lambda payloads are limited to 6 MB each way for synchronous invocations and 1 MB for asynchronous invocations.
+false_statement: AWS Lambda payloads are limited to 1 MB each way for synchronous invocations and 6 MB for asynchronous invocations.
+explanation: Synchronous calls allow 6 MB request and response payloads, or 200 MB when streamed. Asynchronous events are capped lower, at 1 MB.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/aws-lambda.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: da76b1785f34d9bab7f23c0f2b7ae01e2487ba5a
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-lambda
+- kt:lambda-quotas
+difficulty: 2
+created: '2026-11-16'
+status: active

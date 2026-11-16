@@ -1,0 +1,19 @@
+id: aws-000062
+product_area: databases
+true_statement: Amazon RDS keeps automated backups for 7 days by default and can retain them for up to 35 days.
+false_statement: Amazon RDS keeps automated backups for 1 day by default and can retain them for up to 7 days.
+explanation: The default retention is 7 days, adjustable up to 35; setting it to 0 turns automated backups off. Manual snapshots are kept until deleted.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-rds.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 555859e85501bc044e58eaec0f08a1df33cdb7a2
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-rds
+difficulty: 2
+created: '2026-11-16'
+status: active

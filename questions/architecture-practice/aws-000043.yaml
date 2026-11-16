@@ -1,0 +1,19 @@
+id: aws-000043
+product_area: architecture-practice
+true_statement: A pilot light DR site cannot serve any request until its compute is started, while a warm standby can take traffic immediately at reduced capacity.
+false_statement: A warm standby DR site cannot serve any request until its compute is started, while a pilot light can take traffic immediately at reduced capacity.
+explanation: Pilot light keeps data and core infrastructure ready but runs no application instances. Warm standby runs a scaled-down working copy that can serve traffic and scale up on failover.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/disaster-recovery-strategies.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 5bdf9ce2a248a80b183c109ecd618c45a5708eb1
+verified_on: '2026-11-09'
+feature_status: concept
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:disaster-recovery-strategies
+difficulty: 2
+created: '2026-11-16'
+status: active

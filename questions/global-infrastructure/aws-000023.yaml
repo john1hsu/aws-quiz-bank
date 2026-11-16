@@ -1,0 +1,20 @@
+id: aws-000023
+product_area: global-infrastructure
+true_statement: AWS Regions launched after 20 March 2019 are opt-in and stay disabled until you enable them; Regions launched before that date are enabled by default.
+false_statement: AWS Regions launched before 20 March 2019 are opt-in and stay disabled until you enable them; Regions launched after that date are enabled by default.
+explanation: The older Regions, such as us-east-1, are on by default and cannot be disabled. Newer Regions are hidden and disabled until an account opts in, which is free.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-regions.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 60d065d561f029b9960991ef5bcd269b2fd47f6b
+verified_on: '2026-11-08'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-regions
+- kt:aws-account-management
+difficulty: 2
+created: '2026-11-16'
+status: active

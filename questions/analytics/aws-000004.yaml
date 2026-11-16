@@ -1,0 +1,18 @@
+id: aws-000004
+product_area: analytics
+true_statement: Athena SQL per-query billing charges $5 per TB of data scanned, with S3 storage and requests billed separately (as of 2026-11).
+false_statement: Athena SQL per-query billing charges $5 per TB of data stored in the queried S3 tables, with S3 requests billed separately (as of 2026-11).
+explanation: Athena's per-query price is driven by bytes scanned, which is why partitioning and columnar formats cut cost. Storage of the underlying files is an ordinary S3 charge, not the basis of Athena's price.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-athena.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 62c0b2b129cc98be44d1148131ea2e226e3625e6
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:amazon-athena
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-16'
+status: active

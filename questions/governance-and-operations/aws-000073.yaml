@@ -1,0 +1,20 @@
+id: aws-000073
+product_area: governance-and-operations
+true_statement: Service control policies apply to users and roles in member accounts but not to users and roles in the AWS Organizations management account.
+false_statement: Service control policies apply to users and roles in the AWS Organizations management account but not to users and roles in member accounts.
+explanation: SCPs are guardrails for member accounts; the management account sits outside them. That is why AWS advises keeping workloads out of the management account.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-organizations.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: e3a91bd214d4bebf7e8e59195ed28a83d7d5711e
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-organizations
+- kt:service-control-policies
+difficulty: 2
+created: '2026-11-16'
+status: active

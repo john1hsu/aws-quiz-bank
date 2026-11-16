@@ -1,0 +1,19 @@
+id: aws-000086
+product_area: migration-and-hybrid
+true_statement: AWS Transform MGN source servers send replicated data to replication servers over TCP 1500 and reach the MGN API over TCP 443.
+false_statement: AWS Transform MGN source servers send replicated data to replication servers over TCP 443 and reach the MGN API over TCP 1500.
+explanation: Data replication uses TCP 1500 into the staging area, while API communication uses HTTPS on 443. Both are encrypted with TLS 1.2, and SSL interception between them is not supported.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-transform-mgn.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: f2fd58446acf4519d26370a3244747a3b4d409a0
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-transform-mgn
+difficulty: 3
+created: '2026-11-16'
+status: active

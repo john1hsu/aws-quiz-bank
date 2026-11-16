@@ -1,0 +1,18 @@
+id: aws-000028
+product_area: networking-and-content-delivery
+true_statement: CloudFront Functions run only on viewer request and viewer response events, while Lambda@Edge can also run on origin request and origin response events.
+false_statement: Lambda@Edge runs only on viewer request and viewer response events, while CloudFront Functions can also run on origin request and origin response events.
+explanation: CloudFront Functions are lightweight, submillisecond JavaScript limited to the viewer side. Lambda@Edge covers all four events and allows network and body access, at lower scale.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/amazon-cloudfront.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: f0c0f49436843b709f1cca6e15efb5db75ee262b
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:amazon-cloudfront
+- kt:cloudfront-functions
+difficulty: 2
+created: '2026-11-16'
+status: active

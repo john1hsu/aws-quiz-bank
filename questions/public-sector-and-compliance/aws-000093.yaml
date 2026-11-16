@@ -1,0 +1,19 @@
+id: aws-000093
+product_area: public-sector-and-compliance
+true_statement: AWS requires the GovCloud (US) account owner to be a U.S. person but does not require IAM users or application users to be U.S. persons.
+false_statement: AWS requires every IAM user and application user in a GovCloud (US) account to be a U.S. person, but not the account owner.
+explanation: Only the account owner must be a U.S. person. Restricting which IAM and application users may access export-controlled data is the customer's job under the shared responsibility model.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/aws-govcloud-us.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: f314def20de236d7fa14d21dee99fab6bd130cbe
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-govcloud-us
+- kt:aws-iam
+- kt:itar-on-aws
+difficulty: 3
+created: '2026-11-16'
+status: active

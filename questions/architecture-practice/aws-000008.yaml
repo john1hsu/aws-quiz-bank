@@ -1,0 +1,20 @@
+id: aws-000008
+product_area: architecture-practice
+true_statement: Under the AWS Well-Architected Framework, security and operational excellence are generally not traded off, while pillars such as reliability and cost can be balanced by business context.
+false_statement: Under the AWS Well-Architected Framework, reliability and cost optimization are generally not traded off, while pillars such as security and operational excellence can be balanced by business context.
+explanation: AWS accepts trading reliability against cost, for example in cheaper dev environments. Security and operational excellence are the pillars AWS says are generally kept non-negotiable.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/aws-well-architected-framework.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 5c5340742ff340054bc6e763ce30e8262b4aa91d
+verified_on: '2026-11-08'
+feature_status: concept
+concepts:
+- kt:aws-well-architected-framework
+- kt:security-pillar
+- kt:operational-excellence-pillar
+- kt:reliability-pillar
+difficulty: 2
+created: '2026-11-16'
+status: active

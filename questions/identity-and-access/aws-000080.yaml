@@ -1,0 +1,21 @@
+id: aws-000080
+product_area: identity-and-access
+true_statement: IAM Identity Center provisions each assigned permission set into member accounts as an IAM role.
+false_statement: IAM Identity Center provisions each assigned permission set into member accounts as an IAM user with its own access keys.
+explanation: A permission set is a policy template that becomes an IAM role in each target account. Users pick that role in the AWS access portal and get temporary credentials, not long-term keys.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/iam-identity-center.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: fdec55d7f00b98f45fe0dae57fa181bb379932e6
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:iam-identity-center
+- kt:aws-iam
+difficulty: 2
+created: '2026-11-16'
+status: active

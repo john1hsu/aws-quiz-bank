@@ -1,0 +1,18 @@
+id: aws-000048
+product_area: certifications
+true_statement: Security and Compliance makes up 30% of scored content on CLF-C02, more than the 24% given to Cloud Concepts.
+false_statement: Cloud Concepts makes up 30% of scored content on CLF-C02, more than the 24% given to Security and Compliance.
+explanation: The domain weights are Cloud Concepts 24%, Security and Compliance 30%, Cloud Technology and Services 34% and Billing, Pricing, and Support 12%. The false statement swaps the first two.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-cloud-practitioner.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: e3e4a8075ab095fb1e5fe11d6cacb8143f38af3d
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-certified-cloud-practitioner
+- kt:shared-responsibility-model
+difficulty: 2
+created: '2026-11-16'
+status: active

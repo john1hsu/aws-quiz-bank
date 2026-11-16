@@ -1,0 +1,20 @@
+id: aws-000033
+product_area: security
+true_statement: The first copy of management events that a CloudTrail trail delivers to S3 has no CloudTrail charge, but additional copies cost $2.00 per 100,000 events (as of 2026-11).
+false_statement: Every copy of management events that CloudTrail trails deliver to S3, including the first, costs $2.00 per 100,000 events (as of 2026-11).
+explanation: CloudTrail does not charge for one copy of management events; only S3 storage applies. Overlapping trails that capture management events again create paid copies.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-cloudtrail.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d6e12c6631bdbc411d766f70cfc129807997c269
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-cloudtrail
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-16'
+status: active

@@ -1,0 +1,17 @@
+id: aws-000006
+product_area: analytics
+true_statement: Athena does not charge for failed queries, but a cancelled query is charged for the data it scanned before cancellation.
+false_statement: Athena does not charge for cancelled queries, but a failed query is charged for the data it scanned before failing.
+explanation: Failed queries carry no Athena charge. Cancelling a query stops further scanning, but whatever was already scanned up to that point is billed.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-athena.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 62c0b2b129cc98be44d1148131ea2e226e3625e6
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:amazon-athena
+difficulty: 2
+created: '2026-11-16'
+status: active

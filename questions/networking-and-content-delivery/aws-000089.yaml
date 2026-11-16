@@ -1,0 +1,19 @@
+id: aws-000089
+product_area: networking-and-content-delivery
+true_statement: Route 53 does not charge for alias queries to supported AWS resources such as load balancers and CloudFront distributions.
+false_statement: Route 53 charges alias queries to supported AWS resources such as load balancers and CloudFront distributions at twice the standard query rate.
+explanation: Alias queries that resolve to supported AWS targets are free. By contrast, a CNAME pointing at another Route 53 record is billed as two queries, another reason to prefer aliases.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/amazon-route-53.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 66012f56e71e4e5483855674240c92796ac8f654
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:amazon-route-53
+- kt:elastic-load-balancing
+- kt:amazon-cloudfront
+difficulty: 2
+created: '2026-11-16'
+status: active

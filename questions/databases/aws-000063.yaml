@@ -1,0 +1,19 @@
+id: aws-000063
+product_area: databases
+true_statement: Amazon RDS read replicas use each engine's asynchronous replication, so a replica can lag behind its source.
+false_statement: Amazon RDS read replicas use synchronous replication, so a replica always matches its source with no lag.
+explanation: Read replicas rely on the engine's built-in asynchronous replication, which means reads right after a write may be stale. Synchronous replication is what a Multi-AZ standby uses.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-rds.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 555859e85501bc044e58eaec0f08a1df33cdb7a2
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-rds
+difficulty: 1
+created: '2026-11-16'
+status: active

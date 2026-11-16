@@ -1,0 +1,20 @@
+id: aws-000045
+product_area: architecture-practice
+true_statement: In AWS's DR guidance, backup and restore has an indicative RTO of 24 hours or less, while pilot light targets tens of minutes.
+false_statement: In AWS's DR guidance, pilot light has an indicative RTO of 24 hours or less, while backup and restore targets tens of minutes.
+explanation: Backup and restore must redeploy infrastructure and restore data, so its recovery time is the longest. Pilot light already has data and core infrastructure in place, so it recovers in tens of minutes.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/disaster-recovery-strategies.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 5bdf9ce2a248a80b183c109ecd618c45a5708eb1
+verified_on: '2026-11-09'
+feature_status: concept
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:disaster-recovery-strategies
+- kt:reliability-pillar
+difficulty: 2
+created: '2026-11-16'
+status: active

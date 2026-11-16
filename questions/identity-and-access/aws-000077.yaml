@@ -1,0 +1,20 @@
+id: aws-000077
+product_area: identity-and-access
+true_statement: AWS IAM is eventually consistent, so AWS advises keeping IAM changes out of critical, high-availability code paths.
+false_statement: AWS IAM is strongly consistent, so AWS advises making IAM changes inside critical, high-availability code paths when needed.
+explanation: IAM changes are committed but take time to replicate, so a just-created role or policy may not work immediately everywhere. Verify propagation before production depends on a change.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/aws-iam.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 8e0f650b6f270fa71b544d95881a2216790f9c96
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-iam
+difficulty: 2
+created: '2026-11-16'
+status: active

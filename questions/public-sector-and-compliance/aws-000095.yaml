@@ -1,0 +1,17 @@
+id: aws-000095
+product_area: public-sector-and-compliance
+true_statement: Under FedRAMP, each agency still issues its own ATO for the system it builds, using the cloud provider's certification package.
+false_statement: Under FedRAMP, the cloud provider's certification serves as the ATO for every agency system built on it, so agencies issue none of their own.
+explanation: FedRAMP certifies the provider's offering but does not authorize agency systems. Agencies grant their own ATO under the Risk Management Framework, inheriting controls from the provider where applicable.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/fedramp-on-aws.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: a2d8149797d54ae572123323f3cdd22f031bf7c9
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:fedramp-on-aws
+difficulty: 2
+created: '2026-11-16'
+status: active

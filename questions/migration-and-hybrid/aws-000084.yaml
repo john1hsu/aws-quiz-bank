@@ -1,0 +1,19 @@
+id: aws-000084
+product_area: migration-and-hybrid
+true_statement: AWS DMS homogeneous data migrations use native database tooling, need no replication instance and bill only for the hours a migration runs.
+false_statement: AWS DMS homogeneous data migrations run on a provisioned replication instance that bills for every hour it exists, whether or not a migration is running.
+explanation: For supported same-engine moves such as PostgreSQL or MySQL, homogeneous migrations rely on native tools and charge only while running. Provisioned replication instances are the classic option for steady transfers.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-database-migration-service.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 9605fe1f1b0b82b1b813addb4de6823fcf8b6f36
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-database-migration-service
+difficulty: 3
+created: '2026-11-16'
+status: active

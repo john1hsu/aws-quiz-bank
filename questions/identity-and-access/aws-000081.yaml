@@ -1,0 +1,20 @@
+id: aws-000081
+product_area: identity-and-access
+true_statement: An AWS access portal session in IAM Identity Center defaults to 8 hours and can be extended up to 90 days.
+false_statement: An AWS access portal session in IAM Identity Center defaults to 1 hour and can be extended up to 12 hours.
+explanation: The access portal session runs 8 hours by default with a 90-day maximum. The 1-hour default and 12-hour maximum belong to permission-set sessions instead.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/iam-identity-center.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: fdec55d7f00b98f45fe0dae57fa181bb379932e6
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:iam-identity-center
+difficulty: 3
+created: '2026-11-16'
+status: active

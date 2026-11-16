@@ -1,0 +1,17 @@
+id: aws-000090
+product_area: networking-and-content-delivery
+true_statement: Every Route 53 routing policy except IP-based routing is documented as usable in private hosted zones.
+false_statement: Every Route 53 routing policy except latency-based routing is documented as usable in private hosted zones.
+explanation: Of the eight routing policies, AWS lists all but IP-based routing as supported for private hosted zones. Latency routing is among those that work privately.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/amazon-route-53.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 66012f56e71e4e5483855674240c92796ac8f654
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:amazon-route-53
+difficulty: 3
+created: '2026-11-16'
+status: active

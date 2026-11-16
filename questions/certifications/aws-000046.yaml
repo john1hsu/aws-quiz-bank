@@ -1,0 +1,19 @@
+id: aws-000046
+product_area: certifications
+true_statement: Passing any Associate- or Professional-level AWS exam also renews the AWS Certified Cloud Practitioner credential.
+false_statement: Passing AWS Certified AI Practitioner also renews the AWS Certified Cloud Practitioner credential.
+explanation: Cloud Practitioner can be kept current by passing a higher-level Associate or Professional exam. AI Practitioner sits at the same foundational level and is not listed as a renewal path.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-cloud-practitioner.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: e3e4a8075ab095fb1e5fe11d6cacb8143f38af3d
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-ai-practitioner
+- kt:aws-certified-solutions-architect-associate
+difficulty: 2
+created: '2026-11-16'
+status: active

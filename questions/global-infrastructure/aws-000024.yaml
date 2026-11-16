@@ -1,0 +1,19 @@
+id: aws-000024
+product_area: global-infrastructure
+true_statement: Disabling an opt-in AWS Region removes IAM access to its resources but does not delete them, so they keep incurring charges.
+false_statement: Disabling an opt-in AWS Region deletes the resources in it, so they stop incurring charges.
+explanation: Disabling only cuts off access through IAM; resources in the Region remain and continue to bill. They should be removed before the Region is disabled.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-regions.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 60d065d561f029b9960991ef5bcd269b2fd47f6b
+verified_on: '2026-11-08'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-regions
+difficulty: 3
+created: '2026-11-16'
+status: active

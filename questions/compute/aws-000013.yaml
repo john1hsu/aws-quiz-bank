@@ -1,0 +1,19 @@
+id: aws-000013
+product_area: compute
+true_statement: Amazon EC2 per-second billing meters usage in one-second increments with a 60-second minimum per instance.
+false_statement: Amazon EC2 per-second billing meters usage in one-second increments with a one-hour minimum per instance.
+explanation: EC2 bills supported operating systems by the second once the first 60 seconds are charged. A one-hour minimum would make per-second metering pointless for short-lived instances.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/amazon-ec2.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: fcee41b4e23f9d82d08ec63925d46324c99ad40c
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-ec2
+difficulty: 2
+created: '2026-11-16'
+status: active

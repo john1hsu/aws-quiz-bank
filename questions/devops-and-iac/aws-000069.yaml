@@ -1,0 +1,17 @@
+id: aws-000069
+product_area: devops-and-iac
+true_statement: If stack creation fails, AWS CloudFormation by default rolls back by deleting the resources it had created.
+false_statement: If stack creation fails, AWS CloudFormation by default keeps the resources it had created and marks the stack for manual cleanup.
+explanation: Automatic rollback is the default behavior for a failed create, so partial stacks do not linger. Rollback can be switched off deliberately when you want to debug the failure.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-cloudformation.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d791eccf032f7e84ebb9cfe57e554558d0f5b3ab
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-cloudformation
+difficulty: 1
+created: '2026-11-16'
+status: active

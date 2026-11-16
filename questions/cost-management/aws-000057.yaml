@@ -1,0 +1,21 @@
+id: aws-000057
+product_area: cost-management
+true_statement: Enabling AWS Cost Explorer automatically sets up Cost Anomaly Detection with an AWS services monitor and a daily summary alert subscription.
+false_statement: Enabling AWS Cost Explorer automatically sets up AWS Budgets with a monthly cost budget and a daily summary alert subscription.
+explanation: Turning on Cost Explorer also switches on Cost Anomaly Detection, which you can opt out of. AWS Budgets is a separate tool that you configure yourself.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-cost-explorer.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d611b16168df4c05dce3bbf9a57c1d08c2a29c1e
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-cost-explorer
+- kt:aws-cost-anomaly-detection
+- kt:aws-budgets
+difficulty: 2
+created: '2026-11-16'
+status: active

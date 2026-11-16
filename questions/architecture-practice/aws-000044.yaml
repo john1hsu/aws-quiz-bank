@@ -1,0 +1,19 @@
+id: aws-000044
+product_area: architecture-practice
+true_statement: A warm standby that is provisioned for full production load, so failover does not depend on scaling up, is called a hot standby.
+false_statement: A warm standby that is provisioned for full production load, so failover does not depend on scaling up, is called a pilot light.
+explanation: AWS uses the term hot standby for a fully sized warm standby. Pilot light is the opposite end, where application compute is switched off until recovery.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/disaster-recovery-strategies.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 5bdf9ce2a248a80b183c109ecd618c45a5708eb1
+verified_on: '2026-11-09'
+feature_status: concept
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:disaster-recovery-strategies
+difficulty: 3
+created: '2026-11-16'
+status: active

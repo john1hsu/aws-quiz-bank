@@ -1,0 +1,18 @@
+id: aws-000066
+product_area: devops-and-iac
+true_statement: A CDK app has already exited when CloudFormation deploys its stacks, so code that must run during deployment needs a custom resource or the Triggers module.
+false_statement: A CDK app keeps running while CloudFormation deploys its stacks, so app code can act on resources as they are created without a custom resource.
+explanation: CDK only synthesizes templates and assets; CloudFormation does the provisioning after the app finishes. Logic that must run at deploy time therefore goes into a custom resource or Triggers.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-cdk.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 6071c2696b163e6e0a80379604b5d14a2b562bd8
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-cdk
+- kt:aws-cloudformation
+difficulty: 3
+created: '2026-11-16'
+status: active

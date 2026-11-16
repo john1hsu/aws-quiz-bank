@@ -1,0 +1,18 @@
+id: aws-000072
+product_area: global-infrastructure
+true_statement: Features such as S3 Cross-Region Replication and Transit Gateway inter-Region peering work only between Regions in the same partition.
+false_statement: Features such as S3 Cross-Region Replication and Transit Gateway inter-Region peering work between Regions in different partitions, such as commercial and GovCloud (US).
+explanation: The partition is a hard boundary with its own IAM, so cross-Region features stop at its edge. Integrating across partitions has to be planned at the network or API layer with separate credentials.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-partitions.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 19f51b1edab39769929d30978b3382df59887c4a
+verified_on: '2026-11-09'
+feature_status: concept
+concepts:
+- kt:aws-partitions
+- kt:aws-regions
+difficulty: 3
+created: '2026-11-16'
+status: active

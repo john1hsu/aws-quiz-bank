@@ -1,0 +1,17 @@
+id: aws-000041
+product_area: analytics
+true_statement: AWS Glue crawlers scan data stores, infer schemas and partitions, and write table definitions into the Glue Data Catalog.
+false_statement: AWS Glue DataBrew scans data stores, infers schemas and partitions, and writes table definitions into the Glue Data Catalog.
+explanation: Crawlers are the Glue component that discovers data and populates the catalog. DataBrew is a no-code visual data preparation tool, not the catalog's discovery mechanism.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/aws-glue.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 3d3bc19a34857d390c64d526353060af8aafb6d8
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-glue
+difficulty: 1
+created: '2026-11-16'
+status: active

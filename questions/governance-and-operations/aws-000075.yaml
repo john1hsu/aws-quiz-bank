@@ -1,0 +1,20 @@
+id: aws-000075
+product_area: governance-and-operations
+true_statement: Detaching the default FullAWSAccess SCP without attaching a replacement allow policy makes every action in the affected member accounts fail.
+false_statement: Detaching the default FullAWSAccess SCP has no effect on member accounts, because IAM policies alone decide what their principals can do.
+explanation: With SCPs enabled, an action must be allowed by the SCPs in effect as well as by IAM. Removing FullAWSAccess without another allow leaves nothing permitted, so every action fails.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-organizations.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: e3a91bd214d4bebf7e8e59195ed28a83d7d5711e
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-organizations
+- kt:service-control-policies
+difficulty: 3
+created: '2026-11-16'
+status: active

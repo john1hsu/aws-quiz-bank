@@ -1,0 +1,18 @@
+id: aws-000020
+product_area: cost-management
+true_statement: During hourly billing, EC2 Instance Savings Plans are applied before Compute Savings Plans, after any EC2 Reserved Instances.
+false_statement: During hourly billing, Compute Savings Plans are applied before EC2 Instance Savings Plans, after any EC2 Reserved Instances.
+explanation: Reserved Instances apply first, then the narrower EC2 Instance Savings Plans, and finally Compute Savings Plans. The broader plan goes last so it can cover usage the narrower ones cannot.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/savings-plans.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: be65e7d2c35c90f67de2a43a21207dffc446e9a5
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:savings-plans
+- kt:reserved-instances
+difficulty: 3
+created: '2026-11-16'
+status: active

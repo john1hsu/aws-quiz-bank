@@ -1,0 +1,17 @@
+id: aws-000088
+product_area: networking-and-content-delivery
+true_statement: A Route 53 alias record can be created at the zone apex, such as example.com itself, whereas a CNAME record cannot.
+false_statement: A CNAME record can be created at the zone apex, such as example.com itself, whereas a Route 53 alias record cannot.
+explanation: Alias records are a Route 53 extension that works at the apex and tracks the target's changing IPs. A CNAME cannot be placed at the zone apex.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/amazon-route-53.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 66012f56e71e4e5483855674240c92796ac8f654
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:amazon-route-53
+difficulty: 2
+created: '2026-11-16'
+status: active

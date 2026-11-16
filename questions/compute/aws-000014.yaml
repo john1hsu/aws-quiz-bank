@@ -1,0 +1,19 @@
+id: aws-000014
+product_area: compute
+true_statement: Data on an EC2 instance store volume is lost when the instance is stopped, whereas an EBS-backed root volume keeps its data across a stop and start.
+false_statement: Data on an EBS-backed root volume is lost when the instance is stopped, whereas an EC2 instance store volume keeps its data across a stop and start.
+explanation: Instance store is local, temporary storage tied to the host, so stopping, hibernating or terminating wipes it. EBS is persistent network block storage that survives a stop and start.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/amazon-ec2.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: fcee41b4e23f9d82d08ec63925d46324c99ad40c
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-ec2
+difficulty: 1
+created: '2026-11-16'
+status: active

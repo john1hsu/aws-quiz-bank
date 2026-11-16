@@ -1,0 +1,17 @@
+id: aws-000068
+product_area: devops-and-iac
+true_statement: CloudFormation StackSets deploy one template to many accounts and Regions, while nested stacks compose a large system from smaller templates.
+false_statement: CloudFormation nested stacks deploy one template to many accounts and Regions, while StackSets compose a large system from smaller templates.
+explanation: StackSets fan a template out from a central administrator account across accounts and Regions. Nested stacks break one large system into reusable child templates within a parent stack.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-cloudformation.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d791eccf032f7e84ebb9cfe57e554558d0f5b3ab
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-cloudformation
+difficulty: 2
+created: '2026-11-16'
+status: active

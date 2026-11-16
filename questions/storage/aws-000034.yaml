@@ -1,0 +1,18 @@
+id: aws-000034
+product_area: storage
+true_statement: The maximum size of a single Amazon S3 object is 50 TB, raised from 5 TB in December 2025.
+false_statement: The maximum size of a single Amazon S3 object is 5 TB, raised from 5 GB in December 2025.
+explanation: S3 lifted the per-object limit from 5 TB to 50 TB across all Regions and storage classes in December 2025. The 5 GB figure is the cap on a single PUT request, not on objects.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-s3.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 92cf2f32c07aff369ab39fe7aa8b63b87611ebfe
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:amazon-s3
+- kt:amazon-s3-quotas
+difficulty: 2
+created: '2026-11-16'
+status: active

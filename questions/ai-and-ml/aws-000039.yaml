@@ -1,0 +1,21 @@
+id: aws-000039
+product_area: ai-and-ml
+true_statement: Because Bedrock guardrails are Regional, an organization-wide Amazon Bedrock policy needs a separate guardrail in each Region it should cover.
+false_statement: Because Bedrock guardrails are global, one guardrail referenced in an organization-wide Amazon Bedrock policy covers every Region.
+explanation: A guardrail exists in one Region, so central enforcement through AWS Organizations requires a guardrail per Region. The policy must also pin a specific guardrail version.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock-guardrails.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d1999db875f12541b984f433cbd314e645135ff8
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-bedrock-guardrails
+- kt:aws-organizations
+- kt:aws-regions
+difficulty: 3
+created: '2026-11-16'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000064
+product_area: devops-and-iac
+true_statement: AWS CDK L1 constructs, prefixed Cfn, are generated from the CloudFormation resource specification and map one-to-one to a resource type.
+false_statement: AWS CDK L3 constructs, prefixed Cfn, are generated from the CloudFormation resource specification and map one-to-one to a resource type.
+explanation: L1 constructs such as CfnBucket mirror CloudFormation resources exactly. L3 constructs are higher-level patterns that combine several resources into an architecture.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-cdk.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 6071c2696b163e6e0a80379604b5d14a2b562bd8
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-cdk
+- kt:aws-cloudformation
+difficulty: 2
+created: '2026-11-16'
+status: active

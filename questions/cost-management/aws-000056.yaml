@@ -1,0 +1,19 @@
+id: aws-000056
+product_area: cost-management
+true_statement: The Cost Explorer API costs $0.01 per request, and each page of a paginated result counts as a separate request (as of 2026-11).
+false_statement: The Cost Explorer API costs $0.01 per request, and a paginated result counts as one request however many pages it has (as of 2026-11).
+explanation: Every page returned is billed as its own request, so scripts that page through large groupings can add up. The console itself is free.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-cost-explorer.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d611b16168df4c05dce3bbf9a57c1d08c2a29c1e
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-cost-explorer
+difficulty: 2
+created: '2026-11-16'
+status: active

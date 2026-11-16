@@ -1,0 +1,19 @@
+id: aws-000058
+product_area: databases
+true_statement: A single Amazon DynamoDB item is capped at 400 KB, a limit that counts attribute names as well as values.
+false_statement: A single Amazon DynamoDB item can be up to 4 MB, a limit that counts attribute names as well as values.
+explanation: DynamoDB's per-item limit is 400 KB, so larger payloads belong in Amazon S3 with a pointer in the table. The 4 MB figure is the data limit for a whole transaction.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-dynamodb.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 1415e86aee14c02780095359f59c9b6b9834af7d
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:amazon-dynamodb
+- kt:dynamodb-quotas
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-16'
+status: active

@@ -1,0 +1,17 @@
+id: aws-000053
+product_area: containers
+true_statement: AWS Fargate bills Linux tasks per second with a one-minute minimum and Windows tasks per second with a five-minute minimum.
+false_statement: AWS Fargate bills Windows tasks per second with a one-minute minimum and Linux tasks per second with a five-minute minimum.
+explanation: Both operating systems are metered per second from the start of the image download, but the minimum charge is one minute on Linux and five minutes on Windows.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/aws-fargate.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 7ac0cae70b1512109159a59adedbecc5264ac137
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-fargate
+difficulty: 2
+created: '2026-11-16'
+status: active

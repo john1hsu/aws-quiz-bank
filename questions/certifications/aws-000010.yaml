@@ -1,0 +1,17 @@
+id: aws-000010
+product_area: certifications
+true_statement: Applications of Foundation Models is the most heavily weighted domain on the AWS Certified AI Practitioner (AIF-C01) exam, at 28% of scored content.
+false_statement: Fundamentals of AI and ML is the most heavily weighted domain on the AWS Certified AI Practitioner (AIF-C01) exam, at 28% of scored content.
+explanation: Applications of Foundation Models carries 28%, the largest share. Fundamentals of AI and ML is weighted at 20%, behind both foundation-model applications and GenAI fundamentals.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-ai-practitioner.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 933bfbe3fb99bcf638dd2eeef65b81a484da81bd
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:aws-certified-ai-practitioner
+difficulty: 2
+created: '2026-11-16'
+status: active

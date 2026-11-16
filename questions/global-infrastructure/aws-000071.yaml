@@ -1,0 +1,19 @@
+id: aws-000071
+product_area: global-infrastructure
+true_statement: A standard AWS Organizations organization cannot manage AWS GovCloud (US) accounts, so you end up with one organization per partition.
+false_statement: A standard AWS Organizations organization can manage AWS GovCloud (US) accounts as members alongside commercial accounts in a single organization.
+explanation: Partitions are separate identity and governance domains, so GovCloud accounts belong to a separate organization created inside GovCloud. A commercial organization cannot hold them.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-partitions.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 19f51b1edab39769929d30978b3382df59887c4a
+verified_on: '2026-11-09'
+feature_status: concept
+concepts:
+- kt:aws-partitions
+- kt:aws-organizations
+- kt:aws-govcloud-us
+difficulty: 2
+created: '2026-11-16'
+status: active

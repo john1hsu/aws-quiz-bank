@@ -1,0 +1,19 @@
+id: aws-000027
+product_area: governance-and-operations
+true_statement: CloudWatch custom metrics can be published at 1-second high resolution, while standard metrics have 1-minute resolution.
+false_statement: CloudWatch custom metrics can be published at most at 1-minute resolution, while standard metrics have 1-second resolution.
+explanation: High-resolution publishing down to one second is an option for custom metrics, and high-resolution alarms can evaluate every 10 seconds. Standard metrics are at 1-minute resolution.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/amazon-cloudwatch.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: dee1c0ac089646be1514b3cc154b0f1ce65c9658
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-cloudwatch
+difficulty: 2
+created: '2026-11-16'
+status: active

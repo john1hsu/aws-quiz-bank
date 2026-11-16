@@ -1,0 +1,19 @@
+id: aws-000003
+product_area: ai-and-ml
+true_statement: Global cross-Region inference profiles in Amazon Bedrock do not meet data-residency requirements; geographic profiles such as US or EU keep processing inside one geography.
+false_statement: Geographic cross-Region inference profiles in Amazon Bedrock do not meet data-residency requirements; Global profiles keep processing inside one geography.
+explanation: A Global profile may send a request to any supported commercial Region, so it cannot guarantee residency. Geographic profiles restrict routing to Regions within one geography such as the US, EU or APAC.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: cce21025c56675de5cd52c334702f4fd0f17bb5b
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-bedrock
+difficulty: 3
+created: '2026-11-16'
+status: active

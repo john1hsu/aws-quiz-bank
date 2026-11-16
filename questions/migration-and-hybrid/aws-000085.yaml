@@ -1,0 +1,19 @@
+id: aws-000085
+product_area: migration-and-hybrid
+true_statement: Each AWS Transform MGN source server gets a free period of 2,160 hours, or 90 days of replication, starting when the agent is installed (as of 2026-11).
+false_statement: Each AWS Transform MGN source server gets a free period of 720 hours, or 30 days of replication, starting when the agent is installed (as of 2026-11).
+explanation: MGN's free period is 90 days per source server, after which replication is billed per server-hour. Even during that period, the EC2 and EBS resources it provisions are charged normally.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-transform-mgn.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: f2fd58446acf4519d26370a3244747a3b4d409a0
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-transform-mgn
+difficulty: 2
+created: '2026-11-16'
+status: active

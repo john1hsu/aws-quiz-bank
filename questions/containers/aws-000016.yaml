@@ -1,0 +1,20 @@
+id: aws-000016
+product_area: containers
+true_statement: With the EC2 option, Amazon ECS adds no orchestration charge; you pay only for the instances, EBS volumes and public IPv4 addresses you use.
+false_statement: With the EC2 option, Amazon ECS adds an hourly per-cluster orchestration charge on top of the instances, EBS volumes and public IPv4 addresses you use.
+explanation: ECS does not bill for orchestration itself; the cost comes from the compute and storage your tasks consume. There is no per-cluster fee for the control plane.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/amazon-ecs.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 32f9d25246b46f92bf89bd6249f884a0f2f7ce64
+verified_on: '2026-11-08'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-ecs
+- kt:amazon-ec2
+difficulty: 1
+created: '2026-11-16'
+status: active

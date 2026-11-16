@@ -1,0 +1,19 @@
+id: aws-000038
+product_area: ai-and-ml
+true_statement: The ApplyGuardrail API evaluates text against a guardrail without invoking a model, so it can protect models hosted outside Amazon Bedrock.
+false_statement: The ApplyGuardrail API evaluates text only during a Bedrock model invocation, so it cannot protect models hosted outside Amazon Bedrock.
+explanation: ApplyGuardrail is a standalone call that checks any text against a guardrail. That lets the same safeguards cover external models or individual pipeline steps.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock-guardrails.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: d1999db875f12541b984f433cbd314e645135ff8
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-bedrock-guardrails
+difficulty: 2
+created: '2026-11-16'
+status: active

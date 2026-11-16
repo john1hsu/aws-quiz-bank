@@ -1,0 +1,20 @@
+id: aws-000099
+product_area: security
+true_statement: Use of AWS managed KMS keys is recorded in your CloudTrail, while AWS owned keys give you neither key policy control nor CloudTrail records.
+false_statement: Use of AWS owned KMS keys is recorded in your CloudTrail, while AWS managed keys give you neither key policy control nor CloudTrail records.
+explanation: AWS managed keys live in your account and their use is logged, even though a service controls them. AWS owned keys belong to AWS, are shared across accounts and are invisible to your logging.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-kms.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 4fd2b737163ab3edeea24a97e2f146b5c36afe41
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-kms
+- kt:aws-cloudtrail
+difficulty: 3
+created: '2026-11-16'
+status: active

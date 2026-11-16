@@ -1,0 +1,17 @@
+id: aws-000092
+product_area: public-sector-and-compliance
+true_statement: Billing and usage reports for an AWS GovCloud (US) account appear only in the standard AWS account it is linked to.
+false_statement: Billing and usage reports for an AWS GovCloud (US) account appear only inside the GovCloud account itself, not in any standard AWS account.
+explanation: Every GovCloud account is paired with a standard account that handles billing, so its charges and usage show up there. The GovCloud side does not carry its own billing view.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/aws-govcloud-us.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: f314def20de236d7fa14d21dee99fab6bd130cbe
+verified_on: '2026-11-09'
+feature_status: current
+concepts:
+- kt:aws-govcloud-us
+difficulty: 2
+created: '2026-11-16'
+status: active

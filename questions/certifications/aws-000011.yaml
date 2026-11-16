@@ -1,0 +1,19 @@
+id: aws-000011
+product_area: certifications
+true_statement: Earning AWS Certified Machine Learning Engineer – Associate automatically recertifies the AWS Certified AI Practitioner credential.
+false_statement: Earning AWS Certified Cloud Practitioner automatically recertifies the AWS Certified AI Practitioner credential.
+explanation: Besides retaking the current AIF-C01 exam, the automatic renewal path is the Machine Learning Engineer – Associate certification. Cloud Practitioner is a separate foundational exam and does not renew it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-ai-practitioner.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 933bfbe3fb99bcf638dd2eeef65b81a484da81bd
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:aws-certified-ai-practitioner
+- kt:aws-certified-machine-learning-engineer-associate
+- kt:aws-certified-cloud-practitioner
+difficulty: 2
+created: '2026-11-16'
+status: active

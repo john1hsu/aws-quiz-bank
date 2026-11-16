@@ -1,0 +1,20 @@
+id: aws-000097
+product_area: security
+true_statement: AWS KMS encrypts at most 4 KB of data directly, so larger data is encrypted locally with a data key using envelope encryption.
+false_statement: AWS KMS encrypts up to 1 MB of data directly, so only larger data needs to be encrypted locally with a data key using envelope encryption.
+explanation: Direct KMS encryption is limited to 4 KB, which suits small secrets and data keys. Services such as S3 with SSE-KMS rely on data keys for anything larger.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-kms.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: 4fd2b737163ab3edeea24a97e2f146b5c36afe41
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-kms
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-16'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000021
+product_area: cost-management
+true_statement: Savings Plans reserve no capacity, so workloads that need capacity assurance pair them with On-Demand Capacity Reservations.
+false_statement: Savings Plans reserve capacity in the Regions they cover, so workloads that use them no longer need On-Demand Capacity Reservations.
+explanation: A Savings Plan is purely a billing discount for committed spend. Capacity Reservations hold capacity without a discount, and the two are designed to be combined.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/savings-plans.md
+  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
+  blob: be65e7d2c35c90f67de2a43a21207dffc446e9a5
+verified_on: '2026-11-08'
+feature_status: current
+concepts:
+- kt:savings-plans
+- kt:on-demand-capacity-reservations
+difficulty: 2
+created: '2026-11-16'
+status: active
