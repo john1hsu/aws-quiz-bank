@@ -1,0 +1,17 @@
+id: aws-000190
+product_area: certifications
+true_statement: The AWS Certified Solutions Architect – Professional exam gives candidates 180 minutes for 75 questions (as of 2026-11).
+false_statement: The AWS Certified Solutions Architect – Professional exam gives candidates 130 minutes for 65 questions (as of 2026-11).
+explanation: 'The Professional exam is longer than the associate-level format: 75 questions in 180 minutes, of which 65 are scored under the SAP-C02 guide. AWS kept the same length and duration for SAP-C03.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-solutions-architect-professional.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 67acd767e7a825e00aec2c5600e277d30334c6b6
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:aws-certified-solutions-architect-professional
+difficulty: 1
+created: '2026-11-17'
+status: active

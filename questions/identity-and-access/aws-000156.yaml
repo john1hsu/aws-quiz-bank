@@ -1,0 +1,20 @@
+id: aws-000156
+product_area: identity-and-access
+true_statement: Up to 10 SCPs can be attached directly to a root, OU or account, a hard limit that doubled from 5 in May 2026.
+false_statement: Up to 20 SCPs can be attached directly to a root, OU or account, a hard limit that doubled from 10 in May 2026.
+explanation: On 2026-05-15 AWS raised the direct-attachment limit from 5 to 10 per target and the SCP size limit from 5,120 to 10,240 characters. Inherited policies do not count toward the attachment limit.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/service-control-policies.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: fe474214117e4ce8142f2ac342681cf2b569b193
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:service-control-policies
+- kt:organizations-quotas
+difficulty: 2
+created: '2026-11-17'
+status: active

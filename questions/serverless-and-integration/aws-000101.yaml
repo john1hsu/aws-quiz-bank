@@ -1,0 +1,20 @@
+id: aws-000101
+product_area: serverless-and-integration
+true_statement: AWS Step Functions Standard Workflows run exactly-once for up to one year, while Express Workflows run at-least-once for up to five minutes.
+false_statement: AWS Step Functions Express Workflows run exactly-once for up to one year, while Standard Workflows run at-least-once for up to five minutes.
+explanation: Standard Workflows are the long-running, exactly-once option. Express Workflows trade that guarantee for high volume and are capped at five minutes with at-least-once execution, so the false statement swaps the two types.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/aws-serverless-services.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: ffc1b9a8bccbb228e4127347d7abd02679467701
+verified_on: '2026-11-09'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-serverless-services
+- kt:aws-step-functions
+difficulty: 2
+created: '2026-11-17'
+status: active

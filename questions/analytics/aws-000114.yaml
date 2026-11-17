@@ -1,0 +1,18 @@
+id: aws-000114
+product_area: analytics
+true_statement: A provisioned Kinesis shard accepts up to 1 MB/s or 1,000 records/s of writes and serves up to 2 MB/s of reads.
+false_statement: A provisioned Kinesis shard accepts up to 2 MB/s or 1,000 records/s of writes and serves up to 1 MB/s of reads.
+explanation: 'Each provisioned shard''s read capacity is double its write capacity: 1 MB/s (or 1,000 records/s) in and 2 MB/s out. The false statement reverses the two throughput figures.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-kinesis-data-streams.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 57b5b35fdfdb7ec3bfad436d512f4030cb43e196
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:amazon-kinesis-data-streams
+- kt:kinesis-data-streams-quotas
+difficulty: 2
+created: '2026-11-17'
+status: active

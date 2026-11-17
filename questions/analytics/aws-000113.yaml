@@ -1,0 +1,17 @@
+id: aws-000113
+product_area: analytics
+true_statement: Kinesis Data Streams keeps records for 24 hours by default, and the retention period can be raised to as much as 365 days for an extra charge.
+false_statement: Kinesis Data Streams keeps records for 7 days by default, and the retention period can be raised to as much as 365 days for an extra charge.
+explanation: The default retention is 24 hours, adjustable up to 8,760 hours (365 days), with retention beyond a day billed separately. Seven days is not the default.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-kinesis-data-streams.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 57b5b35fdfdb7ec3bfad436d512f4030cb43e196
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:amazon-kinesis-data-streams
+difficulty: 2
+created: '2026-11-17'
+status: active

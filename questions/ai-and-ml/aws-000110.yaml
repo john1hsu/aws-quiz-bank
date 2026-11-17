@@ -1,0 +1,19 @@
+id: aws-000110
+product_area: ai-and-ml
+true_statement: SageMaker AI asynchronous inference accepts payloads up to 1 GB with up to one hour of processing, while serverless inference caps payloads at 4 MB.
+false_statement: SageMaker AI serverless inference accepts payloads up to 1 GB with up to one hour of processing, while asynchronous inference caps payloads at 4 MB.
+explanation: Asynchronous inference queues requests, which is what lets it take very large payloads and long processing times. Serverless inference is meant for intermittent, small requests and is limited to 4 MB and 60 seconds.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-sagemaker-ai.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 8ed5b5aa845ccfbc65e5d0cfd973a0e23866cd5e
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-sagemaker-ai
+difficulty: 2
+created: '2026-11-17'
+status: active

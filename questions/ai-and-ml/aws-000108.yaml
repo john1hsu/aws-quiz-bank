@@ -1,0 +1,20 @@
+id: aws-000108
+product_area: ai-and-ml
+true_statement: A Bedrock knowledge base connected to Amazon Redshift is not vectorized; Bedrock translates each natural-language question into SQL instead.
+false_statement: A Bedrock knowledge base connected to Amazon Redshift is vectorized; Bedrock embeds the table rows into a vector store instead of generating SQL.
+explanation: Structured stores such as Redshift or the Glue Data Catalog skip the chunk-and-embed pipeline. Bedrock uses schema metadata and query history to generate SQL against the data, rather than indexing rows as vectors.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock-knowledge-bases.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: dcec3ad3cab57f0657f5901328498edb316284b1
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-bedrock-knowledge-bases
+- kt:amazon-redshift
+difficulty: 2
+created: '2026-11-17'
+status: active

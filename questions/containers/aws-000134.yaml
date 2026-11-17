@@ -1,0 +1,19 @@
+id: aws-000134
+product_area: containers
+true_statement: Each Kubernetes minor version on Amazon EKS gets 14 months of standard support followed by 12 months of extended support.
+false_statement: Each Kubernetes minor version on Amazon EKS gets 12 months of standard support followed by 14 months of extended support.
+explanation: EKS gives every minor version 14 months of standard support from its EKS release and then 12 months of extended support, 26 months in total. The false statement swaps the two periods.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/amazon-eks.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 4b49fb622c8720aff1451b0d8ec3bbf5ba8a8529
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-eks
+difficulty: 2
+created: '2026-11-17'
+status: active

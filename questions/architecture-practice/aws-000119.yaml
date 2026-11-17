@@ -1,0 +1,20 @@
+id: aws-000119
+product_area: architecture-practice
+true_statement: 'The Well-Architected Operational Excellence pillar groups its best practices into four areas: Organization, Prepare, Operate and Evolve.'
+false_statement: 'The Well-Architected Operational Excellence pillar groups its best practices into four areas: Organization, Prepare, Operate and Recover.'
+explanation: The fourth area is Evolve, which covers learning and continuous improvement (OPS 11). Recovery from failure is a reliability theme, not one of this pillar's areas.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/operational-excellence-pillar.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: c7dd18276f593b78ff958bea0fd683e28fc7417b
+verified_on: '2026-11-10'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:operational-excellence-pillar
+- kt:aws-well-architected-framework
+difficulty: 1
+created: '2026-11-17'
+status: active

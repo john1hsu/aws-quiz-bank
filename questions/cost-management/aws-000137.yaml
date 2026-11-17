@@ -1,0 +1,19 @@
+id: aws-000137
+product_area: cost-management
+true_statement: AWS Budgets data refreshes up to three times a day, so a budget is not a real-time hard cap and costs can keep rising after an alert.
+false_statement: AWS Budgets data refreshes every minute, so a budget works as a real-time hard cap that stops costs from rising after an alert.
+explanation: Budget figures update only a few times a day, usually 8 to 12 hours apart, and billing lags real usage. That is why AWS suggests pairing Budgets with Cost Anomaly Detection for sudden spikes.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-budgets.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: f0608ea22690a25e3fabf4f7fa21ff4f34fa4b50
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-budgets
+difficulty: 1
+created: '2026-11-17'
+status: active

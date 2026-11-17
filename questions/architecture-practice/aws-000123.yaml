@@ -1,0 +1,17 @@
+id: aws-000123
+product_area: architecture-practice
+true_statement: A 99.99% availability target allows about 52 minutes of downtime a year, while a 99.9% target allows about 8 hours 45 minutes.
+false_statement: A 99.99% availability target allows about 8 hours 45 minutes of downtime a year, while a 99.9% target allows about 52 minutes.
+explanation: Each extra nine cuts allowed downtime roughly tenfold. The Reliability pillar maps 99.9% to about 8 hours 45 minutes a year and 99.99% to about 52 minutes, so the false statement reverses them.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/reliability-pillar.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: c7a65a712b541f25a4e73e5da9dd5576061e2b18
+verified_on: '2026-11-10'
+feature_status: concept
+concepts:
+- kt:reliability-pillar
+difficulty: 2
+created: '2026-11-17'
+status: active

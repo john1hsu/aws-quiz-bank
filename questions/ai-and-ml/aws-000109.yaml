@@ -1,0 +1,20 @@
+id: aws-000109
+product_area: ai-and-ml
+true_statement: By default, deleting a Bedrock knowledge base or data source also removes its vectors from S3 Vectors unless the data deletion policy is set to Retain.
+false_statement: By default, deleting a Bedrock knowledge base or data source keeps its vectors in S3 Vectors unless the data deletion policy is set to Delete.
+explanation: The default data deletion policy is Delete, so the vectors go with the knowledge base or data source. Keeping them requires choosing Retain explicitly.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock-knowledge-bases.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: dcec3ad3cab57f0657f5901328498edb316284b1
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-bedrock-knowledge-bases
+- kt:amazon-s3
+difficulty: 3
+created: '2026-11-17'
+status: active

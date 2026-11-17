@@ -1,0 +1,21 @@
+id: aws-000102
+product_area: serverless-and-integration
+true_statement: A single AWS Lambda invocation can run for at most 15 minutes, whereas an AWS Fargate task has no hard limit on how long it runs.
+false_statement: A single AWS Fargate task can run for at most 15 minutes, whereas an AWS Lambda invocation has no hard limit on how long it runs.
+explanation: Lambda caps each invocation at 15 minutes, which is why long-running processes are steered to Fargate. Fargate tasks have no fixed duration cap, so the false statement reverses the two services.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/aws-serverless-services.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: ffc1b9a8bccbb228e4127347d7abd02679467701
+verified_on: '2026-11-09'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-serverless-services
+- kt:aws-lambda
+- kt:aws-fargate
+difficulty: 1
+created: '2026-11-17'
+status: active

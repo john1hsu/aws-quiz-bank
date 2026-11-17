@@ -1,0 +1,20 @@
+id: aws-000161
+product_area: networking-and-content-delivery
+true_statement: AWS reserves five IPv4 addresses in every VPC subnet, so a /24 subnet offers 251 usable addresses.
+false_statement: AWS reserves two IPv4 addresses in every VPC subnet, so a /24 subnet offers 254 usable addresses.
+explanation: Besides the network and broadcast addresses, AWS holds back the VPC router, the DNS server and one address for future use. That leaves 251 of a /24's 256 addresses for your resources.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/amazon-vpc.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 1edc4f31d61999a33d22c9d77c3a0c1c536be8e8
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-vpc
+- kt:subnets-and-route-tables
+difficulty: 2
+created: '2026-11-17'
+status: active

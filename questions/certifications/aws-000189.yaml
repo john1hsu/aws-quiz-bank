@@ -1,0 +1,17 @@
+id: aws-000189
+product_area: certifications
+true_statement: SAP-C03 took over Solutions Architect – Professional exam delivery on November 17, 2026, the day after the last SAP-C02 sitting.
+false_statement: SAP-C03 takes over Solutions Architect – Professional exam delivery on December 1, 2026, the day after the last SAP-C02 sitting.
+explanation: AWS set November 16, 2026 as the final day for SAP-C02 and began SAP-C03 delivery on November 17. Credentials earned on SAP-C02 stay valid until their original expiry.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-solutions-architect-professional.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 67acd767e7a825e00aec2c5600e277d30334c6b6
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:aws-certified-solutions-architect-professional
+difficulty: 2
+created: '2026-11-17'
+status: active

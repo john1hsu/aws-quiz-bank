@@ -1,0 +1,21 @@
+id: aws-000159
+product_area: migration-and-hybrid
+true_statement: AWS DataSync needs no agent to copy between AWS storage services in the same account, but needs one to reach NFS or SMB shares outside AWS.
+false_statement: AWS DataSync needs an agent to copy between AWS storage services in the same account, but reaches NFS or SMB shares outside AWS without one.
+explanation: An agent is the VM appliance that reads or writes storage DataSync cannot reach directly, such as on-premises file shares. Same-account transfers between services like S3, EFS and FSx run agentless.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-datasync.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 2723ac13f35edb81f219310a5dba37d79bd062bd
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-datasync
+- kt:amazon-s3
+- kt:amazon-efs
+difficulty: 2
+created: '2026-11-17'
+status: active

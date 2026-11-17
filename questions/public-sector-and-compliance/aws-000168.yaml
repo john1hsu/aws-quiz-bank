@@ -1,0 +1,17 @@
+id: aws-000168
+product_area: public-sector-and-compliance
+true_statement: DoD impact levels 1 and 3 were folded into the next level up, which is why the levels in use are IL2, IL4, IL5 and IL6.
+false_statement: DoD impact levels 3 and 5 were folded into the next level up, which is why the levels in use are IL1, IL2, IL4 and IL6.
+explanation: The scheme skips odd numbers at the low end because former levels 1 and 3 were merged upward. IL5 is very much in use for higher-sensitivity CUI and National Security Systems.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/dod-cloud-computing-srg-impact-levels.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: f694dd1d085750c21b3784cf72c98b19e204b1cd
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:dod-cloud-computing-srg-impact-levels
+difficulty: 2
+created: '2026-11-17'
+status: active

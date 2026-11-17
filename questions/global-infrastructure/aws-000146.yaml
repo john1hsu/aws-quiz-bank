@@ -1,0 +1,17 @@
+id: aws-000146
+product_area: global-infrastructure
+true_statement: An AZ ID such as use2-az1 is the same physical location in every account, while an AZ name such as us-east-1a can map differently in older accounts.
+false_statement: An AZ name such as us-east-1a is the same physical location in every account, while an AZ ID such as use2-az1 can map differently in older accounts.
+explanation: AWS mapped AZ names to physical zones per account in its oldest Regions for accounts created before November 2025. AZ IDs are consistent everywhere, which is why cross-account work such as RAM subnet sharing should compare IDs.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/availability-zones.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: e7524c6ddb87ccb229df6e3624b831287ee57087
+verified_on: '2026-11-10'
+feature_status: concept
+concepts:
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-17'
+status: active

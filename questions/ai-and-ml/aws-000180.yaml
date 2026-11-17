@@ -1,0 +1,20 @@
+id: aws-000180
+product_area: ai-and-ml
+true_statement: By default, asynchronous Amazon Textract results sit in a Textract-owned bucket and can be retrieved for only 7 days after the job starts.
+false_statement: By default, asynchronous Amazon Textract results sit in a Textract-owned bucket and can be retrieved for up to 90 days after the job starts.
+explanation: Textract keeps default async output for just 7 days. To keep results longer, set OutputConfig so they are written to your own S3 bucket, optionally encrypted with a customer managed KMS key.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-textract.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 8b837f4494efd68839d8ceb3dcef344381c19a85
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-textract
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-17'
+status: active

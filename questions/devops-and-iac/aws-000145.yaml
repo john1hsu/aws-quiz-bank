@@ -1,0 +1,18 @@
+id: aws-000145
+product_area: devops-and-iac
+true_statement: sam local invoke needs a container runtime such as Docker, because the SAM CLI runs the function in a container on your machine.
+false_statement: sam remote invoke needs a container runtime such as Docker, because the SAM CLI runs the function in a container on your machine.
+explanation: Local invocation emulates Lambda in a local container, so a runtime like Docker must be installed. sam remote invoke calls functions that are already deployed in AWS.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-sam.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: e2205aeea5dec922c56574719ca170bbca776443
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:aws-sam
+- kt:aws-lambda
+difficulty: 2
+created: '2026-11-17'
+status: active

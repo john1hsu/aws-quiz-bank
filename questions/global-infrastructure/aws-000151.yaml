@@ -1,0 +1,21 @@
+id: aws-000151
+product_area: global-infrastructure
+true_statement: AWS Outposts needs Enterprise Support or Enterprise On-Ramp, and the customer supplies its power and redundant networking.
+false_statement: AWS Local Zones need Enterprise Support or Enterprise On-Ramp, and the customer supplies their power and redundant networking.
+explanation: Outposts sit in a facility the customer chooses, so the customer provides power and networking and must hold one of those support plans. Local Zone capacity and facilities are owned by AWS, which is one reason AWS prefers them when both fit.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-global-infrastructure.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 8ef3d9a26b08c627c8bc056445b9e0850d83b189
+verified_on: '2026-11-10'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-global-infrastructure
+- kt:aws-outposts
+- kt:local-zones
+difficulty: 2
+created: '2026-11-17'
+status: active

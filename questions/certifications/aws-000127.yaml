@@ -1,0 +1,17 @@
+id: aws-000127
+product_area: certifications
+true_statement: AWS Certified Developer – Associate is renewed for three more years by passing the latest Developer – Associate exam or AWS Certified DevOps Engineer – Professional.
+false_statement: AWS Certified Developer – Associate is renewed for three more years by passing the latest Developer – Associate exam or AWS Certified Solutions Architect – Professional.
+explanation: The professional exam that recertifies Developer – Associate is DevOps Engineer – Professional, the next step on the developer track. Solutions Architect – Professional is not listed as a renewal path for it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-developer-associate.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 879bde709915e07caec65422bcda215351eaf80a
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:aws-certified-developer-associate
+difficulty: 2
+created: '2026-11-17'
+status: active

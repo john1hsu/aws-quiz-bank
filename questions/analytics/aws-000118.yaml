@@ -1,0 +1,20 @@
+id: aws-000118
+product_area: analytics
+true_statement: AWS positions Amazon Redshift as the central warehouse for complex BI at scale, and Amazon Athena for ad-hoc queries on S3 data without loading it first.
+false_statement: AWS positions Amazon Athena as the central warehouse for complex BI at scale, and Amazon Redshift for ad-hoc queries on S3 data without loading it first.
+explanation: Redshift is the MPP warehouse you load curated data into for heavy, frequent, concurrent queries. Athena queries files where they sit, which suits interactive exploration, so the false statement swaps the services.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-redshift.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 4bcd71db1d1a4d1b0516d34a8e5eeb69494ca384
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-redshift
+- kt:amazon-athena
+difficulty: 1
+created: '2026-11-17'
+status: active

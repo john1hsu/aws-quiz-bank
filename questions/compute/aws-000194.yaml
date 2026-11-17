@@ -1,0 +1,18 @@
+id: aws-000194
+product_area: compute
+true_statement: Each vCPU on an AWS Graviton instance is a full physical core rather than one hyperthread of a shared core.
+false_statement: Each vCPU on an AWS Graviton instance is one hyperthread, with two vCPUs sharing every physical core.
+explanation: Graviton does not use simultaneous multithreading, so a vCPU maps to a whole core. AWS cites this as one reason for Graviton's efficiency.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/aws-graviton.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: f1d77d9e417bfe70752be3558a6d251e68526651
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:aws-graviton
+- kt:ec2-instance-types
+difficulty: 2
+created: '2026-11-17'
+status: active

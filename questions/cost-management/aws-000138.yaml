@@ -1,0 +1,19 @@
+id: aws-000138
+product_area: cost-management
+true_statement: The first two action-enabled AWS budgets each month are free, and each additional action-enabled budget costs $0.10 per day (as of 2026-11).
+false_statement: The first ten action-enabled AWS budgets each month are free, and each additional action-enabled budget costs $0.10 per day (as of 2026-11).
+explanation: Budget monitoring and alerts are free, and two budgets with actions are included each month however many actions they hold. Beyond those two, each action-enabled budget is billed $0.10 per day.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-budgets.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: f0608ea22690a25e3fabf4f7fa21ff4f34fa4b50
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-budgets
+difficulty: 2
+created: '2026-11-17'
+status: active

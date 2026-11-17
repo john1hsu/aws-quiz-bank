@@ -1,0 +1,20 @@
+id: aws-000155
+product_area: identity-and-access
+true_statement: For an action to be allowed in a member account, an SCP allowing it must be attached at the root, at each OU in the path and at the account itself.
+false_statement: For an action to be allowed in a member account, an SCP allowing it need only be attached at the root, from where it is inherited by every OU and account below.
+explanation: 'Allows in SCPs are not inherited downward; every level in the path needs one, which is why FullAWSAccess is attached everywhere by default. Denies are the part that flow down: a Deny anywhere on the path wins.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/service-control-policies.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: fe474214117e4ce8142f2ac342681cf2b569b193
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:service-control-policies
+- kt:aws-organizations
+difficulty: 3
+created: '2026-11-17'
+status: active

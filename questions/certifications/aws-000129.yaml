@@ -1,0 +1,17 @@
+id: aws-000129
+product_area: certifications
+true_statement: SAA-C03 is scored on a compensatory model, so a candidate needs a scaled 720 overall rather than a passing score in each section.
+false_statement: SAA-C03 is scored section by section, so a candidate needs a scaled 720 in each domain rather than just a passing score overall.
+explanation: Under the compensatory model only the overall scaled score from 100 to 1,000 decides pass or fail, with 720 needed. Strength in one domain can offset weakness in another, which is why per-section feedback is only a rough guide.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-solutions-architect-associate.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: d17ab926f14337f3953339389b9c18aa40509b6c
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:aws-certified-solutions-architect-associate
+difficulty: 1
+created: '2026-11-17'
+status: active

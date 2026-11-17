@@ -1,0 +1,17 @@
+id: aws-000125
+product_area: certifications
+true_statement: The DVA-C02 Developer – Associate exam can be taken until November 30, 2026, and its replacement DVA-C03 becomes generally available on December 1, 2026.
+false_statement: The DVA-C02 Developer – Associate exam can be taken until October 27, 2026, and its replacement DVA-C03 becomes generally available that same day.
+explanation: October 27, 2026 is when DVA-C03 registration opened; DVA-C02 stays available through November 30 and DVA-C03 goes GA on December 1, 2026.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-developer-associate.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 879bde709915e07caec65422bcda215351eaf80a
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:aws-certified-developer-associate
+difficulty: 2
+created: '2026-11-17'
+status: active

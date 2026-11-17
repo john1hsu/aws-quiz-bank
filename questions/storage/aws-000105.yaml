@@ -1,0 +1,19 @@
+id: aws-000105
+product_area: storage
+true_statement: An EBS gp3 volume gets a baseline of 3,000 IOPS and 125 MiB/s at any size, while gp2 performance scales with size at 3 IOPS per GiB.
+false_statement: An EBS gp2 volume gets a baseline of 3,000 IOPS and 125 MiB/s at any size, while gp3 performance scales with size at 3 IOPS per GiB.
+explanation: gp3 decouples performance from capacity with a fixed baseline you can provision above. gp2 ties IOPS to volume size and relies on burst credits for small volumes, so the false statement swaps the two types.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-ebs.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 03f4c8f297abc8b52614ca6ff607163a213e4371
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-ebs
+difficulty: 2
+created: '2026-11-17'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000136
+product_area: containers
+true_statement: The EKS cluster upgrade policy defaults to EXTENDED, so a cluster left on an aging version moves into paid extended support unless you opt out.
+false_statement: The EKS cluster upgrade policy defaults to STANDARD, so a cluster left on an aging version is auto-upgraded when standard support ends unless you opt in.
+explanation: Extended support is the default for new and existing clusters. Only if you opt out does EKS auto-upgrade the control plane at the end of standard support instead of billing extended support.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/amazon-eks.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 4b49fb622c8720aff1451b0d8ec3bbf5ba8a8529
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-eks
+difficulty: 3
+created: '2026-11-17'
+status: active

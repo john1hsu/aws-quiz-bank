@@ -1,0 +1,19 @@
+id: aws-000167
+product_area: public-sector-and-compliance
+true_statement: On AWS, the US East and US West Regions hold DoD Impact Level 2, while IL4 and IL5 workloads belong in AWS GovCloud (US) (as of 2026-11).
+false_statement: On AWS, the US East and US West Regions hold DoD Impact Level 4, while IL5 and IL6 workloads belong in AWS GovCloud (US) (as of 2026-11).
+explanation: The commercial US Regions are authorized only at IL2. GovCloud (US) holds IL2, IL4 and IL5, and classified IL6 work goes to the AWS Secret Region instead.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/dod-cloud-computing-srg-impact-levels.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: f694dd1d085750c21b3784cf72c98b19e204b1cd
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:dod-cloud-computing-srg-impact-levels
+- kt:aws-govcloud-us
+- kt:aws-regions
+difficulty: 2
+created: '2026-11-17'
+status: active

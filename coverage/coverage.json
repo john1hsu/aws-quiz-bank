@@ -1,71 +1,89 @@
 {
  "totals": {
-  "active": 100
+  "active": 200
  },
  "areas": {
   "ai-and-ml": {
-   "active": 6
+   "active": 15
   },
   "analytics": {
-   "active": 6
+   "active": 15
   },
   "architecture-practice": {
-   "active": 6
+   "active": 15
   },
   "certifications": {
-   "active": 6
+   "active": 15
   },
   "compute": {
-   "active": 6
+   "active": 15
   },
   "containers": {
-   "active": 6
+   "active": 13
   },
   "cost-management": {
-   "active": 6
+   "active": 9
   },
   "databases": {
-   "active": 6
+   "active": 9
   },
   "devops-and-iac": {
-   "active": 6
+   "active": 9
   },
   "global-infrastructure": {
-   "active": 6
+   "active": 12
   },
   "governance-and-operations": {
-   "active": 6
+   "active": 9
   },
   "identity-and-access": {
-   "active": 6
+   "active": 9
   },
   "migration-and-hybrid": {
-   "active": 6
+   "active": 9
   },
   "networking-and-content-delivery": {
-   "active": 6
+   "active": 12
   },
   "public-sector-and-compliance": {
-   "active": 6
+   "active": 9
   },
   "security": {
-   "active": 6
+   "active": 9
   },
   "serverless-and-integration": {
-   "active": 1
+   "active": 7
   },
   "storage": {
-   "active": 3
+   "active": 9
   }
  },
  "articles": {
   "articles/ai-and-ml/amazon-bedrock-guardrails.md": {
    "active": 3
   },
+  "articles/ai-and-ml/amazon-bedrock-knowledge-bases.md": {
+   "active": 3
+  },
   "articles/ai-and-ml/amazon-bedrock.md": {
    "active": 3
   },
+  "articles/ai-and-ml/amazon-sagemaker-ai.md": {
+   "active": 3
+  },
+  "articles/ai-and-ml/amazon-textract.md": {
+   "active": 3
+  },
   "articles/analytics/amazon-athena.md": {
+   "active": 3
+  },
+  "articles/analytics/amazon-emr.md": {
+   "active": 3
+  },
+  "articles/analytics/amazon-kinesis-data-streams.md": {
+   "active": 3
+  },
+  "articles/analytics/amazon-redshift.md": {
    "active": 3
   },
   "articles/analytics/aws-glue.md": {
@@ -77,10 +95,28 @@
   "articles/architecture-practice/disaster-recovery-strategies.md": {
    "active": 3
   },
+  "articles/architecture-practice/operational-excellence-pillar.md": {
+   "active": 3
+  },
+  "articles/architecture-practice/reliability-pillar.md": {
+   "active": 3
+  },
+  "articles/architecture-practice/security-pillar.md": {
+   "active": 3
+  },
   "articles/certifications/aws-certified-ai-practitioner.md": {
    "active": 3
   },
   "articles/certifications/aws-certified-cloud-practitioner.md": {
+   "active": 3
+  },
+  "articles/certifications/aws-certified-developer-associate.md": {
+   "active": 3
+  },
+  "articles/certifications/aws-certified-solutions-architect-associate.md": {
+   "active": 3
+  },
+  "articles/certifications/aws-certified-solutions-architect-professional.md": {
    "active": 3
   },
   "articles/compute/amazon-ec2-auto-scaling.md": {
@@ -89,16 +125,40 @@
   "articles/compute/amazon-ec2.md": {
    "active": 3
   },
+  "articles/compute/aws-compute-services.md": {
+   "active": 3
+  },
+  "articles/compute/aws-graviton.md": {
+   "active": 3
+  },
+  "articles/compute/elastic-load-balancing.md": {
+   "active": 3
+  },
+  "articles/containers/amazon-ecr.md": {
+   "active": 3
+  },
   "articles/containers/amazon-ecs.md": {
    "active": 3
   },
+  "articles/containers/amazon-eks.md": {
+   "active": 3
+  },
   "articles/containers/aws-fargate.md": {
+   "active": 3
+  },
+  "articles/containers/eks-auto-mode.md": {
+   "active": 1
+  },
+  "articles/cost-management/aws-budgets.md": {
    "active": 3
   },
   "articles/cost-management/aws-cost-explorer.md": {
    "active": 3
   },
   "articles/cost-management/savings-plans.md": {
+   "active": 3
+  },
+  "articles/databases/amazon-aurora.md": {
    "active": 3
   },
   "articles/databases/amazon-dynamodb.md": {
@@ -113,6 +173,15 @@
   "articles/devops-and-iac/aws-cloudformation.md": {
    "active": 3
   },
+  "articles/devops-and-iac/aws-sam.md": {
+   "active": 3
+  },
+  "articles/global-infrastructure/availability-zones.md": {
+   "active": 3
+  },
+  "articles/global-infrastructure/aws-global-infrastructure.md": {
+   "active": 3
+  },
   "articles/global-infrastructure/aws-partitions.md": {
    "active": 3
   },
@@ -120,6 +189,9 @@
    "active": 3
   },
   "articles/governance-and-operations/amazon-cloudwatch.md": {
+   "active": 3
+  },
+  "articles/governance-and-operations/aws-control-tower.md": {
    "active": 3
   },
   "articles/governance-and-operations/aws-organizations.md": {
@@ -131,7 +203,13 @@
   "articles/identity-and-access/iam-identity-center.md": {
    "active": 3
   },
+  "articles/identity-and-access/service-control-policies.md": {
+   "active": 3
+  },
   "articles/migration-and-hybrid/aws-database-migration-service.md": {
+   "active": 3
+  },
+  "articles/migration-and-hybrid/aws-datasync.md": {
    "active": 3
   },
   "articles/migration-and-hybrid/aws-transform-mgn.md": {
@@ -143,7 +221,16 @@
   "articles/networking-and-content-delivery/amazon-route-53.md": {
    "active": 3
   },
+  "articles/networking-and-content-delivery/amazon-vpc.md": {
+   "active": 3
+  },
+  "articles/networking-and-content-delivery/aws-networking-and-content-delivery.md": {
+   "active": 3
+  },
   "articles/public-sector-and-compliance/aws-govcloud-us.md": {
+   "active": 3
+  },
+  "articles/public-sector-and-compliance/dod-cloud-computing-srg-impact-levels.md": {
    "active": 3
   },
   "articles/public-sector-and-compliance/fedramp-on-aws.md": {
@@ -155,8 +242,23 @@
   "articles/security/aws-kms.md": {
    "active": 3
   },
+  "articles/security/aws-security-services.md": {
+   "active": 3
+  },
+  "articles/serverless-and-integration/amazon-eventbridge.md": {
+   "active": 3
+  },
   "articles/serverless-and-integration/aws-lambda.md": {
    "active": 1
+  },
+  "articles/serverless-and-integration/aws-serverless-services.md": {
+   "active": 3
+  },
+  "articles/storage/amazon-ebs.md": {
+   "active": 3
+  },
+  "articles/storage/amazon-efs.md": {
+   "active": 3
   },
   "articles/storage/amazon-s3.md": {
    "active": 3

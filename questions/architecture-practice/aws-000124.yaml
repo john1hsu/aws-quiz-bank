@@ -1,0 +1,18 @@
+id: aws-000124
+product_area: architecture-practice
+true_statement: Recovery point objective is the longest acceptable time since the last recovery point, while recovery time objective is the longest acceptable delay before service is restored.
+false_statement: Recovery time objective is the longest acceptable time since the last recovery point, while recovery point objective is the longest acceptable delay before service is restored.
+explanation: RPO bounds data loss and RTO bounds downtime; both are set by the business. The false statement attaches each definition to the wrong objective.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/reliability-pillar.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: c7a65a712b541f25a4e73e5da9dd5576061e2b18
+verified_on: '2026-11-10'
+feature_status: concept
+concepts:
+- kt:reliability-pillar
+- kt:disaster-recovery-strategies
+difficulty: 1
+created: '2026-11-17'
+status: active

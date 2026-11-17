@@ -1,0 +1,19 @@
+id: aws-000135
+product_area: containers
+true_statement: An Amazon EKS cluster costs $0.10 per hour while its Kubernetes version is in standard support and $0.60 per hour in extended support (as of 2026-11).
+false_statement: An Amazon EKS cluster costs $0.10 per hour while its Kubernetes version is in standard support and $0.20 per hour in extended support (as of 2026-11).
+explanation: The cluster fee jumps sixfold, from $0.10 to $0.60 per hour, once a version leaves standard support. Worker capacity such as EC2 and EBS is billed separately in both cases.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/amazon-eks.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 4b49fb622c8720aff1451b0d8ec3bbf5ba8a8529
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-eks
+difficulty: 2
+created: '2026-11-17'
+status: active

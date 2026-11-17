@@ -1,0 +1,20 @@
+id: aws-000131
+product_area: compute
+true_statement: Cross-zone load balancing is always on at the load balancer level for Application Load Balancers but off by default for Network and Gateway Load Balancers.
+false_statement: Cross-zone load balancing is always on at the load balancer level for Network and Gateway Load Balancers but off by default for Application Load Balancers.
+explanation: ALBs spread requests across zones by default (it can be turned off per target group). NLBs and GWLBs keep traffic in the receiving zone unless you enable cross-zone balancing, so the false statement swaps the defaults.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/elastic-load-balancing.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: d29450fc8547af186bd4805f52be7cd6f4d77b2b
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:elastic-load-balancing
+- kt:application-load-balancer
+- kt:network-load-balancer
+- kt:gateway-load-balancer
+difficulty: 2
+created: '2026-11-17'
+status: active

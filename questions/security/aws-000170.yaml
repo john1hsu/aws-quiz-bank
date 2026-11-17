@@ -1,0 +1,20 @@
+id: aws-000170
+product_area: security
+true_statement: Under the shared responsibility model, AWS secures the cloud itself, while customers secure what they run in it, such as their content, applications and networks.
+false_statement: Under the shared responsibility model, customers secure the cloud itself, while AWS secures what they run in it, such as their content, applications and networks.
+explanation: AWS is responsible for security of the cloud, and the customer for security in the cloud. The AWS security services are tools for that customer half, which is why the false statement's split is backwards.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-security-services.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: e69756be8188847ee6a5ab0d3cc122d021a3b956
+verified_on: '2026-11-10'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-security-services
+- kt:cloud-security
+difficulty: 1
+created: '2026-11-17'
+status: active

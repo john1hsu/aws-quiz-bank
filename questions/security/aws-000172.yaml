@@ -1,0 +1,20 @@
+id: aws-000172
+product_area: security
+true_statement: Amazon Macie uses machine learning to discover sensitive data, while Amazon GuardDuty is the AWS service for threat detection.
+false_statement: Amazon GuardDuty uses machine learning to discover sensitive data, while Amazon Macie is the AWS service for threat detection.
+explanation: The AWS SRA lists Macie under data protection for finding sensitive data, and GuardDuty under threat detection and continuous monitoring. The false statement swaps the two services.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-security-services.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: e69756be8188847ee6a5ab0d3cc122d021a3b956
+verified_on: '2026-11-10'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-security-services
+- kt:amazon-guardduty
+difficulty: 1
+created: '2026-11-17'
+status: active

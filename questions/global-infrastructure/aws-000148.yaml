@@ -1,0 +1,18 @@
+id: aws-000148
+product_area: global-infrastructure
+true_statement: In AWS's static stability example, a workload that needs six instances runs three in each of three AZs, so losing one AZ requires no scaling.
+false_statement: In AWS's static stability example, a workload that needs six instances runs two in each of three AZs and relies on auto scaling if one AZ is lost.
+explanation: Static stability pre-provisions about 50% extra capacity (nine instances) because scaling during an AZ event depends on the EC2 control plane and takes time. Relying on auto scaling is exactly what the pattern avoids.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/availability-zones.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: e7524c6ddb87ccb229df6e3624b831287ee57087
+verified_on: '2026-11-10'
+feature_status: concept
+concepts:
+- kt:availability-zones
+- kt:reliability-pillar
+difficulty: 3
+created: '2026-11-17'
+status: active

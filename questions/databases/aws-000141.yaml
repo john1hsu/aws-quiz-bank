@@ -1,0 +1,19 @@
+id: aws-000141
+product_area: databases
+true_statement: When an Aurora writer fails, promoting a replica typically restores service in under 60 seconds, while a cluster with no replicas typically needs under 10 minutes to recreate it.
+false_statement: When an Aurora writer fails, promoting a replica typically restores service in under 10 minutes, while a cluster with no replicas typically needs under 60 seconds to recreate it.
+explanation: Promoting an existing reader is fast because it already shares the cluster volume. Without one, Aurora has to recreate the primary in the same AZ, which is slower, so AWS recommends at least one replica in another AZ.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-aurora.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 95cf7237d29eef1157267567dc86e6f997f93300
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-aurora
+difficulty: 2
+created: '2026-11-17'
+status: active

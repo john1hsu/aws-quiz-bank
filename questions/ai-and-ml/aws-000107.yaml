@@ -1,0 +1,19 @@
+id: aws-000107
+product_area: ai-and-ml
+true_statement: The Bedrock Knowledge Bases Retrieve API returns relevant chunks and leaves generation to your code, while RetrieveAndGenerate returns a cited model answer.
+false_statement: The Bedrock Knowledge Bases RetrieveAndGenerate API returns relevant chunks and leaves generation to your code, while Retrieve returns a cited model answer.
+explanation: Retrieve is the lower-level call for teams that want to run their own prompt orchestration. RetrieveAndGenerate does retrieval and inference in one managed call and attaches citations, so the false statement swaps the two operations.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock-knowledge-bases.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: dcec3ad3cab57f0657f5901328498edb316284b1
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-bedrock-knowledge-bases
+difficulty: 2
+created: '2026-11-17'
+status: active

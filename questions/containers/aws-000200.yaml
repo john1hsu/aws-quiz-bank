@@ -1,0 +1,19 @@
+id: aws-000200
+product_area: containers
+true_statement: EKS Auto Mode's built-in NodePools launch only On-Demand C, M and R instances, so Spot or GPU capacity needs a custom NodePool.
+false_statement: EKS Auto Mode's built-in NodePools launch only Spot C, M and R instances, so On-Demand or GPU capacity needs a custom NodePool.
+explanation: The system and general-purpose pools are On-Demand only and limited to C, M and R families of generation 5 or newer, and they cannot be edited. Adding Spot or GPU instances means defining your own NodePool.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/eks-auto-mode.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: c74490b6c686083b0107777ea42116a94c05f373
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:eks-auto-mode
+- kt:spot-instances
+- kt:karpenter
+difficulty: 3
+created: '2026-11-17'
+status: active

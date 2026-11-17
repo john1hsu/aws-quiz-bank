@@ -1,0 +1,20 @@
+id: aws-000173
+product_area: serverless-and-integration
+true_statement: An EventBridge pipe connects one source to one target, while an EventBridge event bus routes events from many sources to many targets.
+false_statement: An EventBridge event bus connects one source to one target, while an EventBridge pipe routes events from many sources to many targets.
+explanation: Pipes are point-to-point, with optional filtering and enrichment in between. Buses are routers that deliver each event to zero or more targets by rule, and the two are often combined.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-eventbridge.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: aa2726130891423ee92c22f01e0381fb8260e528
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-eventbridge
+difficulty: 1
+created: '2026-11-17'
+status: active

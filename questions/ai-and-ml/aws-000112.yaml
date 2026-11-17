@@ -1,0 +1,20 @@
+id: aws-000112
+product_area: ai-and-ml
+true_statement: SageMaker Savings Plans can cut eligible SageMaker AI instance usage by up to 64%, regardless of instance family, size or Region.
+false_statement: SageMaker Savings Plans can cut eligible SageMaker AI instance usage by up to 64%, but only within one instance family in one Region.
+explanation: The SageMaker plan type is flexible across instance families, sizes and Regions, and it covers notebooks, processing, training, real-time inference and batch transform. The false statement wrongly ties it to one family and Region.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-sagemaker-ai.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 8ed5b5aa845ccfbc65e5d0cfd973a0e23866cd5e
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-sagemaker-ai
+- kt:savings-plans
+difficulty: 2
+created: '2026-11-17'
+status: active

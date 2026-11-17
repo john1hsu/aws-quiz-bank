@@ -1,0 +1,20 @@
+id: aws-000175
+product_area: serverless-and-integration
+true_statement: By default, a classic EventBridge bus retries delivery to a target for 24 hours and up to 185 times.
+false_statement: By default, a classic EventBridge bus retries delivery to a target for 2 hours and up to 18 times.
+explanation: EventBridge keeps retrying failed deliveries for a day and up to 185 attempts, but delivery is at-least-once and it does not persist events like a queue, so consumers should be idempotent.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-eventbridge.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: aa2726130891423ee92c22f01e0381fb8260e528
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-eventbridge
+difficulty: 3
+created: '2026-11-17'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000140
+product_area: databases
+true_statement: Aurora synchronously writes each change to six storage nodes spread across Availability Zones, even if every DB instance in the cluster sits in one AZ.
+false_statement: Aurora synchronously writes each change to two storage nodes in the writer's Availability Zone, unless the cluster's DB instances span several AZs.
+explanation: Aurora's durability comes from the shared cluster volume, which always keeps six copies across AZs in the Region. Instance placement affects failover, not how many storage copies exist.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-aurora.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 95cf7237d29eef1157267567dc86e6f997f93300
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-aurora
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-17'
+status: active

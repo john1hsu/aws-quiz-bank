@@ -1,0 +1,18 @@
+id: aws-000195
+product_area: compute
+true_statement: Graviton-based EC2 instances run Linux rather than Windows, so .NET Framework applications must be ported to modern .NET first.
+false_statement: Graviton-based EC2 instances run Windows Server as well as Linux, so .NET Framework applications can move to them unchanged.
+explanation: Graviton EC2 targets Linux and BSD workloads that can be rebuilt for Arm64. Windows workloads, and .NET Framework code that has not been ported, are reasons to stay on x86.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/aws-graviton.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: f1d77d9e417bfe70752be3558a6d251e68526651
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:aws-graviton
+- kt:amazon-ec2
+difficulty: 2
+created: '2026-11-17'
+status: active

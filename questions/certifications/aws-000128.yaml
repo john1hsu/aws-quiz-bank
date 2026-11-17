@@ -1,0 +1,17 @@
+id: aws-000128
+product_area: certifications
+true_statement: On the SAA-C03 exam, Design Secure Architectures carries 30% of scored content and Design Cost-Optimized Architectures carries 20%.
+false_statement: On the SAA-C03 exam, Design Cost-Optimized Architectures carries 30% of scored content and Design Secure Architectures carries 20%.
+explanation: Security is the largest SAA-C03 domain at 30%, followed by resilience at 26% and performance at 24%; cost optimization is the smallest at 20%. The false statement swaps the first and last domains.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-solutions-architect-associate.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: d17ab926f14337f3953339389b9c18aa40509b6c
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:aws-certified-solutions-architect-associate
+difficulty: 2
+created: '2026-11-17'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000164
+product_area: networking-and-content-delivery
+true_statement: AWS suggests Transit Gateway for self-managed routing between many VPCs, and AWS Cloud WAN when you want AWS to manage a global WAN with central policy.
+false_statement: AWS suggests Cloud WAN for self-managed routing between many VPCs, and AWS Transit Gateway when you want AWS to manage a global WAN with central policy.
+explanation: Transit Gateway is a hub you configure and route yourself, including across Regions. Cloud WAN is the managed wide-area network option driven by a central policy, so the false statement swaps their roles.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-networking-and-content-delivery.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: d7b66b053d860334488ef5de69f4e1ab74169672
+verified_on: '2026-11-10'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-networking-and-content-delivery
+- kt:aws-transit-gateway
+difficulty: 2
+created: '2026-11-17'
+status: active

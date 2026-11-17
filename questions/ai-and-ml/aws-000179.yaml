@@ -1,0 +1,19 @@
+id: aws-000179
+product_area: ai-and-ml
+true_statement: Amazon Textract's DetectDocumentText API returns plain OCR text, while AnalyzeDocument also returns structure such as form key-value pairs and tables.
+false_statement: Amazon Textract's AnalyzeDocument API returns plain OCR text, while DetectDocumentText also returns structure such as form key-value pairs and tables.
+explanation: DetectDocumentText is the basic OCR call. AnalyzeDocument adds forms, tables, signatures, layout and Queries so the output keeps the page's relationships, which is why the false statement has them reversed.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-textract.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 8b837f4494efd68839d8ceb3dcef344381c19a85
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-textract
+difficulty: 2
+created: '2026-11-17'
+status: active

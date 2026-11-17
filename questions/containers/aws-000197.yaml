@@ -1,0 +1,21 @@
+id: aws-000197
+product_area: containers
+true_statement: Amazon ECR basic scanning is provided and billed by ECR, while enhanced scanning is provided and billed by Amazon Inspector.
+false_statement: Amazon ECR enhanced scanning is provided and billed by ECR, while basic scanning is provided and billed by Amazon Inspector.
+explanation: Basic scanning is ECR's own feature. Enhanced scanning hands the work to Amazon Inspector, which also covers programming-language packages and can rescan continuously when new CVEs appear.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/amazon-ecr.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 05b4904397658457444f1886fc569a946dc8764e
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-developer-associate
+concepts:
+- kt:amazon-ecr
+- kt:amazon-inspector
+difficulty: 2
+created: '2026-11-17'
+status: active

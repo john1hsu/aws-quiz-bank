@@ -1,0 +1,17 @@
+id: aws-000122
+product_area: architecture-practice
+true_statement: In Well-Architected availability math, a 99.99% service with two hard dependencies at 99.99% each lands at about 99.97% availability.
+false_statement: In Well-Architected availability math, a 99.99% service with two hard dependencies at 99.99% each lands at about 99.9999% availability.
+explanation: Hard dependencies multiply, so each one pulls the total down slightly. Adding nines only applies to independent redundant components, which is where a figure like 99.9999% comes from.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/reliability-pillar.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: c7a65a712b541f25a4e73e5da9dd5576061e2b18
+verified_on: '2026-11-10'
+feature_status: concept
+concepts:
+- kt:reliability-pillar
+difficulty: 3
+created: '2026-11-17'
+status: active

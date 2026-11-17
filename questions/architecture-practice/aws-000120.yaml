@@ -1,0 +1,19 @@
+id: aws-000120
+product_area: architecture-practice
+true_statement: In the Operational Excellence pillar, runbooks guide the response to well-understood events, while playbooks guide the investigation of issues.
+false_statement: In the Operational Excellence pillar, playbooks guide the response to well-understood events, while runbooks guide the investigation of issues.
+explanation: AWS's Operate guidance uses runbooks as step-by-step procedures for known events and playbooks for working out what is wrong when the cause is unclear. The false statement swaps the two.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/operational-excellence-pillar.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: c7dd18276f593b78ff958bea0fd683e28fc7417b
+verified_on: '2026-11-10'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:operational-excellence-pillar
+difficulty: 2
+created: '2026-11-17'
+status: active

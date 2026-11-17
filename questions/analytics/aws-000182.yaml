@@ -1,0 +1,18 @@
+id: aws-000182
+product_area: analytics
+true_statement: In an Amazon EMR cluster, core nodes run tasks and store HDFS data, while task nodes only run tasks and hold no HDFS data.
+false_statement: In an Amazon EMR cluster, task nodes run tasks and store HDFS data, while core nodes only run tasks and hold no HDFS data.
+explanation: Core nodes carry HDFS, so multi-node clusters need at least one. Task nodes are pure compute, which makes them optional and the safe place to add or remove capacity such as Spot.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-emr.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: adf12700b9c64451d3ef4c1bd56b484ad749c745
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:amazon-emr
+- kt:spot-instances
+difficulty: 2
+created: '2026-11-17'
+status: active

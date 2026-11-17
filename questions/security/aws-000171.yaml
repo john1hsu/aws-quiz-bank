@@ -1,0 +1,22 @@
+id: aws-000171
+product_area: security
+true_statement: The AWS SRA makes a Security Tooling account the delegated administrator for services like GuardDuty and Security Hub, and keeps organization CloudTrail logs in a Log Archive account.
+false_statement: The AWS SRA makes a Log Archive account the delegated administrator for services like GuardDuty and Security Hub, and keeps organization CloudTrail logs in a Security Tooling account.
+explanation: In the reference architecture the Security Tooling account (Control Tower's Audit account) administers the detection services, while Log Archive stores CloudTrail logs and Config snapshots. Neither job is meant for the management account.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-security-services.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: e69756be8188847ee6a5ab0d3cc122d021a3b956
+verified_on: '2026-11-10'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-security-services
+- kt:amazon-guardduty
+- kt:aws-security-hub
+- kt:aws-cloudtrail
+difficulty: 3
+created: '2026-11-17'
+status: active

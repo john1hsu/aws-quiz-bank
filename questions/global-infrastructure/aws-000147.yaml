@@ -1,0 +1,20 @@
+id: aws-000147
+product_area: global-infrastructure
+true_statement: Amazon S3 and DynamoDB replicate data across Availability Zones for you, while Amazon RDS and ElastiCache need Multi-AZ switched on.
+false_statement: Amazon RDS and ElastiCache replicate data across Availability Zones for you, while Amazon S3 and DynamoDB need Multi-AZ switched on.
+explanation: Services such as S3, EFS, Aurora, DynamoDB and SQS spread data across AZs automatically. RDS, Redshift and ElastiCache are single-AZ until you enable Multi-AZ, so the false statement reverses the two groups.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/availability-zones.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: e7524c6ddb87ccb229df6e3624b831287ee57087
+verified_on: '2026-11-10'
+feature_status: concept
+concepts:
+- kt:availability-zones
+- kt:amazon-s3
+- kt:amazon-dynamodb
+- kt:amazon-rds
+difficulty: 1
+created: '2026-11-17'
+status: active

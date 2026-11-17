@@ -1,0 +1,20 @@
+id: aws-000163
+product_area: networking-and-content-delivery
+true_statement: A VPC subnet is public when its route table has a route to an internet gateway, and private when it reaches the internet only through a NAT device.
+false_statement: A VPC subnet is public when its route table has a route to a NAT device, and private when it reaches the internet only through an internet gateway.
+explanation: The route table, not the subnet itself, decides the type. An internet gateway route makes a subnet public; outbound-only access through NAT keeps it private.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/amazon-vpc.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 1edc4f31d61999a33d22c9d77c3a0c1c536be8e8
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-vpc
+- kt:subnets-and-route-tables
+difficulty: 1
+created: '2026-11-17'
+status: active

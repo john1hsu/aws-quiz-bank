@@ -1,0 +1,19 @@
+id: aws-000142
+product_area: databases
+true_statement: AWS's rule of thumb is to choose Aurora I/O-Optimized once I/O makes up about 25% or more of total Aurora spend.
+false_statement: AWS's rule of thumb is to choose Aurora Standard once I/O makes up about 25% or more of total Aurora spend.
+explanation: I/O-Optimized drops per-request I/O charges in exchange for higher storage and compute rates, so it pays off when I/O is a large share of the bill. Standard, which bills every I/O, suits workloads where I/O is a small share.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-aurora.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 95cf7237d29eef1157267567dc86e6f997f93300
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-aurora
+difficulty: 3
+created: '2026-11-17'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000193
+product_area: compute
+true_statement: AWS Lambda's default concurrency quota is 1,000 executions per account per Region, and the quota can be adjusted.
+false_statement: AWS Lambda's default concurrency quota is 1,000 executions per function per Region, and the quota can be adjusted.
+explanation: The 1,000-execution default is shared by all functions in an account within one Region. Treating it as a per-function allowance overstates how much concurrency an account has before requesting an increase.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/aws-compute-services.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: d831ad2b0d3b35ef56a22755c0d6247a4b3df836
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-compute-services
+- kt:aws-lambda
+difficulty: 2
+created: '2026-11-17'
+status: active

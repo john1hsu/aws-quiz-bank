@@ -1,0 +1,17 @@
+id: aws-000188
+product_area: certifications
+true_statement: The SAP-C02 Solutions Architect – Professional exam is pass/fail on a 100–1,000 scale, with a scaled score of 750 needed to pass.
+false_statement: The SAP-C02 Solutions Architect – Professional exam is pass/fail on a 100–1,000 scale, with a scaled score of 720 needed to pass.
+explanation: The SAP-C02 exam guide sets the passing mark at 750, under a compensatory model where only the overall score counts. 720 is not the Professional exam's threshold.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-solutions-architect-professional.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 67acd767e7a825e00aec2c5600e277d30334c6b6
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:aws-certified-solutions-architect-professional
+difficulty: 2
+created: '2026-11-17'
+status: active

@@ -1,0 +1,21 @@
+id: aws-000152
+product_area: governance-and-operations
+true_statement: AWS Control Tower enforces preventive controls through Organizations policies such as SCPs, while its detective controls run as AWS Config rules.
+false_statement: AWS Control Tower enforces preventive controls as AWS Config rules, while its detective controls run through Organizations policies such as SCPs.
+explanation: Preventive controls block actions before they happen, which is what SCPs and RCPs do. Detective controls find non-compliant resources after the fact, which is the job of AWS Config rules.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-control-tower.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: f69210769100c6330c64e05c113ebd7c5ed71bc0
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-control-tower
+- kt:service-control-policies
+- kt:aws-config
+difficulty: 2
+created: '2026-11-17'
+status: active

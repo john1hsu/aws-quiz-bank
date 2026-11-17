@@ -1,0 +1,17 @@
+id: aws-000177
+product_area: storage
+true_statement: The default Amazon EFS lifecycle policy moves files to Infrequent Access after 30 days without access and to Archive after 90 days.
+false_statement: The default Amazon EFS lifecycle policy moves files to Infrequent Access after 90 days without access and to Archive after 180 days.
+explanation: EFS tiers untouched files to IA at 30 days and to Archive at 90 days by default. Intelligent-Tiering can bring a file back to Standard when it is read again.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-efs.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 620b61c619e10a7fe8b46aed87cfa3f8e969a64d
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:amazon-efs
+difficulty: 2
+created: '2026-11-17'
+status: active

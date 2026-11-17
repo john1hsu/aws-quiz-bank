@@ -1,0 +1,20 @@
+id: aws-000160
+product_area: migration-and-hybrid
+true_statement: AWS positions Transfer Family for SFTP or FTPS exchanges with partners, and DataSync for bulk migration and recurring sync of file data into AWS.
+false_statement: AWS positions DataSync for SFTP or FTPS exchanges with partners, and Transfer Family for bulk migration and recurring sync of file data into AWS.
+explanation: Transfer Family provides protocol endpoints such as SFTP, FTPS, FTP and AS2 for outside parties. DataSync is the managed copy engine for moving NAS, HDFS or object data into AWS storage.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-datasync.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 2723ac13f35edb81f219310a5dba37d79bd062bd
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-datasync
+- kt:aws-transfer-family
+difficulty: 1
+created: '2026-11-17'
+status: active

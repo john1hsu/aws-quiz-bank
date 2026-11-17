@@ -1,0 +1,19 @@
+id: aws-000117
+product_area: analytics
+true_statement: Each Amazon Redshift cluster earns up to one hour of free Concurrency Scaling credit per day, and unused credit accrues up to 30 hours.
+false_statement: Each Amazon Redshift cluster earns up to one hour of free Concurrency Scaling credit per day, and unused credit expires at the end of that day.
+explanation: Concurrency Scaling credits build up rather than reset daily, to a ceiling of 30 hours per cluster. Only usage beyond the banked credit is billed, per second with a one-minute minimum.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-redshift.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 4bcd71db1d1a4d1b0516d34a8e5eeb69494ca384
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-redshift
+difficulty: 2
+created: '2026-11-17'
+status: active

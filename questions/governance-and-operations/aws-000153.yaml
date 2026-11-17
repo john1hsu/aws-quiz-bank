@@ -1,0 +1,19 @@
+id: aws-000153
+product_area: governance-and-operations
+true_statement: Since Control Tower landing zone 4.0, drift notifications are sent to Amazon EventBridge in the management account instead of to Amazon SNS.
+false_statement: Since Control Tower landing zone 4.0, drift notifications are sent to Amazon SNS in the Audit account instead of to Amazon EventBridge.
+explanation: Landing zone 4.0 moved drift notifications from SNS to EventBridge in the management account. The same release made every integration optional and stopped Control Tower from creating the Security OU.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-control-tower.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: f69210769100c6330c64e05c113ebd7c5ed71bc0
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-control-tower
+difficulty: 3
+created: '2026-11-17'
+status: active

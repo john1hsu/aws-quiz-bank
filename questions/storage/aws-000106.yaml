@@ -1,0 +1,20 @@
+id: aws-000106
+product_area: storage
+true_statement: EBS Multi-Attach lets an io1 or io2 volume attach to up to 16 Nitro-based instances at once, while other volume types attach to one instance.
+false_statement: EBS Multi-Attach lets a gp3 or gp2 volume attach to up to 16 Nitro-based instances at once, while io1 and io2 volumes attach to one instance.
+explanation: 'Multi-Attach is a Provisioned IOPS feature: only io1 and io2 volumes can be shared by up to 16 Nitro instances. General Purpose volumes attach to a single instance.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-ebs.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 03f4c8f297abc8b52614ca6ff607163a213e4371
+verified_on: '2026-11-09'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-ebs
+- kt:amazon-ec2
+difficulty: 2
+created: '2026-11-17'
+status: active

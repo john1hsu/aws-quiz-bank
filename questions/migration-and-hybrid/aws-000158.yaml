@@ -1,0 +1,19 @@
+id: aws-000158
+product_area: migration-and-hybrid
+true_statement: AWS DataSync Enhanced mode runs the prepare, transfer and verify phases in parallel, while Basic mode runs them one after another.
+false_statement: AWS DataSync Basic mode runs the prepare, transfer and verify phases in parallel, while Enhanced mode runs them one after another.
+explanation: Basic mode scans both locations fully before moving any bytes. Enhanced mode streams objects through as they are listed, which is faster for most workloads and removes the per-execution file-count limit.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-datasync.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 2723ac13f35edb81f219310a5dba37d79bd062bd
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-datasync
+difficulty: 2
+created: '2026-11-17'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000181
+product_area: ai-and-ml
+true_statement: In AWS's US West (Oregon) example rates, Textract Forms costs $0.05 per page versus $0.0015 for DetectDocumentText text detection (as of 2026-11).
+false_statement: In AWS's US West (Oregon) example rates, Textract Forms costs $0.0015 per page versus $0.05 for DetectDocumentText text detection (as of 2026-11).
+explanation: Each Textract feature is billed per page on its own, and Forms is far pricier than raw text detection for the first million pages. Requesting Forms when you only need text multiplies the cost by more than 30.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-textract.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 8b837f4494efd68839d8ceb3dcef344381c19a85
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-textract
+difficulty: 2
+created: '2026-11-17'
+status: active

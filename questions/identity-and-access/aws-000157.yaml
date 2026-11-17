@@ -1,0 +1,20 @@
+id: aws-000157
+product_area: identity-and-access
+true_statement: SCPs restrict the root user of each member account, but they never restrict service-linked roles.
+false_statement: SCPs restrict service-linked roles in each member account, but they never restrict the root user.
+explanation: An SCP caps every IAM user and role in a member account, the root user included. Service-linked roles, which AWS services use on your behalf, are exempt, so the false statement reverses the two.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/service-control-policies.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: fe474214117e4ce8142f2ac342681cf2b569b193
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:service-control-policies
+- kt:aws-iam
+difficulty: 2
+created: '2026-11-17'
+status: active

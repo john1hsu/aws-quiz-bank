@@ -1,0 +1,18 @@
+id: aws-000176
+product_area: storage
+true_statement: A Regional EFS file system stores data across several Availability Zones, while a One Zone file system keeps it in one AZ and can lose data if that AZ is damaged.
+false_statement: A One Zone EFS file system stores data across several Availability Zones, while a Regional file system keeps it in one AZ and can lose data if that AZ is damaged.
+explanation: Regional is AWS's recommended type and stays available through AZ failures. One Zone trades that resilience for a single-AZ footprint, which is why AWS turns on backups by default for it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-efs.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 620b61c619e10a7fe8b46aed87cfa3f8e969a64d
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:amazon-efs
+- kt:availability-zones
+difficulty: 1
+created: '2026-11-17'
+status: active

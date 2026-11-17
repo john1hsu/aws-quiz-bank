@@ -1,0 +1,20 @@
+id: aws-000165
+product_area: networking-and-content-delivery
+true_statement: AWS points to Global Accelerator for latency-sensitive applications such as gaming, IoT and VoIP, and to CloudFront for cutting latency on web content.
+false_statement: AWS points to CloudFront for latency-sensitive applications such as gaming, IoT and VoIP, and to Global Accelerator for cutting latency on web content.
+explanation: CloudFront is the CDN that caches and delivers web content from the edge. Global Accelerator gives static IPs and carries traffic over the AWS network to the nearest healthy endpoint, which suits non-cacheable, latency-sensitive traffic.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-networking-and-content-delivery.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: d7b66b053d860334488ef5de69f4e1ab74169672
+verified_on: '2026-11-10'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-networking-and-content-delivery
+- kt:amazon-cloudfront
+difficulty: 2
+created: '2026-11-17'
+status: active

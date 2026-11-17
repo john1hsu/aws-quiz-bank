@@ -1,0 +1,18 @@
+id: aws-000132
+product_area: compute
+true_statement: A Network Load Balancer can give each Availability Zone a static IP or an Elastic IP, which makes it the ELB choice when clients need fixed addresses.
+false_statement: An Application Load Balancer can give each Availability Zone a static IP or an Elastic IP, which makes it the ELB choice when clients need fixed addresses.
+explanation: Static and Elastic IP addresses per zone are a Network Load Balancer feature. Clients reach an ALB through its DNS name, whose node addresses change as it scales.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/elastic-load-balancing.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: d29450fc8547af186bd4805f52be7cd6f4d77b2b
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:elastic-load-balancing
+- kt:network-load-balancer
+difficulty: 2
+created: '2026-11-17'
+status: active

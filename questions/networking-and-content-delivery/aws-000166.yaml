@@ -1,0 +1,19 @@
+id: aws-000166
+product_area: networking-and-content-delivery
+true_statement: For workloads leaving AWS App Mesh, AWS recommends Amazon VPC Lattice on Amazon EKS and Amazon ECS Service Connect on Amazon ECS.
+false_statement: For workloads leaving AWS App Mesh, AWS recommends Amazon ECS Service Connect on Amazon EKS and Amazon VPC Lattice on Amazon ECS.
+explanation: App Mesh closed to new customers in September 2024 and was set to be discontinued on 2026-09-30. Service Connect is an ECS feature, so it cannot be the EKS answer; VPC Lattice is the recommended path for EKS.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-networking-and-content-delivery.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: d7b66b053d860334488ef5de69f4e1ab74169672
+verified_on: '2026-11-10'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-networking-and-content-delivery
+difficulty: 3
+created: '2026-11-17'
+status: active

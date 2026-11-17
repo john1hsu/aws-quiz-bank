@@ -1,0 +1,22 @@
+id: aws-000149
+product_area: global-infrastructure
+true_statement: The control planes of IAM, Route 53 and CloudFront run in us-east-1, while the AWS Global Accelerator control plane runs in us-west-2.
+false_statement: The control planes of IAM, Route 53 and CloudFront run in us-west-2, while the AWS Global Accelerator control plane runs in us-east-1.
+explanation: Most global services keep a single-Region control plane in us-east-1, including IAM, Organizations, Route 53 and CloudFront. Global Accelerator is the exception AWS names, with its control plane in us-west-2.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-global-infrastructure.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 8ef3d9a26b08c627c8bc056445b9e0850d83b189
+verified_on: '2026-11-10'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-global-infrastructure
+- kt:aws-iam
+- kt:amazon-route-53
+- kt:amazon-cloudfront
+difficulty: 3
+created: '2026-11-17'
+status: active

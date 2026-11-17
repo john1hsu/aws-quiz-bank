@@ -1,0 +1,21 @@
+id: aws-000154
+product_area: governance-and-operations
+true_statement: AWS Control Tower has no charge of its own; you pay for the services it drives, mainly AWS Config, AWS CloudTrail and Amazon S3.
+false_statement: AWS Control Tower charges a monthly fee per governed account on top of the AWS Config, AWS CloudTrail and Amazon S3 usage it drives.
+explanation: Control Tower orchestrates other services and bills nothing itself. The costs come from those services, with AWS Config recording in high-churn accounts being the main one to watch.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-control-tower.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: f69210769100c6330c64e05c113ebd7c5ed71bc0
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-control-tower
+- kt:aws-config
+- kt:aws-cloudtrail
+difficulty: 1
+created: '2026-11-17'
+status: active

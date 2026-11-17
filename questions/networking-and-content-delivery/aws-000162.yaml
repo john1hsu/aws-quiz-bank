@@ -1,0 +1,20 @@
+id: aws-000162
+product_area: networking-and-content-delivery
+true_statement: A VPC's primary IPv4 CIDR block must be between /16, which holds 65,536 addresses, and /28, which holds 16.
+false_statement: A VPC's primary IPv4 CIDR block must be between /8, which holds 16,777,216 addresses, and /28, which holds 16.
+explanation: The largest IPv4 block a VPC accepts is a /16. To grow beyond the original block, you add secondary CIDR blocks, because a block cannot be resized after creation.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/amazon-vpc.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 1edc4f31d61999a33d22c9d77c3a0c1c536be8e8
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-vpc
+- kt:vpc-quotas
+difficulty: 2
+created: '2026-11-17'
+status: active

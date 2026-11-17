@@ -1,0 +1,18 @@
+id: aws-000183
+product_area: analytics
+true_statement: Data kept only in an Amazon EMR cluster's HDFS is lost when the cluster terminates, so durable input and output usually live in Amazon S3.
+false_statement: Data kept only in an Amazon EMR cluster's HDFS is saved to Amazon S3 automatically when the cluster terminates, so it survives the cluster.
+explanation: HDFS on EMR is ephemeral and disappears with the cluster, even after a failure. Keeping durable data in S3 through EMRFS or S3A is what makes short-lived, job-scoped clusters practical.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-emr.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: adf12700b9c64451d3ef4c1bd56b484ad749c745
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:amazon-emr
+- kt:amazon-s3
+difficulty: 1
+created: '2026-11-17'
+status: active

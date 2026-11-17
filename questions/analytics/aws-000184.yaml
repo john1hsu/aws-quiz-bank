@@ -1,0 +1,18 @@
+id: aws-000184
+product_area: analytics
+true_statement: An Amazon EMR on EC2 cluster can run one or three primary nodes, and the three-node option needs EMR release 5.23.0 or later.
+false_statement: An Amazon EMR on EC2 cluster can run one or two primary nodes, and the two-node option needs EMR release 5.23.0 or later.
+explanation: For primary-node high availability EMR supports three primary nodes, starting with release 5.23.0. There is no two-primary configuration.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-emr.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: adf12700b9c64451d3ef4c1bd56b484ad749c745
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:amazon-emr
+- kt:amazon-ec2
+difficulty: 3
+created: '2026-11-17'
+status: active

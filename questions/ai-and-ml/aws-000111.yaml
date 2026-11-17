@@ -1,0 +1,19 @@
+id: aws-000111
+product_area: ai-and-ml
+true_statement: Renaming Amazon SageMaker to Amazon SageMaker AI in December 2024 left the sagemaker API namespace and CLI commands unchanged.
+false_statement: Renaming Amazon SageMaker to Amazon SageMaker AI in December 2024 also moved the API namespace and CLI commands to sagemaker-ai.
+explanation: 'The rename was cosmetic at the API level: namespaces, CLI commands, managed policies, CloudFormation resource types and endpoints all kept the sagemaker name. Existing code and templates did not need changes.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-sagemaker-ai.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 8ed5b5aa845ccfbc65e5d0cfd973a0e23866cd5e
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-sagemaker-ai
+difficulty: 2
+created: '2026-11-17'
+status: active

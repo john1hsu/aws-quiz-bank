@@ -1,0 +1,20 @@
+id: aws-000116
+product_area: analytics
+true_statement: A Redshift Serverless workgroup's base capacity defaults to 128 RPUs, and it can be set as low as 4 RPUs in most Regions.
+false_statement: A Redshift Serverless workgroup's base capacity defaults to 4 RPUs, and it can be set as high as 128 RPUs in most Regions.
+explanation: Redshift Serverless starts workgroups at 128 RPUs by default, with a configurable range from 4 up to 512 RPUs in most Regions (1,024 in a few large ones). Four RPUs is the floor, not the default, and 128 is not the ceiling.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-redshift.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 4bcd71db1d1a4d1b0516d34a8e5eeb69494ca384
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-redshift
+- kt:redshift-quotas
+difficulty: 2
+created: '2026-11-17'
+status: active

@@ -1,0 +1,17 @@
+id: aws-000126
+product_area: certifications
+true_statement: Development with AWS Services is the heaviest DVA-C02 domain at 32% of scored content, while Troubleshooting and Optimization is the lightest at 18%.
+false_statement: Troubleshooting and Optimization is the heaviest DVA-C02 domain at 32% of scored content, while Development with AWS Services is the lightest at 18%.
+explanation: The DVA-C02 guide weights Development with AWS Services at 32%, Security at 26%, Deployment at 24% and Troubleshooting and Optimization at 18%. The false statement reverses the top and bottom domains.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-developer-associate.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 879bde709915e07caec65422bcda215351eaf80a
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:aws-certified-developer-associate
+difficulty: 2
+created: '2026-11-17'
+status: active

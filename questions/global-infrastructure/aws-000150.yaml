@@ -1,0 +1,19 @@
+id: aws-000150
+product_area: global-infrastructure
+true_statement: Global services' data planes keep working when their control planes are impaired, so AWS advises keeping control-plane calls out of failover and recovery paths.
+false_statement: Global services' control planes keep working when their data planes are impaired, so AWS advises keeping data-plane calls out of failover and recovery paths.
+explanation: Data-plane functions such as IAM authentication and Route 53 DNS resolution are distributed and stay up. Creating or changing resources depends on a single-Region control plane, so recovery should not rely on it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-global-infrastructure.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 8ef3d9a26b08c627c8bc056445b9e0850d83b189
+verified_on: '2026-11-10'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-global-infrastructure
+difficulty: 3
+created: '2026-11-17'
+status: active

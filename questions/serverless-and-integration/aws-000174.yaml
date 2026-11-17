@@ -1,0 +1,21 @@
+id: aws-000174
+product_area: serverless-and-integration
+true_statement: A rule on a classic EventBridge event bus can have at most 5 targets, and that quota is fixed.
+false_statement: A rule on a classic EventBridge event bus can have at most 50 targets, and that quota is fixed.
+explanation: Classic buses allow 300 rules per bus by default (adjustable) but only 5 targets per rule, which cannot be raised. Wider fan-out needs more rules or another routing layer.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-eventbridge.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: aa2726130891423ee92c22f01e0381fb8260e528
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-eventbridge
+- kt:eventbridge-quotas
+difficulty: 2
+created: '2026-11-17'
+status: active

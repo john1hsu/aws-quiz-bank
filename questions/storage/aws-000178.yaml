@@ -1,0 +1,18 @@
+id: aws-000178
+product_area: storage
+true_statement: Amazon EFS encryption at rest must be chosen when the file system is created, while encryption in transit is turned on when a client mounts it.
+false_statement: Amazon EFS encryption in transit must be chosen when the file system is created, while encryption at rest is turned on when a client mounts it.
+explanation: At-rest encryption with AWS KMS is a creation-time setting of the file system. TLS for data in transit is enabled per mount, using the EFS mount helper, so the false statement swaps the two.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-efs.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 620b61c619e10a7fe8b46aed87cfa3f8e969a64d
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:amazon-efs
+- kt:aws-kms
+difficulty: 2
+created: '2026-11-17'
+status: active

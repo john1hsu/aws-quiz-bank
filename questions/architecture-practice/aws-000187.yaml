@@ -1,0 +1,19 @@
+id: aws-000187
+product_area: architecture-practice
+true_statement: The Security pillar's application security guidance puts threat modeling in the design phase, so flaws are caught while they are still cheap to fix.
+false_statement: The Security pillar's application security guidance puts threat modeling after deployment, so flaws are judged against how the application really runs.
+explanation: SEC 11 covers security across design, development and deployment, and it places threat modeling early. Finding a design flaw before code is written costs far less than fixing it in production.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/security-pillar.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 95035e9177d0967f0502550e4ff94c908e29a36d
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:security-pillar
+difficulty: 2
+created: '2026-11-17'
+status: active

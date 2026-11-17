@@ -1,0 +1,17 @@
+id: aws-000115
+product_area: analytics
+true_statement: Kinesis on-demand mode does not isolate hot partition keys, so AWS recommends provisioned mode for streams with heavily skewed keys.
+false_statement: Kinesis provisioned mode does not isolate hot partition keys, so AWS recommends on-demand mode for streams with heavily skewed keys.
+explanation: On-demand scaling still routes every record with one key to one shard, so a hot key keeps getting throttled. Provisioned mode gives you control over shard distribution, which is why AWS points skewed workloads there.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-kinesis-data-streams.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 57b5b35fdfdb7ec3bfad436d512f4030cb43e196
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:amazon-kinesis-data-streams
+difficulty: 3
+created: '2026-11-17'
+status: active

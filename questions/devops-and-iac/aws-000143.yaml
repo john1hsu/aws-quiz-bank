@@ -1,0 +1,18 @@
+id: aws-000143
+product_area: devops-and-iac
+true_statement: What marks a CloudFormation template as an AWS SAM template is its declaration of the AWS::Serverless-2016-10-31 transform.
+false_statement: What marks a CloudFormation template as an AWS SAM template is its declaration of the AWS::LanguageExtensions transform.
+explanation: The serverless transform is what CloudFormation expands into ordinary resources at deployment. AWS::LanguageExtensions is a separate transform that, when used, has to be listed before the serverless one.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-sam.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: e2205aeea5dec922c56574719ca170bbca776443
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:aws-sam
+- kt:aws-cloudformation
+difficulty: 2
+created: '2026-11-17'
+status: active

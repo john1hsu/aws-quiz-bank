@@ -1,0 +1,21 @@
+id: aws-000198
+product_area: containers
+true_statement: Pulling an ECR image to ECS, Fargate or Lambda in the same Region is free, while cross-Region pulls are charged at internet data transfer rates.
+false_statement: Pulling an ECR image to ECS, Fargate or Lambda in another Region is free, while same-Region pulls are charged at internet data transfer rates.
+explanation: ECR charges nothing for inbound pushes or for same-Region pulls to AWS compute. Moving image data between Regions, by pulling or by replication, is billed like internet transfer.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/amazon-ecr.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 05b4904397658457444f1886fc569a946dc8764e
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-developer-associate
+concepts:
+- kt:amazon-ecr
+- kt:aws-regions
+difficulty: 2
+created: '2026-11-17'
+status: active

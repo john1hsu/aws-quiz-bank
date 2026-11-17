@@ -1,0 +1,21 @@
+id: aws-000103
+product_area: serverless-and-integration
+true_statement: Amazon EventBridge does not guarantee event ordering, so AWS points to Amazon SQS FIFO queues when the sequence of messages matters.
+false_statement: Amazon SQS FIFO queues do not guarantee message ordering, so AWS points to Amazon EventBridge event buses when the sequence of messages matters.
+explanation: EventBridge routes events by content but makes no ordering promise, and it does not persist events. SQS FIFO queues are the ordered option, so the false statement gets the roles backwards.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/aws-serverless-services.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: ffc1b9a8bccbb228e4127347d7abd02679467701
+verified_on: '2026-11-09'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-serverless-services
+- kt:amazon-eventbridge
+- kt:amazon-sqs
+difficulty: 2
+created: '2026-11-17'
+status: active

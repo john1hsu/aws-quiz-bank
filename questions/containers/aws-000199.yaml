@@ -1,0 +1,20 @@
+id: aws-000199
+product_area: containers
+true_statement: An ECR pull through cache rule mirrors images from an upstream registry such as Docker Hub into your private registry and re-checks the upstream for updates.
+false_statement: An ECR replication rule mirrors images from an upstream registry such as Docker Hub into your private registry and re-checks the upstream for updates.
+explanation: Pull through cache is the feature for keeping copies of third-party images in ECR. Replication copies images you already hold in ECR to other Regions or accounts.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/amazon-ecr.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 05b4904397658457444f1886fc569a946dc8764e
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-developer-associate
+concepts:
+- kt:amazon-ecr
+difficulty: 2
+created: '2026-11-17'
+status: active

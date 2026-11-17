@@ -1,0 +1,21 @@
+id: aws-000192
+product_area: compute
+true_statement: AWS cites savings of up to 90% with Spot Instances and up to 72% with Savings Plans compared with On-Demand pricing (as of 2026-11).
+false_statement: AWS cites savings of up to 72% with Spot Instances and up to 90% with Savings Plans compared with On-Demand pricing (as of 2026-11).
+explanation: Spot offers the deepest discount because the capacity can be reclaimed. Savings Plans trade a usage commitment for a smaller maximum discount, so the false statement swaps the two figures.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/aws-compute-services.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: d831ad2b0d3b35ef56a22755c0d6247a4b3df836
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-compute-services
+- kt:savings-plans
+- kt:spot-instances
+difficulty: 2
+created: '2026-11-17'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000196
+product_area: compute
+true_statement: In an EC2 instance name such as M8gd, the g marks a Graviton processor and the d marks local NVMe storage.
+false_statement: In an EC2 instance name such as M8gd, the g marks local NVMe storage and the d marks a Graviton processor.
+explanation: The letter g after the generation number signals Graviton, and an added d signals instance-attached NVMe disks, as in M9gd or C9gd.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/aws-graviton.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: f1d77d9e417bfe70752be3558a6d251e68526651
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:aws-graviton
+- kt:ec2-instance-types
+difficulty: 1
+created: '2026-11-17'
+status: active

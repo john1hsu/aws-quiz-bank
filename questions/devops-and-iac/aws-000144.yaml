@@ -1,0 +1,17 @@
+id: aws-000144
+product_area: devops-and-iac
+true_statement: sam sync can push changes such as Lambda code directly to a service API instead of deploying through CloudFormation, so AWS advises it only for development stacks.
+false_statement: sam deploy can push changes such as Lambda code directly to a service API instead of deploying through CloudFormation, so AWS advises it only for development stacks.
+explanation: sam sync trades consistency for speed and can drift from the template, which is why AWS keeps it to development. sam deploy always transforms the template and deploys it as a CloudFormation stack, the path recommended for production.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-sam.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: e2205aeea5dec922c56574719ca170bbca776443
+verified_on: '2026-11-10'
+feature_status: current
+concepts:
+- kt:aws-sam
+difficulty: 2
+created: '2026-11-17'
+status: active

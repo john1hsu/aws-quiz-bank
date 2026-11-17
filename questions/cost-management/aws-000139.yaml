@@ -1,0 +1,21 @@
+id: aws-000139
+product_area: cost-management
+true_statement: A budget action run from an Organizations management account can attach an SCP to a member account but cannot target EC2 or RDS instances in that account.
+false_statement: A budget action run from an Organizations management account can target EC2 or RDS instances in a member account but cannot attach an SCP to that account.
+explanation: Attaching an SCP is a management-account action that reaches other accounts. EC2 and RDS instance actions work only on instances in the budget's own account, so the false statement reverses what crosses the account boundary.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-budgets.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: f0608ea22690a25e3fabf4f7fa21ff4f34fa4b50
+verified_on: '2026-11-10'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-budgets
+- kt:service-control-policies
+- kt:aws-organizations
+difficulty: 3
+created: '2026-11-17'
+status: active

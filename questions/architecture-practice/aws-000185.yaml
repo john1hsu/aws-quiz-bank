@@ -1,0 +1,20 @@
+id: aws-000185
+product_area: architecture-practice
+true_statement: Security pillar best practice SEC01-BP01 calls for separating workloads and environments into different AWS accounts organized into OUs.
+false_statement: Security pillar best practice SEC01-BP01 calls for separating workloads and environments into different VPCs inside one shared AWS account.
+explanation: SEC01-BP01 uses accounts as the isolation boundary, grouped into organizational units whose controls member accounts inherit. Mixing workloads of different data sensitivity in one account is one of its named anti-patterns.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/security-pillar.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 95035e9177d0967f0502550e4ff94c908e29a36d
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:security-pillar
+- kt:aws-organizations
+difficulty: 2
+created: '2026-11-17'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000186
+product_area: architecture-practice
+true_statement: The Security pillar's apply-security-at-all-layers principle means defense in depth, from the network edge and VPC down to the application and its code.
+false_statement: The Security pillar's maintain-traceability principle means defense in depth, from the network edge and VPC down to the application and its code.
+explanation: Layered controls are the point of applying security at all layers. Maintaining traceability is a different principle, about monitoring, alerting on and auditing actions in real time.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/security-pillar.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: 95035e9177d0967f0502550e4ff94c908e29a36d
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:security-pillar
+difficulty: 1
+created: '2026-11-17'
+status: active

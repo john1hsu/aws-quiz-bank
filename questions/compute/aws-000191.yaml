@@ -1,0 +1,21 @@
+id: aws-000191
+product_area: compute
+true_statement: AWS App Runner is no longer open to new customers, and AWS points new container web apps to Amazon ECS Express Mode instead.
+false_statement: Amazon ECS Express Mode is no longer open to new customers, and AWS points new container web apps to AWS App Runner instead.
+explanation: App Runner gets no new features and is closed to new customers, though existing customers can keep creating services. ECS Express Mode is the suggested path, provisioning a Fargate service, an ALB and auto scaling from one API call.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/aws-compute-services.md
+  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
+  blob: d831ad2b0d3b35ef56a22755c0d6247a4b3df836
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-compute-services
+- kt:amazon-ecs
+- kt:aws-fargate
+difficulty: 2
+created: '2026-11-17'
+status: active

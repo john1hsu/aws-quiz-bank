@@ -1,7 +1,7 @@
 {
  "version": 1,
- "count": 100,
- "active": 100,
+ "count": 200,
+ "active": 200,
  "questions": [
   {
    "id": "aws-000001",
@@ -1780,6 +1780,1816 @@
    "difficulty": 2,
    "status": "active",
    "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/serverless-and-integration/aws-lambda.md"
+  },
+  {
+   "id": "aws-000101",
+   "area": "serverless-and-integration",
+   "t": "AWS Step Functions Standard Workflows run exactly-once for up to one year, while Express Workflows run at-least-once for up to five minutes.",
+   "f": "AWS Step Functions Express Workflows run exactly-once for up to one year, while Standard Workflows run at-least-once for up to five minutes.",
+   "x": "Standard Workflows are the long-running, exactly-once option. Express Workflows trade that guarantee for high volume and are capped at five minutes with at-least-once execution, so the false statement swaps the two types.",
+   "verified": "2026-11-09",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-serverless-services",
+    "kt:aws-step-functions"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/serverless-and-integration/aws-serverless-services.md"
+  },
+  {
+   "id": "aws-000102",
+   "area": "serverless-and-integration",
+   "t": "A single AWS Lambda invocation can run for at most 15 minutes, whereas an AWS Fargate task has no hard limit on how long it runs.",
+   "f": "A single AWS Fargate task can run for at most 15 minutes, whereas an AWS Lambda invocation has no hard limit on how long it runs.",
+   "x": "Lambda caps each invocation at 15 minutes, which is why long-running processes are steered to Fargate. Fargate tasks have no fixed duration cap, so the false statement reverses the two services.",
+   "verified": "2026-11-09",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-serverless-services",
+    "kt:aws-lambda",
+    "kt:aws-fargate"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/serverless-and-integration/aws-serverless-services.md"
+  },
+  {
+   "id": "aws-000103",
+   "area": "serverless-and-integration",
+   "t": "Amazon EventBridge does not guarantee event ordering, so AWS points to Amazon SQS FIFO queues when the sequence of messages matters.",
+   "f": "Amazon SQS FIFO queues do not guarantee message ordering, so AWS points to Amazon EventBridge event buses when the sequence of messages matters.",
+   "x": "EventBridge routes events by content but makes no ordering promise, and it does not persist events. SQS FIFO queues are the ordered option, so the false statement gets the roles backwards.",
+   "verified": "2026-11-09",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-serverless-services",
+    "kt:amazon-eventbridge",
+    "kt:amazon-sqs"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/serverless-and-integration/aws-serverless-services.md"
+  },
+  {
+   "id": "aws-000104",
+   "area": "storage",
+   "t": "An Amazon EBS volume can attach only to instances in its own Availability Zone, but its snapshots can be restored into any AZ in the Region.",
+   "f": "An Amazon EBS volume can attach to instances in any Availability Zone of its Region, but its snapshots can be restored only into the original AZ.",
+   "x": "Volumes are replicated and attached within a single AZ. Snapshots sit in AWS-managed storage replicated across the Region's AZs, which is what makes cross-AZ recovery possible, so the false statement reverses the scopes.",
+   "verified": "2026-11-09",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-ebs",
+    "kt:availability-zones",
+    "kt:ebs-snapshots"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/storage/amazon-ebs.md"
+  },
+  {
+   "id": "aws-000105",
+   "area": "storage",
+   "t": "An EBS gp3 volume gets a baseline of 3,000 IOPS and 125 MiB/s at any size, while gp2 performance scales with size at 3 IOPS per GiB.",
+   "f": "An EBS gp2 volume gets a baseline of 3,000 IOPS and 125 MiB/s at any size, while gp3 performance scales with size at 3 IOPS per GiB.",
+   "x": "gp3 decouples performance from capacity with a fixed baseline you can provision above. gp2 ties IOPS to volume size and relies on burst credits for small volumes, so the false statement swaps the two types.",
+   "verified": "2026-11-09",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-ebs"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/storage/amazon-ebs.md"
+  },
+  {
+   "id": "aws-000106",
+   "area": "storage",
+   "t": "EBS Multi-Attach lets an io1 or io2 volume attach to up to 16 Nitro-based instances at once, while other volume types attach to one instance.",
+   "f": "EBS Multi-Attach lets a gp3 or gp2 volume attach to up to 16 Nitro-based instances at once, while io1 and io2 volumes attach to one instance.",
+   "x": "Multi-Attach is a Provisioned IOPS feature: only io1 and io2 volumes can be shared by up to 16 Nitro instances. General Purpose volumes attach to a single instance.",
+   "verified": "2026-11-09",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-ebs",
+    "kt:amazon-ec2"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/storage/amazon-ebs.md"
+  },
+  {
+   "id": "aws-000107",
+   "area": "ai-and-ml",
+   "t": "The Bedrock Knowledge Bases Retrieve API returns relevant chunks and leaves generation to your code, while RetrieveAndGenerate returns a cited model answer.",
+   "f": "The Bedrock Knowledge Bases RetrieveAndGenerate API returns relevant chunks and leaves generation to your code, while Retrieve returns a cited model answer.",
+   "x": "Retrieve is the lower-level call for teams that want to run their own prompt orchestration. RetrieveAndGenerate does retrieval and inference in one managed call and attaches citations, so the false statement swaps the two operations.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-ai-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-bedrock-knowledge-bases"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/ai-and-ml/amazon-bedrock-knowledge-bases.md"
+  },
+  {
+   "id": "aws-000108",
+   "area": "ai-and-ml",
+   "t": "A Bedrock knowledge base connected to Amazon Redshift is not vectorized; Bedrock translates each natural-language question into SQL instead.",
+   "f": "A Bedrock knowledge base connected to Amazon Redshift is vectorized; Bedrock embeds the table rows into a vector store instead of generating SQL.",
+   "x": "Structured stores such as Redshift or the Glue Data Catalog skip the chunk-and-embed pipeline. Bedrock uses schema metadata and query history to generate SQL against the data, rather than indexing rows as vectors.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-ai-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-bedrock-knowledge-bases",
+    "kt:amazon-redshift"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/ai-and-ml/amazon-bedrock-knowledge-bases.md"
+  },
+  {
+   "id": "aws-000109",
+   "area": "ai-and-ml",
+   "t": "By default, deleting a Bedrock knowledge base or data source also removes its vectors from S3 Vectors unless the data deletion policy is set to Retain.",
+   "f": "By default, deleting a Bedrock knowledge base or data source keeps its vectors in S3 Vectors unless the data deletion policy is set to Delete.",
+   "x": "The default data deletion policy is Delete, so the vectors go with the knowledge base or data source. Keeping them requires choosing Retain explicitly.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-ai-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-bedrock-knowledge-bases",
+    "kt:amazon-s3"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/ai-and-ml/amazon-bedrock-knowledge-bases.md"
+  },
+  {
+   "id": "aws-000110",
+   "area": "ai-and-ml",
+   "t": "SageMaker AI asynchronous inference accepts payloads up to 1 GB with up to one hour of processing, while serverless inference caps payloads at 4 MB.",
+   "f": "SageMaker AI serverless inference accepts payloads up to 1 GB with up to one hour of processing, while asynchronous inference caps payloads at 4 MB.",
+   "x": "Asynchronous inference queues requests, which is what lets it take very large payloads and long processing times. Serverless inference is meant for intermittent, small requests and is limited to 4 MB and 60 seconds.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-ai-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-sagemaker-ai"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/ai-and-ml/amazon-sagemaker-ai.md"
+  },
+  {
+   "id": "aws-000111",
+   "area": "ai-and-ml",
+   "t": "Renaming Amazon SageMaker to Amazon SageMaker AI in December 2024 left the sagemaker API namespace and CLI commands unchanged.",
+   "f": "Renaming Amazon SageMaker to Amazon SageMaker AI in December 2024 also moved the API namespace and CLI commands to sagemaker-ai.",
+   "x": "The rename was cosmetic at the API level: namespaces, CLI commands, managed policies, CloudFormation resource types and endpoints all kept the sagemaker name. Existing code and templates did not need changes.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-ai-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-sagemaker-ai"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/ai-and-ml/amazon-sagemaker-ai.md"
+  },
+  {
+   "id": "aws-000112",
+   "area": "ai-and-ml",
+   "t": "SageMaker Savings Plans can cut eligible SageMaker AI instance usage by up to 64%, regardless of instance family, size or Region.",
+   "f": "SageMaker Savings Plans can cut eligible SageMaker AI instance usage by up to 64%, but only within one instance family in one Region.",
+   "x": "The SageMaker plan type is flexible across instance families, sizes and Regions, and it covers notebooks, processing, training, real-time inference and batch transform. The false statement wrongly ties it to one family and Region.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-ai-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-sagemaker-ai",
+    "kt:savings-plans"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/ai-and-ml/amazon-sagemaker-ai.md"
+  },
+  {
+   "id": "aws-000113",
+   "area": "analytics",
+   "t": "Kinesis Data Streams keeps records for 24 hours by default, and the retention period can be raised to as much as 365 days for an extra charge.",
+   "f": "Kinesis Data Streams keeps records for 7 days by default, and the retention period can be raised to as much as 365 days for an extra charge.",
+   "x": "The default retention is 24 hours, adjustable up to 8,760 hours (365 days), with retention beyond a day billed separately. Seven days is not the default.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-kinesis-data-streams"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/analytics/amazon-kinesis-data-streams.md"
+  },
+  {
+   "id": "aws-000114",
+   "area": "analytics",
+   "t": "A provisioned Kinesis shard accepts up to 1 MB/s or 1,000 records/s of writes and serves up to 2 MB/s of reads.",
+   "f": "A provisioned Kinesis shard accepts up to 2 MB/s or 1,000 records/s of writes and serves up to 1 MB/s of reads.",
+   "x": "Each provisioned shard's read capacity is double its write capacity: 1 MB/s (or 1,000 records/s) in and 2 MB/s out. The false statement reverses the two throughput figures.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-kinesis-data-streams",
+    "kt:kinesis-data-streams-quotas"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/analytics/amazon-kinesis-data-streams.md"
+  },
+  {
+   "id": "aws-000115",
+   "area": "analytics",
+   "t": "Kinesis on-demand mode does not isolate hot partition keys, so AWS recommends provisioned mode for streams with heavily skewed keys.",
+   "f": "Kinesis provisioned mode does not isolate hot partition keys, so AWS recommends on-demand mode for streams with heavily skewed keys.",
+   "x": "On-demand scaling still routes every record with one key to one shard, so a hot key keeps getting throttled. Provisioned mode gives you control over shard distribution, which is why AWS points skewed workloads there.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-kinesis-data-streams"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/analytics/amazon-kinesis-data-streams.md"
+  },
+  {
+   "id": "aws-000116",
+   "area": "analytics",
+   "t": "A Redshift Serverless workgroup's base capacity defaults to 128 RPUs, and it can be set as low as 4 RPUs in most Regions.",
+   "f": "A Redshift Serverless workgroup's base capacity defaults to 4 RPUs, and it can be set as high as 128 RPUs in most Regions.",
+   "x": "Redshift Serverless starts workgroups at 128 RPUs by default, with a configurable range from 4 up to 512 RPUs in most Regions (1,024 in a few large ones). Four RPUs is the floor, not the default, and 128 is not the ceiling.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-redshift",
+    "kt:redshift-quotas"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/analytics/amazon-redshift.md"
+  },
+  {
+   "id": "aws-000117",
+   "area": "analytics",
+   "t": "Each Amazon Redshift cluster earns up to one hour of free Concurrency Scaling credit per day, and unused credit accrues up to 30 hours.",
+   "f": "Each Amazon Redshift cluster earns up to one hour of free Concurrency Scaling credit per day, and unused credit expires at the end of that day.",
+   "x": "Concurrency Scaling credits build up rather than reset daily, to a ceiling of 30 hours per cluster. Only usage beyond the banked credit is billed, per second with a one-minute minimum.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-redshift"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/analytics/amazon-redshift.md"
+  },
+  {
+   "id": "aws-000118",
+   "area": "analytics",
+   "t": "AWS positions Amazon Redshift as the central warehouse for complex BI at scale, and Amazon Athena for ad-hoc queries on S3 data without loading it first.",
+   "f": "AWS positions Amazon Athena as the central warehouse for complex BI at scale, and Amazon Redshift for ad-hoc queries on S3 data without loading it first.",
+   "x": "Redshift is the MPP warehouse you load curated data into for heavy, frequent, concurrent queries. Athena queries files where they sit, which suits interactive exploration, so the false statement swaps the services.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-redshift",
+    "kt:amazon-athena"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/analytics/amazon-redshift.md"
+  },
+  {
+   "id": "aws-000119",
+   "area": "architecture-practice",
+   "t": "The Well-Architected Operational Excellence pillar groups its best practices into four areas: Organization, Prepare, Operate and Evolve.",
+   "f": "The Well-Architected Operational Excellence pillar groups its best practices into four areas: Organization, Prepare, Operate and Recover.",
+   "x": "The fourth area is Evolve, which covers learning and continuous improvement (OPS 11). Recovery from failure is a reliability theme, not one of this pillar's areas.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:operational-excellence-pillar",
+    "kt:aws-well-architected-framework"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/architecture-practice/operational-excellence-pillar.md"
+  },
+  {
+   "id": "aws-000120",
+   "area": "architecture-practice",
+   "t": "In the Operational Excellence pillar, runbooks guide the response to well-understood events, while playbooks guide the investigation of issues.",
+   "f": "In the Operational Excellence pillar, playbooks guide the response to well-understood events, while runbooks guide the investigation of issues.",
+   "x": "AWS's Operate guidance uses runbooks as step-by-step procedures for known events and playbooks for working out what is wrong when the cause is unclear. The false statement swaps the two.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:operational-excellence-pillar"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/architecture-practice/operational-excellence-pillar.md"
+  },
+  {
+   "id": "aws-000121",
+   "area": "architecture-practice",
+   "t": "In the Operational Excellence pillar, post-incident analysis of customer-impacting events belongs to the Evolve area rather than the Operate area.",
+   "f": "In the Operational Excellence pillar, post-incident analysis of customer-impacting events belongs to the Operate area rather than the Evolve area.",
+   "x": "Operate (OPS 8 to OPS 10) covers observability, health and event management while things run. Learning from incidents afterward is part of Evolve's OPS 11 on how operations improve.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:operational-excellence-pillar"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/architecture-practice/operational-excellence-pillar.md"
+  },
+  {
+   "id": "aws-000122",
+   "area": "architecture-practice",
+   "t": "In Well-Architected availability math, a 99.99% service with two hard dependencies at 99.99% each lands at about 99.97% availability.",
+   "f": "In Well-Architected availability math, a 99.99% service with two hard dependencies at 99.99% each lands at about 99.9999% availability.",
+   "x": "Hard dependencies multiply, so each one pulls the total down slightly. Adding nines only applies to independent redundant components, which is where a figure like 99.9999% comes from.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:reliability-pillar"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/architecture-practice/reliability-pillar.md"
+  },
+  {
+   "id": "aws-000123",
+   "area": "architecture-practice",
+   "t": "A 99.99% availability target allows about 52 minutes of downtime a year, while a 99.9% target allows about 8 hours 45 minutes.",
+   "f": "A 99.99% availability target allows about 8 hours 45 minutes of downtime a year, while a 99.9% target allows about 52 minutes.",
+   "x": "Each extra nine cuts allowed downtime roughly tenfold. The Reliability pillar maps 99.9% to about 8 hours 45 minutes a year and 99.99% to about 52 minutes, so the false statement reverses them.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:reliability-pillar"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/architecture-practice/reliability-pillar.md"
+  },
+  {
+   "id": "aws-000124",
+   "area": "architecture-practice",
+   "t": "Recovery point objective is the longest acceptable time since the last recovery point, while recovery time objective is the longest acceptable delay before service is restored.",
+   "f": "Recovery time objective is the longest acceptable time since the last recovery point, while recovery point objective is the longest acceptable delay before service is restored.",
+   "x": "RPO bounds data loss and RTO bounds downtime; both are set by the business. The false statement attaches each definition to the wrong objective.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:reliability-pillar",
+    "kt:disaster-recovery-strategies"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/architecture-practice/reliability-pillar.md"
+  },
+  {
+   "id": "aws-000125",
+   "area": "certifications",
+   "t": "The DVA-C02 Developer – Associate exam can be taken until November 30, 2026, and its replacement DVA-C03 becomes generally available on December 1, 2026.",
+   "f": "The DVA-C02 Developer – Associate exam can be taken until October 27, 2026, and its replacement DVA-C03 becomes generally available that same day.",
+   "x": "October 27, 2026 is when DVA-C03 registration opened; DVA-C02 stays available through November 30 and DVA-C03 goes GA on December 1, 2026.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-certified-developer-associate"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-developer-associate.md"
+  },
+  {
+   "id": "aws-000126",
+   "area": "certifications",
+   "t": "Development with AWS Services is the heaviest DVA-C02 domain at 32% of scored content, while Troubleshooting and Optimization is the lightest at 18%.",
+   "f": "Troubleshooting and Optimization is the heaviest DVA-C02 domain at 32% of scored content, while Development with AWS Services is the lightest at 18%.",
+   "x": "The DVA-C02 guide weights Development with AWS Services at 32%, Security at 26%, Deployment at 24% and Troubleshooting and Optimization at 18%. The false statement reverses the top and bottom domains.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-certified-developer-associate"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-developer-associate.md"
+  },
+  {
+   "id": "aws-000127",
+   "area": "certifications",
+   "t": "AWS Certified Developer – Associate is renewed for three more years by passing the latest Developer – Associate exam or AWS Certified DevOps Engineer – Professional.",
+   "f": "AWS Certified Developer – Associate is renewed for three more years by passing the latest Developer – Associate exam or AWS Certified Solutions Architect – Professional.",
+   "x": "The professional exam that recertifies Developer – Associate is DevOps Engineer – Professional, the next step on the developer track. Solutions Architect – Professional is not listed as a renewal path for it.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-certified-developer-associate"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-developer-associate.md"
+  },
+  {
+   "id": "aws-000128",
+   "area": "certifications",
+   "t": "On the SAA-C03 exam, Design Secure Architectures carries 30% of scored content and Design Cost-Optimized Architectures carries 20%.",
+   "f": "On the SAA-C03 exam, Design Cost-Optimized Architectures carries 30% of scored content and Design Secure Architectures carries 20%.",
+   "x": "Security is the largest SAA-C03 domain at 30%, followed by resilience at 26% and performance at 24%; cost optimization is the smallest at 20%. The false statement swaps the first and last domains.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-solutions-architect-associate.md"
+  },
+  {
+   "id": "aws-000129",
+   "area": "certifications",
+   "t": "SAA-C03 is scored on a compensatory model, so a candidate needs a scaled 720 overall rather than a passing score in each section.",
+   "f": "SAA-C03 is scored section by section, so a candidate needs a scaled 720 in each domain rather than just a passing score overall.",
+   "x": "Under the compensatory model only the overall scaled score from 100 to 1,000 decides pass or fail, with 720 needed. Strength in one domain can offset weakness in another, which is why per-section feedback is only a rough guide.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-solutions-architect-associate.md"
+  },
+  {
+   "id": "aws-000130",
+   "area": "certifications",
+   "t": "Disaster recovery strategies such as pilot light and warm standby are tested under the SAA-C03 domain Design Resilient Architectures.",
+   "f": "Disaster recovery strategies such as pilot light and warm standby are tested under the SAA-C03 domain Design High-Performing Architectures.",
+   "x": "The resilience domain covers loose coupling, multi-AZ and multi-Region failover, and DR strategies measured against RPO and RTO. The high-performing domain is about choosing storage, compute, database and network services.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-certified-solutions-architect-associate",
+    "kt:disaster-recovery-strategies"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-solutions-architect-associate.md"
+  },
+  {
+   "id": "aws-000131",
+   "area": "compute",
+   "t": "Cross-zone load balancing is always on at the load balancer level for Application Load Balancers but off by default for Network and Gateway Load Balancers.",
+   "f": "Cross-zone load balancing is always on at the load balancer level for Network and Gateway Load Balancers but off by default for Application Load Balancers.",
+   "x": "ALBs spread requests across zones by default (it can be turned off per target group). NLBs and GWLBs keep traffic in the receiving zone unless you enable cross-zone balancing, so the false statement swaps the defaults.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:elastic-load-balancing",
+    "kt:application-load-balancer",
+    "kt:network-load-balancer",
+    "kt:gateway-load-balancer"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/elastic-load-balancing.md"
+  },
+  {
+   "id": "aws-000132",
+   "area": "compute",
+   "t": "A Network Load Balancer can give each Availability Zone a static IP or an Elastic IP, which makes it the ELB choice when clients need fixed addresses.",
+   "f": "An Application Load Balancer can give each Availability Zone a static IP or an Elastic IP, which makes it the ELB choice when clients need fixed addresses.",
+   "x": "Static and Elastic IP addresses per zone are a Network Load Balancer feature. Clients reach an ALB through its DNS name, whose node addresses change as it scales.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:elastic-load-balancing",
+    "kt:network-load-balancer"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/elastic-load-balancing.md"
+  },
+  {
+   "id": "aws-000133",
+   "area": "compute",
+   "t": "A Gateway Load Balancer passes traffic to its fleet of network appliances encapsulated in GENEVE on port 6081.",
+   "f": "A Gateway Load Balancer passes traffic to its fleet of network appliances encapsulated in GRE on port 4789.",
+   "x": "GWLB inserts firewalls and inspection appliances into the traffic path using GENEVE encapsulation on port 6081, with a 5-tuple hash so each flow reaches the same appliance.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:elastic-load-balancing",
+    "kt:gateway-load-balancer"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/elastic-load-balancing.md"
+  },
+  {
+   "id": "aws-000134",
+   "area": "containers",
+   "t": "Each Kubernetes minor version on Amazon EKS gets 14 months of standard support followed by 12 months of extended support.",
+   "f": "Each Kubernetes minor version on Amazon EKS gets 12 months of standard support followed by 14 months of extended support.",
+   "x": "EKS gives every minor version 14 months of standard support from its EKS release and then 12 months of extended support, 26 months in total. The false statement swaps the two periods.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-eks"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/amazon-eks.md"
+  },
+  {
+   "id": "aws-000135",
+   "area": "containers",
+   "t": "An Amazon EKS cluster costs $0.10 per hour while its Kubernetes version is in standard support and $0.60 per hour in extended support (as of 2026-11).",
+   "f": "An Amazon EKS cluster costs $0.10 per hour while its Kubernetes version is in standard support and $0.20 per hour in extended support (as of 2026-11).",
+   "x": "The cluster fee jumps sixfold, from $0.10 to $0.60 per hour, once a version leaves standard support. Worker capacity such as EC2 and EBS is billed separately in both cases.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-eks"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/amazon-eks.md"
+  },
+  {
+   "id": "aws-000136",
+   "area": "containers",
+   "t": "The EKS cluster upgrade policy defaults to EXTENDED, so a cluster left on an aging version moves into paid extended support unless you opt out.",
+   "f": "The EKS cluster upgrade policy defaults to STANDARD, so a cluster left on an aging version is auto-upgraded when standard support ends unless you opt in.",
+   "x": "Extended support is the default for new and existing clusters. Only if you opt out does EKS auto-upgrade the control plane at the end of standard support instead of billing extended support.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-eks"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/amazon-eks.md"
+  },
+  {
+   "id": "aws-000137",
+   "area": "cost-management",
+   "t": "AWS Budgets data refreshes up to three times a day, so a budget is not a real-time hard cap and costs can keep rising after an alert.",
+   "f": "AWS Budgets data refreshes every minute, so a budget works as a real-time hard cap that stops costs from rising after an alert.",
+   "x": "Budget figures update only a few times a day, usually 8 to 12 hours apart, and billing lags real usage. That is why AWS suggests pairing Budgets with Cost Anomaly Detection for sudden spikes.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-budgets"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/cost-management/aws-budgets.md"
+  },
+  {
+   "id": "aws-000138",
+   "area": "cost-management",
+   "t": "The first two action-enabled AWS budgets each month are free, and each additional action-enabled budget costs $0.10 per day (as of 2026-11).",
+   "f": "The first ten action-enabled AWS budgets each month are free, and each additional action-enabled budget costs $0.10 per day (as of 2026-11).",
+   "x": "Budget monitoring and alerts are free, and two budgets with actions are included each month however many actions they hold. Beyond those two, each action-enabled budget is billed $0.10 per day.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-budgets"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/cost-management/aws-budgets.md"
+  },
+  {
+   "id": "aws-000139",
+   "area": "cost-management",
+   "t": "A budget action run from an Organizations management account can attach an SCP to a member account but cannot target EC2 or RDS instances in that account.",
+   "f": "A budget action run from an Organizations management account can target EC2 or RDS instances in a member account but cannot attach an SCP to that account.",
+   "x": "Attaching an SCP is a management-account action that reaches other accounts. EC2 and RDS instance actions work only on instances in the budget's own account, so the false statement reverses what crosses the account boundary.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-budgets",
+    "kt:service-control-policies",
+    "kt:aws-organizations"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/cost-management/aws-budgets.md"
+  },
+  {
+   "id": "aws-000140",
+   "area": "databases",
+   "t": "Aurora synchronously writes each change to six storage nodes spread across Availability Zones, even if every DB instance in the cluster sits in one AZ.",
+   "f": "Aurora synchronously writes each change to two storage nodes in the writer's Availability Zone, unless the cluster's DB instances span several AZs.",
+   "x": "Aurora's durability comes from the shared cluster volume, which always keeps six copies across AZs in the Region. Instance placement affects failover, not how many storage copies exist.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:amazon-aurora",
+    "kt:availability-zones"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/databases/amazon-aurora.md"
+  },
+  {
+   "id": "aws-000141",
+   "area": "databases",
+   "t": "When an Aurora writer fails, promoting a replica typically restores service in under 60 seconds, while a cluster with no replicas typically needs under 10 minutes to recreate it.",
+   "f": "When an Aurora writer fails, promoting a replica typically restores service in under 10 minutes, while a cluster with no replicas typically needs under 60 seconds to recreate it.",
+   "x": "Promoting an existing reader is fast because it already shares the cluster volume. Without one, Aurora has to recreate the primary in the same AZ, which is slower, so AWS recommends at least one replica in another AZ.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:amazon-aurora"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/databases/amazon-aurora.md"
+  },
+  {
+   "id": "aws-000142",
+   "area": "databases",
+   "t": "AWS's rule of thumb is to choose Aurora I/O-Optimized once I/O makes up about 25% or more of total Aurora spend.",
+   "f": "AWS's rule of thumb is to choose Aurora Standard once I/O makes up about 25% or more of total Aurora spend.",
+   "x": "I/O-Optimized drops per-request I/O charges in exchange for higher storage and compute rates, so it pays off when I/O is a large share of the bill. Standard, which bills every I/O, suits workloads where I/O is a small share.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:amazon-aurora"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/databases/amazon-aurora.md"
+  },
+  {
+   "id": "aws-000143",
+   "area": "devops-and-iac",
+   "t": "What marks a CloudFormation template as an AWS SAM template is its declaration of the AWS::Serverless-2016-10-31 transform.",
+   "f": "What marks a CloudFormation template as an AWS SAM template is its declaration of the AWS::LanguageExtensions transform.",
+   "x": "The serverless transform is what CloudFormation expands into ordinary resources at deployment. AWS::LanguageExtensions is a separate transform that, when used, has to be listed before the serverless one.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-sam",
+    "kt:aws-cloudformation"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/devops-and-iac/aws-sam.md"
+  },
+  {
+   "id": "aws-000144",
+   "area": "devops-and-iac",
+   "t": "sam sync can push changes such as Lambda code directly to a service API instead of deploying through CloudFormation, so AWS advises it only for development stacks.",
+   "f": "sam deploy can push changes such as Lambda code directly to a service API instead of deploying through CloudFormation, so AWS advises it only for development stacks.",
+   "x": "sam sync trades consistency for speed and can drift from the template, which is why AWS keeps it to development. sam deploy always transforms the template and deploys it as a CloudFormation stack, the path recommended for production.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-sam"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/devops-and-iac/aws-sam.md"
+  },
+  {
+   "id": "aws-000145",
+   "area": "devops-and-iac",
+   "t": "sam local invoke needs a container runtime such as Docker, because the SAM CLI runs the function in a container on your machine.",
+   "f": "sam remote invoke needs a container runtime such as Docker, because the SAM CLI runs the function in a container on your machine.",
+   "x": "Local invocation emulates Lambda in a local container, so a runtime like Docker must be installed. sam remote invoke calls functions that are already deployed in AWS.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-sam",
+    "kt:aws-lambda"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/devops-and-iac/aws-sam.md"
+  },
+  {
+   "id": "aws-000146",
+   "area": "global-infrastructure",
+   "t": "An AZ ID such as use2-az1 is the same physical location in every account, while an AZ name such as us-east-1a can map differently in older accounts.",
+   "f": "An AZ name such as us-east-1a is the same physical location in every account, while an AZ ID such as use2-az1 can map differently in older accounts.",
+   "x": "AWS mapped AZ names to physical zones per account in its oldest Regions for accounts created before November 2025. AZ IDs are consistent everywhere, which is why cross-account work such as RAM subnet sharing should compare IDs.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:availability-zones"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/availability-zones.md"
+  },
+  {
+   "id": "aws-000147",
+   "area": "global-infrastructure",
+   "t": "Amazon S3 and DynamoDB replicate data across Availability Zones for you, while Amazon RDS and ElastiCache need Multi-AZ switched on.",
+   "f": "Amazon RDS and ElastiCache replicate data across Availability Zones for you, while Amazon S3 and DynamoDB need Multi-AZ switched on.",
+   "x": "Services such as S3, EFS, Aurora, DynamoDB and SQS spread data across AZs automatically. RDS, Redshift and ElastiCache are single-AZ until you enable Multi-AZ, so the false statement reverses the two groups.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:availability-zones",
+    "kt:amazon-s3",
+    "kt:amazon-dynamodb",
+    "kt:amazon-rds"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/availability-zones.md"
+  },
+  {
+   "id": "aws-000148",
+   "area": "global-infrastructure",
+   "t": "In AWS's static stability example, a workload that needs six instances runs three in each of three AZs, so losing one AZ requires no scaling.",
+   "f": "In AWS's static stability example, a workload that needs six instances runs two in each of three AZs and relies on auto scaling if one AZ is lost.",
+   "x": "Static stability pre-provisions about 50% extra capacity (nine instances) because scaling during an AZ event depends on the EC2 control plane and takes time. Relying on auto scaling is exactly what the pattern avoids.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:availability-zones",
+    "kt:reliability-pillar"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/availability-zones.md"
+  },
+  {
+   "id": "aws-000149",
+   "area": "global-infrastructure",
+   "t": "The control planes of IAM, Route 53 and CloudFront run in us-east-1, while the AWS Global Accelerator control plane runs in us-west-2.",
+   "f": "The control planes of IAM, Route 53 and CloudFront run in us-west-2, while the AWS Global Accelerator control plane runs in us-east-1.",
+   "x": "Most global services keep a single-Region control plane in us-east-1, including IAM, Organizations, Route 53 and CloudFront. Global Accelerator is the exception AWS names, with its control plane in us-west-2.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-global-infrastructure",
+    "kt:aws-iam",
+    "kt:amazon-route-53",
+    "kt:amazon-cloudfront"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/aws-global-infrastructure.md"
+  },
+  {
+   "id": "aws-000150",
+   "area": "global-infrastructure",
+   "t": "Global services' data planes keep working when their control planes are impaired, so AWS advises keeping control-plane calls out of failover and recovery paths.",
+   "f": "Global services' control planes keep working when their data planes are impaired, so AWS advises keeping data-plane calls out of failover and recovery paths.",
+   "x": "Data-plane functions such as IAM authentication and Route 53 DNS resolution are distributed and stay up. Creating or changing resources depends on a single-Region control plane, so recovery should not rely on it.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-global-infrastructure"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/aws-global-infrastructure.md"
+  },
+  {
+   "id": "aws-000151",
+   "area": "global-infrastructure",
+   "t": "AWS Outposts needs Enterprise Support or Enterprise On-Ramp, and the customer supplies its power and redundant networking.",
+   "f": "AWS Local Zones need Enterprise Support or Enterprise On-Ramp, and the customer supplies their power and redundant networking.",
+   "x": "Outposts sit in a facility the customer chooses, so the customer provides power and networking and must hold one of those support plans. Local Zone capacity and facilities are owned by AWS, which is one reason AWS prefers them when both fit.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-global-infrastructure",
+    "kt:aws-outposts",
+    "kt:local-zones"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/aws-global-infrastructure.md"
+  },
+  {
+   "id": "aws-000152",
+   "area": "governance-and-operations",
+   "t": "AWS Control Tower enforces preventive controls through Organizations policies such as SCPs, while its detective controls run as AWS Config rules.",
+   "f": "AWS Control Tower enforces preventive controls as AWS Config rules, while its detective controls run through Organizations policies such as SCPs.",
+   "x": "Preventive controls block actions before they happen, which is what SCPs and RCPs do. Detective controls find non-compliant resources after the fact, which is the job of AWS Config rules.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:aws-control-tower",
+    "kt:service-control-policies",
+    "kt:aws-config"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/governance-and-operations/aws-control-tower.md"
+  },
+  {
+   "id": "aws-000153",
+   "area": "governance-and-operations",
+   "t": "Since Control Tower landing zone 4.0, drift notifications are sent to Amazon EventBridge in the management account instead of to Amazon SNS.",
+   "f": "Since Control Tower landing zone 4.0, drift notifications are sent to Amazon SNS in the Audit account instead of to Amazon EventBridge.",
+   "x": "Landing zone 4.0 moved drift notifications from SNS to EventBridge in the management account. The same release made every integration optional and stopped Control Tower from creating the Security OU.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:aws-control-tower"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/governance-and-operations/aws-control-tower.md"
+  },
+  {
+   "id": "aws-000154",
+   "area": "governance-and-operations",
+   "t": "AWS Control Tower has no charge of its own; you pay for the services it drives, mainly AWS Config, AWS CloudTrail and Amazon S3.",
+   "f": "AWS Control Tower charges a monthly fee per governed account on top of the AWS Config, AWS CloudTrail and Amazon S3 usage it drives.",
+   "x": "Control Tower orchestrates other services and bills nothing itself. The costs come from those services, with AWS Config recording in high-churn accounts being the main one to watch.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:aws-control-tower",
+    "kt:aws-config",
+    "kt:aws-cloudtrail"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/governance-and-operations/aws-control-tower.md"
+  },
+  {
+   "id": "aws-000155",
+   "area": "identity-and-access",
+   "t": "For an action to be allowed in a member account, an SCP allowing it must be attached at the root, at each OU in the path and at the account itself.",
+   "f": "For an action to be allowed in a member account, an SCP allowing it need only be attached at the root, from where it is inherited by every OU and account below.",
+   "x": "Allows in SCPs are not inherited downward; every level in the path needs one, which is why FullAWSAccess is attached everywhere by default. Denies are the part that flow down: a Deny anywhere on the path wins.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:service-control-policies",
+    "kt:aws-organizations"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/identity-and-access/service-control-policies.md"
+  },
+  {
+   "id": "aws-000156",
+   "area": "identity-and-access",
+   "t": "Up to 10 SCPs can be attached directly to a root, OU or account, a hard limit that doubled from 5 in May 2026.",
+   "f": "Up to 20 SCPs can be attached directly to a root, OU or account, a hard limit that doubled from 10 in May 2026.",
+   "x": "On 2026-05-15 AWS raised the direct-attachment limit from 5 to 10 per target and the SCP size limit from 5,120 to 10,240 characters. Inherited policies do not count toward the attachment limit.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:service-control-policies",
+    "kt:organizations-quotas"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/identity-and-access/service-control-policies.md"
+  },
+  {
+   "id": "aws-000157",
+   "area": "identity-and-access",
+   "t": "SCPs restrict the root user of each member account, but they never restrict service-linked roles.",
+   "f": "SCPs restrict service-linked roles in each member account, but they never restrict the root user.",
+   "x": "An SCP caps every IAM user and role in a member account, the root user included. Service-linked roles, which AWS services use on your behalf, are exempt, so the false statement reverses the two.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:service-control-policies",
+    "kt:aws-iam"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/identity-and-access/service-control-policies.md"
+  },
+  {
+   "id": "aws-000158",
+   "area": "migration-and-hybrid",
+   "t": "AWS DataSync Enhanced mode runs the prepare, transfer and verify phases in parallel, while Basic mode runs them one after another.",
+   "f": "AWS DataSync Basic mode runs the prepare, transfer and verify phases in parallel, while Enhanced mode runs them one after another.",
+   "x": "Basic mode scans both locations fully before moving any bytes. Enhanced mode streams objects through as they are listed, which is faster for most workloads and removes the per-execution file-count limit.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:aws-datasync"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/migration-and-hybrid/aws-datasync.md"
+  },
+  {
+   "id": "aws-000159",
+   "area": "migration-and-hybrid",
+   "t": "AWS DataSync needs no agent to copy between AWS storage services in the same account, but needs one to reach NFS or SMB shares outside AWS.",
+   "f": "AWS DataSync needs an agent to copy between AWS storage services in the same account, but reaches NFS or SMB shares outside AWS without one.",
+   "x": "An agent is the VM appliance that reads or writes storage DataSync cannot reach directly, such as on-premises file shares. Same-account transfers between services like S3, EFS and FSx run agentless.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:aws-datasync",
+    "kt:amazon-s3",
+    "kt:amazon-efs"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/migration-and-hybrid/aws-datasync.md"
+  },
+  {
+   "id": "aws-000160",
+   "area": "migration-and-hybrid",
+   "t": "AWS positions Transfer Family for SFTP or FTPS exchanges with partners, and DataSync for bulk migration and recurring sync of file data into AWS.",
+   "f": "AWS positions DataSync for SFTP or FTPS exchanges with partners, and Transfer Family for bulk migration and recurring sync of file data into AWS.",
+   "x": "Transfer Family provides protocol endpoints such as SFTP, FTPS, FTP and AS2 for outside parties. DataSync is the managed copy engine for moving NAS, HDFS or object data into AWS storage.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:aws-datasync",
+    "kt:aws-transfer-family"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/migration-and-hybrid/aws-datasync.md"
+  },
+  {
+   "id": "aws-000161",
+   "area": "networking-and-content-delivery",
+   "t": "AWS reserves five IPv4 addresses in every VPC subnet, so a /24 subnet offers 251 usable addresses.",
+   "f": "AWS reserves two IPv4 addresses in every VPC subnet, so a /24 subnet offers 254 usable addresses.",
+   "x": "Besides the network and broadcast addresses, AWS holds back the VPC router, the DNS server and one address for future use. That leaves 251 of a /24's 256 addresses for your resources.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:amazon-vpc",
+    "kt:subnets-and-route-tables"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/networking-and-content-delivery/amazon-vpc.md"
+  },
+  {
+   "id": "aws-000162",
+   "area": "networking-and-content-delivery",
+   "t": "A VPC's primary IPv4 CIDR block must be between /16, which holds 65,536 addresses, and /28, which holds 16.",
+   "f": "A VPC's primary IPv4 CIDR block must be between /8, which holds 16,777,216 addresses, and /28, which holds 16.",
+   "x": "The largest IPv4 block a VPC accepts is a /16. To grow beyond the original block, you add secondary CIDR blocks, because a block cannot be resized after creation.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:amazon-vpc",
+    "kt:vpc-quotas"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/networking-and-content-delivery/amazon-vpc.md"
+  },
+  {
+   "id": "aws-000163",
+   "area": "networking-and-content-delivery",
+   "t": "A VPC subnet is public when its route table has a route to an internet gateway, and private when it reaches the internet only through a NAT device.",
+   "f": "A VPC subnet is public when its route table has a route to a NAT device, and private when it reaches the internet only through an internet gateway.",
+   "x": "The route table, not the subnet itself, decides the type. An internet gateway route makes a subnet public; outbound-only access through NAT keeps it private.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:amazon-vpc",
+    "kt:subnets-and-route-tables"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/networking-and-content-delivery/amazon-vpc.md"
+  },
+  {
+   "id": "aws-000164",
+   "area": "networking-and-content-delivery",
+   "t": "AWS suggests Transit Gateway for self-managed routing between many VPCs, and AWS Cloud WAN when you want AWS to manage a global WAN with central policy.",
+   "f": "AWS suggests Cloud WAN for self-managed routing between many VPCs, and AWS Transit Gateway when you want AWS to manage a global WAN with central policy.",
+   "x": "Transit Gateway is a hub you configure and route yourself, including across Regions. Cloud WAN is the managed wide-area network option driven by a central policy, so the false statement swaps their roles.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-networking-and-content-delivery",
+    "kt:aws-transit-gateway"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/networking-and-content-delivery/aws-networking-and-content-delivery.md"
+  },
+  {
+   "id": "aws-000165",
+   "area": "networking-and-content-delivery",
+   "t": "AWS points to Global Accelerator for latency-sensitive applications such as gaming, IoT and VoIP, and to CloudFront for cutting latency on web content.",
+   "f": "AWS points to CloudFront for latency-sensitive applications such as gaming, IoT and VoIP, and to Global Accelerator for cutting latency on web content.",
+   "x": "CloudFront is the CDN that caches and delivers web content from the edge. Global Accelerator gives static IPs and carries traffic over the AWS network to the nearest healthy endpoint, which suits non-cacheable, latency-sensitive traffic.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-networking-and-content-delivery",
+    "kt:amazon-cloudfront"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/networking-and-content-delivery/aws-networking-and-content-delivery.md"
+  },
+  {
+   "id": "aws-000166",
+   "area": "networking-and-content-delivery",
+   "t": "For workloads leaving AWS App Mesh, AWS recommends Amazon VPC Lattice on Amazon EKS and Amazon ECS Service Connect on Amazon ECS.",
+   "f": "For workloads leaving AWS App Mesh, AWS recommends Amazon ECS Service Connect on Amazon EKS and Amazon VPC Lattice on Amazon ECS.",
+   "x": "App Mesh closed to new customers in September 2024 and was set to be discontinued on 2026-09-30. Service Connect is an ECS feature, so it cannot be the EKS answer; VPC Lattice is the recommended path for EKS.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-networking-and-content-delivery"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/networking-and-content-delivery/aws-networking-and-content-delivery.md"
+  },
+  {
+   "id": "aws-000167",
+   "area": "public-sector-and-compliance",
+   "t": "On AWS, the US East and US West Regions hold DoD Impact Level 2, while IL4 and IL5 workloads belong in AWS GovCloud (US) (as of 2026-11).",
+   "f": "On AWS, the US East and US West Regions hold DoD Impact Level 4, while IL5 and IL6 workloads belong in AWS GovCloud (US) (as of 2026-11).",
+   "x": "The commercial US Regions are authorized only at IL2. GovCloud (US) holds IL2, IL4 and IL5, and classified IL6 work goes to the AWS Secret Region instead.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:dod-cloud-computing-srg-impact-levels",
+    "kt:aws-govcloud-us",
+    "kt:aws-regions"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/public-sector-and-compliance/dod-cloud-computing-srg-impact-levels.md"
+  },
+  {
+   "id": "aws-000168",
+   "area": "public-sector-and-compliance",
+   "t": "DoD impact levels 1 and 3 were folded into the next level up, which is why the levels in use are IL2, IL4, IL5 and IL6.",
+   "f": "DoD impact levels 3 and 5 were folded into the next level up, which is why the levels in use are IL1, IL2, IL4 and IL6.",
+   "x": "The scheme skips odd numbers at the low end because former levels 1 and 3 were merged upward. IL5 is very much in use for higher-sensitivity CUI and National Security Systems.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:dod-cloud-computing-srg-impact-levels"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/public-sector-and-compliance/dod-cloud-computing-srg-impact-levels.md"
+  },
+  {
+   "id": "aws-000169",
+   "area": "public-sector-and-compliance",
+   "t": "Private connectivity for DoD IL4 and IL5 workloads runs through a DoD CIO-approved Cloud Access Point that the mission owner, not the cloud provider, connects to.",
+   "f": "Private connectivity for DoD IL4 and IL5 workloads runs through a DoD CIO-approved Cloud Access Point that the cloud provider, not the mission owner, connects to.",
+   "x": "Connecting to a Cloud Access Point is the mission owner's job under the SRG. It is one of several areas, along with OS and application STIGs, that stay with the customer rather than being inherited from AWS.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:dod-cloud-computing-srg-impact-levels"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/public-sector-and-compliance/dod-cloud-computing-srg-impact-levels.md"
+  },
+  {
+   "id": "aws-000170",
+   "area": "security",
+   "t": "Under the shared responsibility model, AWS secures the cloud itself, while customers secure what they run in it, such as their content, applications and networks.",
+   "f": "Under the shared responsibility model, customers secure the cloud itself, while AWS secures what they run in it, such as their content, applications and networks.",
+   "x": "AWS is responsible for security of the cloud, and the customer for security in the cloud. The AWS security services are tools for that customer half, which is why the false statement's split is backwards.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-security-services",
+    "kt:cloud-security"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/security/aws-security-services.md"
+  },
+  {
+   "id": "aws-000171",
+   "area": "security",
+   "t": "The AWS SRA makes a Security Tooling account the delegated administrator for services like GuardDuty and Security Hub, and keeps organization CloudTrail logs in a Log Archive account.",
+   "f": "The AWS SRA makes a Log Archive account the delegated administrator for services like GuardDuty and Security Hub, and keeps organization CloudTrail logs in a Security Tooling account.",
+   "x": "In the reference architecture the Security Tooling account (Control Tower's Audit account) administers the detection services, while Log Archive stores CloudTrail logs and Config snapshots. Neither job is meant for the management account.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-security-services",
+    "kt:amazon-guardduty",
+    "kt:aws-security-hub",
+    "kt:aws-cloudtrail"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/security/aws-security-services.md"
+  },
+  {
+   "id": "aws-000172",
+   "area": "security",
+   "t": "Amazon Macie uses machine learning to discover sensitive data, while Amazon GuardDuty is the AWS service for threat detection.",
+   "f": "Amazon GuardDuty uses machine learning to discover sensitive data, while Amazon Macie is the AWS service for threat detection.",
+   "x": "The AWS SRA lists Macie under data protection for finding sensitive data, and GuardDuty under threat detection and continuous monitoring. The false statement swaps the two services.",
+   "verified": "2026-11-10",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-security-services",
+    "kt:amazon-guardduty"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/security/aws-security-services.md"
+  },
+  {
+   "id": "aws-000173",
+   "area": "serverless-and-integration",
+   "t": "An EventBridge pipe connects one source to one target, while an EventBridge event bus routes events from many sources to many targets.",
+   "f": "An EventBridge event bus connects one source to one target, while an EventBridge pipe routes events from many sources to many targets.",
+   "x": "Pipes are point-to-point, with optional filtering and enrichment in between. Buses are routers that deliver each event to zero or more targets by rule, and the two are often combined.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner",
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:amazon-eventbridge"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/serverless-and-integration/amazon-eventbridge.md"
+  },
+  {
+   "id": "aws-000174",
+   "area": "serverless-and-integration",
+   "t": "A rule on a classic EventBridge event bus can have at most 5 targets, and that quota is fixed.",
+   "f": "A rule on a classic EventBridge event bus can have at most 50 targets, and that quota is fixed.",
+   "x": "Classic buses allow 300 rules per bus by default (adjustable) but only 5 targets per rule, which cannot be raised. Wider fan-out needs more rules or another routing layer.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner",
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:amazon-eventbridge",
+    "kt:eventbridge-quotas"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/serverless-and-integration/amazon-eventbridge.md"
+  },
+  {
+   "id": "aws-000175",
+   "area": "serverless-and-integration",
+   "t": "By default, a classic EventBridge bus retries delivery to a target for 24 hours and up to 185 times.",
+   "f": "By default, a classic EventBridge bus retries delivery to a target for 2 hours and up to 18 times.",
+   "x": "EventBridge keeps retrying failed deliveries for a day and up to 185 attempts, but delivery is at-least-once and it does not persist events like a queue, so consumers should be idempotent.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner",
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:amazon-eventbridge"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/serverless-and-integration/amazon-eventbridge.md"
+  },
+  {
+   "id": "aws-000176",
+   "area": "storage",
+   "t": "A Regional EFS file system stores data across several Availability Zones, while a One Zone file system keeps it in one AZ and can lose data if that AZ is damaged.",
+   "f": "A One Zone EFS file system stores data across several Availability Zones, while a Regional file system keeps it in one AZ and can lose data if that AZ is damaged.",
+   "x": "Regional is AWS's recommended type and stays available through AZ failures. One Zone trades that resilience for a single-AZ footprint, which is why AWS turns on backups by default for it.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-efs",
+    "kt:availability-zones"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/storage/amazon-efs.md"
+  },
+  {
+   "id": "aws-000177",
+   "area": "storage",
+   "t": "The default Amazon EFS lifecycle policy moves files to Infrequent Access after 30 days without access and to Archive after 90 days.",
+   "f": "The default Amazon EFS lifecycle policy moves files to Infrequent Access after 90 days without access and to Archive after 180 days.",
+   "x": "EFS tiers untouched files to IA at 30 days and to Archive at 90 days by default. Intelligent-Tiering can bring a file back to Standard when it is read again.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-efs"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/storage/amazon-efs.md"
+  },
+  {
+   "id": "aws-000178",
+   "area": "storage",
+   "t": "Amazon EFS encryption at rest must be chosen when the file system is created, while encryption in transit is turned on when a client mounts it.",
+   "f": "Amazon EFS encryption in transit must be chosen when the file system is created, while encryption at rest is turned on when a client mounts it.",
+   "x": "At-rest encryption with AWS KMS is a creation-time setting of the file system. TLS for data in transit is enabled per mount, using the EFS mount helper, so the false statement swaps the two.",
+   "verified": "2026-11-10",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-efs",
+    "kt:aws-kms"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/storage/amazon-efs.md"
+  },
+  {
+   "id": "aws-000179",
+   "area": "ai-and-ml",
+   "t": "Amazon Textract's DetectDocumentText API returns plain OCR text, while AnalyzeDocument also returns structure such as form key-value pairs and tables.",
+   "f": "Amazon Textract's AnalyzeDocument API returns plain OCR text, while DetectDocumentText also returns structure such as form key-value pairs and tables.",
+   "x": "DetectDocumentText is the basic OCR call. AnalyzeDocument adds forms, tables, signatures, layout and Queries so the output keeps the page's relationships, which is why the false statement has them reversed.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-ai-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-textract"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/ai-and-ml/amazon-textract.md"
+  },
+  {
+   "id": "aws-000180",
+   "area": "ai-and-ml",
+   "t": "By default, asynchronous Amazon Textract results sit in a Textract-owned bucket and can be retrieved for only 7 days after the job starts.",
+   "f": "By default, asynchronous Amazon Textract results sit in a Textract-owned bucket and can be retrieved for up to 90 days after the job starts.",
+   "x": "Textract keeps default async output for just 7 days. To keep results longer, set OutputConfig so they are written to your own S3 bucket, optionally encrypted with a customer managed KMS key.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-ai-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-textract",
+    "kt:amazon-s3"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/ai-and-ml/amazon-textract.md"
+  },
+  {
+   "id": "aws-000181",
+   "area": "ai-and-ml",
+   "t": "In AWS's US West (Oregon) example rates, Textract Forms costs $0.05 per page versus $0.0015 for DetectDocumentText text detection (as of 2026-11).",
+   "f": "In AWS's US West (Oregon) example rates, Textract Forms costs $0.0015 per page versus $0.05 for DetectDocumentText text detection (as of 2026-11).",
+   "x": "Each Textract feature is billed per page on its own, and Forms is far pricier than raw text detection for the first million pages. Requesting Forms when you only need text multiplies the cost by more than 30.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-ai-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-textract"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/ai-and-ml/amazon-textract.md"
+  },
+  {
+   "id": "aws-000182",
+   "area": "analytics",
+   "t": "In an Amazon EMR cluster, core nodes run tasks and store HDFS data, while task nodes only run tasks and hold no HDFS data.",
+   "f": "In an Amazon EMR cluster, task nodes run tasks and store HDFS data, while core nodes only run tasks and hold no HDFS data.",
+   "x": "Core nodes carry HDFS, so multi-node clusters need at least one. Task nodes are pure compute, which makes them optional and the safe place to add or remove capacity such as Spot.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-emr",
+    "kt:spot-instances"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/analytics/amazon-emr.md"
+  },
+  {
+   "id": "aws-000183",
+   "area": "analytics",
+   "t": "Data kept only in an Amazon EMR cluster's HDFS is lost when the cluster terminates, so durable input and output usually live in Amazon S3.",
+   "f": "Data kept only in an Amazon EMR cluster's HDFS is saved to Amazon S3 automatically when the cluster terminates, so it survives the cluster.",
+   "x": "HDFS on EMR is ephemeral and disappears with the cluster, even after a failure. Keeping durable data in S3 through EMRFS or S3A is what makes short-lived, job-scoped clusters practical.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-emr",
+    "kt:amazon-s3"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/analytics/amazon-emr.md"
+  },
+  {
+   "id": "aws-000184",
+   "area": "analytics",
+   "t": "An Amazon EMR on EC2 cluster can run one or three primary nodes, and the three-node option needs EMR release 5.23.0 or later.",
+   "f": "An Amazon EMR on EC2 cluster can run one or two primary nodes, and the two-node option needs EMR release 5.23.0 or later.",
+   "x": "For primary-node high availability EMR supports three primary nodes, starting with release 5.23.0. There is no two-primary configuration.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-emr",
+    "kt:amazon-ec2"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/analytics/amazon-emr.md"
+  },
+  {
+   "id": "aws-000185",
+   "area": "architecture-practice",
+   "t": "Security pillar best practice SEC01-BP01 calls for separating workloads and environments into different AWS accounts organized into OUs.",
+   "f": "Security pillar best practice SEC01-BP01 calls for separating workloads and environments into different VPCs inside one shared AWS account.",
+   "x": "SEC01-BP01 uses accounts as the isolation boundary, grouped into organizational units whose controls member accounts inherit. Mixing workloads of different data sensitivity in one account is one of its named anti-patterns.",
+   "verified": "2026-11-11",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:security-pillar",
+    "kt:aws-organizations"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/architecture-practice/security-pillar.md"
+  },
+  {
+   "id": "aws-000186",
+   "area": "architecture-practice",
+   "t": "The Security pillar's apply-security-at-all-layers principle means defense in depth, from the network edge and VPC down to the application and its code.",
+   "f": "The Security pillar's maintain-traceability principle means defense in depth, from the network edge and VPC down to the application and its code.",
+   "x": "Layered controls are the point of applying security at all layers. Maintaining traceability is a different principle, about monitoring, alerting on and auditing actions in real time.",
+   "verified": "2026-11-11",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:security-pillar"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/architecture-practice/security-pillar.md"
+  },
+  {
+   "id": "aws-000187",
+   "area": "architecture-practice",
+   "t": "The Security pillar's application security guidance puts threat modeling in the design phase, so flaws are caught while they are still cheap to fix.",
+   "f": "The Security pillar's application security guidance puts threat modeling after deployment, so flaws are judged against how the application really runs.",
+   "x": "SEC 11 covers security across design, development and deployment, and it places threat modeling early. Finding a design flaw before code is written costs far less than fixing it in production.",
+   "verified": "2026-11-11",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:security-pillar"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/architecture-practice/security-pillar.md"
+  },
+  {
+   "id": "aws-000188",
+   "area": "certifications",
+   "t": "The SAP-C02 Solutions Architect – Professional exam is pass/fail on a 100–1,000 scale, with a scaled score of 750 needed to pass.",
+   "f": "The SAP-C02 Solutions Architect – Professional exam is pass/fail on a 100–1,000 scale, with a scaled score of 720 needed to pass.",
+   "x": "The SAP-C02 exam guide sets the passing mark at 750, under a compensatory model where only the overall score counts. 720 is not the Professional exam's threshold.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-certified-solutions-architect-professional"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-solutions-architect-professional.md"
+  },
+  {
+   "id": "aws-000189",
+   "area": "certifications",
+   "t": "SAP-C03 took over Solutions Architect – Professional exam delivery on November 17, 2026, the day after the last SAP-C02 sitting.",
+   "f": "SAP-C03 takes over Solutions Architect – Professional exam delivery on December 1, 2026, the day after the last SAP-C02 sitting.",
+   "x": "AWS set November 16, 2026 as the final day for SAP-C02 and began SAP-C03 delivery on November 17. Credentials earned on SAP-C02 stay valid until their original expiry.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-certified-solutions-architect-professional"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-solutions-architect-professional.md"
+  },
+  {
+   "id": "aws-000190",
+   "area": "certifications",
+   "t": "The AWS Certified Solutions Architect – Professional exam gives candidates 180 minutes for 75 questions (as of 2026-11).",
+   "f": "The AWS Certified Solutions Architect – Professional exam gives candidates 130 minutes for 65 questions (as of 2026-11).",
+   "x": "The Professional exam is longer than the associate-level format: 75 questions in 180 minutes, of which 65 are scored under the SAP-C02 guide. AWS kept the same length and duration for SAP-C03.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-certified-solutions-architect-professional"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-solutions-architect-professional.md"
+  },
+  {
+   "id": "aws-000191",
+   "area": "compute",
+   "t": "AWS App Runner is no longer open to new customers, and AWS points new container web apps to Amazon ECS Express Mode instead.",
+   "f": "Amazon ECS Express Mode is no longer open to new customers, and AWS points new container web apps to AWS App Runner instead.",
+   "x": "App Runner gets no new features and is closed to new customers, though existing customers can keep creating services. ECS Express Mode is the suggested path, provisioning a Fargate service, an ALB and auto scaling from one API call.",
+   "verified": "2026-11-11",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-compute-services",
+    "kt:amazon-ecs",
+    "kt:aws-fargate"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/aws-compute-services.md"
+  },
+  {
+   "id": "aws-000192",
+   "area": "compute",
+   "t": "AWS cites savings of up to 90% with Spot Instances and up to 72% with Savings Plans compared with On-Demand pricing (as of 2026-11).",
+   "f": "AWS cites savings of up to 72% with Spot Instances and up to 90% with Savings Plans compared with On-Demand pricing (as of 2026-11).",
+   "x": "Spot offers the deepest discount because the capacity can be reclaimed. Savings Plans trade a usage commitment for a smaller maximum discount, so the false statement swaps the two figures.",
+   "verified": "2026-11-11",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-compute-services",
+    "kt:savings-plans",
+    "kt:spot-instances"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/aws-compute-services.md"
+  },
+  {
+   "id": "aws-000193",
+   "area": "compute",
+   "t": "AWS Lambda's default concurrency quota is 1,000 executions per account per Region, and the quota can be adjusted.",
+   "f": "AWS Lambda's default concurrency quota is 1,000 executions per function per Region, and the quota can be adjusted.",
+   "x": "The 1,000-execution default is shared by all functions in an account within one Region. Treating it as a per-function allowance overstates how much concurrency an account has before requesting an increase.",
+   "verified": "2026-11-11",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-compute-services",
+    "kt:aws-lambda"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/aws-compute-services.md"
+  },
+  {
+   "id": "aws-000194",
+   "area": "compute",
+   "t": "Each vCPU on an AWS Graviton instance is a full physical core rather than one hyperthread of a shared core.",
+   "f": "Each vCPU on an AWS Graviton instance is one hyperthread, with two vCPUs sharing every physical core.",
+   "x": "Graviton does not use simultaneous multithreading, so a vCPU maps to a whole core. AWS cites this as one reason for Graviton's efficiency.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-graviton",
+    "kt:ec2-instance-types"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/aws-graviton.md"
+  },
+  {
+   "id": "aws-000195",
+   "area": "compute",
+   "t": "Graviton-based EC2 instances run Linux rather than Windows, so .NET Framework applications must be ported to modern .NET first.",
+   "f": "Graviton-based EC2 instances run Windows Server as well as Linux, so .NET Framework applications can move to them unchanged.",
+   "x": "Graviton EC2 targets Linux and BSD workloads that can be rebuilt for Arm64. Windows workloads, and .NET Framework code that has not been ported, are reasons to stay on x86.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-graviton",
+    "kt:amazon-ec2"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/aws-graviton.md"
+  },
+  {
+   "id": "aws-000196",
+   "area": "compute",
+   "t": "In an EC2 instance name such as M8gd, the g marks a Graviton processor and the d marks local NVMe storage.",
+   "f": "In an EC2 instance name such as M8gd, the g marks local NVMe storage and the d marks a Graviton processor.",
+   "x": "The letter g after the generation number signals Graviton, and an added d signals instance-attached NVMe disks, as in M9gd or C9gd.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-graviton",
+    "kt:ec2-instance-types"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/aws-graviton.md"
+  },
+  {
+   "id": "aws-000197",
+   "area": "containers",
+   "t": "Amazon ECR basic scanning is provided and billed by ECR, while enhanced scanning is provided and billed by Amazon Inspector.",
+   "f": "Amazon ECR enhanced scanning is provided and billed by ECR, while basic scanning is provided and billed by Amazon Inspector.",
+   "x": "Basic scanning is ECR's own feature. Enhanced scanning hands the work to Amazon Inspector, which also covers programming-language packages and can rescan continuously when new CVEs appear.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner",
+    "kt:aws-certified-developer-associate"
+   ],
+   "concepts": [
+    "kt:amazon-ecr",
+    "kt:amazon-inspector"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/amazon-ecr.md"
+  },
+  {
+   "id": "aws-000198",
+   "area": "containers",
+   "t": "Pulling an ECR image to ECS, Fargate or Lambda in the same Region is free, while cross-Region pulls are charged at internet data transfer rates.",
+   "f": "Pulling an ECR image to ECS, Fargate or Lambda in another Region is free, while same-Region pulls are charged at internet data transfer rates.",
+   "x": "ECR charges nothing for inbound pushes or for same-Region pulls to AWS compute. Moving image data between Regions, by pulling or by replication, is billed like internet transfer.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner",
+    "kt:aws-certified-developer-associate"
+   ],
+   "concepts": [
+    "kt:amazon-ecr",
+    "kt:aws-regions"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/amazon-ecr.md"
+  },
+  {
+   "id": "aws-000199",
+   "area": "containers",
+   "t": "An ECR pull through cache rule mirrors images from an upstream registry such as Docker Hub into your private registry and re-checks the upstream for updates.",
+   "f": "An ECR replication rule mirrors images from an upstream registry such as Docker Hub into your private registry and re-checks the upstream for updates.",
+   "x": "Pull through cache is the feature for keeping copies of third-party images in ECR. Replication copies images you already hold in ECR to other Regions or accounts.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner",
+    "kt:aws-certified-developer-associate"
+   ],
+   "concepts": [
+    "kt:amazon-ecr"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/amazon-ecr.md"
+  },
+  {
+   "id": "aws-000200",
+   "area": "containers",
+   "t": "EKS Auto Mode's built-in NodePools launch only On-Demand C, M and R instances, so Spot or GPU capacity needs a custom NodePool.",
+   "f": "EKS Auto Mode's built-in NodePools launch only Spot C, M and R instances, so On-Demand or GPU capacity needs a custom NodePool.",
+   "x": "The system and general-purpose pools are On-Demand only and limited to C, M and R families of generation 5 or newer, and they cannot be edited. Adding Spot or GPU instances means defining your own NodePool.",
+   "verified": "2026-11-11",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:eks-auto-mode",
+    "kt:spot-instances",
+    "kt:karpenter"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/eks-auto-mode.md"
   }
  ]
 }
