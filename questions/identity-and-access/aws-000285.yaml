@@ -1,0 +1,20 @@
+id: aws-000285
+product_area: identity-and-access
+true_statement: When one IAM role's credentials are used to assume another role, AWS STS caps the new session at 1 hour, whatever the role's maximum session duration.
+false_statement: When one IAM role's credentials are used to assume another role, AWS STS caps the new session at 12 hours, whatever the role's maximum session duration.
+explanation: Role chaining overrides the configured maximum and limits the chained session to one hour. Twelve hours is the highest maximum a role can be set to for a direct AssumeRole.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/aws-sts.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: c16b6494b0c42cd341b90e3ecb4c67c8b88137cd
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-sts
+- kt:iam-roles
+difficulty: 3
+created: '2026-11-18'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000281
+product_area: global-infrastructure
+true_statement: For high availability with Local Zones, AWS suggests pairing two zones in one parent Region that are anchored to different parent Availability Zones.
+false_statement: For high availability with Local Zones, AWS suggests pairing two zones in one parent Region that are anchored to the same parent Availability Zone.
+explanation: Each Local Zone relies on a parent AZ for some control-plane operations. Using zones with different parents gives a Multi-AZ design from the control-plane point of view.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/local-zones.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 747bbba874d7d5707f67f02b53850854ec19ce65
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:local-zones
+- kt:availability-zones
+difficulty: 3
+created: '2026-11-18'
+status: active

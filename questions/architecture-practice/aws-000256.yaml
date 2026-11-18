@@ -1,0 +1,18 @@
+id: aws-000256
+product_area: architecture-practice
+true_statement: Well-Architected guidance treats choosing the AWS Region closest to your own office, rather than to your users, as an anti-pattern.
+false_statement: Well-Architected guidance treats choosing the AWS Region closest to your users, rather than to your own office, as an anti-pattern.
+explanation: Location should follow where users and data are, because that drives latency. Picking a Region for the team's convenience is called out as a mistake, as is keeping everything in one geography.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/performance-efficiency-pillar.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 47ed7df040056e8701ad33bf00b4f8a8f5bbc835
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:performance-efficiency-pillar
+- kt:aws-regions
+difficulty: 1
+created: '2026-11-18'
+status: active

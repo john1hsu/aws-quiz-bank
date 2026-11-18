@@ -1,0 +1,20 @@
+id: aws-000206
+product_area: cost-management
+true_statement: A Spot capacity pool is the unused capacity of one instance type in one Availability Zone, so adding instance types and AZs gives Spot more pools to draw from.
+false_statement: A Spot capacity pool is the unused capacity of one instance family across a whole Region, so adding Availability Zones gives Spot no extra pools to draw from.
+explanation: Pools are defined per instance type per AZ and are available independently. That is why AWS recommends many instance types and every AZ in the VPC for Spot workloads.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/spot-instances.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 4d5f03265d70ab1eadcae41d0d55f8538690a0c3
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:spot-instances
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-18'
+status: active

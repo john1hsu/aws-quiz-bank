@@ -1,0 +1,19 @@
+id: aws-000209
+product_area: databases
+true_statement: Enabling durability on a node-based ElastiCache for Valkey cluster logs writes to a Multi-AZ transactional log, so data survives the loss of every cache node.
+false_statement: Enabling durability on a node-based ElastiCache for Memcached cluster logs writes to a Multi-AZ transactional log, so data survives the loss of every cache node.
+explanation: Durability is offered for node-based Valkey clusters. Memcached has no such option, so a plain Memcached cache loses its contents when its nodes are lost.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-elasticache.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 09d668684aaeba98d434dc22f080a1ba772ca1ba
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-elasticache
+difficulty: 3
+created: '2026-11-18'
+status: active

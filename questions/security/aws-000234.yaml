@@ -1,0 +1,21 @@
+id: aws-000234
+product_area: security
+true_statement: A web ACL that protects a CloudFront distribution must be created, with the IP sets and rule groups it references, in US East (N. Virginia).
+false_statement: A web ACL that protects a CloudFront distribution must be created, with the IP sets and rule groups it references, in the Region of the distribution's origin.
+explanation: CloudFront uses AWS WAF's Global (CloudFront) scope, which is managed from us-east-1. Regional web ACLs, by contrast, must live in the same Region as the resource they protect.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-waf.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 5261ee0c08c6c80e3d8b055a56b783004bf99256
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-waf
+- kt:amazon-cloudfront
+- kt:aws-regions
+difficulty: 2
+created: '2026-11-18'
+status: active

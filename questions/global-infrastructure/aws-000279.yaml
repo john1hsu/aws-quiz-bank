@@ -1,0 +1,18 @@
+id: aws-000279
+product_area: global-infrastructure
+true_statement: You use an AWS Local Zone by extending a VPC from its parent Region with a subnet in the zone, so the zone's subnet joins the same VPC.
+false_statement: You use an AWS Local Zone by creating a separate VPC inside the zone and peering it with a VPC in the parent Region.
+explanation: A Local Zone is an extension of its parent Region. You add a subnet there to an existing VPC, and its gateways and route tables carry over as for any other subnet.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/local-zones.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 747bbba874d7d5707f67f02b53850854ec19ce65
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:local-zones
+- kt:amazon-vpc
+difficulty: 2
+created: '2026-11-18'
+status: active

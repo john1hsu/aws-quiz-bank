@@ -1,0 +1,20 @@
+id: aws-000232
+product_area: public-sector-and-compliance
+true_statement: After a HIPAA BAA is accepted in AWS Artifact, the account may still use any AWS service, but protected health information belongs only in HIPAA Eligible Services.
+false_statement: After a HIPAA BAA is accepted in AWS Artifact, the account is blocked from using any AWS service that is not a HIPAA Eligible Service.
+explanation: Accepting the BAA designates a HIPAA Account without restricting which services run there. The customer's obligation is to keep PHI inside eligible services.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/aws-artifact.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: f1243daa17b7425a0371c82f108b836055254d5f
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-artifact
+- kt:hipaa-eligible-services
+difficulty: 2
+created: '2026-11-18'
+status: active

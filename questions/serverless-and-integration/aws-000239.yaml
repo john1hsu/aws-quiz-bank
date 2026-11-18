@@ -1,0 +1,19 @@
+id: aws-000239
+product_area: serverless-and-integration
+true_statement: In AWS's US East example rates, HTTP APIs cost $1.00 per million requests and REST APIs $3.50 per million for their first pricing tier (as of 2026-11).
+false_statement: In AWS's US East example rates, REST APIs cost $1.00 per million requests and HTTP APIs $3.50 per million for their first pricing tier (as of 2026-11).
+explanation: HTTP APIs are the lower-cost option and REST APIs the feature-rich, pricier one. The false statement swaps the two request prices.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-api-gateway.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: e229c04ac2bcad1eff316b2ea1b568e19386b7d4
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:amazon-api-gateway
+difficulty: 2
+created: '2026-11-18'
+status: active

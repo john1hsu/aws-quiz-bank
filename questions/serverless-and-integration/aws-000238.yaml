@@ -1,0 +1,20 @@
+id: aws-000238
+product_area: serverless-and-integration
+true_statement: API Gateway's default throttle of 10,000 requests per second applies per account per Region and is shared by all of that account's HTTP, REST and WebSocket APIs (as of 2026-11).
+false_statement: API Gateway's default throttle of 10,000 requests per second applies to each API separately, so every HTTP, REST or WebSocket API gets its own allowance (as of 2026-11).
+explanation: The quota is account-level within a Region, so one busy client can starve every API in the account. REST API usage plans are the way to throttle individual clients.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-api-gateway.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: e229c04ac2bcad1eff316b2ea1b568e19386b7d4
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:amazon-api-gateway
+- kt:api-gateway-quotas
+difficulty: 2
+created: '2026-11-18'
+status: active

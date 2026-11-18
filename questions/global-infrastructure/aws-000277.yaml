@@ -1,0 +1,20 @@
+id: aws-000277
+product_area: global-infrastructure
+true_statement: AWS Global Accelerator announces static anycast IP addresses from edge locations and terminates client TCP connections at the edge before reaching regional endpoints.
+false_statement: AWS Global Accelerator announces static anycast IP addresses from each Region and passes client TCP connections straight through to regional endpoints unterminated.
+explanation: Clients enter AWS at the nearest edge location, where Global Accelerator ends the TCP connection and opens a new one to the endpoint, keeping the traffic on the AWS backbone.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/edge-locations.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: e607bed22719e61a2d0a2299a96095665323276e
+verified_on: '2026-11-12'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:edge-locations
+- kt:aws-global-accelerator
+difficulty: 2
+created: '2026-11-18'
+status: active

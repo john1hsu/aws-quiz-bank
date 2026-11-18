@@ -1,0 +1,19 @@
+id: aws-000243
+product_area: storage
+true_statement: An AWS Backup Vault Lock in governance mode can be removed by suitably authorized IAM users, while one in compliance mode becomes unchangeable once its grace time ends.
+false_statement: An AWS Backup Vault Lock in compliance mode can be removed by suitably authorized IAM users, while one in governance mode becomes unchangeable once its grace time ends.
+explanation: Governance mode is the reversible setting, useful for testing retention rules. After the grace time, a compliance-mode lock cannot be altered or deleted by users or by AWS until retention ends.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/aws-backup.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 881bd195d41c416c0a52d5c762948af60204e0de
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-backup
+difficulty: 2
+created: '2026-11-18'
+status: active

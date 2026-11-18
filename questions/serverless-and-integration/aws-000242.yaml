@@ -1,0 +1,20 @@
+id: aws-000242
+product_area: serverless-and-integration
+true_statement: Amazon SNS FIFO topics deliver only to SQS queues, while standard topics support every delivery protocol, including email, SMS and HTTP/S.
+false_statement: Amazon SNS standard topics deliver only to SQS queues, while FIFO topics support every delivery protocol, including email, SMS and HTTP/S.
+explanation: FIFO topics add ordering and deduplication but limit subscribers to SQS FIFO or standard queues. Standard topics trade those guarantees for support of all endpoint types.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-sns.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 391c0de4a149466e1cf3b8ee5211d71d8e099c0a
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-sns
+- kt:amazon-sqs
+difficulty: 2
+created: '2026-11-18'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000208
+product_area: databases
+true_statement: An ElastiCache serverless cache stores data redundantly across three Availability Zones and carries a 99.99% availability SLA.
+false_statement: An ElastiCache serverless cache stores data in a single Availability Zone and carries a 99.9% availability SLA.
+explanation: 'Serverless caches are built highly available by default: data is spread over three AZs and the SLA is 99.99%. Single-AZ placement is a node-based option, not how serverless works.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-elasticache.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 09d668684aaeba98d434dc22f080a1ba772ca1ba
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-elasticache
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-18'
+status: active

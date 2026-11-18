@@ -1,0 +1,19 @@
+id: aws-000213
+product_area: devops-and-iac
+true_statement: CodePipeline V1 costs $1.00 per active pipeline per month, while V2 costs $0.002 per action execution minute (as of 2026-11).
+false_statement: CodePipeline V2 costs $1.00 per active pipeline per month, while V1 costs $0.002 per action execution minute (as of 2026-11).
+explanation: V1 is the flat-rate type billed per active pipeline; V2 is metered by action execution minutes, with manual approvals and custom actions not charged. The false statement swaps the two pricing models.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-codepipeline.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 00e4d9c456f0d008c741d8639696145332e0299b
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-codepipeline
+difficulty: 2
+created: '2026-11-18'
+status: active

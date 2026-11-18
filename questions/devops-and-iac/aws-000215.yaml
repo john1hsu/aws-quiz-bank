@@ -1,0 +1,19 @@
+id: aws-000215
+product_area: devops-and-iac
+true_statement: A CodePipeline manual approval action times out after 7 days by default, and the timeout can be extended to as long as 60 days.
+false_statement: A CodePipeline manual approval action times out after 1 hour by default, and the timeout can be extended to as long as 7 days.
+explanation: Approvals default to a 7-day window that can be configured up to 60 days. The one-hour timeout is the default for most other action types.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-codepipeline.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 00e4d9c456f0d008c741d8639696145332e0299b
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-codepipeline
+difficulty: 2
+created: '2026-11-18'
+status: active

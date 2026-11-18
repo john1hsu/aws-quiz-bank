@@ -1,0 +1,19 @@
+id: aws-000219
+product_area: governance-and-operations
+true_statement: AWS Config rules in proactive mode evaluate resource properties before deployment but only report results; they neither block the deployment nor remediate.
+false_statement: AWS Config rules in proactive mode evaluate resource properties before deployment and block the deployment of any resource they find noncompliant.
+explanation: Proactive evaluation is advisory. Stopping a deployment needs a preventive control such as an SCP, which is why AWS suggests pairing the two.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-config.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 143ed16989c5387d63b61b4e3b2247ae78f0d2af
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-config
+difficulty: 2
+created: '2026-11-18'
+status: active

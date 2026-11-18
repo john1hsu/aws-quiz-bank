@@ -1,0 +1,19 @@
+id: aws-000216
+product_area: devops-and-iac
+true_statement: The CodeDeploy configuration ECSCanary10Percent5Minutes shifts 10% of traffic first and moves the remaining 90% five minutes later.
+false_statement: The CodeDeploy configuration ECSCanary10Percent5Minutes shifts another 10% of traffic every five minutes until all traffic has moved.
+explanation: 'A canary configuration shifts traffic in two steps: a first slice, then everything else after the wait. Moving equal slices at fixed intervals describes a linear configuration instead.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/blue-green-deployments.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 59197a9d851811a5c6201f73cf0c5046e9cb5cd2
+verified_on: '2026-11-11'
+feature_status: concept
+concepts:
+- kt:blue-green-deployments
+- kt:aws-codedeploy
+- kt:canary-deployments
+difficulty: 2
+created: '2026-11-18'
+status: active

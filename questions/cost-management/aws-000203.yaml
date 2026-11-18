@@ -1,0 +1,19 @@
+id: aws-000203
+product_area: cost-management
+true_statement: Only Standard Reserved Instances can be sold on the Reserved Instance Marketplace; Convertible RIs can instead be exchanged for other Convertible RIs.
+false_statement: Only Convertible Reserved Instances can be sold on the Reserved Instance Marketplace; Standard RIs can instead be exchanged for other Standard RIs.
+explanation: RIs cannot be cancelled. Standard RIs can be modified or resold on the Marketplace, while exchanges for different attributes are a Convertible RI feature.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/reserved-instances.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 0ec80030e1bb9a0767b19e13c7f0519053d0c3aa
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:reserved-instances
+difficulty: 2
+created: '2026-11-18'
+status: active

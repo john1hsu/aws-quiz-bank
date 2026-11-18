@@ -1,0 +1,19 @@
+id: aws-000299
+product_area: networking-and-content-delivery
+true_statement: AWS Direct Connect traffic is not encrypted by default, but MACsec layer-2 encryption is available on dedicated connections at selected locations.
+false_statement: AWS Direct Connect traffic is encrypted by default with MACsec on every connection, including hosted connections at any location.
+explanation: A private link is not the same as an encrypted one. MACsec has to be set up and is limited to certain dedicated connection speeds and locations.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-direct-connect.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 254f4a198b55c6d87a79c96a1ac750907ce2c0d6
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-direct-connect
+difficulty: 2
+created: '2026-11-18'
+status: active

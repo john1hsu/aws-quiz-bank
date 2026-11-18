@@ -1,0 +1,17 @@
+id: aws-000272
+product_area: databases
+true_statement: DynamoDB charges no cross-Region data transfer for replication between a global table's Regions, but bills replicated write units in every Region that holds a replica.
+false_statement: DynamoDB bills no replicated write units for a global table's replicas, but charges cross-Region data transfer for replication between its Regions.
+explanation: Global table cost comes from replicated writes, charged per 1 KB in each replica Region at normal write-unit prices. Inter-Region replication traffic itself is not billed.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/dynamodb-global-tables.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 8d925aec2a32f5567d8660e8005dd32a468ca5ca
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:dynamodb-global-tables
+difficulty: 2
+created: '2026-11-18'
+status: active

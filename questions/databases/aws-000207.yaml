@@ -1,0 +1,19 @@
+id: aws-000207
+product_area: databases
+true_statement: In Amazon ElastiCache, Global Datastore cross-Region replication and data tiering are available only on node-based clusters, not on serverless caches.
+false_statement: In Amazon ElastiCache, Global Datastore cross-Region replication and data tiering are available only on serverless caches, not on node-based clusters.
+explanation: Serverless trades control for simplicity and lacks these features. Workloads that need cross-Region replication or data tiering must run node-based clusters.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-elasticache.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 09d668684aaeba98d434dc22f080a1ba772ca1ba
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-elasticache
+difficulty: 2
+created: '2026-11-18'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000244
+product_area: storage
+true_statement: AWS Backup continuous backups of Amazon S3 allow restoring to any point within the last 35 days, while periodic S3 backups can run as often as hourly.
+false_statement: AWS Backup continuous backups of Amazon S3 allow restoring to any point within the last 7 days, while periodic S3 backups can run at most once a day.
+explanation: Continuous S3 backup gives a 35-day point-in-time restore window, and periodic backups can be scheduled down to hourly. The false statement shrinks both.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/aws-backup.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 881bd195d41c416c0a52d5c762948af60204e0de
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-backup
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-18'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000298
+product_area: networking-and-content-delivery
+true_statement: All connections in an AWS Direct Connect link aggregation group terminate on the same AWS device, so AWS says a LAG is not a high-availability strategy.
+false_statement: Connections in an AWS Direct Connect link aggregation group are spread across separate AWS devices, so AWS presents a LAG as a high-availability strategy.
+explanation: A LAG bundles links for bandwidth, but one device failure takes them all down. Resilience comes from separate connections on separate devices and locations.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-direct-connect.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 254f4a198b55c6d87a79c96a1ac750907ce2c0d6
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-direct-connect
+difficulty: 3
+created: '2026-11-18'
+status: active

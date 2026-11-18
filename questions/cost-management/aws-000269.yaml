@@ -1,0 +1,17 @@
+id: aws-000269
+product_area: cost-management
+true_statement: New AWS customers get USD $100 in Free Tier credits at sign-up and can earn up to $100 more by completing five introductory activities worth $20 each.
+false_statement: New AWS customers get USD $200 in Free Tier credits at sign-up and can earn up to $100 more by completing five introductory activities worth $20 each.
+explanation: 'The credit-based Free Tier totals up to $200: half is granted at sign-up and half is earned through activities such as creating a budget or using the Bedrock playground.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-free-tier.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: f1d14e663723be2bed5817df58b49d5704384e80
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:aws-free-tier
+difficulty: 1
+created: '2026-11-18'
+status: active

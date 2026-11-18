@@ -1,0 +1,17 @@
+id: aws-000257
+product_area: architecture-practice
+true_statement: Per the Well-Architected networking guidance, a cluster placement group with supported instances and ENA gives a low-jitter network of up to 25 Gbps between instances.
+false_statement: Per the Well-Architected networking guidance, a spread placement group with supported instances and ENA gives a low-jitter network of up to 25 Gbps between instances.
+explanation: Cluster placement groups pack instances close together for low-latency, high-throughput networking. Spread placement groups separate instances onto distinct hardware for resilience, not network performance.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/performance-efficiency-pillar.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 47ed7df040056e8701ad33bf00b4f8a8f5bbc835
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:performance-efficiency-pillar
+difficulty: 3
+created: '2026-11-18'
+status: active

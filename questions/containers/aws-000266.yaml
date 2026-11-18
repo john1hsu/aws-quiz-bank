@@ -1,0 +1,19 @@
+id: aws-000266
+product_area: containers
+true_statement: AWS App2Container is a command-line tool that packages existing .NET and Java applications as containers.
+false_statement: AWS App2Container is a managed orchestrator that schedules and scales containers on on-premises servers.
+explanation: App2Container helps containerize existing applications; it does not run them. Running containers on premises is the job of options such as ECS Anywhere or EKS Anywhere.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/aws-container-services.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: fc7b12131435ecd3a89c996ba856cca6f8d749b1
+verified_on: '2026-11-12'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-container-services
+difficulty: 1
+created: '2026-11-18'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000248
+product_area: storage
+true_statement: AWS's storage decision guide notes that a single EBS gp3 volume can reach 64 TiB, 80,000 IOPS and 2,000 MB/s.
+false_statement: AWS's storage decision guide notes that a single EBS gp3 volume can reach 16 TiB, 16,000 IOPS and 1,000 MB/s.
+explanation: The guide quotes higher gp3 ceilings of 64 TiB, 80,000 IOPS and 2,000 MB/s. The smaller figures understate what one gp3 volume can now do.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/aws-storage-services.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 2fd711077d8229fb9506de65ff498dd3098906fa
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-storage-services
+- kt:amazon-ebs
+difficulty: 2
+created: '2026-11-18'
+status: active

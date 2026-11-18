@@ -1,0 +1,19 @@
+id: aws-000268
+product_area: cost-management
+true_statement: Joining AWS Organizations or setting up an AWS Control Tower landing zone automatically upgrades a Free-plan account to a Paid account plan.
+false_statement: Joining AWS Organizations or setting up an AWS Control Tower landing zone is blocked for a Free-plan account until it is manually upgraded to a Paid plan.
+explanation: These actions are allowed, but taking them moves the account onto the Paid plan automatically, as do Enterprise Agreements and HIPAA or SEC designations.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-free-tier.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: f1d14e663723be2bed5817df58b49d5704384e80
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:aws-free-tier
+- kt:aws-organizations
+- kt:aws-control-tower
+difficulty: 2
+created: '2026-11-18'
+status: active

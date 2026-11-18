@@ -1,0 +1,19 @@
+id: aws-000222
+product_area: governance-and-operations
+true_statement: AWS Proton reached end of support on 2026-10-07; its console is no longer reachable, but infrastructure it deployed stays in place.
+false_statement: AWS Proton reached end of support on 2026-10-07; its console is no longer reachable, and infrastructure it deployed was deleted with it.
+explanation: End of support removed access to Proton itself, not to the stacks it had provisioned. Those resources keep running and need a new deployment tool such as CloudFormation Git sync or CodePipeline.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-management-and-governance-services.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 358beb6def396fa38bc10b310eff13c7aa35c2ec
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-management-and-governance-services
+difficulty: 2
+created: '2026-11-18'
+status: active

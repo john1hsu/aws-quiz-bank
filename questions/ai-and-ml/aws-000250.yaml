@@ -1,0 +1,17 @@
+id: aws-000250
+product_area: ai-and-ml
+true_statement: Trainium3 is AWS's first 3 nm AI chip, and a fully configured Trn3 UltraServer holds up to 144 Trainium3 chips.
+false_statement: Trainium3 is AWS's first 3 nm AI chip, and a fully configured Trn3 UltraServer holds up to 64 Trainium3 chips.
+explanation: Trn3 UltraServers scale to 144 chips joined by an all-to-all switch fabric. The 64-chip figure matches a Trn2 UltraServer of four Trn2 instances, or the smaller Gen1 Trn3 layout.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/aws-trainium-and-inferentia.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 1b79458d1d32ab61ba437588f7211e73864c4449
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:aws-trainium-and-inferentia
+difficulty: 2
+created: '2026-11-18'
+status: active

@@ -1,0 +1,17 @@
+id: aws-000280
+product_area: global-infrastructure
+true_statement: Opting in to an AWS Local Zone group is self-service, but disabling a zone group requires an AWS Support case after its resources are deleted.
+false_statement: Opting in to an AWS Local Zone group requires an AWS Support case, but disabling a zone group is self-service once its resources are deleted.
+explanation: Zone groups are enabled from AWS Global View or the ModifyAvailabilityZoneGroup API. Turning one off is not self-service and goes through Support.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/local-zones.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 747bbba874d7d5707f67f02b53850854ec19ce65
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:local-zones
+difficulty: 2
+created: '2026-11-18'
+status: active

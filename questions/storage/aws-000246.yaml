@@ -1,0 +1,21 @@
+id: aws-000246
+product_area: storage
+true_statement: For a mixed fleet of Windows and Linux clients, AWS's storage guide points to Amazon FSx for NetApp ONTAP, which serves NFS and SMB at the same time.
+false_statement: For a mixed fleet of Windows and Linux clients, AWS's storage guide points to Amazon EFS, which serves NFS and SMB at the same time.
+explanation: FSx for NetApp ONTAP is the multiprotocol option in the guide. EFS is recommended for Linux clients over NFS, and FSx for Windows File Server for Windows over SMB.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/aws-storage-services.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 2fd711077d8229fb9506de65ff498dd3098906fa
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-storage-services
+- kt:amazon-fsx
+- kt:amazon-efs
+difficulty: 2
+created: '2026-11-18'
+status: active

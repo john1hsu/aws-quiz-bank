@@ -1,0 +1,19 @@
+id: aws-000245
+product_area: storage
+true_statement: A logically air-gapped AWS Backup vault is always locked in compliance mode and can be shared through AWS RAM so other accounts can restore if the owner account is compromised.
+false_statement: A logically air-gapped AWS Backup vault is always locked in governance mode and can be shared through AWS RAM so other accounts can restore if the owner account is compromised.
+explanation: Air-gapped vaults are built for ransomware recovery, so their lock is fixed in compliance mode, which nobody can lift early. Governance mode would let privileged users in the compromised account remove it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/aws-backup.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 881bd195d41c416c0a52d5c762948af60204e0de
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-backup
+difficulty: 3
+created: '2026-11-18'
+status: active

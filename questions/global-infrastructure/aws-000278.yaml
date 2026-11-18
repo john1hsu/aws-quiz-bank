@@ -1,0 +1,20 @@
+id: aws-000278
+product_area: global-infrastructure
+true_statement: Edge locations host services such as CloudFront and Route 53 for you; you cannot choose them to launch EC2 instances or store data as you would a Region.
+false_statement: Edge locations host services such as CloudFront and Route 53 and can also be chosen, like a small Region, to launch EC2 instances or store data.
+explanation: Edge locations are the entry point for user traffic, not a place to provision compute or storage. For compute near users, AWS points to options such as Local Zones or Outposts.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/edge-locations.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: e607bed22719e61a2d0a2299a96095665323276e
+verified_on: '2026-11-12'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:edge-locations
+- kt:aws-regions
+difficulty: 1
+created: '2026-11-18'
+status: active

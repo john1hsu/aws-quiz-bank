@@ -1,0 +1,20 @@
+id: aws-000204
+product_area: cost-management
+true_statement: Amazon EC2 gives a two-minute warning before it stops or terminates a Spot Instance, delivered as an EventBridge event and in instance metadata.
+false_statement: Amazon EC2 gives a ten-minute warning before it stops or terminates a Spot Instance, delivered as an EventBridge event and in instance metadata.
+explanation: The Spot interruption notice gives two minutes of lead time, on a best-effort basis, and AWS suggests polling metadata for it every few seconds. Ten minutes overstates the window; hibernation gets no lead time at all.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/spot-instances.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 4d5f03265d70ab1eadcae41d0d55f8538690a0c3
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:spot-instances
+- kt:amazon-eventbridge
+difficulty: 1
+created: '2026-11-18'
+status: active

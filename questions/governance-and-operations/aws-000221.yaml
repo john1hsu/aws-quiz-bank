@@ -1,0 +1,19 @@
+id: aws-000221
+product_area: governance-and-operations
+true_statement: In AWS's US East (N. Virginia) pricing, AWS Config charges $0.003 per continuously recorded configuration item and $0.012 per daily periodic item (as of 2026-11).
+false_statement: In AWS's US East (N. Virginia) pricing, AWS Config charges $0.012 per continuously recorded configuration item and $0.003 per daily periodic item (as of 2026-11).
+explanation: Continuous items are cheaper each but are created on every change, while periodic recording costs more per item but produces at most one per resource per day. That is why daily recording helps high-churn workloads.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-config.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 143ed16989c5387d63b61b4e3b2247ae78f0d2af
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-config
+difficulty: 3
+created: '2026-11-18'
+status: active

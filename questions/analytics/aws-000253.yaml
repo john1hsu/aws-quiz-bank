@@ -1,0 +1,19 @@
+id: aws-000253
+product_area: analytics
+true_statement: Amazon Data Firehose loads Amazon Redshift indirectly, first writing data to an S3 bucket and then issuing a Redshift COPY command.
+false_statement: Amazon Data Firehose loads Amazon Redshift directly, inserting each buffered batch into the target table without staging it in Amazon S3.
+explanation: Redshift delivery always stages data in S3 before the COPY. Failed loads are retried for a period and then recorded in an errors manifest for manual loading.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-data-firehose.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: d38e4659ea60ef2e4673f9f203821aebe4729680
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:amazon-data-firehose
+- kt:amazon-redshift
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-18'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000214
+product_area: devops-and-iac
+true_statement: CodePipeline caps pipelines that poll their source at 300 per Region, a quota that cannot be raised, so AWS favors event-based change detection.
+false_statement: CodePipeline caps pipelines that use event-based change detection at 300 per Region, a quota that cannot be raised, so AWS favors polling the source.
+explanation: The general limit is 1,000 pipelines per Region and is adjustable, but polling pipelines have their own fixed cap of 300. Event-based detection avoids that cap.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-codepipeline.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 00e4d9c456f0d008c741d8639696145332e0299b
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-codepipeline
+- kt:aws-regions
+difficulty: 2
+created: '2026-11-18'
+status: active

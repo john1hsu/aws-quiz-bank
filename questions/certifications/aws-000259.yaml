@@ -1,0 +1,17 @@
+id: aws-000259
+product_area: certifications
+true_statement: AWS Certification exam fees are 100 USD for Foundational, 150 USD for Associate and 300 USD for Professional and Specialty exams, before taxes (as of 2026-11).
+false_statement: AWS Certification exam fees are 100 USD for Foundational, 300 USD for Associate and 150 USD for Professional and Specialty exams, before taxes (as of 2026-11).
+explanation: 'Fees rise with the level: Associate costs 150 USD and the Professional and Specialty exams cost 300 USD. The false statement swaps those two prices.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certification-program.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 743d929073777b883c498fae32a48a5e27d21a13
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:aws-certification-program
+difficulty: 1
+created: '2026-11-18'
+status: active

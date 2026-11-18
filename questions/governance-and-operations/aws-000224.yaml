@@ -1,0 +1,20 @@
+id: aws-000224
+product_area: governance-and-operations
+true_statement: AWS Security Hub CSPM gathers findings from services such as GuardDuty, Inspector and Macie into one prioritized view, while AWS Audit Manager continuously collects audit evidence.
+false_statement: AWS Audit Manager gathers findings from services such as GuardDuty, Inspector and Macie into one prioritized view, while AWS Security Hub CSPM continuously collects audit evidence.
+explanation: Security Hub CSPM is the findings aggregator across security services, and Audit Manager is the evidence collector for audits. The false statement reverses them.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-management-and-governance-services.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 358beb6def396fa38bc10b310eff13c7aa35c2ec
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-management-and-governance-services
+- kt:aws-security-hub
+difficulty: 2
+created: '2026-11-18'
+status: active

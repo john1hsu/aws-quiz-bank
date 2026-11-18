@@ -1,0 +1,18 @@
+id: aws-000274
+product_area: devops-and-iac
+true_statement: CloudFormation drift detection checks only the resource properties set explicitly in the template or its parameters, not properties left at their defaults.
+false_statement: CloudFormation drift detection checks every property of each resource, including properties left at their defaults rather than set in the template.
+explanation: Drift is measured against the values the template declares. Properties it never sets are not compared, so changes to them can go unnoticed.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/infrastructure-as-code.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: fec6ce58eb2daf92adfa4146c4949dd5a6819c75
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:infrastructure-as-code
+- kt:cloudformation-drift-detection
+difficulty: 3
+created: '2026-11-18'
+status: active

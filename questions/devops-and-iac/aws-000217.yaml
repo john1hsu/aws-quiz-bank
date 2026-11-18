@@ -1,0 +1,18 @@
+id: aws-000217
+product_area: devops-and-iac
+true_statement: In an Amazon RDS Blue/Green Deployment the green environment is read-only by default, because writes to it can cause replication conflicts.
+false_statement: In an Amazon RDS Blue/Green Deployment the green environment accepts writes by default, because replication from blue resolves any conflicts.
+explanation: Green is kept in sync from blue by replication, so writing to it directly risks conflicts. RDS therefore makes it read-only unless you change that.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/blue-green-deployments.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 59197a9d851811a5c6201f73cf0c5046e9cb5cd2
+verified_on: '2026-11-11'
+feature_status: concept
+concepts:
+- kt:blue-green-deployments
+- kt:amazon-rds
+difficulty: 3
+created: '2026-11-18'
+status: active

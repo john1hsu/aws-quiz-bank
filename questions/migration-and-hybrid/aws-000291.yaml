@@ -1,0 +1,20 @@
+id: aws-000291
+product_area: migration-and-hybrid
+true_statement: A VPC – Internet endpoint in AWS Transfer Family attaches Elastic IP addresses that partners can allow-list, while a Public endpoint has no static IP.
+false_statement: A Public endpoint in AWS Transfer Family attaches Elastic IP addresses that partners can allow-list, while a VPC – Internet endpoint has no static IP.
+explanation: Fixed, allow-listable addresses come from the VPC – Internet endpoint type, which also supports security groups. The Public endpoint offers SFTP only, with no static IP or source-IP filtering.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-transfer-family.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: c4cabe04116e93b945464135ba2e5106c9bab8a7
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-transfer-family
+- kt:amazon-vpc
+difficulty: 2
+created: '2026-11-18'
+status: active

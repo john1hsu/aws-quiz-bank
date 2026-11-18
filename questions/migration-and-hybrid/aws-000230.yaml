@@ -1,0 +1,19 @@
+id: aws-000230
+product_area: migration-and-hybrid
+true_statement: AWS Data Transfer Terminals are billed per reserved port hour, with a one-hour minimum, and carry no charge based on data volume.
+false_statement: AWS Data Transfer Terminals are billed per terabyte copied, with a one-terabyte minimum, and carry no charge based on reserved time.
+explanation: 'Terminal pricing is time-based: you pay for the port hours you reserve, whatever the amount of data moved. Rates also rise when the terminal and AWS endpoint are on different continents.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-migration-and-transfer-services.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 692f5cc88a3657b964357ed3aa87a45e49cc41ea
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-migration-and-transfer-services
+difficulty: 2
+created: '2026-11-18'
+status: active

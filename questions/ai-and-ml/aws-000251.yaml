@@ -1,0 +1,18 @@
+id: aws-000251
+product_area: ai-and-ml
+true_statement: Models run on Trainium and Inferentia through the AWS Neuron SDK, and AWS no longer actively develops its TensorFlow and MXNet Neuron integrations.
+false_statement: Models run on Trainium and Inferentia through the AWS Neuron SDK, and AWS no longer actively develops its PyTorch and vLLM Neuron integrations.
+explanation: Neuron compiles models for NeuronCores. AWS steers users to PyTorch, JAX and vLLM because the TensorFlow and MXNet paths are no longer under active development.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/aws-trainium-and-inferentia.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 1b79458d1d32ab61ba437588f7211e73864c4449
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:aws-trainium-and-inferentia
+- kt:aws-neuron-sdk
+difficulty: 2
+created: '2026-11-18'
+status: active

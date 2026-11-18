@@ -1,0 +1,19 @@
+id: aws-000225
+product_area: identity-and-access
+true_statement: Within one account, a resource-based policy naming an IAM user's ARN grants access the user's permissions boundary does not limit, while one naming a role's ARN is limited by the role's boundary.
+false_statement: Within one account, a resource-based policy naming an IAM role's ARN grants access the role's permissions boundary does not limit, while one naming a user's ARN is limited by the user's boundary.
+explanation: Boundaries restrict through an implicit deny, and IAM treats user ARNs and role ARNs differently in resource policies. Access granted to a user ARN bypasses the user's boundary; access granted to a role ARN still has to fit the role's boundary.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/permissions-boundaries.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: af131be4c498ead6312d200c152e9e61d084a562
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:permissions-boundaries
+- kt:iam-policy-evaluation-logic
+- kt:iam-roles
+difficulty: 3
+created: '2026-11-18'
+status: active

@@ -1,0 +1,17 @@
+id: aws-000296
+product_area: migration-and-hybrid
+true_statement: Relocate, the strategy added to AWS's original six Rs, moves workloads to a cloud version of the same platform or to another VPC, Region or account without changing their architecture.
+false_statement: Repurchase, the strategy added to AWS's original six Rs, moves workloads to a cloud version of the same platform or to another VPC, Region or account without changing their architecture.
+explanation: Repurchase was already among the six strategies in the 2016 blog post. Relocate is the seventh, and AWS calls it the quickest route because the architecture stays the same.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/seven-rs-migration-strategies.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: dadd12e4be0a41a5b60830c9fb005361c65da816
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:seven-rs-migration-strategies
+difficulty: 2
+created: '2026-11-18'
+status: active

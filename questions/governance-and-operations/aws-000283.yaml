@@ -1,0 +1,19 @@
+id: aws-000283
+product_area: governance-and-operations
+true_statement: In AWS's recommended OU layout, the Security OU holds log archive and security tooling accounts, while the Infrastructure OU holds shared networking and IT services.
+false_statement: In AWS's recommended OU layout, the Infrastructure OU holds log archive and security tooling accounts, while the Security OU holds shared networking and IT services.
+explanation: Security and Infrastructure are the two foundational OUs. Logging and security tools sit under Security; shared network and IT service accounts sit under Infrastructure.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/multi-account-strategy.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 1a88da25ddbae8e9428f072c947b68efa72447f0
+verified_on: '2026-11-12'
+feature_status: concept
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:multi-account-strategy
+difficulty: 2
+created: '2026-11-18'
+status: active

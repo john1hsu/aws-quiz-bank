@@ -1,0 +1,17 @@
+id: aws-000254
+product_area: analytics
+true_statement: If its destination is unavailable, a Direct PUT Firehose stream keeps retrying data for up to 24 hours before discarding it.
+false_statement: If its destination is unavailable, a Direct PUT Firehose stream keeps retrying data for up to 7 days before discarding it.
+explanation: Direct PUT data is held for at most 24 hours. Only when the source is a Kinesis data stream does the window extend to that stream's retention period.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-data-firehose.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: d38e4659ea60ef2e4673f9f203821aebe4729680
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:amazon-data-firehose
+difficulty: 2
+created: '2026-11-18'
+status: active

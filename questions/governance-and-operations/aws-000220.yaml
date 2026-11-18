@@ -1,0 +1,20 @@
+id: aws-000220
+product_area: governance-and-operations
+true_statement: AWS Config allows 1,000 rules per Region per account, a fixed limit that also counts the rules deployed inside conformance packs (as of 2026-11).
+false_statement: AWS Config allows 1,000 rules per Region per account, a fixed limit that excludes the rules deployed inside conformance packs (as of 2026-11).
+explanation: Rules added through conformance packs are not exempt; they consume the same per-Region, non-adjustable allowance as rules created one by one.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-config.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 143ed16989c5387d63b61b4e3b2247ae78f0d2af
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-config
+- kt:aws-config-quotas
+difficulty: 3
+created: '2026-11-18'
+status: active

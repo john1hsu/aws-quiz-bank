@@ -1,0 +1,17 @@
+id: aws-000252
+product_area: analytics
+true_statement: Amazon Data Firehose rounds each Direct PUT or Kinesis Data Streams record up to 5 KB for billing, so many tiny records cost more than the same bytes in fewer records.
+false_statement: Amazon Data Firehose bills each Direct PUT or Kinesis Data Streams record by its exact size, so many tiny records cost the same as the same bytes in fewer records.
+explanation: Ingestion is billed per GB, but every record counts as at least 5 KB. Batching small events into larger records is therefore a cost lever.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-data-firehose.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: d38e4659ea60ef2e4673f9f203821aebe4729680
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:amazon-data-firehose
+difficulty: 2
+created: '2026-11-18'
+status: active

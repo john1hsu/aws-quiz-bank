@@ -1,0 +1,19 @@
+id: aws-000218
+product_area: devops-and-iac
+true_statement: For CodeDeploy blue/green deployments of an ECS service behind a Network Load Balancer, only the ECSAllAtOnce configuration is supported (as of 2026-11).
+false_statement: For CodeDeploy blue/green deployments of an ECS service behind a Network Load Balancer, only canary and linear configurations are supported (as of 2026-11).
+explanation: Gradual canary and linear shifting is not available for ECS services fronted by an NLB in CodeDeploy; they must shift all traffic at once.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/blue-green-deployments.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 59197a9d851811a5c6201f73cf0c5046e9cb5cd2
+verified_on: '2026-11-11'
+feature_status: concept
+concepts:
+- kt:blue-green-deployments
+- kt:aws-codedeploy
+- kt:elastic-load-balancing
+difficulty: 3
+created: '2026-11-18'
+status: active

@@ -1,0 +1,21 @@
+id: aws-000240
+product_area: serverless-and-integration
+true_statement: Amazon SNS retries failed deliveries to AWS-managed endpoints such as SQS and Lambda over 23 days, but to customer-managed endpoints such as SMS and email over only 6 hours.
+false_statement: Amazon SNS retries failed deliveries to customer-managed endpoints such as SMS and email over 23 days, but to AWS-managed endpoints such as SQS and Lambda over only 6 hours.
+explanation: The default delivery policy is far more persistent for AWS-managed targets (up to 100,015 attempts) than for customer-managed ones (50 attempts). After the policy runs out, the message is dropped unless a dead-letter queue is set.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-sns.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 391c0de4a149466e1cf3b8ee5211d71d8e099c0a
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-sns
+- kt:amazon-sqs
+- kt:aws-lambda
+difficulty: 3
+created: '2026-11-18'
+status: active

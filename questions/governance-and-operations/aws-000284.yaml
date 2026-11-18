@@ -1,0 +1,20 @@
+id: aws-000284
+product_area: governance-and-operations
+true_statement: AWS Organizations allows OUs to be nested up to five levels deep, though AWS recommends keeping the hierarchy shallow.
+false_statement: AWS Organizations allows OUs to be nested up to ten levels deep, though AWS recommends keeping the hierarchy shallow.
+explanation: Five levels of OU nesting is the documented maximum. AWS still suggests a flat structure because deep trees make policy inheritance harder to reason about.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/multi-account-strategy.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 1a88da25ddbae8e9428f072c947b68efa72447f0
+verified_on: '2026-11-12'
+feature_status: concept
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:multi-account-strategy
+- kt:organizations-quotas
+difficulty: 2
+created: '2026-11-18'
+status: active

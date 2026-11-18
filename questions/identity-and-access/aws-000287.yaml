@@ -1,0 +1,20 @@
+id: aws-000287
+product_area: identity-and-access
+true_statement: By default the global AWS STS endpoint issues version 1 tokens that do not work in opt-in Regions, while Regional STS endpoints issue tokens valid in every Region.
+false_statement: By default Regional AWS STS endpoints issue version 1 tokens that do not work in opt-in Regions, while the global STS endpoint issues tokens valid in every Region.
+explanation: Tokens from sts.amazonaws.com fail in opt-in Regions such as Hong Kong unless reconfigured. That is one reason AWS recommends calling the Regional endpoint where the workload runs.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/aws-sts.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: c16b6494b0c42cd341b90e3ecb4c67c8b88137cd
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-sts
+- kt:aws-regions
+difficulty: 3
+created: '2026-11-18'
+status: active

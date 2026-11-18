@@ -1,0 +1,20 @@
+id: aws-000264
+product_area: containers
+true_statement: Up to 25 Amazon ECS Express Mode services can share one Application Load Balancer, and Express Mode adds no charge beyond the resources it creates.
+false_statement: Each Amazon ECS Express Mode service needs its own Application Load Balancer, and Express Mode adds a per-service charge on top of the resources it creates.
+explanation: Express Mode provisions a Fargate-backed service, ALB, scaling and networking in one call, and several services can share an ALB. You pay only for those underlying resources.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/aws-container-services.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: fc7b12131435ecd3a89c996ba856cca6f8d749b1
+verified_on: '2026-11-12'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-container-services
+- kt:amazon-ecs
+difficulty: 2
+created: '2026-11-18'
+status: active

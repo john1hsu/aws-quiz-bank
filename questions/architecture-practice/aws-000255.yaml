@@ -1,0 +1,18 @@
+id: aws-000255
+product_area: architecture-practice
+true_statement: The performance efficiency design principle called mechanical sympathy means choosing technology that fits the goal, such as matching a data store to the workload's access patterns.
+false_statement: The performance efficiency design principle called democratizing advanced technologies means choosing technology that fits the goal, such as matching a data store to the workload's access patterns.
+explanation: 'Mechanical sympathy is about fitting the technology to how the workload uses it. Democratizing advanced technologies is a different principle: consuming specialized tech such as ML or NoSQL as managed services.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/performance-efficiency-pillar.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 47ed7df040056e8701ad33bf00b4f8a8f5bbc835
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:performance-efficiency-pillar
+- kt:purpose-built-databases
+difficulty: 2
+created: '2026-11-18'
+status: active

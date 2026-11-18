@@ -1,0 +1,18 @@
+id: aws-000263
+product_area: compute
+true_statement: Only On-Demand Capacity Reservations can reserve capacity inside an EC2 cluster placement group; zonal Reserved Instances cannot.
+false_statement: Only zonal Reserved Instances can reserve capacity inside an EC2 cluster placement group; On-Demand Capacity Reservations cannot.
+explanation: Capacity Reservations can target a cluster placement group, whereas zonal RIs reserve capacity only in an AZ. No reservation type reserves capacity in partition or spread groups.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/ec2-placement-groups.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 73dc28d197e874f114c36d5b05b4d753a3ffce20
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:ec2-placement-groups
+- kt:on-demand-capacity-reservations
+difficulty: 3
+created: '2026-11-18'
+status: active

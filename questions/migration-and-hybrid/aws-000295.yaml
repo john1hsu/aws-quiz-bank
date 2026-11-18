@@ -1,0 +1,17 @@
+id: aws-000295
+product_area: migration-and-hybrid
+true_statement: For large migrations, AWS Prescriptive Guidance does not recommend refactoring and favors strategies such as rehost, replatform, relocate and retire.
+false_statement: For large migrations, AWS Prescriptive Guidance recommends refactoring each workload first and avoids strategies such as rehost and relocate.
+explanation: Refactoring is the most complex and costly strategy, so AWS advises migrating first and modernizing later, once rehosted workloads are already running on AWS.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/seven-rs-migration-strategies.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: dadd12e4be0a41a5b60830c9fb005361c65da816
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:seven-rs-migration-strategies
+difficulty: 2
+created: '2026-11-18'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000270
+product_area: databases
+true_statement: DynamoDB global tables in MREC mode resolve concurrent updates to the same item with last writer wins, while MRSC mode gives a recovery point objective of zero.
+false_statement: DynamoDB global tables in MRSC mode resolve concurrent updates to the same item with last writer wins, while MREC mode gives a recovery point objective of zero.
+explanation: MREC replicates asynchronously, so conflicting writes are settled by timestamp and the RPO equals the replication lag. MRSC replicates synchronously before acknowledging, which brings the RPO to zero.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/dynamodb-global-tables.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 8d925aec2a32f5567d8660e8005dd32a468ca5ca
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:dynamodb-global-tables
+- kt:amazon-dynamodb
+difficulty: 3
+created: '2026-11-18'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000236
+product_area: security
+true_statement: The Count action in an AWS WAF rule records that a request matched without allowing or blocking it, which makes it useful for testing new rules.
+false_statement: The Count action in an AWS WAF rule blocks a request once a client exceeds a set number of matches, which makes it useful for rate limiting.
+explanation: Count only tallies matches and lets the request continue through the web ACL. Per-client rate limiting is done with rate-based rules instead.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-waf.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 5261ee0c08c6c80e3d8b055a56b783004bf99256
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-waf
+difficulty: 1
+created: '2026-11-18'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000286
+product_area: identity-and-access
+true_statement: Session policies passed to AWS STS AssumeRole can only narrow a session, because effective permissions are the intersection of the role's policies and the session policies.
+false_statement: Session policies passed to AWS STS AssumeRole can widen a session, because effective permissions are the union of the role's policies and the session policies.
+explanation: A session policy is a filter applied on top of the role's identity-based policies. It can remove permissions for that session but never grant anything the role lacks.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/aws-sts.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: c16b6494b0c42cd341b90e3ecb4c67c8b88137cd
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-sts
+- kt:iam-policy-evaluation-logic
+difficulty: 2
+created: '2026-11-18'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000202
+product_area: cost-management
+true_statement: By default you can buy 20 new regional Reserved Instances per Region per month plus 20 new zonal RIs per Availability Zone per month (as of 2026-11).
+false_statement: By default you can buy 20 new Reserved Instances per Region per month in total, whether they are regional or zonal (as of 2026-11).
+explanation: The regional and zonal purchase quotas are separate, and the zonal one applies per AZ, so a three-AZ Region allows 80 new RIs a month by default.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/reserved-instances.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 0ec80030e1bb9a0767b19e13c7f0519053d0c3aa
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:reserved-instances
+difficulty: 2
+created: '2026-11-18'
+status: active

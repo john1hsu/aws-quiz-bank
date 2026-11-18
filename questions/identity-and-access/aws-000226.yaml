@@ -1,0 +1,17 @@
+id: aws-000226
+product_area: identity-and-access
+true_statement: A resource-policy Deny that uses NotPrincipal always denies any principal that has a permissions boundary attached, so AWS recommends ArnNotEquals on aws:PrincipalArn instead.
+false_statement: A resource-policy Deny that uses ArnNotEquals on aws:PrincipalArn always denies any principal that has a permissions boundary attached, so AWS recommends NotPrincipal instead.
+explanation: The NotPrincipal pattern misfires for principals with boundaries and blocks them outright. A condition on aws:PrincipalArn achieves the intended exception safely.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/permissions-boundaries.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: af131be4c498ead6312d200c152e9e61d084a562
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:permissions-boundaries
+difficulty: 3
+created: '2026-11-18'
+status: active

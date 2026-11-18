@@ -1,0 +1,19 @@
+id: aws-000237
+product_area: serverless-and-integration
+true_statement: In Amazon API Gateway, native JWT authorizers are an HTTP API feature, while API keys with per-client usage throttling are a REST API feature.
+false_statement: In Amazon API Gateway, native JWT authorizers are a REST API feature, while API keys with per-client usage throttling are an HTTP API feature.
+explanation: HTTP APIs are the cheaper type with a few features of their own, such as built-in JWT authorizers. API keys and usage plans, along with caching and AWS WAF, are available only on REST APIs.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-api-gateway.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: e229c04ac2bcad1eff316b2ea1b568e19386b7d4
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:amazon-api-gateway
+difficulty: 2
+created: '2026-11-18'
+status: active

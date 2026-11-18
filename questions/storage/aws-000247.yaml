@@ -1,0 +1,21 @@
+id: aws-000247
+product_area: storage
+true_statement: Amazon FSx File Gateway is closed to new customers, and AWS suggests mapping file shares directly to FSx for Windows File Server instead.
+false_statement: Amazon FSx for Windows File Server is closed to new customers, and AWS suggests mapping file shares through FSx File Gateway instead.
+explanation: It is the gateway, not the file system, that stopped taking new customers. New designs connect clients straight to FSx for Windows File Server.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/aws-storage-services.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 2fd711077d8229fb9506de65ff498dd3098906fa
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-storage-services
+- kt:aws-storage-gateway
+- kt:amazon-fsx
+difficulty: 2
+created: '2026-11-18'
+status: active

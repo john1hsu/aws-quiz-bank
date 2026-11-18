@@ -1,0 +1,20 @@
+id: aws-000231
+product_area: public-sector-and-compliance
+true_statement: An AWS Artifact organization agreement can be accepted only from the management account of an organization with all features enabled.
+false_statement: An AWS Artifact organization agreement can be accepted from any member account of an organization that has only consolidated billing enabled.
+explanation: Organization agreements cover every current and future member account, so only the management account may accept or terminate them, and the organization needs all features, not just consolidated billing.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/aws-artifact.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: f1243daa17b7425a0371c82f108b836055254d5f
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-artifact
+- kt:aws-organizations
+difficulty: 2
+created: '2026-11-18'
+status: active

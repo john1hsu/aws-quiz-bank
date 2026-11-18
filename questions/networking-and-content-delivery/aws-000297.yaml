@@ -1,0 +1,20 @@
+id: aws-000297
+product_area: networking-and-content-delivery
+true_statement: An AWS Direct Connect transit VIF reaches AWS Transit Gateway, while a public VIF reaches AWS public endpoints such as Amazon S3.
+false_statement: An AWS Direct Connect public VIF reaches AWS Transit Gateway, while a transit VIF reaches AWS public endpoints such as Amazon S3.
+explanation: 'Each virtual interface type has its own target: private VIFs reach a VPC''s private range, transit VIFs reach Transit Gateway or Cloud WAN, and public VIFs reach AWS public service endpoints.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-direct-connect.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 254f4a198b55c6d87a79c96a1ac750907ce2c0d6
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-direct-connect
+- kt:aws-transit-gateway
+difficulty: 2
+created: '2026-11-18'
+status: active

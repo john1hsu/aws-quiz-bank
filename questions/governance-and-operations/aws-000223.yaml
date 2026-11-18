@@ -1,0 +1,19 @@
+id: aws-000223
+product_area: governance-and-operations
+true_statement: AWS Service Catalog curates the IT products teams are allowed to launch, while AWS License Manager tracks vendor software licences across AWS and on-premises servers.
+false_statement: AWS License Manager curates the IT products teams are allowed to launch, while AWS Service Catalog tracks vendor software licences across AWS and on-premises servers.
+explanation: Service Catalog is the governed catalog of approved products, and License Manager is the licence-tracking service. The false statement swaps their jobs.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-management-and-governance-services.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 358beb6def396fa38bc10b310eff13c7aa35c2ec
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-management-and-governance-services
+difficulty: 1
+created: '2026-11-18'
+status: active

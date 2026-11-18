@@ -1,0 +1,20 @@
+id: aws-000276
+product_area: global-infrastructure
+true_statement: CloudFront regional edge caches sit inside AWS Regions, between origin servers and the points of presence that serve viewers.
+false_statement: CloudFront regional edge caches sit inside ISP networks, closer to viewers than the points of presence that connect back to origins.
+explanation: RECs are the mid tier located in Regions. The tier embedded in ISP networks, closest to viewers, is the embedded PoP.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/edge-locations.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: e607bed22719e61a2d0a2299a96095665323276e
+verified_on: '2026-11-12'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:edge-locations
+- kt:amazon-cloudfront
+difficulty: 2
+created: '2026-11-18'
+status: active

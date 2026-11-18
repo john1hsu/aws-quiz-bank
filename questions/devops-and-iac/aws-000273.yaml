@@ -1,0 +1,19 @@
+id: aws-000273
+product_area: devops-and-iac
+true_statement: AWS Prescriptive Guidance suggests Terraform for multi-cloud or hybrid infrastructure, and CloudFormation or the AWS CDK when infrastructure lives entirely on AWS.
+false_statement: AWS Prescriptive Guidance suggests CloudFormation for multi-cloud or hybrid infrastructure, and Terraform or Pulumi when infrastructure lives entirely on AWS.
+explanation: CloudFormation and the CDK manage state for you and support new AWS features natively, which suits AWS-only estates. Terraform's provider ecosystem is the reason it is suggested for multi-provider setups.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/infrastructure-as-code.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: fec6ce58eb2daf92adfa4146c4949dd5a6819c75
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:infrastructure-as-code
+- kt:aws-cloudformation
+- kt:aws-cdk
+difficulty: 2
+created: '2026-11-18'
+status: active

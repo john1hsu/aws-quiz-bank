@@ -1,0 +1,20 @@
+id: aws-000282
+product_area: governance-and-operations
+true_statement: AWS advises structuring OUs around shared security and operational needs rather than mirroring the company's reporting chart.
+false_statement: AWS advises structuring OUs to mirror the company's reporting chart rather than grouping accounts by shared security and operational needs.
+explanation: OUs exist to apply common controls, so accounts that need the same policies belong together. Org-chart structures change often and rarely match control requirements.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/multi-account-strategy.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 1a88da25ddbae8e9428f072c947b68efa72447f0
+verified_on: '2026-11-12'
+feature_status: concept
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:multi-account-strategy
+- kt:aws-organizations
+difficulty: 2
+created: '2026-11-18'
+status: active

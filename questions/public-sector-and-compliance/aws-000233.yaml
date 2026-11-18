@@ -1,0 +1,20 @@
+id: aws-000233
+product_area: public-sector-and-compliance
+true_statement: AWS Artifact reports such as SOC and ISO attest to AWS's own controls, so customers must still produce their own evidence for the parts of a workload they operate.
+false_statement: AWS Artifact reports such as SOC and ISO attest to each customer's workload, so customers need no further evidence for the parts of a workload they operate.
+explanation: Artifact provides evidence about AWS's side of the shared responsibility model. Compliance of the customer's own configuration and applications still has to be shown separately.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/aws-artifact.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: f1243daa17b7425a0371c82f108b836055254d5f
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-artifact
+- kt:shared-responsibility-model
+difficulty: 1
+created: '2026-11-18'
+status: active

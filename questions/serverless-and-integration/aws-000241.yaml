@@ -1,0 +1,19 @@
+id: aws-000241
+product_area: serverless-and-integration
+true_statement: Amazon SNS bills each 64 KB chunk of published data as one request, so publishing a single 1 MiB message counts as 16 requests.
+false_statement: Amazon SNS bills each 256 KB chunk of published data as one request, so publishing a single 1 MiB message counts as 4 requests.
+explanation: SNS meters payloads in 64 KB units, so large messages multiply the request charge. A 1 MiB publish therefore costs as much as 16 small ones.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-sns.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 391c0de4a149466e1cf3b8ee5211d71d8e099c0a
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-sns
+difficulty: 2
+created: '2026-11-18'
+status: active

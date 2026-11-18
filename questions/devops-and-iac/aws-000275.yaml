@@ -1,0 +1,18 @@
+id: aws-000275
+product_area: devops-and-iac
+true_statement: The CloudFormation IaC generator writes templates from existing resources, but only for resource types that Cloud Control API supports in that Region.
+false_statement: The CloudFormation IaC generator writes templates from existing resources, but only for resource types that AWS Config records in that Region.
+explanation: The generator's coverage is tied to Cloud Control API support. Resources it can scan can then be imported into a stack or moved into a CDK app.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/infrastructure-as-code.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: fec6ce58eb2daf92adfa4146c4949dd5a6819c75
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:infrastructure-as-code
+- kt:aws-cloudformation
+difficulty: 3
+created: '2026-11-18'
+status: active

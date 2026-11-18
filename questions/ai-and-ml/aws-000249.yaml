@@ -1,0 +1,17 @@
+id: aws-000249
+product_area: ai-and-ml
+true_statement: AWS positions Trainium for both training and high-volume inference of large models, while Inferentia is built specifically for deep learning inference.
+false_statement: AWS positions Inferentia for both training and high-volume inference of large models, while Trainium is built specifically for deep learning inference.
+explanation: Trainium is AWS's training-and-inference accelerator pitched on cost per token at scale. Inferentia is the inference-only family behind Inf instances.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/aws-trainium-and-inferentia.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 1b79458d1d32ab61ba437588f7211e73864c4449
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:aws-trainium-and-inferentia
+difficulty: 1
+created: '2026-11-18'
+status: active

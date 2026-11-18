@@ -1,0 +1,17 @@
+id: aws-000262
+product_area: compute
+true_statement: In an EC2 partition placement group no two partitions share a rack, so AWS suggests matching the partition count to a data store's replication factor.
+false_statement: In an EC2 partition placement group each partition sits in its own Availability Zone, so AWS suggests matching the partition count to a data store's replication factor.
+explanation: Partitions are isolated at rack level, with separate network and power, inside an AZ. Rack-aware systems such as HDFS or Kafka can then treat the partition number as a rack ID.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/ec2-placement-groups.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 73dc28d197e874f114c36d5b05b4d753a3ffce20
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:ec2-placement-groups
+difficulty: 3
+created: '2026-11-18'
+status: active

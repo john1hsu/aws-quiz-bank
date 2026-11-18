@@ -1,0 +1,19 @@
+id: aws-000292
+product_area: migration-and-hybrid
+true_statement: Plain FTP in AWS Transfer Family is allowed only on a VPC – Internal endpoint, reachable from the VPC and networks connected over VPN or Direct Connect.
+false_statement: Plain FTP in AWS Transfer Family is allowed only on a Public endpoint, reachable from anywhere on the internet without a VPC.
+explanation: Because FTP is unencrypted, Transfer Family limits it to internal VPC endpoints. Public endpoints support SFTP only.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-transfer-family.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: c4cabe04116e93b945464135ba2e5106c9bab8a7
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-transfer-family
+difficulty: 3
+created: '2026-11-18'
+status: active

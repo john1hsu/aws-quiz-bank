@@ -1,0 +1,18 @@
+id: aws-000227
+product_area: identity-and-access
+true_statement: To delegate role creation safely, a developer's policy allows iam:CreateRole only when the iam:PermissionsBoundary condition key equals the approved boundary's ARN.
+false_statement: To delegate role creation safely, a developer's policy allows iam:CreateRole only when the aws:SourceAccount condition key equals the approved boundary's ARN.
+explanation: The iam:PermissionsBoundary key checks which boundary is being set on the new role, so a create call without the approved boundary fails. aws:SourceAccount identifies a calling account, not a boundary policy.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/permissions-boundaries.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: af131be4c498ead6312d200c152e9e61d084a562
+verified_on: '2026-11-11'
+feature_status: current
+concepts:
+- kt:permissions-boundaries
+- kt:aws-iam
+difficulty: 2
+created: '2026-11-18'
+status: active

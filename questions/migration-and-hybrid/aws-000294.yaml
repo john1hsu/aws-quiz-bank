@@ -1,0 +1,18 @@
+id: aws-000294
+product_area: migration-and-hybrid
+true_statement: Moving SQL Server to Amazon RDS for SQL Server is AWS's example of the replatform strategy, while moving to a SaaS product is repurchase.
+false_statement: Moving SQL Server to Amazon RDS for SQL Server is AWS's example of the repurchase strategy, while moving to a SaaS product is replatform.
+explanation: Replatform keeps the application but swaps in targeted optimizations such as a managed database. Repurchase replaces the application with a different product, typically SaaS.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/seven-rs-migration-strategies.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: dadd12e4be0a41a5b60830c9fb005361c65da816
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:seven-rs-migration-strategies
+- kt:amazon-rds
+difficulty: 1
+created: '2026-11-18'
+status: active

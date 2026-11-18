@@ -1,0 +1,19 @@
+id: aws-000293
+product_area: migration-and-hybrid
+true_statement: AWS Transfer Family charges an hourly fee for each protocol enabled on an endpoint for as long as the server exists, even when no files are moving.
+false_statement: AWS Transfer Family charges an hourly fee only while files are moving through an endpoint, so an idle server with protocols enabled costs nothing.
+explanation: The per-protocol hourly charge accrues around the clock, so an idle test server with SFTP and FTPS enabled still costs about $0.60 an hour in US East (as of 2026-11). Data transferred is billed separately per GB.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-transfer-family.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: c4cabe04116e93b945464135ba2e5106c9bab8a7
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-transfer-family
+difficulty: 2
+created: '2026-11-18'
+status: active

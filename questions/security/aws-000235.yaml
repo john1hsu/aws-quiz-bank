@@ -1,0 +1,21 @@
+id: aws-000235
+product_area: security
+true_statement: AWS WAF inspects at most 8 KB of a request body for an Application Load Balancer, a fixed limit, while CloudFront defaults to 16 KB and can be raised to 64 KB.
+false_statement: AWS WAF inspects at most 64 KB of a request body for an Application Load Balancer, a fixed limit, while CloudFront defaults to 8 KB and cannot be raised.
+explanation: Body inspection limits depend on the protected resource. ALB is capped at 8 KB, while CloudFront and several other front doors start at 16 KB and can go to 64 KB, so content past the limit needs explicit oversize handling.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-waf.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 5261ee0c08c6c80e3d8b055a56b783004bf99256
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-waf
+- kt:application-load-balancer
+- kt:amazon-cloudfront
+difficulty: 3
+created: '2026-11-18'
+status: active

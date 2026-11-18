@@ -1,0 +1,17 @@
+id: aws-000258
+product_area: certifications
+true_statement: After failing an AWS Certification exam you must wait 14 calendar days to retry, and after passing you cannot retake that exam for two years.
+false_statement: After failing an AWS Certification exam you must wait 30 calendar days to retry, and after passing you cannot retake that exam for one year.
+explanation: The retake policy is a 14-day wait after a fail, with no cap on attempts but a full fee each time, and a two-year block on retaking an exam you have passed.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certification-program.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 743d929073777b883c498fae32a48a5e27d21a13
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:aws-certification-program
+difficulty: 1
+created: '2026-11-18'
+status: active

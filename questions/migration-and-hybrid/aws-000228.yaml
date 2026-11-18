@@ -1,0 +1,20 @@
+id: aws-000228
+product_area: migration-and-hybrid
+true_statement: AWS Migration Hub closed to new customers on November 7, 2025, and AWS directs new migration projects to AWS Transform.
+false_statement: AWS Transform closed to new customers on November 7, 2025, and AWS directs new migration projects to AWS Migration Hub.
+explanation: Migration Hub is the service being wound down; existing customers can finish projects. AWS Transform, launched in May 2025, takes over its planning and tracking features.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-migration-and-transfer-services.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 692f5cc88a3657b964357ed3aa87a45e49cc41ea
+verified_on: '2026-11-11'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-migration-and-transfer-services
+- kt:aws-transform
+difficulty: 2
+created: '2026-11-18'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000205
+product_area: cost-management
+true_statement: Setting an optional maximum price on Spot Instances makes them get interrupted more often than leaving the maximum price unset.
+false_statement: Setting an optional maximum price on Spot Instances makes them get interrupted less often than leaving the maximum price unset.
+explanation: 'A maximum price adds a second interruption trigger: when the Spot price rises above it, EC2 reclaims the instance. Leaving it unset removes that trigger, so interruptions are less frequent.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/spot-instances.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 4d5f03265d70ab1eadcae41d0d55f8538690a0c3
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:spot-instances
+difficulty: 2
+created: '2026-11-18'
+status: active

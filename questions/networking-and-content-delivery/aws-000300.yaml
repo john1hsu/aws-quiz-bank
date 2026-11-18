@@ -1,0 +1,20 @@
+id: aws-000300
+product_area: networking-and-content-delivery
+true_statement: Transit Gateway appliance mode keeps both directions of a flow on the same Availability Zone interface, which stateful firewalls in an inspection VPC need.
+false_statement: Transit Gateway appliance mode spreads the two directions of a flow across different Availability Zone interfaces, which stateful firewalls in an inspection VPC need.
+explanation: A stateful appliance must see the request and its return traffic. Appliance mode pins a flow to one AZ's attachment interface so return packets are not dropped.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-transit-gateway.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: f7f6281da98855a35dcd8ed744b5f46f8366be1b
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-transit-gateway
+- kt:amazon-vpc
+difficulty: 3
+created: '2026-11-18'
+status: active

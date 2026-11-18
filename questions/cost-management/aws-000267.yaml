@@ -1,0 +1,17 @@
+id: aws-000267
+product_area: cost-management
+true_statement: An AWS account on the Free account plan is never billed; when the plan ends the account is closed, and upgrading within 90 days restores it.
+false_statement: An AWS account on the Free account plan is never billed; when the plan ends the account moves to on-demand billing, and nothing is closed or deleted.
+explanation: 'The Free plan stops rather than starts charging: the account closes when the period ends, content is kept for 90 days, and only an upgrade to a Paid plan in that window brings it back.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-free-tier.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: f1d14e663723be2bed5817df58b49d5704384e80
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:aws-free-tier
+difficulty: 1
+created: '2026-11-18'
+status: active

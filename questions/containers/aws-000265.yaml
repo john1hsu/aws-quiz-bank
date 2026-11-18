@@ -1,0 +1,20 @@
+id: aws-000265
+product_area: containers
+true_statement: AWS says Fargate Spot is up to 70% cheaper than regular Fargate for interruption-tolerant ECS tasks (as of 2026-11).
+false_statement: AWS says Fargate Spot is up to 90% cheaper than regular Fargate for interruption-tolerant ECS tasks (as of 2026-11).
+explanation: The ECS pricing page puts the Fargate Spot discount at up to 70%. The 90% figure is the one AWS cites for EC2 Spot Instances, not Fargate Spot.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/aws-container-services.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: fc7b12131435ecd3a89c996ba856cca6f8d749b1
+verified_on: '2026-11-12'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-container-services
+- kt:aws-fargate
+difficulty: 2
+created: '2026-11-18'
+status: active

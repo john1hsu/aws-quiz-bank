@@ -1,0 +1,18 @@
+id: aws-000271
+product_area: databases
+true_statement: A DynamoDB MRSC global table spans exactly three Regions, either three replicas or two replicas plus a witness that serves no reads or writes.
+false_statement: A DynamoDB MRSC global table spans exactly two Regions, either two replicas or one replica plus a witness that serves no reads or writes.
+explanation: Strongly consistent multi-Region tables are fixed at three Regions. A DynamoDB-managed witness can stand in for one replica, storing data without serving traffic.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/dynamodb-global-tables.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 8d925aec2a32f5567d8660e8005dd32a468ca5ca
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:dynamodb-global-tables
+- kt:aws-regions
+difficulty: 3
+created: '2026-11-18'
+status: active

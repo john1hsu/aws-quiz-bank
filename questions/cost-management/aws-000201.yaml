@@ -1,0 +1,20 @@
+id: aws-000201
+product_area: cost-management
+true_statement: A zonal Reserved Instance reserves capacity in one Availability Zone, while a regional Reserved Instance reserves no capacity but discounts usage in any AZ of the Region.
+false_statement: A regional Reserved Instance reserves capacity in every Availability Zone of the Region, while a zonal Reserved Instance reserves no capacity but discounts usage in one AZ.
+explanation: Capacity reservation comes only with zonal RIs. Regional RIs trade that away for a discount that floats across AZs and, through size flexibility, across instance sizes.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/reserved-instances.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 0ec80030e1bb9a0767b19e13c7f0519053d0c3aa
+verified_on: '2026-11-11'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:reserved-instances
+- kt:aws-regions
+difficulty: 2
+created: '2026-11-18'
+status: active

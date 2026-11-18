@@ -1,0 +1,19 @@
+id: aws-000289
+product_area: identity-and-access
+true_statement: For AWS KMS keys and IAM role trust policies, the resource-based policy itself must allow the principal; an identity-based allow alone is not enough.
+false_statement: For AWS KMS keys and IAM role trust policies, an identity-based allow alone is enough; the resource-based policy does not need to allow the principal.
+explanation: These are documented exceptions to the usual rule that an allow in either policy type suffices. The key policy or trust policy has to grant the principal directly.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/iam-policy-evaluation-logic.md
+  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
+  blob: 99c5400187d4a0d601b96fec1b292a87cc3b0eb3
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:iam-policy-evaluation-logic
+- kt:aws-kms
+- kt:iam-roles
+difficulty: 3
+created: '2026-11-18'
+status: active
