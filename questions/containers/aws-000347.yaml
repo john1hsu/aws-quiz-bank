@@ -1,0 +1,17 @@
+id: aws-000347
+product_area: containers
+true_statement: AWS patches ECS Managed Instances roughly every 14 days, after which ECS drains an instance and moves its service tasks onto a fresh one.
+false_statement: AWS patches ECS Managed Instances roughly every 90 days, after which ECS drains an instance and moves its service tasks onto a fresh one.
+explanation: Instances live for about two weeks before replacement, so long-running tasks must tolerate being moved. Hosts that must live longer belong on self-managed EC2 capacity.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/ecs-managed-instances.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 95a1f8de1d1438c0fa4a71a4b461e1ffb3e15ed3
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:ecs-managed-instances
+difficulty: 2
+created: '2026-11-19'
+status: active

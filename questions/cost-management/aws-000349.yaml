@@ -1,0 +1,20 @@
+id: aws-000349
+product_area: cost-management
+true_statement: AWS names compute, storage and outbound data transfer as its three fundamental cost drivers, while inbound data transfer is in most cases free.
+false_statement: AWS names compute, storage and inbound data transfer as its three fundamental cost drivers, while outbound data transfer is in most cases free.
+explanation: Data leaving AWS is billed and shows up as AWS Data Transfer Out, whereas data coming in is usually not charged. AWS still advises checking for exceptions before relying on free transfer.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-pricing-fundamentals.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 55095c8ddfb234ce209e9113f5065e105c624dc6
+verified_on: '2026-11-13'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-pricing-fundamentals
+- kt:data-transfer-costs
+difficulty: 1
+created: '2026-11-19'
+status: active

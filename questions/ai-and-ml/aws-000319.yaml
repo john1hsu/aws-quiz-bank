@@ -1,0 +1,20 @@
+id: aws-000319
+product_area: ai-and-ml
+true_statement: Amazon Bedrock AgentCore works with any agent framework and can call models hosted outside Amazon Bedrock, while Amazon Bedrock Agents is tied to Bedrock's own orchestration and models.
+false_statement: Amazon Bedrock Agents works with any agent framework and can call models hosted outside Amazon Bedrock, while Amazon Bedrock AgentCore is tied to Bedrock's own orchestration and models.
+explanation: AgentCore is deliberately framework- and model-agnostic, hosting agents built with tools like LangGraph or Strands that may call non-Bedrock models. Bedrock Agents is the older managed feature bound to Bedrock's orchestration.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock-agentcore.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 7da907032181059150298e355ce82d920fdbcde8
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-bedrock-agentcore
+- kt:amazon-bedrock-agents
+difficulty: 1
+created: '2026-11-19'
+status: active

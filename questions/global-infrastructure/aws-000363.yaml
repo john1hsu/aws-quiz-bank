@@ -1,0 +1,20 @@
+id: aws-000363
+product_area: global-infrastructure
+true_statement: AWS Lambda functions packaged as container images receive runtime patches only after the customer rebuilds from the latest base image and redeploys.
+false_statement: AWS Lambda functions packaged as container images receive runtime patches automatically from Lambda in Auto update mode, with no rebuild or redeploy needed.
+explanation: Auto update mode applies to Lambda's managed runtimes. A container image bundles its own runtime, so patching it is the customer's job of rebuilding and redeploying.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/shared-responsibility-model.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 46844396b1bc49326cb301ffed9d47811cfcbe1e
+verified_on: '2026-11-13'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:shared-responsibility-model
+- kt:aws-lambda
+difficulty: 3
+created: '2026-11-19'
+status: active

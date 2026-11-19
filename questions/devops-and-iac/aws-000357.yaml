@@ -1,0 +1,19 @@
+id: aws-000357
+product_area: devops-and-iac
+true_statement: AWS CodeBuild sets its concurrent build quotas per compute type, and Linux GPU types default to 0, so GPU builds need a quota increase first.
+false_statement: AWS CodeBuild sets one concurrent build quota shared by all compute types, and it defaults high enough that GPU builds run without a quota increase.
+explanation: Concurrency is tracked separately for each compute type, and many start at 1 or even 0. Teams moving CI to a new account often see builds queue until they request increases.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-codebuild.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 271b572040f9b7779309063d3f18229010e1196f
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-codebuild
+difficulty: 2
+created: '2026-11-19'
+status: active

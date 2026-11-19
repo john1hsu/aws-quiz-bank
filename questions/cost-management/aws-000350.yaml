@@ -1,0 +1,19 @@
+id: aws-000350
+product_area: cost-management
+true_statement: Every public IPv4 address on AWS costs $0.005 per hour, whether it is attached to a running resource or sitting idle (as of 2026-11).
+false_statement: Only idle public IPv4 addresses on AWS cost $0.005 per hour, while addresses attached to a running resource are free (as of 2026-11).
+explanation: AWS charges the hourly public IPv4 fee for in-use and idle addresses alike. The older idea that only unattached Elastic IPs cost money no longer holds.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-pricing-fundamentals.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 55095c8ddfb234ce209e9113f5065e105c624dc6
+verified_on: '2026-11-13'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-pricing-fundamentals
+difficulty: 2
+created: '2026-11-19'
+status: active

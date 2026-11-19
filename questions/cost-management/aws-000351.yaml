@@ -1,0 +1,20 @@
+id: aws-000351
+product_area: cost-management
+true_statement: In US East (Ohio), a NAT gateway costs $0.045 per hour plus $0.045 per GB processed, and cross-AZ use adds data transfer charges (as of 2026-11).
+false_statement: In US East (Ohio), a NAT gateway costs $0.045 per hour with no per-GB processing charge, and cross-AZ use adds data transfer charges (as of 2026-11).
+explanation: NAT gateways bill both an hourly rate and a per-GB data processing rate, which is why they are a classic hidden network cost. Placing the gateway in a different AZ from its instances adds transfer charges on top.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-pricing-fundamentals.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 55095c8ddfb234ce209e9113f5065e105c624dc6
+verified_on: '2026-11-13'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-pricing-fundamentals
+- kt:data-transfer-costs
+difficulty: 2
+created: '2026-11-19'
+status: active

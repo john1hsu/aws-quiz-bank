@@ -1,0 +1,20 @@
+id: aws-000307
+product_area: security
+true_statement: Amazon GuardDuty keeps findings for 90 days, a fixed per-Region quota, so a longer record means exporting them elsewhere (as of 2026-11).
+false_statement: Amazon GuardDuty keeps findings for 365 days, a fixed per-Region quota, so a longer record means exporting them elsewhere (as of 2026-11).
+explanation: GuardDuty's finding retention period is 90 days and is not adjustable. Anything you need beyond that must be sent to another store, such as through EventBridge.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/amazon-guardduty.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: f8a2af7cc7edcec565cd745132376d933b8d1e6c
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-guardduty
+- kt:guardduty-quotas
+difficulty: 2
+created: '2026-11-19'
+status: active

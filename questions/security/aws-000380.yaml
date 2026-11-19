@@ -1,0 +1,21 @@
+id: aws-000380
+product_area: security
+true_statement: Activating Amazon Inspector automatically turns on EC2, ECR and Lambda standard scanning, while Lambda code scanning has to be switched on separately.
+false_statement: Activating Amazon Inspector automatically turns on EC2, ECR and Lambda code scanning, while Lambda standard scanning has to be switched on separately.
+explanation: Standard Lambda scanning of dependencies is part of the default enrollment. Lambda code scanning, AMI scanning and Code Security are opt-in, and enabling code scanning also enables standard scanning.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/amazon-inspector.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 6df05e9f3fb370f436926734dfd4bc73c5d4aad8
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-security-specialty
+concepts:
+- kt:amazon-inspector
+- kt:aws-lambda
+difficulty: 2
+created: '2026-11-19'
+status: active

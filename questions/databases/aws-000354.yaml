@@ -1,0 +1,19 @@
+id: aws-000354
+product_area: databases
+true_statement: While an Aurora Serverless instance is paused at 0 ACUs its instance charge is zero, but storage and other cluster-level charges continue.
+false_statement: While an Aurora Serverless instance is paused at 0 ACUs both its instance charge and the cluster's storage charges stop until it resumes.
+explanation: Pausing removes only the compute charge for that instance. Cluster storage persists while paused, so it keeps being billed.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/aurora-serverless-v2.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 7e4a1a959da0418697eda219b2e8c43cd33cf32d
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aurora-serverless-v2
+difficulty: 2
+created: '2026-11-19'
+status: active

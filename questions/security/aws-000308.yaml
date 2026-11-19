@@ -1,0 +1,19 @@
+id: aws-000308
+product_area: security
+true_statement: Malware Protection for S3 is the only GuardDuty protection plan that can be used without enabling GuardDuty itself in the account.
+false_statement: Runtime Monitoring is the only GuardDuty protection plan that can be used without enabling GuardDuty itself in the account.
+explanation: Malware Protection for S3 can scan newly uploaded objects as a standalone feature. Runtime Monitoring and the other plans build on an enabled GuardDuty detector.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/amazon-guardduty.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: f8a2af7cc7edcec565cd745132376d933b8d1e6c
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-guardduty
+difficulty: 3
+created: '2026-11-19'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000346
+product_area: containers
+true_statement: Amazon ECS Managed Instances run only the Bottlerocket OS without SSH access, so you debug running tasks through ECS Exec instead.
+false_statement: Amazon ECS Managed Instances run only Amazon Linux 2023 without SSH access, so you debug running tasks through ECS Exec instead.
+explanation: Managed Instances use Bottlerocket, AWS's container-focused OS with an immutable root filesystem and no SSH. Custom AMIs, including other Linux images, are not supported.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/ecs-managed-instances.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 95a1f8de1d1438c0fa4a71a4b461e1ffb3e15ed3
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:ecs-managed-instances
+- kt:bottlerocket
+difficulty: 2
+created: '2026-11-19'
+status: active

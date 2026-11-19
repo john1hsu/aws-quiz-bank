@@ -1,0 +1,17 @@
+id: aws-000306
+product_area: public-sector-and-compliance
+true_statement: When a healthcare customer only uses a SaaS product built on AWS, the SaaS partner normally signs the BAA with AWS and the customer signs one with the partner.
+false_statement: When a healthcare customer only uses a SaaS product built on AWS, the customer normally signs the BAA directly with AWS and the SaaS partner signs none.
+explanation: The partner is the one running AWS accounts that hold PHI, so it holds the BAA with AWS and passes obligations down through its own BAA with the customer. A customer needs its own AWS BAA only for PHI in its own accounts.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/hipaa-eligible-services.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: c975ffe7d79db3bdc2cd5d610f8e4ab568b27bb1
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:hipaa-eligible-services
+difficulty: 2
+created: '2026-11-19'
+status: active

@@ -1,0 +1,17 @@
+id: aws-000338
+product_area: certifications
+true_statement: The MLA-C02 beta exam is English-only, with 85 questions in 170 minutes for 75 USD (as of 2026-11).
+false_statement: The MLA-C02 beta exam is English-only, with 65 questions in 130 minutes for 150 USD (as of 2026-11).
+explanation: The beta is longer and cheaper than the standard exam. The 65-question, 130-minute, 150 USD format belongs to MLA-C01.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-machine-learning-engineer-associate.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: bf52825d54c52238943eae447c270ec6a68728ab
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-certified-machine-learning-engineer-associate
+difficulty: 2
+created: '2026-11-19'
+status: active

@@ -1,0 +1,17 @@
+id: aws-000317
+product_area: storage
+true_statement: Within the Amazon FSx family, only FSx for NetApp ONTAP and FSx for Windows File Server support Active Directory authentication and data deduplication.
+false_statement: Within the Amazon FSx family, only FSx for OpenZFS and FSx for Windows File Server support Active Directory authentication and data deduplication.
+explanation: ONTAP and Windows File Server are the two members with AD integration and deduplication. OpenZFS offers snapshots, clones and compression, but not those two features.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-fsx.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 5d9474756a38118cf39a09defe463c77646e5b99
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:amazon-fsx
+difficulty: 3
+created: '2026-11-19'
+status: active

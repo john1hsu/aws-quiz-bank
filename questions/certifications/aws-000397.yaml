@@ -1,0 +1,18 @@
+id: aws-000397
+product_area: certifications
+true_statement: AWS Certified Data Engineer – Associate became available in 2024 as the practical successor to the retired AWS Certified Data Analytics – Specialty.
+false_statement: AWS Certified Data Engineer – Associate became available in 2024 as the practical successor to the retired AWS Certified Machine Learning – Specialty.
+explanation: The data engineer exam arrived as Data Analytics – Specialty retired in April 2024, taking over analytics and pipeline topics. Machine learning work maps to the ML Engineer – Associate track instead.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-data-engineer-associate.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 23e1db0054fe07d9d7a67a42699f7eb11e06015b
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:aws-certified-data-engineer-associate
+- kt:aws-certification-program
+difficulty: 1
+created: '2026-11-19'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000340
+product_area: certifications
+true_statement: On the SCS-C03 Security – Specialty exam, Identity and Access Management is the heaviest domain at 20% of scored content, while Incident Response carries 14%.
+false_statement: On the SCS-C03 Security – Specialty exam, Incident Response is the heaviest domain at 20% of scored content, while Identity and Access Management carries 14%.
+explanation: Identity and Access Management tops the SCS-C03 weighting at 20%. Incident Response and Security Foundations and Governance are the lightest domains at 14% each.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-security-specialty.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 07a4a68a94f00032419e853fc14cae300717bc11
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-certified-security-specialty
+- kt:aws-iam
+difficulty: 2
+created: '2026-11-19'
+status: active

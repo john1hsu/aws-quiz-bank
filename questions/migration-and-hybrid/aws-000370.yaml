@@ -1,0 +1,18 @@
+id: aws-000370
+product_area: migration-and-hybrid
+true_statement: In the AWS Migration Acceleration Program, the Assess phase finds capability gaps and builds a TCO model, and the Mobilize phase closes those gaps and builds the operational foundation.
+false_statement: In the AWS Migration Acceleration Program, the Mobilize phase finds capability gaps and builds a TCO model, and the Assess phase closes those gaps and builds the operational foundation.
+explanation: MAP runs assess, then mobilize, then migrate and modernize. Assess diagnoses readiness across the CAF perspectives and models cost; Mobilize fixes the gaps and settles migration strategies before execution.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-migration-acceleration-program.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: b7538c1907d111a70308a6f2e79fc6a9382d2e3a
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-migration-acceleration-program
+- kt:aws-cloud-adoption-framework
+difficulty: 2
+created: '2026-11-19'
+status: active

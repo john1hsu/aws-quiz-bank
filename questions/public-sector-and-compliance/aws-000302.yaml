@@ -1,0 +1,18 @@
+id: aws-000302
+product_area: public-sector-and-compliance
+true_statement: HIPAA and GDPR sit in AWS's laws and regulations group, where no formal certification exists for a cloud provider, unlike SOC 2 or ISO 27001, which independent auditors certify.
+false_statement: HIPAA and GDPR sit in AWS's certifications and attestations group, where independent auditors certify the cloud provider, just as they do for SOC 2 or ISO 27001.
+explanation: For laws such as HIPAA and GDPR there is no provider certificate; AWS offers features and agreements like the BAA, and the customer owns its compliance. Third-party audits and certificates belong to programs like SOC and ISO 27001.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/aws-compliance-programs.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 64439886c2b3a326275ca6a84c6c9fea75c96913
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:aws-compliance-programs
+- kt:hipaa-eligible-services
+difficulty: 1
+created: '2026-11-19'
+status: active

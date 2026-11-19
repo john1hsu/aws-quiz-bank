@@ -1,0 +1,18 @@
+id: aws-000339
+product_area: certifications
+true_statement: MLA-C02 keeps the four-domain structure of MLA-C01 and adds generative and agentic AI content by rewriting the task statements.
+false_statement: MLA-C02 adds a fifth domain dedicated to generative and agentic AI on top of the four domains of MLA-C01.
+explanation: AWS kept the same domains for MLA-C02 and folded Bedrock, RAG, agentic workflows and foundation-model operations into rewritten task statements. No new domain was created.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-machine-learning-engineer-associate.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: bf52825d54c52238943eae447c270ec6a68728ab
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-certified-machine-learning-engineer-associate
+- kt:amazon-bedrock
+difficulty: 2
+created: '2026-11-19'
+status: active

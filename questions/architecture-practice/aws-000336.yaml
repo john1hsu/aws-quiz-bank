@@ -1,0 +1,17 @@
+id: aws-000336
+product_area: architecture-practice
+true_statement: The Sustainability Pillar builds KPIs by dividing proxy metrics such as vCPU minutes by a business metric like transactions, and warns against financial business metrics.
+false_statement: The Sustainability Pillar builds KPIs by dividing proxy metrics such as vCPU minutes by a financial business metric like revenue, which it prefers over transaction counts.
+explanation: Normalizing resource use per transaction or active user shows efficiency changes. Financial metrics are discouraged because shifts in transaction value would distort the comparison.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/sustainability-pillar.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 1d198458672ec4cee7d497f9d66329361db899f1
+verified_on: '2026-11-13'
+feature_status: concept
+concepts:
+- kt:sustainability-pillar
+difficulty: 3
+created: '2026-11-19'
+status: active

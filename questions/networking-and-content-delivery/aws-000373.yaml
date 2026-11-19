@@ -1,0 +1,17 @@
+id: aws-000373
+product_area: networking-and-content-delivery
+true_statement: An Application Load Balancer can authenticate users through an OIDC provider or an Amazon Cognito user pool, but only on HTTPS listeners.
+false_statement: An Application Load Balancer can authenticate users through an OIDC provider or an Amazon Cognito user pool on any HTTP or HTTPS listener.
+explanation: The authenticate-oidc and authenticate-cognito rule actions require an HTTPS listener. Plain HTTP listeners cannot use built-in authentication.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/application-load-balancer.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: da786f021af4c0e9ccfca007918334b11c4917a1
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:application-load-balancer
+difficulty: 2
+created: '2026-11-19'
+status: active

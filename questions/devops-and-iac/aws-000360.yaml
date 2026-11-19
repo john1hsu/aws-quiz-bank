@@ -1,0 +1,20 @@
+id: aws-000360
+product_area: devops-and-iac
+true_statement: AWS's DevOps Guidance rates continuous deployment, which removes all manual approvals, as optional, but rates automatically triggered builds as foundational.
+false_statement: AWS's DevOps Guidance rates continuous deployment, which removes all manual approvals, as foundational, but rates automatically triggered builds as optional.
+explanation: Automatic build triggering is a baseline CI practice that gives fast feedback. Removing every approval is left optional because regulated organizations may need to keep approval steps.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/ci-cd.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: c52f671724f15392fea550e87c0b5a715ddfbe63
+verified_on: '2026-11-13'
+feature_status: concept
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:ci-cd
+- kt:devops
+difficulty: 3
+created: '2026-11-19'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000359
+product_area: devops-and-iac
+true_statement: Amazon's own pipelines deploy first to a single one-box unit and then to production in waves of growing size, waiting a bake time between stages.
+false_statement: Amazon's own pipelines deploy first to the largest production Region and then to the rest in waves of shrinking size, waiting a bake time between stages.
+explanation: Starting with one box and widening gradually limits the blast radius of a bad change. Automatic rollback on high-severity alarms stops a wave before it reaches the next stage.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/ci-cd.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: c52f671724f15392fea550e87c0b5a715ddfbe63
+verified_on: '2026-11-13'
+feature_status: concept
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:ci-cd
+- kt:amazon-cloudwatch
+difficulty: 3
+created: '2026-11-19'
+status: active

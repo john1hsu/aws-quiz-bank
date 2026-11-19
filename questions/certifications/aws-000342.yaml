@@ -1,0 +1,18 @@
+id: aws-000342
+product_area: certifications
+true_statement: An active AWS Certified Security – Specialty credential can be extended by one year through a paid AWS Skill Builder subscription, starting within 90 days of expiry.
+false_statement: An active AWS Certified Security – Specialty credential can be extended by three years through a paid AWS Skill Builder subscription, starting within 90 days of expiry.
+explanation: The Skill Builder route maintains the credential for only one more year. A full three-year renewal requires passing the latest version of the exam.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-security-specialty.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 07a4a68a94f00032419e853fc14cae300717bc11
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-certified-security-specialty
+- kt:aws-certification-program
+difficulty: 2
+created: '2026-11-19'
+status: active

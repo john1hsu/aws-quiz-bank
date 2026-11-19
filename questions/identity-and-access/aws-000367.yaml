@@ -1,0 +1,19 @@
+id: aws-000367
+product_area: identity-and-access
+true_statement: IAM allows 1,000 roles per account by default, and Service Quotas auto-approves increases up to 10,000 roles (as of 2026-11).
+false_statement: IAM allows 1,000 roles per account by default, and Service Quotas auto-approves increases up to 5,000 roles (as of 2026-11).
+explanation: AWS raised the auto-approved ceiling for roles from 5,000 to 10,000 in May 2026. The 5,000 figure is the old maximum.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/iam-quotas.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 168c88b3e2aea18f56c5c93de2e6a487c0bf6669
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:iam-quotas
+- kt:iam-roles
+- kt:service-quotas
+difficulty: 2
+created: '2026-11-19'
+status: active

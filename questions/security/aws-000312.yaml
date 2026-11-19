@@ -1,0 +1,20 @@
+id: aws-000312
+product_area: security
+true_statement: Since 2025, the original standards-checking Security Hub service is called Security Hub CSPM, and the name Security Hub refers to the newer unified service built on top of it.
+false_statement: Since 2025, the original standards-checking Security Hub service is called Security Hub Essentials, and the name Security Hub refers to the newer unified service built on top of it.
+explanation: AWS renamed the posture-checking service Security Hub CSPM when the unified service took the Security Hub name. Essentials is the unified service's default pricing plan, not the old service's new name.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-security-hub.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 91f92aeaa31659503162b08777494f2a85aab6c2
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-security-hub
+- kt:aws-security-hub-cspm
+difficulty: 1
+created: '2026-11-19'
+status: active

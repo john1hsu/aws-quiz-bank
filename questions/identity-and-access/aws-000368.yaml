@@ -1,0 +1,18 @@
+id: aws-000368
+product_area: identity-and-access
+true_statement: AWS STS calls made with AWS credentials share a default quota of 600 requests per second per account in each Region (as of 2026-11).
+false_statement: AWS STS calls made with AWS credentials share a default quota of 600 requests per second per account across all Regions combined (as of 2026-11).
+explanation: The STS request quota is counted per account and per Region, so a busy fleet in one Region does not consume another Region's budget. Calls by AWS service principals don't count against it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/iam-quotas.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 168c88b3e2aea18f56c5c93de2e6a487c0bf6669
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:iam-quotas
+- kt:aws-sts
+difficulty: 3
+created: '2026-11-19'
+status: active

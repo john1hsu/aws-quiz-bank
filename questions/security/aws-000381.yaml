@@ -1,0 +1,22 @@
+id: aws-000381
+product_area: security
+true_statement: In Amazon Inspector's default hybrid mode, EC2 instances with a configured SSM Agent are scanned through the agent, and the rest fall back to agentless EBS snapshot scans.
+false_statement: In Amazon Inspector's default hybrid mode, every EC2 instance is scanned through agentless EBS snapshots, and the SSM Agent is used only where snapshots cannot be taken.
+explanation: Hybrid mode prefers agent-based scanning, which reruns as soon as packages or CVEs change. Snapshot-based agentless scanning, which runs every 24 hours, covers instances without a working agent.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/amazon-inspector.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 6df05e9f3fb370f436926734dfd4bc73c5d4aad8
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-security-specialty
+concepts:
+- kt:amazon-inspector
+- kt:aws-systems-manager
+- kt:amazon-ec2
+difficulty: 3
+created: '2026-11-19'
+status: active

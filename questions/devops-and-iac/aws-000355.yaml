@@ -1,0 +1,21 @@
+id: aws-000355
+product_area: devops-and-iac
+true_statement: AWS CodeBuild's Lambda compute mode starts builds faster than EC2 mode but offers only 1–10 GiB of memory with 10 GB of disk.
+false_statement: AWS CodeBuild's EC2 compute mode starts builds faster than Lambda mode but offers only 1–10 GiB of memory with 10 GB of disk.
+explanation: 'Lambda mode trades capacity for speed: quick starts and no queuing, but small memory and disk. EC2 mode is the flexible option for larger, longer, GPU or Windows builds.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-codebuild.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 271b572040f9b7779309063d3f18229010e1196f
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-codebuild
+- kt:aws-lambda
+- kt:amazon-ec2
+difficulty: 2
+created: '2026-11-19'
+status: active

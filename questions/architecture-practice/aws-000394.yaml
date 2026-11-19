@@ -1,0 +1,19 @@
+id: aws-000394
+product_area: architecture-practice
+true_statement: The Reliability Pillar has publishers attach an idempotency token to each message, and consumers record the tokens they have processed so they can skip repeats.
+false_statement: The Reliability Pillar has consumers attach an idempotency token to each message, and publishers record the tokens they have sent so they never deliver a message twice.
+explanation: At-least-once delivery means duplicates will arrive, so the consumer must recognize them using a token the publisher supplied. Publishers cannot guarantee single delivery on their own.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/event-driven-architecture.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: d8b590047a135ac9b18dbb43f5e1875b426a42c5
+verified_on: '2026-11-14'
+feature_status: concept
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:event-driven-architecture
+difficulty: 2
+created: '2026-11-19'
+status: active

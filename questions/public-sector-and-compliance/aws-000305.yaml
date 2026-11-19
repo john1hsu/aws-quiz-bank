@@ -1,0 +1,19 @@
+id: aws-000305
+product_area: public-sector-and-compliance
+true_statement: A HIPAA BAA accepted in AWS Artifact as an organization agreement covers every existing and future member account, while an account agreement covers a single account.
+false_statement: A HIPAA BAA accepted in AWS Artifact as an organization agreement covers only the member accounts present when it was accepted, while an account agreement covers a single account.
+explanation: The organization agreement extends automatically to accounts that join later. Only an account agreement is limited to one designated account.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/hipaa-eligible-services.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: c975ffe7d79db3bdc2cd5d610f8e4ab568b27bb1
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:hipaa-eligible-services
+- kt:aws-artifact
+- kt:aws-organizations
+difficulty: 2
+created: '2026-11-19'
+status: active

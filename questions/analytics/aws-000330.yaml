@@ -1,0 +1,18 @@
+id: aws-000330
+product_area: analytics
+true_statement: AWS's data lake storage whitepaper partitions the raw zone by processing date, but the transformed and curated zones by business date.
+false_statement: AWS's data lake storage whitepaper partitions the raw zone by business date, but the transformed and curated zones by processing date.
+explanation: Raw data is landed as it arrives, so processing date is the natural key there. Downstream zones serve analysis, so they are partitioned by the business date queries filter on.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/data-lake-on-aws.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 70b2f509ba2b43f5dfad37323c413355b6b3600e
+verified_on: '2026-11-13'
+feature_status: concept
+concepts:
+- kt:data-lake-on-aws
+- kt:amazon-s3
+difficulty: 3
+created: '2026-11-19'
+status: active

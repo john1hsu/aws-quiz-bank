@@ -1,0 +1,20 @@
+id: aws-000382
+product_area: serverless-and-integration
+true_statement: AWS Step Functions caps input and output at 256 KiB per task, state or execution, a hard limit, so large payloads are stored in S3 and passed by reference.
+false_statement: AWS Step Functions caps input and output at 256 KiB per task, state or execution, a limit you can raise through Service Quotas for large payloads.
+explanation: The 256 KiB payload ceiling cannot be increased. The standard workaround is to put the data in S3 and pass its location between states.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/aws-step-functions.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: c63d175ad22c89b3879b5c5d85ecf16e9bd1c3cb
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-step-functions
+- kt:step-functions-quotas
+difficulty: 2
+created: '2026-11-19'
+status: active

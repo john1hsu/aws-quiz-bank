@@ -1,0 +1,20 @@
+id: aws-000386
+product_area: storage
+true_statement: Volume Gateway snapshots are stored as Amazon EBS snapshots, so they can be restored as EBS volumes for EC2 but are not reachable through S3 APIs.
+false_statement: Volume Gateway snapshots are stored as Amazon S3 objects, so they can be read through S3 APIs but cannot be restored as EBS volumes for EC2.
+explanation: Although S3 backs the service, Volume Gateway snapshots surface as EBS snapshots. That makes EC2 recovery possible, while the data itself is not exposed as S3 objects.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/aws-storage-gateway.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: a86a970e64cb24ff0c172e73091a0381b97cd425
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-storage-gateway
+- kt:amazon-ebs
+difficulty: 3
+created: '2026-11-19'
+status: active

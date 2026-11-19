@@ -1,0 +1,20 @@
+id: aws-000309
+product_area: security
+true_statement: Enabling Amazon GuardDuty creates a separate detector in each Region where it is turned on, so threat detection coverage is decided Region by Region.
+false_statement: Enabling Amazon GuardDuty creates a single global detector for the account, so threat detection coverage applies to every Region at once.
+explanation: Each Region gets its own detector with its own ID, settings and findings. Turning GuardDuty on in one Region does nothing for the others.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/amazon-guardduty.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: f8a2af7cc7edcec565cd745132376d933b8d1e6c
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-guardduty
+- kt:aws-regions
+difficulty: 2
+created: '2026-11-19'
+status: active

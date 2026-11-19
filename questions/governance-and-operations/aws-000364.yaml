@@ -1,0 +1,21 @@
+id: aws-000364
+product_area: governance-and-operations
+true_statement: Systems Manager Session Manager lets you close inbound SSH ports and retire bastion hosts, because IAM decides who may start a session on which node.
+false_statement: Systems Manager Session Manager requires inbound SSH ports to stay open on each node, because SSH key pairs decide who may start a session on which node.
+explanation: Session Manager connects through the SSM Agent, so nodes need no open inbound ports, bastions or SSH keys. Access is granted and audited through IAM and CloudTrail.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-systems-manager.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 40ff235927b81e10eda6092d77dbd09f5dc8c44c
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-systems-manager
+- kt:systems-manager-session-manager
+- kt:aws-iam
+difficulty: 1
+created: '2026-11-19'
+status: active

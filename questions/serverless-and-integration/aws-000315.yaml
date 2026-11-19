@@ -1,0 +1,21 @@
+id: aws-000315
+product_area: serverless-and-integration
+true_statement: Amazon SQS retains messages for 4 days by default, and the retention period can be set from 60 seconds up to 14 days.
+false_statement: Amazon SQS retains messages for 1 day by default, and the retention period can be set from 60 seconds up to 14 days.
+explanation: The default retention is 4 days, adjustable between one minute and two weeks. A one-day default would be far shorter than what SQS actually keeps.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-sqs.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 5af626b046a2941db11d27e359763f4b500903e2
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+- kt:aws-certified-developer-associate
+concepts:
+- kt:amazon-sqs
+- kt:sqs-quotas
+difficulty: 2
+created: '2026-11-19'
+status: active

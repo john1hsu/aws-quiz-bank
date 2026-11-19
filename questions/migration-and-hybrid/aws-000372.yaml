@@ -1,0 +1,17 @@
+id: aws-000372
+product_area: migration-and-hybrid
+true_statement: A MAP 2.0 map-migrated tag value combines a lowercase prefix such as mig, sap or oracle with the Migration Program Engagement ID from the MAP agreement.
+false_statement: A MAP 2.0 map-migrated tag value combines a lowercase prefix such as mig, sap or oracle with the 12-digit AWS account ID of the migrated workload.
+explanation: The value ties spend to a specific MAP agreement through its MPE ID, which is 5 digits or 10 uppercase alphanumeric characters. The account ID plays no part in the tag value.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-migration-acceleration-program.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: b7538c1907d111a70308a6f2e79fc6a9382d2e3a
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-migration-acceleration-program
+difficulty: 2
+created: '2026-11-19'
+status: active

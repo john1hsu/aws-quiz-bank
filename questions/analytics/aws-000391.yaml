@@ -1,0 +1,20 @@
+id: aws-000391
+product_area: analytics
+true_statement: With Amazon MSK, AWS runs the Kafka cluster control plane, while you produce and consume data using Apache Kafka's own APIs.
+false_statement: With Amazon MSK, AWS runs the Kafka cluster control plane, while you produce and consume data using Kinesis Data Streams APIs.
+explanation: MSK is managed Apache Kafka, so applications keep using standard Kafka producer and consumer APIs. Kinesis Data Streams is a separate AWS streaming service with its own API.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/aws-analytics-services.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 68fca85f1ff043dc84fa6c1367ecc790f78c6560
+verified_on: '2026-11-14'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-analytics-services
+- kt:amazon-kinesis-data-streams
+difficulty: 2
+created: '2026-11-19'
+status: active

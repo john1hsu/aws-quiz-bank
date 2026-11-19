@@ -1,0 +1,19 @@
+id: aws-000384
+product_area: serverless-and-integration
+true_statement: Step Functions Express workflows support only the Request Response integration pattern, while Standard workflows also support .sync jobs and task-token callbacks.
+false_statement: Step Functions Standard workflows support only the Request Response integration pattern, while Express workflows also support .sync jobs and task-token callbacks.
+explanation: Waiting for a job or a callback suits long-running Standard workflows, which can last up to a year. Express workflows are short and high-volume, so they are limited to Request Response calls.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/aws-step-functions.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: c63d175ad22c89b3879b5c5d85ecf16e9bd1c3cb
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-step-functions
+difficulty: 3
+created: '2026-11-19'
+status: active

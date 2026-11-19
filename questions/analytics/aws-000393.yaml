@@ -1,0 +1,20 @@
+id: aws-000393
+product_area: analytics
+true_statement: When Amazon QuickSight evolved into AWS Quick, Quick Sight became the name of its BI component, and existing dashboards, datasets and analyses carried over unchanged.
+false_statement: When Amazon QuickSight evolved into AWS Quick, Quick Sight became the name of its BI component, and existing dashboards, datasets and analyses had to be rebuilt.
+explanation: AWS's October 2025 change was a rename and expansion, not a migration, so BI assets moved across as they were. Older material may still say QuickSight for the same product.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/aws-analytics-services.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 68fca85f1ff043dc84fa6c1367ecc790f78c6560
+verified_on: '2026-11-14'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-analytics-services
+- kt:amazon-quick
+difficulty: 2
+created: '2026-11-19'
+status: active

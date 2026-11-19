@@ -1,0 +1,18 @@
+id: aws-000301
+product_area: public-sector-and-compliance
+true_statement: AWS issues its SOC 1 report quarterly and its SOC 2 and SOC 3 reports every six months, each covering a 12-month period (as of 2026-11).
+false_statement: AWS issues its SOC 1 report every six months and its SOC 2 and SOC 3 reports quarterly, each covering a 12-month period (as of 2026-11).
+explanation: SOC 1 is the quarterly report, while SOC 2 and SOC 3 come out twice a year; all of them look back over 12 months. The false version swaps the two cadences.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/aws-compliance-programs.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 64439886c2b3a326275ca6a84c6c9fea75c96913
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:aws-compliance-programs
+- kt:aws-artifact
+difficulty: 2
+created: '2026-11-19'
+status: active

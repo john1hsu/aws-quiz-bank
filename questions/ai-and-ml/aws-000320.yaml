@@ -1,0 +1,20 @@
+id: aws-000320
+product_area: ai-and-ml
+true_statement: An Amazon Bedrock AgentCore Runtime session on microVMs can last at most 8 hours, with an idle timeout that defaults to 15 minutes (as of 2026-11).
+false_statement: An Amazon Bedrock AgentCore Runtime session on microVMs can last at most 1 hour, with an idle timeout that defaults to 15 minutes (as of 2026-11).
+explanation: Runtime microVM sessions can run for up to 8 hours, and the newer Instances compute type stretches that to 14 days. Both the lifetime and the idle timeout are set per agent in its lifecycle configuration.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock-agentcore.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 7da907032181059150298e355ce82d920fdbcde8
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-bedrock-agentcore
+- kt:agentcore-quotas
+difficulty: 2
+created: '2026-11-19'
+status: active

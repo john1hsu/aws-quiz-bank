@@ -1,0 +1,21 @@
+id: aws-000313
+product_area: serverless-and-integration
+true_statement: An Amazon SQS visibility timeout defaults to 30 seconds and can be set anywhere from 0 seconds to 12 hours.
+false_statement: An Amazon SQS visibility timeout defaults to 30 seconds and can be set anywhere from 0 seconds to 15 minutes.
+explanation: After a receive, SQS hides the message for the visibility timeout, which can stretch to 12 hours for slow consumers. Fifteen minutes is the ceiling for message delay, a different setting.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-sqs.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 5af626b046a2941db11d27e359763f4b500903e2
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+- kt:aws-certified-developer-associate
+concepts:
+- kt:amazon-sqs
+- kt:sqs-quotas
+difficulty: 2
+created: '2026-11-19'
+status: active

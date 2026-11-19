@@ -1,0 +1,18 @@
+id: aws-000345
+product_area: compute
+true_statement: A Nitro Enclave has no persistent storage, no interactive access and no external networking, and it communicates only with its parent instance over a local socket.
+false_statement: A Nitro Enclave has no persistent storage and no interactive access, and it communicates with external services through its own elastic network interface.
+explanation: Enclaves are isolated VMs carved from the parent's vCPUs and memory, with the parent as their only channel. They get no network interface of their own, which keeps their attack surface minimal.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/aws-nitro-system.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: c53e65791554e133165e9e94ecd93fd62cdf3ef9
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-nitro-system
+- kt:aws-nitro-enclaves
+difficulty: 2
+created: '2026-11-19'
+status: active

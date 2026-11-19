@@ -1,0 +1,19 @@
+id: aws-000321
+product_area: ai-and-ml
+true_statement: AgentCore Runtime does not bill CPU while an agent waits on I/O such as a model response, but it still bills the memory the session holds during that wait.
+false_statement: AgentCore Runtime does not bill memory while an agent waits on I/O such as a model response, but it still bills the CPU the session holds during that wait.
+explanation: Runtime pricing skips CPU charges during I/O waits, which suits agents that spend much of their time waiting on models. Memory stays allocated, so it keeps accruing until Runtime v2 reclaims idle memory.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock-agentcore.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 7da907032181059150298e355ce82d920fdbcde8
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-bedrock-agentcore
+difficulty: 3
+created: '2026-11-19'
+status: active

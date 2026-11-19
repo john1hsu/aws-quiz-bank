@@ -1,0 +1,20 @@
+id: aws-000325
+product_area: analytics
+true_statement: A data access request governed by AWS Lake Formation has to pass both its IAM permission check and its Lake Formation permission check.
+false_statement: A data access request governed by AWS Lake Formation has to pass only its Lake Formation permission check, which overrides any IAM permission check.
+explanation: IAM and Lake Formation permissions are complementary layers, and both must allow the request. Enabling Lake Formation does not replace or override existing IAM permissions.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/aws-lake-formation.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 7d249c904a44d2390d0bf69bb159a8f4a866b23e
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-lake-formation
+- kt:aws-iam
+difficulty: 2
+created: '2026-11-19'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000389
+product_area: ai-and-ml
+true_statement: An Amazon Q Business Starter index runs in one Availability Zone for proofs of concept, while an Enterprise index runs in three AZs for production.
+false_statement: An Amazon Q Business Enterprise index runs in one Availability Zone for proofs of concept, while a Starter index runs in three AZs for production.
+explanation: The cheaper Starter index is single-AZ and capped at five units per application. The Enterprise index spreads across three AZs and adds customer managed key encryption.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-q-business.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 2ae2e79e07fb749b06631c9ebbae7dc38a64b85e
+verified_on: '2026-11-14'
+feature_status: closed-to-new-customers
+concepts:
+- kt:amazon-q-business
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-19'
+status: active

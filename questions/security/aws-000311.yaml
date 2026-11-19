@@ -1,0 +1,19 @@
+id: aws-000311
+product_area: security
+true_statement: In AWS Security Hub Essentials pricing, 12 Lambda functions count as one resource unit, the same as a single EC2 instance (as of 2026-11).
+false_statement: In AWS Security Hub Essentials pricing, 125 Lambda functions count as one resource unit, the same as a single EC2 instance (as of 2026-11).
+explanation: 'Essentials meters four resource types: one EC2 instance, 18 ECR images, 12 Lambda functions or 125 IAM users and roles per unit. The 125 figure belongs to IAM principals, not Lambda functions.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-security-hub.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 91f92aeaa31659503162b08777494f2a85aab6c2
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-security-hub
+difficulty: 2
+created: '2026-11-19'
+status: active

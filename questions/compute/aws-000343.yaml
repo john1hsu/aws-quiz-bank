@@ -1,0 +1,19 @@
+id: aws-000343
+product_area: compute
+true_statement: In the AWS Nitro System, Nitro Cards handle VPC networking and EBS I/O, while the Nitro Hypervisor partitions CPU and memory and has no networking stack.
+false_statement: In the AWS Nitro System, the Nitro Hypervisor handles VPC networking and EBS I/O, while Nitro Cards partition CPU and memory and have no networking stack.
+explanation: Nitro offloads I/O to dedicated cards, leaving a minimal KVM-based hypervisor that only partitions CPU and memory and passes devices through. Keeping networking out of the hypervisor is part of its small attack surface.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/aws-nitro-system.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: c53e65791554e133165e9e94ecd93fd62cdf3ef9
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-nitro-system
+- kt:amazon-ebs
+- kt:amazon-vpc
+difficulty: 2
+created: '2026-11-19'
+status: active

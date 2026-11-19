@@ -1,0 +1,20 @@
+id: aws-000326
+product_area: analytics
+true_statement: For Glue compatibility, new accounts grant Super to the IAMAllowedPrincipals group in Lake Formation, so IAM alone decides data access until those defaults change.
+false_statement: For Glue compatibility, new accounts revoke the IAMAllowedPrincipals group's access in Lake Formation, so Lake Formation grants decide data access from the start.
+explanation: 'Lake Formation is effectively off by default: IAMAllowedPrincipals holds Super and the IAM-only setting is on. You must change both, or use hybrid access mode, before Lake Formation grants take effect.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/aws-lake-formation.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 7d249c904a44d2390d0bf69bb159a8f4a866b23e
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-lake-formation
+- kt:aws-glue
+difficulty: 3
+created: '2026-11-19'
+status: active

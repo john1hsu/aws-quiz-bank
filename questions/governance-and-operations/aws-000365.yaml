@@ -1,0 +1,20 @@
+id: aws-000365
+product_area: governance-and-operations
+true_statement: Systems Manager Parameter Store standard parameters hold values up to 4 KB, while advanced parameters hold values up to 8 KB.
+false_statement: Systems Manager Parameter Store standard parameters hold values up to 8 KB, while advanced parameters hold values up to 64 KB.
+explanation: The free standard tier caps values at 4 KB; the paid advanced tier doubles that to 8 KB and adds parameter policies and sharing. Neither tier reaches 64 KB.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-systems-manager.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 40ff235927b81e10eda6092d77dbd09f5dc8c44c
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-systems-manager
+- kt:systems-manager-parameter-store
+difficulty: 2
+created: '2026-11-19'
+status: active

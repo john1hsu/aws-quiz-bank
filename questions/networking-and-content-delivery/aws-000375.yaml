@@ -1,0 +1,18 @@
+id: aws-000375
+product_area: networking-and-content-delivery
+true_statement: The default quota for reserved Application Load Balancer LCUs is 0 per Region, so reserving capacity ahead of a traffic spike first needs a quota increase (as of 2026-11).
+false_statement: The default quota for reserved Application Load Balancer LCUs is 100 per Region, so reserving capacity ahead of a traffic spike needs no quota increase (as of 2026-11).
+explanation: Reserved LCUs start with a zero quota, so teams must request an increase before reserving. Usage above the reservation is then billed at the normal LCU rate.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/application-load-balancer.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: da786f021af4c0e9ccfca007918334b11c4917a1
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:application-load-balancer
+- kt:elb-quotas
+difficulty: 3
+created: '2026-11-19'
+status: active

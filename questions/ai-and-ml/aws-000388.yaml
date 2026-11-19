@@ -1,0 +1,18 @@
+id: aws-000388
+product_area: ai-and-ml
+true_statement: Amazon Q Business stopped accepting new customers on July 30, 2026, and AWS directs new employee-assistant projects to Amazon Quick.
+false_statement: Amazon Q Business stopped accepting new customers on July 30, 2026, and AWS directs new employee-assistant projects to Amazon Kendra.
+explanation: AWS names Amazon Quick as the destination for Q Business applications and new assistants. Kendra was moved to maintenance in the same announcement, so it is not the recommended successor.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-q-business.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 2ae2e79e07fb749b06631c9ebbae7dc38a64b85e
+verified_on: '2026-11-14'
+feature_status: closed-to-new-customers
+concepts:
+- kt:amazon-q-business
+- kt:amazon-quick
+difficulty: 2
+created: '2026-11-19'
+status: active

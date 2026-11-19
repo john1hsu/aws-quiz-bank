@@ -1,0 +1,18 @@
+id: aws-000369
+product_area: identity-and-access
+true_statement: A customer managed IAM policy can hold at most 6,144 characters, not counting whitespace, and AWS accepts no requests to raise that limit.
+false_statement: A customer managed IAM policy can hold at most 10,240 characters, not counting whitespace, and AWS accepts no requests to raise that limit.
+explanation: Managed policies are capped at 6,144 characters. The 10,240 figure is the combined inline-policy limit for a role, a different quota.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/iam-quotas.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 168c88b3e2aea18f56c5c93de2e6a487c0bf6669
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:iam-quotas
+- kt:aws-iam
+difficulty: 2
+created: '2026-11-19'
+status: active

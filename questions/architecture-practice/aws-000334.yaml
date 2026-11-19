@@ -1,0 +1,18 @@
+id: aws-000334
+product_area: architecture-practice
+true_statement: In the Sustainability Pillar's shared model, AWS handles sourcing renewable power for its infrastructure, while customers handle maximizing the utilization of their workloads.
+false_statement: In the Sustainability Pillar's shared model, customers handle sourcing renewable power for AWS infrastructure, while AWS handles maximizing the utilization of their workloads.
+explanation: AWS owns sustainability of the cloud, such as efficient data centers and renewable energy. Customers own sustainability in the cloud, such as right-sizing, efficient code and minimizing deployed resources.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/sustainability-pillar.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 1d198458672ec4cee7d497f9d66329361db899f1
+verified_on: '2026-11-13'
+feature_status: concept
+concepts:
+- kt:sustainability-pillar
+- kt:shared-responsibility-model
+difficulty: 1
+created: '2026-11-19'
+status: active

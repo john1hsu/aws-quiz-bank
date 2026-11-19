@@ -1,0 +1,18 @@
+id: aws-000371
+product_area: migration-and-hybrid
+true_statement: The MAP 2.0 tag key map-migrated is activated automatically as a cost allocation tag and does not count against the account's cost allocation tag quota.
+false_statement: The MAP 2.0 tag key map-migrated must be activated manually as a cost allocation tag and counts against the account's cost allocation tag quota.
+explanation: AWS turns on map-migrated as a cost allocation tag itself and exempts it from the tag quota. Cost Explorer still needs to be enabled for MAP spend reporting.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-migration-acceleration-program.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: b7538c1907d111a70308a6f2e79fc6a9382d2e3a
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-migration-acceleration-program
+- kt:cost-allocation-tags
+difficulty: 3
+created: '2026-11-19'
+status: active

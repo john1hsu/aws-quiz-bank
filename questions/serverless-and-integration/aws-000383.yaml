@@ -1,0 +1,19 @@
+id: aws-000383
+product_area: serverless-and-integration
+true_statement: A Step Functions Map state in Inline mode runs up to 40 parallel branches, while Distributed mode runs up to 10,000 as separate child executions.
+false_statement: A Step Functions Map state in Inline mode runs up to 10,000 parallel branches, while Distributed mode runs up to 40 as separate child executions.
+explanation: Inline Map is limited to 40 concurrent iterations inside the parent execution. Distributed Map scales to 10,000 child executions and is built for large S3 inputs, avoiding the parent's payload and history limits.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/aws-step-functions.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: c63d175ad22c89b3879b5c5d85ecf16e9bd1c3cb
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-step-functions
+difficulty: 2
+created: '2026-11-19'
+status: active

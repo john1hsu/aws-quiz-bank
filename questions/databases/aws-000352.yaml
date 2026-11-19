@@ -1,0 +1,20 @@
+id: aws-000352
+product_area: databases
+true_statement: One Aurora capacity unit (ACU) in Aurora Serverless provides roughly 2 GiB of memory with matching CPU and networking.
+false_statement: One Aurora capacity unit (ACU) in Aurora Serverless provides roughly 8 GiB of memory with matching CPU and networking.
+explanation: AWS sizes an ACU at about 2 GiB of memory plus proportional CPU and network. Capacity ranges and per-ACU-hour prices are all expressed in these units.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/aurora-serverless-v2.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 7e4a1a959da0418697eda219b2e8c43cd33cf32d
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aurora-serverless-v2
+- kt:amazon-aurora
+difficulty: 2
+created: '2026-11-19'
+status: active

@@ -1,0 +1,21 @@
+id: aws-000395
+product_area: architecture-practice
+true_statement: EventBridge rules give an event-driven system choreography with no central controller, while Step Functions orchestrates a multi-step workflow from one place.
+false_statement: Step Functions gives an event-driven system choreography with no central controller, while EventBridge rules orchestrate a multi-step workflow from one place.
+explanation: On an event bus, producers don't know their consumers and each team subscribes with its own rule. Step Functions is the orchestrator for processes that need end-to-end control of branching, retries and errors.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/event-driven-architecture.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: d8b590047a135ac9b18dbb43f5e1875b426a42c5
+verified_on: '2026-11-14'
+feature_status: concept
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:event-driven-architecture
+- kt:amazon-eventbridge
+- kt:aws-step-functions
+difficulty: 2
+created: '2026-11-19'
+status: active

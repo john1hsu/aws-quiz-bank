@@ -1,0 +1,19 @@
+id: aws-000356
+product_area: devops-and-iac
+true_statement: An AWS CodeBuild build timeout can be set from 5 to 2,160 minutes (36 hours), and neither bound can be raised (as of 2026-11).
+false_statement: An AWS CodeBuild build timeout can be set from 5 to 480 minutes (8 hours), and neither bound can be raised (as of 2026-11).
+explanation: CodeBuild allows builds of up to 36 hours, a fixed ceiling. Eight hours understates that limit by a wide margin.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-codebuild.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 271b572040f9b7779309063d3f18229010e1196f
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-codebuild
+difficulty: 2
+created: '2026-11-19'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000358
+product_area: devops-and-iac
+true_statement: Continuous delivery keeps a manual approval before production, whereas continuous deployment pushes every validated change to production with no human approval.
+false_statement: Continuous deployment keeps a manual approval before production, whereas continuous delivery pushes every validated change to production with no human approval.
+explanation: Under continuous delivery every change is ready to ship, but a person decides when it goes live. Continuous deployment removes that gate and releases each passing change automatically.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/ci-cd.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: c52f671724f15392fea550e87c0b5a715ddfbe63
+verified_on: '2026-11-13'
+feature_status: concept
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:ci-cd
+difficulty: 1
+created: '2026-11-19'
+status: active

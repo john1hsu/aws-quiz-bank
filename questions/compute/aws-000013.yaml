@@ -6,8 +6,8 @@ explanation: EC2 bills supported operating systems by the second once the first 
 source:
   repo: john1hsu/aws-graph
   path: articles/compute/amazon-ec2.md
-  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
-  blob: fcee41b4e23f9d82d08ec63925d46324c99ad40c
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 0f9c8ec5e8609625970f52fce5e8bd7deab06d93
 verified_on: '2026-11-08'
 feature_status: current
 certs:

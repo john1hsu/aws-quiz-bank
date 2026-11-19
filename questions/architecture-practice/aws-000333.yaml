@@ -1,0 +1,17 @@
+id: aws-000333
+product_area: architecture-practice
+true_statement: Under the Cost Optimization Pillar's demand and supply guidance, Auto Scaling manages the supply side, while API Gateway throttling and SQS buffering manage the demand side.
+false_statement: Under the Cost Optimization Pillar's demand and supply guidance, API Gateway throttling and SQS buffering manage the supply side, while Auto Scaling manages the demand side.
+explanation: Supply-side tactics change how much capacity exists, which is what Auto Scaling does. Demand-side tactics shape incoming work, by throttling requests or queuing them for later.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/cost-optimization-pillar.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 24fa7fb20f5bfbd7f61501d0d2009dd69ab6247a
+verified_on: '2026-11-13'
+feature_status: concept
+concepts:
+- kt:cost-optimization-pillar
+difficulty: 3
+created: '2026-11-19'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000327
+product_area: analytics
+true_statement: AWS Lake Formation charges nothing for creating permissions, enforcing them or cross-account sharing; its own charge is for Storage API bytes scanned (as of 2026-11).
+false_statement: AWS Lake Formation charges per permission grant and per cross-account share, while Storage API reads cost nothing extra (as of 2026-11).
+explanation: The permissions layer is free; Lake Formation bills only Storage API scans, with a 10 MB minimum, when no other analytics service processes the data. S3 and the Glue Data Catalog bill separately at their usual rates.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/aws-lake-formation.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 7d249c904a44d2390d0bf69bb159a8f4a866b23e
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-lake-formation
+difficulty: 2
+created: '2026-11-19'
+status: active

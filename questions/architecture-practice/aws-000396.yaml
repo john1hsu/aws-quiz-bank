@@ -1,0 +1,21 @@
+id: aws-000396
+product_area: architecture-practice
+true_statement: For latency-sensitive event paths, the Serverless Lens suggests filtering and routing with Amazon SNS and SQS rather than with Amazon EventBridge.
+false_statement: For latency-sensitive event paths, the Serverless Lens suggests filtering and routing with Amazon EventBridge rather than with Amazon SNS and SQS.
+explanation: EventBridge adds some routing latency, so SNS fan-out with SQS buffering is the lower-latency choice. EventBridge remains the usual router when content-based rules matter more than speed.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/event-driven-architecture.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: d8b590047a135ac9b18dbb43f5e1875b426a42c5
+verified_on: '2026-11-14'
+feature_status: concept
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:event-driven-architecture
+- kt:amazon-sns
+- kt:amazon-sqs
+difficulty: 3
+created: '2026-11-19'
+status: active

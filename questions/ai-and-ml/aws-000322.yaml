@@ -1,0 +1,19 @@
+id: aws-000322
+product_area: ai-and-ml
+true_statement: Amazon Comprehend can detect PII in real time or in a batch job, but PII redaction runs only as an asynchronous job.
+false_statement: Amazon Comprehend can detect PII only in a batch job, but PII redaction runs either in real time or as an asynchronous job.
+explanation: Detection is offered both synchronously and asynchronously, while redaction is limited to async jobs that read from and write to S3. The false version reverses which capability is restricted.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-comprehend.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 7793a5178d63c06d55c1e17ca49cfc4c79526c04
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-comprehend
+difficulty: 3
+created: '2026-11-19'
+status: active

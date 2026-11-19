@@ -1,0 +1,19 @@
+id: aws-000348
+product_area: containers
+true_statement: One ECS task definition can list both FARGATE and MANAGED_INSTANCES, but a single capacity provider strategy cannot mix Managed Instances and Fargate providers.
+false_statement: A single ECS capacity provider strategy can mix Managed Instances and Fargate providers, but one task definition cannot list both FARGATE and MANAGED_INSTANCES.
+explanation: Compatibility is declared per task definition, so the same definition can run on either option. Capacity provider strategies, however, must not combine Managed Instances with Fargate or Auto Scaling group providers.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/ecs-managed-instances.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 95a1f8de1d1438c0fa4a71a4b461e1ffb3e15ed3
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:ecs-managed-instances
+- kt:aws-fargate
+- kt:amazon-ecs
+difficulty: 3
+created: '2026-11-19'
+status: active

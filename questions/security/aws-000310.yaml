@@ -1,0 +1,20 @@
+id: aws-000310
+product_area: security
+true_statement: In AWS Security Hub, automation rules and third-party ticketing can be configured only in the aggregation Region, which collects findings from linked Regions.
+false_statement: In AWS Security Hub, automation rules and third-party ticketing can be configured only in the organization's home Region for AWS Organizations, separate from the aggregation Region.
+explanation: The aggregation Region is where cross-Region findings land, so it is the one place automation rules and Jira or ServiceNow ticketing are set up. There is no separate Organizations home Region for these settings.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-security-hub.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 91f92aeaa31659503162b08777494f2a85aab6c2
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-security-hub
+- kt:aws-regions
+difficulty: 3
+created: '2026-11-19'
+status: active

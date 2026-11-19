@@ -1,0 +1,20 @@
+id: aws-000366
+product_area: governance-and-operations
+true_statement: A Parameter Store standard parameter can be upgraded to advanced, but an advanced parameter can never be downgraded; it must be deleted and recreated.
+false_statement: A Parameter Store advanced parameter can be downgraded to standard, but a standard parameter can never be upgraded; it must be deleted and recreated.
+explanation: Moving up a tier is allowed in place, but the change is one-way. Getting back to the standard tier means deleting the advanced parameter and creating a new standard one.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-systems-manager.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 40ff235927b81e10eda6092d77dbd09f5dc8c44c
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-systems-manager
+- kt:systems-manager-parameter-store
+difficulty: 3
+created: '2026-11-19'
+status: active

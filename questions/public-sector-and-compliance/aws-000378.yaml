@@ -1,0 +1,18 @@
+id: aws-000378
+product_area: public-sector-and-compliance
+true_statement: On-premises classified networks connect to AWS's Top Secret cloud over AWS Direct Connect rather than over the internet.
+false_statement: On-premises classified networks connect to AWS's Top Secret cloud over AWS Site-to-Site VPN tunnels across the internet.
+explanation: The Top Secret cloud is fully isolated physically and from public networks, so access comes through dedicated Direct Connect links. Internet-based VPN paths are not how these Regions are reached.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/aws-secret-and-top-secret-regions.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 01603c3e660b5537ee772aff7ce6f7ef7a7f454e
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-secret-and-top-secret-regions
+- kt:aws-direct-connect
+difficulty: 2
+created: '2026-11-19'
+status: active

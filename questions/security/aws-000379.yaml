@@ -1,0 +1,21 @@
+id: aws-000379
+product_area: security
+true_statement: Amazon Inspector looks for software vulnerabilities before they are exploited, while Amazon GuardDuty detects threats while they are happening.
+false_statement: Amazon GuardDuty looks for software vulnerabilities before they are exploited, while Amazon Inspector detects threats while they are happening.
+explanation: Inspector is the vulnerability management service that scans EC2, ECR images, Lambda and code for CVEs and exposure. GuardDuty analyzes logs and events to flag active malicious behavior.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/amazon-inspector.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 6df05e9f3fb370f436926734dfd4bc73c5d4aad8
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-security-specialty
+concepts:
+- kt:amazon-inspector
+- kt:amazon-guardduty
+difficulty: 1
+created: '2026-11-19'
+status: active

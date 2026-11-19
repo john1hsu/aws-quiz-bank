@@ -1,0 +1,18 @@
+id: aws-000316
+product_area: storage
+true_statement: Amazon FSx for Lustre runs only in a single Availability Zone, and its scratch file systems don't replicate data while its persistent file systems do.
+false_statement: Amazon FSx for Lustre runs only in a single Availability Zone, and its persistent file systems don't replicate data while its scratch file systems do.
+explanation: Scratch Lustre is meant for temporary, short-lived processing and keeps no replica. Persistent Lustre replicates data within its AZ for longer-lived workloads.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-fsx.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 5d9474756a38118cf39a09defe463c77646e5b99
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:amazon-fsx
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-19'
+status: active

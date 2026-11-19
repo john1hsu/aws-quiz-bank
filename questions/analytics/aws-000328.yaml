@@ -1,0 +1,18 @@
+id: aws-000328
+product_area: analytics
+true_statement: A data lake applies a schema when data is read, whereas a data warehouse usually has its schema designed before data is loaded.
+false_statement: A data warehouse applies a schema when data is read, whereas a data lake usually has its schema designed before data is loaded.
+explanation: Lakes store raw data in native form and impose structure at query time (schema-on-read). Warehouses such as Redshift typically model the schema first and load data into it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/data-lake-on-aws.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 70b2f509ba2b43f5dfad37323c413355b6b3600e
+verified_on: '2026-11-13'
+feature_status: concept
+concepts:
+- kt:data-lake-on-aws
+- kt:data-warehouse
+difficulty: 1
+created: '2026-11-19'
+status: active

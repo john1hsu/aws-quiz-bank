@@ -1,0 +1,17 @@
+id: aws-000390
+product_area: ai-and-ml
+true_statement: Amazon Q Business plugins and Amazon Q Apps require a Pro subscription; the Lite subscription does not include them.
+false_statement: Amazon Q Business plugins and Amazon Q Apps are included in the Lite subscription as well as the Pro subscription.
+explanation: Lite covers basic chat over enterprise data. Plugins, Q Apps, chat orchestration and answers from model knowledge are Pro features.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-q-business.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 2ae2e79e07fb749b06631c9ebbae7dc38a64b85e
+verified_on: '2026-11-14'
+feature_status: closed-to-new-customers
+concepts:
+- kt:amazon-q-business
+difficulty: 2
+created: '2026-11-19'
+status: active

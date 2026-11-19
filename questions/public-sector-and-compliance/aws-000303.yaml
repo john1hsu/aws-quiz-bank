@@ -1,0 +1,17 @@
+id: aws-000303
+product_area: public-sector-and-compliance
+true_statement: On AWS's Services in Scope page, a listed service's generally available features are in scope for a program unless AWS specifically excludes them (as of 2026-11).
+false_statement: On AWS's Services in Scope page, a listed service's generally available features are out of scope for a program unless AWS specifically includes them (as of 2026-11).
+explanation: Scope is granted by default to a listed service's GA features, with named carve-outs such as Simple AD under SOC. The false version reverses the default into an opt-in list.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/aws-compliance-programs.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 64439886c2b3a326275ca6a84c6c9fea75c96913
+verified_on: '2026-11-12'
+feature_status: concept
+concepts:
+- kt:aws-compliance-programs
+difficulty: 2
+created: '2026-11-19'
+status: active

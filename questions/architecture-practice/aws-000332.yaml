@@ -1,0 +1,17 @@
+id: aws-000332
+product_area: architecture-practice
+true_statement: On-Demand Capacity Reservations are billed at the On-Demand rate whether or not the reserved capacity is used, so the Well-Architected guidance warns they are not a discount.
+false_statement: On-Demand Capacity Reservations are billed at a discount to the On-Demand rate and only while instances use the reserved capacity, so the Well-Architected guidance treats them as a discount.
+explanation: A Capacity Reservation guarantees capacity, not price, and you pay On-Demand rates for it even when it sits idle. Discounts come from Savings Plans, Reserved Instances or Spot.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/cost-optimization-pillar.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 24fa7fb20f5bfbd7f61501d0d2009dd69ab6247a
+verified_on: '2026-11-13'
+feature_status: concept
+concepts:
+- kt:cost-optimization-pillar
+difficulty: 2
+created: '2026-11-19'
+status: active

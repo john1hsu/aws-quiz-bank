@@ -1,0 +1,17 @@
+id: aws-000335
+product_area: architecture-practice
+true_statement: The Sustainability Pillar says two hosts at 30% utilization are less efficient than one host at 60%, because every running host draws baseline power.
+false_statement: The Sustainability Pillar says two hosts at 30% utilization are more efficient than one host at 60%, because spreading load lowers the power each host draws.
+explanation: Each host has a fixed power floor regardless of load, so consolidating work onto fewer, busier hosts wastes less energy. That is why maximizing utilization is a design principle.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/sustainability-pillar.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 1d198458672ec4cee7d497f9d66329361db899f1
+verified_on: '2026-11-13'
+feature_status: concept
+concepts:
+- kt:sustainability-pillar
+difficulty: 2
+created: '2026-11-19'
+status: active

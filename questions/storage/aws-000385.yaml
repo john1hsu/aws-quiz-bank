@@ -1,0 +1,20 @@
+id: aws-000385
+product_area: storage
+true_statement: Volume Gateway cached volumes keep the primary copy of data in Amazon S3, while stored volumes keep the full dataset on premises and back up snapshots to AWS.
+false_statement: Volume Gateway stored volumes keep the primary copy of data in Amazon S3, while cached volumes keep the full dataset on premises and back up snapshots to AWS.
+explanation: Cached mode treats S3 as primary storage and caches hot data locally. Stored mode keeps everything local for low-latency access and sends point-in-time snapshots to AWS asynchronously.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/aws-storage-gateway.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: a86a970e64cb24ff0c172e73091a0381b97cd425
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-storage-gateway
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-19'
+status: active

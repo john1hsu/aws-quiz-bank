@@ -1,0 +1,18 @@
+id: aws-000344
+product_area: compute
+true_statement: Nitro v6 instances cut the default idle timeout for established TCP connections from 432,000 seconds to 350 seconds, so long-lived idle connections need keepalives.
+false_statement: Nitro v6 instances raise the default idle timeout for established TCP connections from 350 seconds to 432,000 seconds, so long-lived idle connections no longer need keepalives.
+explanation: On Nitro v6 the established-connection idle timeout dropped sharply to 350 seconds. Applications that keep idle connections open must send keepalives or they will be cut off.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/aws-nitro-system.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: c53e65791554e133165e9e94ecd93fd62cdf3ef9
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-nitro-system
+- kt:ec2-instance-types
+difficulty: 3
+created: '2026-11-19'
+status: active

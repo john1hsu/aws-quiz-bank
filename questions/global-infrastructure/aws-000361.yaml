@@ -1,0 +1,20 @@
+id: aws-000361
+product_area: global-infrastructure
+true_statement: On Amazon EC2 the customer patches the guest operating system, while on Amazon DynamoDB AWS runs the operating system and platform for the customer.
+false_statement: On Amazon DynamoDB the customer patches the guest operating system, while on Amazon EC2 AWS runs the operating system and platform for the customer.
+explanation: EC2 is an infrastructure service, so the guest OS, installed software and security groups are the customer's. DynamoDB is abstracted, leaving the customer only data, encryption choices and IAM permissions.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/shared-responsibility-model.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 46844396b1bc49326cb301ffed9d47811cfcbe1e
+verified_on: '2026-11-13'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:shared-responsibility-model
+- kt:amazon-ec2
+difficulty: 1
+created: '2026-11-19'
+status: active

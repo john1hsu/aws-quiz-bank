@@ -1,0 +1,19 @@
+id: aws-000376
+product_area: public-sector-and-compliance
+true_statement: AWS's Secret-level Regions are authorized at DoD Cloud Computing SRG Impact Level 6 and under the intelligence directive ICD 503.
+false_statement: AWS's Secret-level Regions are authorized at DoD Cloud Computing SRG Impact Level 5 and under the intelligence directive ICD 503.
+explanation: IL6 is the DoD level for Secret-classified data, and the Secret Regions hold that authorization. IL5 is unclassified-but-sensitive data, which AWS hosts in GovCloud (US).
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/aws-secret-and-top-secret-regions.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 01603c3e660b5537ee772aff7ce6f7ef7a7f454e
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-secret-and-top-secret-regions
+- kt:dod-cloud-computing-srg-impact-levels
+- kt:icd-503
+difficulty: 2
+created: '2026-11-19'
+status: active

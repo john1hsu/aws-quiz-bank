@@ -1,0 +1,21 @@
+id: aws-000314
+product_area: serverless-and-integration
+true_statement: An Amazon SQS message can be up to 1 MiB, and the Extended Client Libraries handle payloads up to 2 GB by storing them in Amazon S3 (as of 2026-11).
+false_statement: An Amazon SQS message can be up to 256 KiB, and the Extended Client Libraries handle payloads up to 2 GB by storing them in Amazon S3 (as of 2026-11).
+explanation: AWS raised the SQS message size limit from 256 KiB to 1 MiB in August 2025. Larger payloads go to S3, with only a reference sent through the queue.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-sqs.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 5af626b046a2941db11d27e359763f4b500903e2
+verified_on: '2026-11-12'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+- kt:aws-certified-developer-associate
+concepts:
+- kt:amazon-sqs
+- kt:sqs-quotas
+difficulty: 2
+created: '2026-11-19'
+status: active

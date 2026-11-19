@@ -1,0 +1,17 @@
+id: aws-000304
+product_area: public-sector-and-compliance
+true_statement: Under HHS guidance, a cloud provider that stores only encrypted ePHI and holds no decryption key still counts as a business associate that needs a BAA.
+false_statement: Under HHS guidance, a cloud provider that stores only encrypted ePHI and holds no decryption key counts as a no-view conduit that needs no BAA.
+explanation: HHS treats any provider that stores or processes ePHI as a business associate, even one that cannot read the data. Lacking the key does not remove the BAA requirement.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/hipaa-eligible-services.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: c975ffe7d79db3bdc2cd5d610f8e4ab568b27bb1
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:hipaa-eligible-services
+difficulty: 2
+created: '2026-11-19'
+status: active

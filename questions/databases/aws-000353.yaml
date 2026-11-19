@@ -1,0 +1,19 @@
+id: aws-000353
+product_area: databases
+true_statement: Aurora Serverless readers in failover tiers 0–1 track the writer's capacity, while readers in tiers 2–15 scale independently of it.
+false_statement: Aurora Serverless readers in failover tiers 2–15 track the writer's capacity, while readers in tiers 0–1 scale independently of it.
+explanation: High-priority failover readers stay sized like the writer so they can take over without a capacity shortfall. Lower-priority readers scale on their own load, which suits reporting replicas.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/aurora-serverless-v2.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 7e4a1a959da0418697eda219b2e8c43cd33cf32d
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aurora-serverless-v2
+difficulty: 3
+created: '2026-11-19'
+status: active

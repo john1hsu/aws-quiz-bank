@@ -1,0 +1,17 @@
+id: aws-000331
+product_area: architecture-practice
+true_statement: The Cost Optimization Pillar estimates that running dev and test environments only during an eight-hour working day saves about 75%, as they run 40 of 168 weekly hours.
+false_statement: The Cost Optimization Pillar estimates that running dev and test environments only during an eight-hour working day saves about 25%, as they run 40 of 168 weekly hours.
+explanation: Forty hours is roughly a quarter of a 168-hour week, so the saving is about three quarters of the always-on cost. A 25% saving would mean the environments still ran most of the week.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/cost-optimization-pillar.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 24fa7fb20f5bfbd7f61501d0d2009dd69ab6247a
+verified_on: '2026-11-13'
+feature_status: concept
+concepts:
+- kt:cost-optimization-pillar
+difficulty: 2
+created: '2026-11-19'
+status: active

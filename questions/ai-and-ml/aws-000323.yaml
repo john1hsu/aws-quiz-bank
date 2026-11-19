@@ -1,0 +1,19 @@
+id: aws-000323
+product_area: ai-and-ml
+true_statement: Amazon Comprehend meters requests in 100-character units with a minimum charge of 3 units (300 characters) per request (as of 2026-11).
+false_statement: Amazon Comprehend meters requests in 100-character units with a minimum charge of 10 units (1,000 characters) per request (as of 2026-11).
+explanation: Every request is billed for at least three 100-character units, which makes very short texts relatively costly. Batching short texts is the usual way to soften that minimum.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-comprehend.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 7793a5178d63c06d55c1e17ca49cfc4c79526c04
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-comprehend
+difficulty: 2
+created: '2026-11-19'
+status: active

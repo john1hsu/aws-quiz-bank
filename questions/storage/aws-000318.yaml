@@ -1,0 +1,18 @@
+id: aws-000318
+product_area: storage
+true_statement: Amazon FSx for Lustre can link to an Amazon S3 bucket, presenting its objects as files and writing processed results back to the bucket.
+false_statement: Amazon FSx for OpenZFS can link to an Amazon S3 bucket, presenting its objects as files and writing processed results back to the bucket.
+explanation: The S3 data repository link is a Lustre feature aimed at HPC and ML pipelines. OpenZFS is an NFS file system without that built-in S3 linkage.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-fsx.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 5d9474756a38118cf39a09defe463c77646e5b99
+verified_on: '2026-11-12'
+feature_status: current
+concepts:
+- kt:amazon-fsx
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-19'
+status: active

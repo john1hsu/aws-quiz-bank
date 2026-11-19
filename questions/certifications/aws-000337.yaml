@@ -1,0 +1,17 @@
+id: aws-000337
+product_area: certifications
+true_statement: On the MLA-C01 exam, Data Preparation for Machine Learning is the heaviest domain at 28%, and Deployment and Orchestration of ML Workflows the lightest at 22%.
+false_statement: On the MLA-C01 exam, Deployment and Orchestration of ML Workflows is the heaviest domain at 28%, and Data Preparation for Machine Learning the lightest at 22%.
+explanation: MLA-C01 weights data preparation most heavily, followed by model development at 26% and monitoring and security at 24%. Deployment and orchestration carries the smallest share.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-machine-learning-engineer-associate.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: bf52825d54c52238943eae447c270ec6a68728ab
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-certified-machine-learning-engineer-associate
+difficulty: 2
+created: '2026-11-19'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000362
+product_area: global-infrastructure
+true_statement: For single-tenant managed services such as Amazon RDS the customer picks when AWS-built patches apply, while multi-tenant services such as DynamoDB are patched with no customer action.
+false_statement: For multi-tenant services such as DynamoDB the customer picks when AWS-built patches apply, while single-tenant managed services such as Amazon RDS are patched with no customer action.
+explanation: With RDS, ElastiCache or OpenSearch Service, AWS releases patches but the customer schedules them through maintenance windows or restarts. Multi-tenant services like S3 and DynamoDB are patched entirely by AWS.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/shared-responsibility-model.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 46844396b1bc49326cb301ffed9d47811cfcbe1e
+verified_on: '2026-11-13'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:shared-responsibility-model
+- kt:amazon-rds
+difficulty: 2
+created: '2026-11-19'
+status: active

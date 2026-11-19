@@ -1,0 +1,18 @@
+id: aws-000377
+product_area: public-sector-and-compliance
+true_statement: Multi-Region disaster recovery at the Secret classification level became possible only once AWS Secret-West opened in 2025.
+false_statement: Multi-Region disaster recovery at the Secret classification level became possible once AWS Top Secret-West opened in 2021.
+explanation: Until Secret-West went live, the Secret level had a single Region, so workloads could spread only across its AZs. Top Secret-West added a second Region at the Top Secret level, not the Secret level.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/aws-secret-and-top-secret-regions.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: 01603c3e660b5537ee772aff7ce6f7ef7a7f454e
+verified_on: '2026-11-13'
+feature_status: current
+concepts:
+- kt:aws-secret-and-top-secret-regions
+- kt:disaster-recovery-strategies
+difficulty: 3
+created: '2026-11-19'
+status: active

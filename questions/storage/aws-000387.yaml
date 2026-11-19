@@ -1,0 +1,19 @@
+id: aws-000387
+product_area: storage
+true_statement: An archived Tape Gateway tape typically takes 3–5 hours to retrieve from S3 Glacier Flexible Retrieval and about 12 hours from S3 Glacier Deep Archive.
+false_statement: An archived Tape Gateway tape typically takes 3–5 hours to retrieve from S3 Glacier Deep Archive and about 12 hours from S3 Glacier Flexible Retrieval.
+explanation: Deep Archive is the colder, cheaper shelf, so its retrievals are slower than Flexible Retrieval. Archived tapes must return to the virtual tape library before backup software can read them.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/aws-storage-gateway.md
+  commit: cbc55bd30cc136537cf4807406630bc6e5524689
+  blob: a86a970e64cb24ff0c172e73091a0381b97cd425
+verified_on: '2026-11-13'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-storage-gateway
+difficulty: 2
+created: '2026-11-19'
+status: active
