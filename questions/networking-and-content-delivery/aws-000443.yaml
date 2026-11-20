@@ -1,0 +1,20 @@
+id: aws-000443
+product_area: networking-and-content-delivery
+true_statement: Gateway endpoints for Amazon S3 and DynamoDB don't use PrivateLink and are free, while PrivateLink interface endpoints are billed per endpoint network interface-hour.
+false_statement: Interface endpoints for Amazon S3 and DynamoDB don't use PrivateLink and are free, while PrivateLink gateway endpoints are billed per endpoint network interface-hour.
+explanation: Gateway endpoints are route-table targets for just S3 and DynamoDB and carry no charge. Interface endpoints place PrivateLink network interfaces in your subnets and cost $0.01 per interface-hour plus data processing in AWS's us-east-1 example.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-privatelink.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 702a35e94af21285ea783b36d1e0560effa473b9
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-privatelink
+- kt:vpc-endpoints
+difficulty: 2
+created: '2026-11-20'
+status: active

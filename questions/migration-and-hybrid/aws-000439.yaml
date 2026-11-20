@@ -1,0 +1,17 @@
+id: aws-000439
+product_area: migration-and-hybrid
+true_statement: AWS Transform's mainframe modernization analyses COBOL, PL/I and JCL and can refactor the code to Java.
+false_statement: AWS Transform's mainframe modernization analyses COBOL, PL/I and JCL and can refactor the code to Python.
+explanation: For mainframe estates the service extracts business rules, generates documentation and tests, and refactors to Java or reimagines the application as cloud-native. Python appears only among its custom upgrade transformations.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-transform.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 3517cb63dd9ab8eb7c1e528178fe846cf755b11c
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:aws-transform
+difficulty: 2
+created: '2026-11-20'
+status: active

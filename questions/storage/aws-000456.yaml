@@ -1,0 +1,18 @@
+id: aws-000456
+product_area: storage
+true_statement: In Amazon S3 Files, large reads of 1 MiB or more are streamed straight from the bucket, while small files are imported onto the file system's high-performance storage.
+false_statement: In Amazon S3 Files, small reads under 1 MiB are streamed straight from the bucket, while large files are imported onto the file system's high-performance storage.
+explanation: S3 Files caches small files (under 128 KiB by default) on its fast tier for low-latency repeat reads. Big sequential reads bypass that tier and come directly from S3, billed as normal GET requests.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-s3-files.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 69f1b4d9a5c7bc65f561a8c47794ced985ea8d61
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:amazon-s3-files
+- kt:amazon-efs
+difficulty: 3
+created: '2026-11-20'
+status: active

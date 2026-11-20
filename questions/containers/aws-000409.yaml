@@ -1,0 +1,18 @@
+id: aws-000409
+product_area: containers
+true_statement: ECS service-modify calls such as UpdateService share a token bucket with a burst of 50 and a sustained rate of 5 per second (as of 2026-11).
+false_statement: ECS service-modify calls such as UpdateService share a token bucket with a burst of 100 and a sustained rate of 40 per second (as of 2026-11).
+explanation: Service create, update and delete calls refill at only 5 per second after a 50-call burst, which slows pipelines that touch many services. The 100/40 bucket belongs to cluster resource calls such as RunTask and StopTask.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/ecs-quotas.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: dcdaff34708007a4e830c04c7e535644cf966160
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:ecs-quotas
+- kt:amazon-ecs
+difficulty: 3
+created: '2026-11-20'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000463
+product_area: analytics
+true_statement: Service control policies for OpenSearch Service must list both old and new action names, such as es:CreateElasticsearchDomain and es:CreateDomain, because SCPs get no automatic mapping.
+false_statement: Identity-based policies for OpenSearch Service must list both old and new action names, such as es:CreateElasticsearchDomain and es:CreateDomain, because they get no automatic mapping.
+explanation: After the 2021 rename, AWS maps old action names to new ones for identity policies. SCPs don't receive that mapping, so they need both names to be effective.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-opensearch-service.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 81a8d7d7b775004eeb540f24ecd83f1d75322eaa
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:amazon-opensearch-service
+- kt:aws-iam
+difficulty: 3
+created: '2026-11-20'
+status: active

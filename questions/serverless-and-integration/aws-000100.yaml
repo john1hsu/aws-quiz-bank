@@ -6,8 +6,8 @@ explanation: Synchronous calls allow 6 MB request and response payloads, or 200 
 source:
   repo: john1hsu/aws-graph
   path: articles/serverless-and-integration/aws-lambda.md
-  commit: 86cb78a64b6dba0c673d8521fd00be0f5c00d454
-  blob: da76b1785f34d9bab7f23c0f2b7ae01e2487ba5a
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 529ae8ed5fdfc9c67e3c289b68e89ce5e5d9ead8
 verified_on: '2026-11-09'
 feature_status: current
 certs:

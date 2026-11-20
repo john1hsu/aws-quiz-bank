@@ -1,0 +1,18 @@
+id: aws-000441
+product_area: migration-and-hybrid
+true_statement: EC2 security group rules are not enforced on Amazon EVS network interfaces in VLAN subnets, so traffic there is filtered with network ACLs.
+false_statement: Network ACL rules are not enforced on Amazon EVS network interfaces in VLAN subnets, so traffic there is filtered with EC2 security groups.
+explanation: EVS VLAN subnets are a case where security groups don't apply to the interfaces. AWS's guidance is to rely on network ACLs to control that traffic.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/vmware-migration-to-aws.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: d81c38abae62eedf801dd101edf4f5880fb20e77
+verified_on: '2026-11-14'
+feature_status: concept
+concepts:
+- kt:vmware-migration-to-aws
+- kt:amazon-elastic-vmware-service
+difficulty: 3
+created: '2026-11-20'
+status: active

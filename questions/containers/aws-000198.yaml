@@ -6,8 +6,8 @@ explanation: ECR charges nothing for inbound pushes or for same-Region pulls to 
 source:
   repo: john1hsu/aws-graph
   path: articles/containers/amazon-ecr.md
-  commit: 7cca3afd643be6d6cbe8147207dad4ad597d3d59
-  blob: 05b4904397658457444f1886fc569a946dc8764e
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: f5cda9714473af94ba576d04473a7552368d3024
 verified_on: '2026-11-11'
 feature_status: current
 certs:

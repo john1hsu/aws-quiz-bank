@@ -1,0 +1,17 @@
+id: aws-000440
+product_area: migration-and-hybrid
+true_statement: Since April 30, 2024, AWS and its channel partners no longer resell VMware Cloud on AWS, which customers can still buy from Broadcom.
+false_statement: Since April 30, 2024, Broadcom no longer sells VMware Cloud on AWS, which customers can still buy from AWS and its channel partners.
+explanation: AWS stopped reselling VMware Cloud on AWS in 2024, and Broadcom is now the place to buy it. AWS's own VMware relocation option is Amazon EVS.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/vmware-migration-to-aws.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: d81c38abae62eedf801dd101edf4f5880fb20e77
+verified_on: '2026-11-14'
+feature_status: concept
+concepts:
+- kt:vmware-migration-to-aws
+difficulty: 2
+created: '2026-11-20'
+status: active

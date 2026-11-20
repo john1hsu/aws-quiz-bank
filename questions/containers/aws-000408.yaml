@@ -1,0 +1,18 @@
+id: aws-000408
+product_area: containers
+true_statement: An ECS service that uses service discovery is capped at 1,000 tasks, because AWS Cloud Map allows only 1,000 instances per service and that quota can't be raised.
+false_statement: An ECS service that uses service discovery can reach 5,000 tasks, because AWS Cloud Map's 1,000 instances-per-service quota can be raised to match ECS.
+explanation: The Cloud Map per-service instance limit is fixed at 1,000, so it becomes the ceiling for a service-discovery-enabled ECS service. ECS's own 5,000 tasks-per-service limit is never reached in that case.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/ecs-quotas.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: dcdaff34708007a4e830c04c7e535644cf966160
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:ecs-quotas
+- kt:aws-cloud-map
+difficulty: 3
+created: '2026-11-20'
+status: active

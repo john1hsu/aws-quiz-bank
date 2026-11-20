@@ -1,0 +1,20 @@
+id: aws-000476
+product_area: cost-management
+true_statement: AWS Organizations consolidated billing has no extra fee and pools usage across accounts, so volume discounts, Reserved Instances and Savings Plans are shared.
+false_statement: AWS Organizations consolidated billing has no extra fee but prices each account's usage separately, so volume discounts, Reserved Instances and Savings Plans are not shared.
+explanation: Consolidated billing produces one bill and treats the organization's usage as a pool, which helps accounts reach volume tiers and lets commitments apply across accounts.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-cost-management-services.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 006a8e8c92cef292f98eacb1e478d11f307dd1bc
+verified_on: '2026-11-15'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-cost-management-services
+- kt:aws-organizations
+difficulty: 1
+created: '2026-11-20'
+status: active

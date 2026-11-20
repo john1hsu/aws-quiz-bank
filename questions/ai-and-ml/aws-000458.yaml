@@ -1,0 +1,18 @@
+id: aws-000458
+product_area: ai-and-ml
+true_statement: Amazon Q Developer's IDE plugins reach end of support on April 30, 2027, and AWS names Kiro as their successor.
+false_statement: Amazon Q Developer's IDE plugins reach end of support on April 30, 2027, and AWS names Amazon Q Business as their successor.
+explanation: AWS points developers to Kiro, its agentic IDE and CLI, as the replacement for the Q Developer plugins and subscriptions. Amazon Q Business is a separate employee-assistant product, not a coding tool.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-q-developer.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: f6c056ca29399a8520ae2adb2cf8aeb9beafa51a
+verified_on: '2026-11-15'
+feature_status: closed-to-new-customers
+concepts:
+- kt:amazon-q-developer
+- kt:kiro
+difficulty: 1
+created: '2026-11-20'
+status: active

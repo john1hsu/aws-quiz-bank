@@ -1,0 +1,20 @@
+id: aws-000493
+product_area: governance-and-operations
+true_statement: Trusted Advisor organizational view needs AWS Organizations with all features enabled and a qualifying support plan on the management account.
+false_statement: Trusted Advisor organizational view needs AWS Organizations with only consolidated billing enabled and a qualifying support plan on each member account.
+explanation: The organization-wide report is built from the management account, which must have all features turned on and an eligible plan. It keeps up to 50 downloadable JSON or CSV reports.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-trusted-advisor.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 04564144d6628d2d09c0e970af9a8d8914030877
+verified_on: '2026-11-15'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-trusted-advisor
+- kt:aws-organizations
+difficulty: 2
+created: '2026-11-20'
+status: active

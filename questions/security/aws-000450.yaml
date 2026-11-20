@@ -1,0 +1,20 @@
+id: aws-000450
+product_area: security
+true_statement: When one account reads another account's secret, the API call counts against the requesting account's Secrets Manager quota rather than the owner's.
+false_statement: When one account reads another account's secret, the API call counts against the owning account's Secrets Manager quota rather than the requester's.
+explanation: Secrets Manager throttling falls on the caller, so heavy cross-account readers use up their own request rate. AWS recommends exponential backoff with jitter and client-side caching.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-secrets-manager.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 585d80011325ce063c44ddaaab8163d7674cceea
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-secrets-manager
+- kt:secrets-manager-quotas
+difficulty: 3
+created: '2026-11-20'
+status: active

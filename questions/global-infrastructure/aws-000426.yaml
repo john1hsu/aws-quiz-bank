@@ -1,0 +1,19 @@
+id: aws-000426
+product_area: global-infrastructure
+true_statement: Each AWS Outpost is an extension of a single Availability Zone in its parent Region, linked back to that Region by a service link.
+false_statement: Each AWS Outpost is an extension of every Availability Zone in its parent Region, linked back to that Region by a service link.
+explanation: An Outpost is anchored to one AZ of its parent Region, and you create VPC subnets on it from that Region's VPC. The service link carries its management and control traffic.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-outposts.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: c4ec70cdce7df079899775bfd1daece52dc964ea
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:aws-outposts
+- kt:availability-zones
+- kt:amazon-vpc
+difficulty: 2
+created: '2026-11-20'
+status: active

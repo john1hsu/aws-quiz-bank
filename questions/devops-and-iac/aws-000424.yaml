@@ -1,0 +1,20 @@
+id: aws-000424
+product_area: devops-and-iac
+true_statement: Each CodeDeploy deployment group can run only one deployment at a time, a fixed limit, while an account allows 1,300 concurrent deployments by default.
+false_statement: Each CodeDeploy account can run only one deployment at a time, a fixed limit, while a deployment group allows 1,300 concurrent deployments by default.
+explanation: The one-at-a-time rule applies per deployment group and can't be raised. The account-wide figure of 1,300 concurrent deployments is the adjustable one.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-codedeploy.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 5dbe708d4e2c4acfa853fa72b49e8646dcf08783
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-codedeploy
+- kt:codedeploy-quotas
+difficulty: 3
+created: '2026-11-20'
+status: active

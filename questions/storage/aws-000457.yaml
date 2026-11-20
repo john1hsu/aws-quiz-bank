@@ -1,0 +1,18 @@
+id: aws-000457
+product_area: storage
+true_statement: Writes through Amazon S3 Files are typically exported to the bucket within minutes, while changes made directly in the bucket usually appear in the file system within seconds.
+false_statement: Writes through Amazon S3 Files are typically exported to the bucket within seconds, while changes made directly in the bucket usually appear in the file system within minutes.
+explanation: File-system writes first land on the high-performance tier and are pushed to S3 as new objects or versions some minutes later. In the other direction, bucket changes are picked up quickly through EventBridge-driven synchronization.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-s3-files.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 69f1b4d9a5c7bc65f561a8c47794ced985ea8d61
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:amazon-s3-files
+- kt:amazon-s3
+difficulty: 3
+created: '2026-11-20'
+status: active

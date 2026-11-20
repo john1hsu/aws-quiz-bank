@@ -1,0 +1,20 @@
+id: aws-000452
+product_area: serverless-and-integration
+true_statement: An AWS AppSync request can execute for at most 30 seconds, a fixed limit, so long-running work should be started asynchronously and the resolver should return at once.
+false_statement: An AWS AppSync request can execute for at most 15 minutes, a fixed limit, so long-running work should be started asynchronously and the resolver should return at once.
+explanation: AppSync caps request execution at 30 seconds and the quota can't be raised. Longer jobs should be handed off, for example to Lambda or EventBridge, instead of blocking the resolver.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/aws-appsync.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 7f85438dff3b9ecf6599049c630258a594280292
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-appsync
+- kt:appsync-quotas
+difficulty: 2
+created: '2026-11-20'
+status: active

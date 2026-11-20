@@ -1,0 +1,20 @@
+id: aws-000478
+product_area: cost-management
+true_statement: AWS Billing Conductor builds a separate, custom version of monthly billing data for showback and chargeback without changing what AWS actually charges.
+false_statement: AWS Billing Conductor rewrites the amounts AWS actually charges each account, so showback and chargeback rates appear on the official invoice.
+explanation: Billing Conductor produces pro forma billing data, for example to present custom rates to internal teams or customers. The real AWS bill is unaffected.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-cost-management-services.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 006a8e8c92cef292f98eacb1e478d11f307dd1bc
+verified_on: '2026-11-15'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-cost-management-services
+- kt:aws-billing-and-cost-management
+difficulty: 2
+created: '2026-11-20'
+status: active

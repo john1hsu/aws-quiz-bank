@@ -1,0 +1,20 @@
+id: aws-000486
+product_area: global-infrastructure
+true_statement: Most AWS services are Regional, so a service or price available in one Region can't be assumed to exist in another.
+false_statement: Most AWS services are global, so a service or price available in one Region can be assumed to exist in every other Region.
+explanation: Customers choose a Region for each workload, and availability and pricing vary between Regions. That is why Region choice affects latency, data residency and cost.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/amazon-web-services.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 948c205ff65df3b48de7931c7345180c80b39b28
+verified_on: '2026-11-15'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-web-services
+- kt:aws-global-infrastructure
+difficulty: 1
+created: '2026-11-20'
+status: active

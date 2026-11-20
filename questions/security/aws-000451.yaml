@@ -1,0 +1,20 @@
+id: aws-000451
+product_area: security
+true_statement: The alternating-users rotation strategy in Secrets Manager keeps the previous database credentials valid during the switch, unlike the single-user strategy.
+false_statement: The single-user rotation strategy in Secrets Manager keeps the previous database credentials valid during the switch, unlike the alternating-users strategy.
+explanation: Alternating users rotates between two database users, so the old login still works while clients pick up the new one. Single-user rotation changes the password of one user in place.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-secrets-manager.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 585d80011325ce063c44ddaaab8163d7674cceea
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-secrets-manager
+- kt:amazon-rds
+difficulty: 3
+created: '2026-11-20'
+status: active

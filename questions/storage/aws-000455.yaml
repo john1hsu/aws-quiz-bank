@@ -1,0 +1,18 @@
+id: aws-000455
+product_area: storage
+true_statement: Amazon S3 Files needs a general purpose bucket in the same Region with S3 Versioning enabled before a file system can be linked to it.
+false_statement: Amazon S3 Files needs an S3 directory bucket in the same Region with S3 Versioning enabled before a file system can be linked to it.
+explanation: S3 Files works on general purpose buckets that have versioning turned on and use SSE-S3 or SSE-KMS. Directory buckets are a different bucket type and are not the prerequisite.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-s3-files.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 69f1b4d9a5c7bc65f561a8c47794ced985ea8d61
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:amazon-s3-files
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-20'
+status: active

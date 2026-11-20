@@ -1,0 +1,18 @@
+id: aws-000480
+product_area: databases
+true_statement: During a Multi-AZ failover, RDS Proxy keeps its IP address and holds idle client connections open, cancelling only connections that are mid-transaction or mid-statement.
+false_statement: During a Multi-AZ failover, RDS Proxy changes its IP address and drops every client connection, so all clients must reconnect to the new writer.
+explanation: The proxy queues new requests and routes them to the new writer while idle connections stay up. AWS says this can cut failover times for RDS and Aurora Multi-AZ databases by up to 66%.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/rds-proxy.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: f7eee840e4c107e3abd76738e4a52eb7704c3437
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:rds-proxy
+- kt:amazon-rds
+difficulty: 2
+created: '2026-11-20'
+status: active

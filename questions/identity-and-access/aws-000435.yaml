@@ -1,0 +1,18 @@
+id: aws-000435
+product_area: identity-and-access
+true_statement: Administrators can edit the permissions of an IAM service role, but can only view the permissions of a service-linked role, which the service itself owns.
+false_statement: Administrators can edit the permissions of an IAM service-linked role, but can only view the permissions of a service role, which the service itself owns.
+explanation: A service role is an ordinary role you create for a service to assume, so you control its policies. A service-linked role is defined and owned by the service, and its resources must be removed before the role can be deleted.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/iam-roles.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 62517f13e93dc41aa3f3a7de09f27748f7d2939f
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:iam-roles
+- kt:aws-iam
+difficulty: 2
+created: '2026-11-20'
+status: active

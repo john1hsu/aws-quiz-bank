@@ -1,0 +1,20 @@
+id: aws-000484
+product_area: devops-and-iac
+true_statement: AWS X-Ray traces requests as they move through distributed applications, while AWS Fault Injection Service runs controlled experiments to test resilience.
+false_statement: AWS Fault Injection Service traces requests as they move through distributed applications, while AWS X-Ray runs controlled experiments to test resilience.
+explanation: X-Ray is the tracing tool for microservices and other distributed systems. Fault Injection Service deliberately injects faults so teams can see how a workload copes.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-developer-tools.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 86e09d2312cabedd39cdecb32e50c3e17b38b9ab
+verified_on: '2026-11-15'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-developer-tools
+- kt:aws-x-ray
+difficulty: 1
+created: '2026-11-20'
+status: active

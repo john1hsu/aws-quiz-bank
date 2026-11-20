@@ -1,0 +1,17 @@
+id: aws-000462
+product_area: analytics
+true_statement: OpenSearch Service Multi-AZ with Standby needs OpenSearch 1.3 or later and a data-node count that is a multiple of three.
+false_statement: OpenSearch Service Multi-AZ with Standby needs OpenSearch 1.3 or later and a data-node count that is a multiple of two.
+explanation: The standby option spreads nodes across three Availability Zones with one zone on standby, so data nodes must come in threes. It lets standby nodes take over in under a minute for some failures.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-opensearch-service.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 81a8d7d7b775004eeb540f24ecd83f1d75322eaa
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:amazon-opensearch-service
+difficulty: 3
+created: '2026-11-20'
+status: active

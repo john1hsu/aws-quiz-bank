@@ -1,0 +1,19 @@
+id: aws-000423
+product_area: devops-and-iac
+true_statement: CodeDeploy adds no charge for deployments to Amazon EC2, while deployments to on-premises instances cost $0.02 per instance update (as of 2026-11).
+false_statement: CodeDeploy adds no charge for deployments to on-premises instances, while deployments to Amazon EC2 cost $0.02 per instance update (as of 2026-11).
+explanation: Using CodeDeploy with EC2 is free beyond the instances themselves. Each update to an on-premises server is billed at two cents.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-codedeploy.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 5dbe708d4e2c4acfa853fa72b49e8646dcf08783
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-codedeploy
+difficulty: 1
+created: '2026-11-20'
+status: active

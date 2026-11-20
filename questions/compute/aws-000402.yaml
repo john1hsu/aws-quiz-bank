@@ -1,0 +1,18 @@
+id: aws-000402
+product_area: compute
+true_statement: EC2 dedicates CPU, memory and instance storage to each instance, while network and disk subsystems are shared among instances on the same host.
+false_statement: EC2 dedicates network and disk subsystems to each instance, while CPU, memory and instance storage are shared among instances on the same host.
+explanation: Compute, memory and local instance storage belong to the instance alone. The I/O paths for network and disk are shared, and types rated for higher I/O get a bigger and steadier share.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/ec2-instance-types.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 2de33892ce6465de72fcb3a1e53f60241e6e69a9
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:ec2-instance-types
+- kt:amazon-ec2
+difficulty: 2
+created: '2026-11-20'
+status: active

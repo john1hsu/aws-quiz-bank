@@ -1,0 +1,18 @@
+id: aws-000503
+product_area: global-infrastructure
+true_statement: Inter-Region VPC peering traffic travels over the AWS global backbone rather than the public internet, with built-in redundancy and encryption.
+false_statement: Inter-Region VPC peering traffic travels over the public internet rather than the AWS global backbone, with built-in redundancy and encryption.
+explanation: Peering between Regions rides AWS's private backbone with AEAD encryption and no single point of failure. If the peering connection fails, traffic has no internet fallback path.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-global-network.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: e3e8b0035596893de352efc16044a986339a5582
+verified_on: '2026-11-15'
+feature_status: concept
+concepts:
+- kt:aws-global-network
+- kt:amazon-vpc
+difficulty: 2
+created: '2026-11-20'
+status: active

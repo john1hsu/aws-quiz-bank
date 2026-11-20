@@ -1,0 +1,17 @@
+id: aws-000459
+product_area: ai-and-ml
+true_statement: Amazon Q Developer Pro costs $19 per user per month and includes 4,000 lines of Java transformation a month, pooled at the account level.
+false_statement: Amazon Q Developer Pro costs $19 per user per month and includes 4,000 lines of Java transformation a month for each individual user.
+explanation: Pro's Java transformation allowance is a shared account-level pool, with extra lines billed at $0.003 each. The Free tier's 1,000 lines, by contrast, apply per user.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-q-developer.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: f6c056ca29399a8520ae2adb2cf8aeb9beafa51a
+verified_on: '2026-11-15'
+feature_status: closed-to-new-customers
+concepts:
+- kt:amazon-q-developer
+difficulty: 2
+created: '2026-11-20'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000448
+product_area: public-sector-and-compliance
+true_statement: Security Hub CSPM's NIST SP 800-53 Rev 5 standard relies on AWS Config recording, which must be on for the checked resource types before you enable it.
+false_statement: Security Hub CSPM's NIST SP 800-53 Rev 5 standard relies on AWS CloudTrail data events, which must be on for the checked resource types before you enable it.
+explanation: The standard's automated controls are evaluated from AWS Config data, so recording has to be in place first. Even then they cover only the requirements that can be checked automatically.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/nist-sp-800-53.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: bf5d0afee586dedd2c27fb96adbf97ef8bc9cee9
+verified_on: '2026-11-14'
+feature_status: concept
+concepts:
+- kt:nist-sp-800-53
+- kt:aws-security-hub
+- kt:aws-config
+difficulty: 2
+created: '2026-11-20'
+status: active

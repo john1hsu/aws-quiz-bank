@@ -1,0 +1,19 @@
+id: aws-000465
+product_area: architecture-practice
+true_statement: In the AWS CAF, the Align phase finds capability gaps and cross-team dependencies, while the Launch phase delivers production pilots that show incremental value.
+false_statement: In the AWS CAF, the Launch phase finds capability gaps and cross-team dependencies, while the Align phase delivers production pilots that show incremental value.
+explanation: CAF's phases run Envision, Align, Launch and Scale. Align is where stakeholders agree on gaps to close; Launch puts pilots into production before Scale expands them.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/aws-cloud-adoption-framework.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: c722f06276858419cfa5eec98eaf087416140833
+verified_on: '2026-11-15'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-cloud-adoption-framework
+difficulty: 2
+created: '2026-11-20'
+status: active

@@ -1,0 +1,21 @@
+id: aws-000485
+product_area: global-infrastructure
+true_statement: One of the six advantages of cloud computing that AWS cites is trading upfront capital expense for variable expense.
+false_statement: One of the six advantages of cloud computing that AWS cites is trading variable expense for upfront capital expense.
+explanation: AWS's pitch is that you stop buying servers ahead of time and instead pay for what you use as you go. Turning pay-as-you-go spend back into upfront purchases is the opposite of that model.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/amazon-web-services.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 948c205ff65df3b48de7931c7345180c80b39b28
+verified_on: '2026-11-15'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-web-services
+- kt:aws-pricing-fundamentals
+- kt:cloud-computing
+difficulty: 1
+created: '2026-11-20'
+status: active

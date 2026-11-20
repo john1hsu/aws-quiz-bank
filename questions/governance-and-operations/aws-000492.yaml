@@ -1,0 +1,19 @@
+id: aws-000492
+product_area: governance-and-operations
+true_statement: A red Trusted Advisor check status means action is recommended, while a yellow status means investigation is recommended.
+false_statement: A yellow Trusted Advisor check status means action is recommended, while a red status means investigation is recommended.
+explanation: 'Trusted Advisor reports four states: red for action recommended, yellow for investigation recommended, green for no problems and gray for excluded items.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-trusted-advisor.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 04564144d6628d2d09c0e970af9a8d8914030877
+verified_on: '2026-11-15'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-trusted-advisor
+difficulty: 1
+created: '2026-11-20'
+status: active

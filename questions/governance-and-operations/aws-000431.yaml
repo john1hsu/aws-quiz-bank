@@ -1,0 +1,18 @@
+id: aws-000431
+product_area: governance-and-operations
+true_statement: AWS service quotas are Regional unless a quota says otherwise, so an increase approved in one Region does not carry over to other Regions.
+false_statement: AWS service quotas are global unless a quota says otherwise, so an increase approved in one Region carries over to every other Region.
+explanation: Most quotas, such as VPCs per Region, are tracked separately in each Region, and defaults can differ between Regions. Only quotas marked global, such as IAM roles per account, apply account-wide.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/service-quotas.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 0d6226b6c7f7da3f497c27530f47a75df8208332
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:service-quotas
+- kt:aws-regions
+difficulty: 1
+created: '2026-11-20'
+status: active

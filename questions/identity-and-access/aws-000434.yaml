@@ -1,0 +1,18 @@
+id: aws-000434
+product_area: identity-and-access
+true_statement: An IAM role's maximum session duration setting can range from 1 to 12 hours, while a session lasts at least 15 minutes and defaults to 1 hour.
+false_statement: An IAM role's maximum session duration setting can range from 1 to 36 hours, while a session lasts at least 15 minutes and defaults to 1 hour.
+explanation: Role sessions can be requested for 15 minutes up to the role's configured maximum, which tops out at 12 hours. Role chaining lowers the ceiling further to one hour.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/iam-roles.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 62517f13e93dc41aa3f3a7de09f27748f7d2939f
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:iam-roles
+- kt:aws-sts
+difficulty: 2
+created: '2026-11-20'
+status: active

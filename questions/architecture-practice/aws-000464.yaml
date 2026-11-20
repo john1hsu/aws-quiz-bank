@@ -1,0 +1,19 @@
+id: aws-000464
+product_area: architecture-practice
+true_statement: Of the AWS CAF's six perspectives, Platform, Security and Operations cover technical readiness, while Business, People and Governance cover organizational change.
+false_statement: Of the AWS CAF's six perspectives, Business, People and Governance cover technical readiness, while Platform, Security and Operations cover organizational change.
+explanation: CAF groups its foundational capabilities into six perspectives split between technical and organizational concerns. The Business, People and Governance side is the part stalled cloud programs often neglect.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/aws-cloud-adoption-framework.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: c722f06276858419cfa5eec98eaf087416140833
+verified_on: '2026-11-15'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-cloud-adoption-framework
+difficulty: 1
+created: '2026-11-20'
+status: active

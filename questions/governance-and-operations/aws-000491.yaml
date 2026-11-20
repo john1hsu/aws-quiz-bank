@@ -1,0 +1,20 @@
+id: aws-000491
+product_area: governance-and-operations
+true_statement: On Basic Support, Trusted Advisor gives every service-limits check plus a few core security checks, while the full check set and its API need a plan such as Business Support+.
+false_statement: On Basic Support, Trusted Advisor gives every cost-optimization check plus a few core security checks, while the full check set and its API need a plan such as Business Support+.
+explanation: Basic and Developer customers see all service-limits checks and a short security list, such as root MFA and public snapshots. Cost-optimization checks are part of the full set that higher support plans unlock.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-trusted-advisor.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 04564144d6628d2d09c0e970af9a8d8914030877
+verified_on: '2026-11-15'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-trusted-advisor
+- kt:aws-support-plans
+difficulty: 1
+created: '2026-11-20'
+status: active

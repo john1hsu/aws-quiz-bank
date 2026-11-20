@@ -1,0 +1,18 @@
+id: aws-000429
+product_area: governance-and-operations
+true_statement: Each root, OU or account can have at most 5 resource control policies attached directly, and the undetachable RCPFullAWSAccess policy uses one of them.
+false_statement: Each root, OU or account can have at most 10 resource control policies attached directly, and the undetachable RCPFullAWSAccess policy uses one of them.
+explanation: RCPs have a fixed limit of five direct attachments per target, half the SCP limit. Because AWS attaches RCPFullAWSAccess everywhere RCPs are on, only four slots remain for your own RCPs.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/organizations-quotas.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 67a542892aa8120edd59497f135ecf5250325ae1
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:organizations-quotas
+- kt:resource-control-policies
+difficulty: 3
+created: '2026-11-20'
+status: active

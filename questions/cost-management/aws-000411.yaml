@@ -1,0 +1,20 @@
+id: aws-000411
+product_area: cost-management
+true_statement: In the in-console Pricing Calculator, workload estimates are free, while bill estimates are free for five per calendar month and then cost $2 each (as of 2026-11).
+false_statement: In the in-console Pricing Calculator, bill estimates are free, while workload estimates are free for five per calendar month and then cost $2 each (as of 2026-11).
+explanation: Only the whole-bill estimate type carries a charge after the monthly free allowance; failed ones aren't billed. Workload estimates for a single application or change cost nothing.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-pricing-calculator.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: e1316ee1dae19466cfc592813236ee7b70b238d8
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-pricing-calculator
+- kt:aws-cost-management-services
+difficulty: 2
+created: '2026-11-20'
+status: active

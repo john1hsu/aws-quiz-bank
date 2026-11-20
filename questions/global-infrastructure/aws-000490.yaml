@@ -1,0 +1,18 @@
+id: aws-000490
+product_area: global-infrastructure
+true_statement: Data sent out over AWS Direct Connect to a remote Region is billed at the rate of the Region the data leaves, not the connection's associated Region.
+false_statement: Data sent out over AWS Direct Connect to a remote Region is billed at the rate of the connection's associated Region, not the Region the data leaves.
+explanation: A Direct Connect location can reach other public Regions over the backbone, but outbound transfer is still metered by the source Region. Backbone transport does not make that traffic free.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-global-network.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: e3e8b0035596893de352efc16044a986339a5582
+verified_on: '2026-11-15'
+feature_status: concept
+concepts:
+- kt:aws-global-network
+- kt:aws-direct-connect
+difficulty: 3
+created: '2026-11-20'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000414
+product_area: cost-management
+true_statement: Activating an AWS-generated cost allocation tag in an organization's management account also turns it on for every member account.
+false_statement: Activating an AWS-generated cost allocation tag in an organization's management account turns it on there only, so each member account must activate it too.
+explanation: Member accounts can't use the cost allocation tags manager; the management account (or a standalone account) controls activation, and its choice for AWS-generated tags propagates to members.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/cost-allocation-tags.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: efc0d610243570c809e915ad6b6f69cee415c7dd
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:cost-allocation-tags
+- kt:aws-organizations
+difficulty: 2
+created: '2026-11-20'
+status: active

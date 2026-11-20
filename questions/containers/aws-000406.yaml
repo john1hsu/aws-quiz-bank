@@ -1,0 +1,19 @@
+id: aws-000406
+product_area: containers
+true_statement: ECS tasks in awsvpc mode on EC2 container instances get no public IP, so IPv4 internet access goes through a private subnet and a NAT gateway.
+false_statement: ECS tasks in awsvpc mode on EC2 container instances get a public IP in a public subnet, so IPv4 internet access goes straight through an internet gateway.
+explanation: Task ENIs on EC2 container instances are never given public addresses. For outbound IPv4 they rely on NAT from a private subnet; dual-stack tasks can use IPv6 through an internet or egress-only gateway.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/container-networking-on-aws.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: ffb376d76256c0ac95fd81ca736e6f0fabf3c1e2
+verified_on: '2026-11-14'
+feature_status: concept
+concepts:
+- kt:container-networking-on-aws
+- kt:amazon-ecs
+- kt:subnets-and-route-tables
+difficulty: 3
+created: '2026-11-20'
+status: active

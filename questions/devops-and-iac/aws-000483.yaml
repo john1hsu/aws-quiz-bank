@@ -1,0 +1,19 @@
+id: aws-000483
+product_area: devops-and-iac
+true_statement: Amazon CodeCatalyst closed to new customers in November 2025, and AWS recommends GitLab Duo with Amazon Q as the alternative.
+false_statement: Amazon CodeCatalyst closed to new customers in November 2025, and AWS recommends AWS Cloud9 as the alternative.
+explanation: Existing CodeCatalyst spaces keep running without new features, and AWS documents mirroring repositories to GitLab or GitHub. Cloud9 is itself closed to new customers, so it isn't the suggested replacement.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-developer-tools.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 86e09d2312cabedd39cdecb32e50c3e17b38b9ab
+verified_on: '2026-11-15'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-developer-tools
+difficulty: 2
+created: '2026-11-20'
+status: active

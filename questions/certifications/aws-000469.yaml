@@ -1,0 +1,18 @@
+id: aws-000469
+product_area: certifications
+true_statement: AWS Specialty certifications sit outside the Foundational–Associate–Professional hierarchy, so renewing a Professional certification does not renew a Specialty one.
+false_statement: AWS Specialty certifications sit inside the Foundational–Associate–Professional hierarchy, so renewing a Professional certification also renews a Specialty one.
+explanation: Specialty credentials are renewed on their own, normally by passing the latest version of that exam. A Professional renewal doesn't carry over to them, and the reverse is also true.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-advanced-networking-specialty.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 8b53719a54cb930e6275c37be7f4ffc4add95386
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:aws-certified-advanced-networking-specialty
+- kt:aws-certified-solutions-architect-professional
+difficulty: 2
+created: '2026-11-20'
+status: active

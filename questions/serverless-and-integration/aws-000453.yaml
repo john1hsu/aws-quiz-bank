@@ -1,0 +1,19 @@
+id: aws-000453
+product_area: serverless-and-integration
+true_statement: AWS AppSync meters real-time messages in 5 KB units, so delivering one 8 KB message is billed as two operations.
+false_statement: AWS AppSync meters real-time messages in 64 KB units, so delivering one 8 KB message is billed as a single operation.
+explanation: Real-time updates are counted per 5 KB increment, which makes larger messages cost proportionally more. Requests rejected by authentication or authorization are not billed.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/aws-appsync.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 7f85438dff3b9ecf6599049c630258a594280292
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-appsync
+difficulty: 3
+created: '2026-11-20'
+status: active

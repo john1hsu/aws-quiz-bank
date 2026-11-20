@@ -1,0 +1,18 @@
+id: aws-000415
+product_area: cost-management
+true_statement: The AWS-generated aws:createdBy tag is applied only to resources created after the tag is activated, and only for a listed set of create events.
+false_statement: The AWS-generated aws:createdBy tag is applied retroactively to existing resources once activated, and only for a listed set of create events.
+explanation: aws:createdBy is stamped on resources at creation time, built from CloudTrail records, so older resources stay without it. It is also best-effort and limited to certain events and Regions.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/cost-allocation-tags.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: efc0d610243570c809e915ad6b6f69cee415c7dd
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:cost-allocation-tags
+- kt:aws-cloudtrail
+difficulty: 2
+created: '2026-11-20'
+status: active

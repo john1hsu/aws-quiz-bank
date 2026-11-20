@@ -1,0 +1,18 @@
+id: aws-000438
+product_area: migration-and-hybrid
+true_statement: AWS Transform's Windows modernization ports .NET Framework apps to cross-platform .NET and converts SQL Server databases to Aurora PostgreSQL.
+false_statement: AWS Transform's Windows modernization ports .NET Framework apps to cross-platform .NET and converts SQL Server databases to Amazon DynamoDB.
+explanation: The Windows agent targets .NET 8 or .NET 10 for code and Aurora PostgreSQL for SQL Server data, using DMS Schema Conversion for storage objects. It does not move relational schemas into a NoSQL store.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-transform.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 3517cb63dd9ab8eb7c1e528178fe846cf755b11c
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:aws-transform
+- kt:aws-database-migration-service
+difficulty: 2
+created: '2026-11-20'
+status: active

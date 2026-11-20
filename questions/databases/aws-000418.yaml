@@ -1,0 +1,17 @@
+id: aws-000418
+product_area: databases
+true_statement: Amazon DocumentDB elastic clusters hash-partition data by a shard key across up to 32 shards, each with its own writer and up to 15 replicas.
+false_statement: Amazon DocumentDB elastic clusters hash-partition data by a shard key across up to 32 shards, all sending writes through one cluster-wide primary.
+explanation: Elastic clusters scale writes by giving every shard its own writer instance. They are meant for workloads whose write rate or data volume is too much for a single primary.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-documentdb.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: ddc97b1ad845441514d0ad3c23b6e124e358d510
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:amazon-documentdb
+difficulty: 3
+created: '2026-11-20'
+status: active

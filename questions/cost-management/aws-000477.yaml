@@ -1,0 +1,20 @@
+id: aws-000477
+product_area: cost-management
+true_statement: IAM users and roles can't open the Billing and Cost Management console until the account turns on its Activate IAM Access setting.
+false_statement: IAM users and roles can't open the Billing and Cost Management console until the organization attaches an SCP that allows billing actions.
+explanation: Billing console access for IAM identities is gated by an account-level setting called Activate IAM Access, which new accounts often miss. SCPs only cap permissions and can't grant this access.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-cost-management-services.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 006a8e8c92cef292f98eacb1e478d11f307dd1bc
+verified_on: '2026-11-15'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-cost-management-services
+- kt:aws-billing-and-cost-management
+difficulty: 2
+created: '2026-11-20'
+status: active

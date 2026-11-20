@@ -1,0 +1,20 @@
+id: aws-000482
+product_area: devops-and-iac
+true_statement: AWS CodeCommit, de-emphasized in July 2024, was returned to full general availability and reopened to new customers in November 2025.
+false_statement: AWS Cloud9, closed to new customers in July 2024, was returned to full general availability and reopened to new customers in November 2025.
+explanation: AWS reversed course on CodeCommit, citing customers' use of its IAM, VPC endpoint and pipeline integration, and published a roadmap. Cloud9 remains closed to new customers, with IDE Toolkits and CloudShell as the suggested path.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-developer-tools.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 86e09d2312cabedd39cdecb32e50c3e17b38b9ab
+verified_on: '2026-11-15'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-developer-tools
+- kt:aws-codecommit
+difficulty: 2
+created: '2026-11-20'
+status: active

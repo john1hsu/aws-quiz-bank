@@ -1,0 +1,20 @@
+id: aws-000444
+product_area: networking-and-content-delivery
+true_statement: A PrivateLink endpoint service must sit behind a load balancer, while a resource configuration exposed through a resource gateway needs no load balancer.
+false_statement: A PrivateLink resource configuration must sit behind a load balancer, while an endpoint service exposed through a resource gateway needs no load balancer.
+explanation: Service providers front their endpoint service with a Network or Gateway Load Balancer. Resource owners instead describe a resource, group or CIDR range in a resource configuration and expose it through a resource gateway.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-privatelink.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 702a35e94af21285ea783b36d1e0560effa473b9
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-privatelink
+- kt:elastic-load-balancing
+difficulty: 3
+created: '2026-11-20'
+status: active

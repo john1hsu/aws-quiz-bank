@@ -1,0 +1,17 @@
+id: aws-000468
+product_area: certifications
+true_statement: Of the 65 questions on the ANS-C01 exam, 50 are scored and 15 are unscored items that are not identified to the candidate.
+false_statement: Of the 65 questions on the ANS-C01 exam, 55 are scored and 10 are unscored items that are not identified to the candidate.
+explanation: ANS-C01 includes 15 hidden unscored questions alongside 50 that count. Unanswered questions are marked wrong and there is no penalty for guessing.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-advanced-networking-specialty.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 8b53719a54cb930e6275c37be7f4ffc4add95386
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:aws-certified-advanced-networking-specialty
+difficulty: 2
+created: '2026-11-20'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000445
+product_area: networking-and-content-delivery
+true_statement: Each PrivateLink VPC endpoint starts at 10 Gbps per Availability Zone and scales automatically to 100 Gbps (as of 2026-11).
+false_statement: Each PrivateLink VPC endpoint starts at 1 Gbps per Availability Zone and scales automatically to 10 Gbps (as of 2026-11).
+explanation: Endpoint bandwidth begins at 10 Gbps in each AZ and grows to 100 Gbps without action from you. Packets larger than the 8,500-byte MTU are dropped.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-privatelink.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 702a35e94af21285ea783b36d1e0560effa473b9
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-privatelink
+- kt:vpc-endpoints
+difficulty: 3
+created: '2026-11-20'
+status: active

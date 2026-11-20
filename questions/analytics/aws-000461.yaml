@@ -1,0 +1,18 @@
+id: aws-000461
+product_area: analytics
+true_statement: In Amazon OpenSearch Service, UltraWarm and cold storage keep read-only indexes on Amazon S3-backed managed storage, while hot data sits on EBS or instance storage.
+false_statement: In Amazon OpenSearch Service, hot data sits on Amazon S3-backed managed storage, while UltraWarm and cold storage keep read-only indexes on EBS or instance storage.
+explanation: The warm and cold tiers lower cost for less-accessed, read-only indexes by keeping them on S3-backed storage. Actively written and queried data stays on the nodes' EBS volumes or instance storage.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-opensearch-service.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 81a8d7d7b775004eeb540f24ecd83f1d75322eaa
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:amazon-opensearch-service
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-20'
+status: active

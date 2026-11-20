@@ -1,0 +1,18 @@
+id: aws-000403
+product_area: compute
+true_statement: An Arm-based Graviton EC2 instance can change only to another Arm instance type, because a type change must keep the same processor architecture.
+false_statement: An Arm-based Graviton EC2 instance can change to an x86 instance type, because a type change only has to keep the same virtualization type.
+explanation: Resizing an instance requires matching processor architecture as well as compatible virtualization. Moving between Arm and x86 means launching a new instance from a suitable AMI instead.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/ec2-instance-types.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 2de33892ce6465de72fcb3a1e53f60241e6e69a9
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:ec2-instance-types
+- kt:aws-graviton
+difficulty: 2
+created: '2026-11-20'
+status: active

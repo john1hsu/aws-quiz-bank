@@ -1,0 +1,18 @@
+id: aws-000430
+product_area: governance-and-operations
+true_statement: In a rolling 30-day window an organization can close 250 member accounts or 20% of them, whichever is higher, up to 1,000, and this limit is fixed.
+false_statement: In a rolling 30-day window an organization can close 250 member accounts or 20% of them, whichever is lower, up to 1,000, and this limit is fixed.
+explanation: The closure allowance takes the larger of the two figures, capped at 1,000, and can't be raised. The window starts at the first closure rather than at the start of a calendar month.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/organizations-quotas.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 67a542892aa8120edd59497f135ecf5250325ae1
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:organizations-quotas
+- kt:aws-organizations
+difficulty: 3
+created: '2026-11-20'
+status: active

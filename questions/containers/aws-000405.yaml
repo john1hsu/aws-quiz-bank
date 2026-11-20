@@ -1,0 +1,18 @@
+id: aws-000405
+product_area: containers
+true_statement: With VPC CNI prefix delegation on Amazon EKS, each ENI slot receives a /28 IPv4 prefix of 16 addresses instead of a single secondary IP.
+false_statement: With VPC CNI prefix delegation on Amazon EKS, each ENI slot receives a /24 IPv4 prefix of 256 addresses instead of a single secondary IP.
+explanation: Prefix delegation hands out /28 blocks, 16 addresses each, which raises pod density without more ENIs. It needs contiguous /28 space, so fragmented subnets can fail with InsufficientCidrBlocks.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/container-networking-on-aws.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: ffb376d76256c0ac95fd81ca736e6f0fabf3c1e2
+verified_on: '2026-11-14'
+feature_status: concept
+concepts:
+- kt:container-networking-on-aws
+- kt:amazon-eks
+difficulty: 3
+created: '2026-11-20'
+status: active

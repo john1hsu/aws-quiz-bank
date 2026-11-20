@@ -1,0 +1,17 @@
+id: aws-000446
+product_area: public-sector-and-compliance
+true_statement: NIST SP 800-53 Revision 5 groups its security and privacy controls into 20 families, from Access Control to Supply Chain Risk Management.
+false_statement: NIST SP 800-53 Revision 5 groups its security and privacy controls into 12 families, from Access Control to Supply Chain Risk Management.
+explanation: Revision 5 has 20 control families, including newer ones such as PII Processing and Transparency and Supply Chain Risk Management. Individual controls carry family-based identifiers like AC-2.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/nist-sp-800-53.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: bf5d0afee586dedd2c27fb96adbf97ef8bc9cee9
+verified_on: '2026-11-14'
+feature_status: concept
+concepts:
+- kt:nist-sp-800-53
+difficulty: 2
+created: '2026-11-20'
+status: active

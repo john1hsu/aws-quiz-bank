@@ -1,0 +1,20 @@
+id: aws-000470
+product_area: compute
+true_statement: AWS Batch has no charge of its own; you pay only for the EC2 instances, Fargate tasks or other resources it launches to run your jobs.
+false_statement: AWS Batch charges a fee per submitted job on top of the EC2 instances, Fargate tasks or other resources it launches to run your jobs.
+explanation: Batch is a free scheduler in every Region. Costs come from the underlying compute, where Spot, Savings Plans, Reserved Instances and Fargate pricing apply as usual.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/aws-batch.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: b5cfbee7c2f57b5241e1f682b79b5f5b705afcae
+verified_on: '2026-11-15'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-batch
+- kt:aws-compute-services
+difficulty: 1
+created: '2026-11-20'
+status: active

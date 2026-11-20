@@ -1,0 +1,19 @@
+id: aws-000473
+product_area: containers
+true_statement: AWS Fargate's concurrent capacity quotas count the vCPUs requested by running tasks and pods, rather than the number of running tasks and pods.
+false_statement: AWS Fargate's concurrent capacity quotas count the number of running tasks and pods, rather than the vCPUs those tasks and pods request.
+explanation: Since 2022 Fargate limits concurrent usage in vCPUs, so sixteen quarter-vCPU tasks use the same quota as one 4-vCPU task. The older task-count quotas and their metrics were retired.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/fargate-quotas.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 425b98fc67b4d5d5d834ddfc4ac96b4bc4724596
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:fargate-quotas
+- kt:aws-fargate
+- kt:service-quotas
+difficulty: 2
+created: '2026-11-20'
+status: active

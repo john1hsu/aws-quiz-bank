@@ -1,0 +1,18 @@
+id: aws-000474
+product_area: containers
+true_statement: An Amazon EKS pod on Fargate that requests 1 vCPU and 8 GB is provisioned and billed as 2 vCPU and 9 GB, after Fargate adds memory for Kubernetes components and rounds up.
+false_statement: An Amazon EKS pod on Fargate that requests 1 vCPU and 8 GB is provisioned and billed as exactly 1 vCPU and 8 GB, because Fargate uses the pod's request as given.
+explanation: Fargate adds 256 MB for kubelet, kube-proxy and containerd and then rounds up to the next supported size, which here requires 2 vCPU. The CapacityProvisioned annotation shows the enforced size.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/fargate-quotas.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 425b98fc67b4d5d5d834ddfc4ac96b4bc4724596
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:fargate-quotas
+- kt:amazon-eks
+difficulty: 3
+created: '2026-11-20'
+status: active

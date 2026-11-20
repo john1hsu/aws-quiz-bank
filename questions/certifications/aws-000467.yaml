@@ -1,0 +1,18 @@
+id: aws-000467
+product_area: certifications
+true_statement: December 31, 2026 is the last day to sit the ANS-C01 Advanced Networking – Specialty exam, and AWS has not named a successor certification.
+false_statement: December 31, 2026 is the last day to sit the ANS-C01 Advanced Networking – Specialty exam, and AWS names an ANS-C02 version as its successor.
+explanation: The networking specialty is being retired with no replacement; AWS points networking learners to Skill Builder. Credentials earned before the cut-off stay active for their three-year term.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-advanced-networking-specialty.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 8b53719a54cb930e6275c37be7f4ffc4add95386
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:aws-certified-advanced-networking-specialty
+- kt:aws-certification-program
+difficulty: 2
+created: '2026-11-20'
+status: active

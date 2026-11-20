@@ -1,0 +1,21 @@
+id: aws-000472
+product_area: compute
+true_statement: A single AWS Batch job queue cannot mix Fargate compute environments with EC2 or EC2 Spot compute environments.
+false_statement: A single AWS Batch job queue cannot mix On-Demand EC2 compute environments with EC2 Spot compute environments.
+explanation: Fargate and Fargate Spot environments must sit in their own queues apart from EC2-based ones. EC2 On-Demand and Spot environments can share a queue in priority order.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/aws-batch.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: b5cfbee7c2f57b5241e1f682b79b5f5b705afcae
+verified_on: '2026-11-15'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:aws-batch
+- kt:aws-fargate
+- kt:spot-instances
+difficulty: 3
+created: '2026-11-20'
+status: active

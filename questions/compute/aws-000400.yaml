@@ -1,0 +1,21 @@
+id: aws-000400
+product_area: compute
+true_statement: Elastic Beanstalk's default quota of 1,000 application versions is shared by all applications in an account's Region, not counted per application.
+false_statement: Elastic Beanstalk's default quota of 1,000 application versions is counted per application, not shared by all applications in an account's Region.
+explanation: The application-version limit is a single Regional pool for the account. An account that hits it must delete versions by hand, because the version lifecycle policy only runs after a new version is created.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/aws-elastic-beanstalk.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: a8936179559f396343c73323c1b8b5a6fd3abb18
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-elastic-beanstalk
+- kt:elastic-beanstalk-quotas
+difficulty: 3
+created: '2026-11-20'
+status: active

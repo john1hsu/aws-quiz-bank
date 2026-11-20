@@ -1,0 +1,17 @@
+id: aws-000427
+product_area: global-infrastructure
+true_statement: Data sent from an Outpost to its parent Region is free, while data sent from the Region into the Outpost is charged at Region transfer rates.
+false_statement: Data sent from the parent Region into an Outpost is free, while data sent from the Outpost to the Region is charged at Region transfer rates.
+explanation: Outposts follow the usual AWS pattern of charging traffic that leaves the Region, so Region-to-Outpost transfer is billed. Outpost-to-Region traffic and traffic out through the local gateway cost nothing.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-outposts.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: c4ec70cdce7df079899775bfd1daece52dc964ea
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:aws-outposts
+difficulty: 2
+created: '2026-11-20'
+status: active

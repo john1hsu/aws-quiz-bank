@@ -1,0 +1,18 @@
+id: aws-000413
+product_area: cost-management
+true_statement: A cost allocation tag backfill applies a key's current activation status to up to 12 months of past cost data, and only one backfill can run at a time.
+false_statement: A cost allocation tag backfill applies a key's current activation status to up to 3 months of past cost data, and only one backfill can run at a time.
+explanation: Since 2024 the management account can backfill activation over the previous 12 months, at most once every 24 hours. It only helps for months in which resources actually carried the tag.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/cost-allocation-tags.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: efc0d610243570c809e915ad6b6f69cee415c7dd
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:cost-allocation-tags
+- kt:aws-cost-explorer
+difficulty: 2
+created: '2026-11-20'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000422
+product_area: devops-and-iac
+true_statement: OneAtATime is the default CodeDeploy deployment configuration for the EC2/On-Premises compute platform.
+false_statement: HalfAtATime is the default CodeDeploy deployment configuration for the EC2/On-Premises compute platform.
+explanation: Unless you choose otherwise, CodeDeploy updates EC2 or on-premises hosts one at a time. HalfAtATime and AllAtOnce are the other predefined options, each defined by a minimum healthy host count.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/aws-codedeploy.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 5dbe708d4e2c4acfa853fa72b49e8646dcf08783
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-codedeploy
+difficulty: 2
+created: '2026-11-20'
+status: active

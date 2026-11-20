@@ -1,7 +1,7 @@
 {
  "version": 1,
- "count": 397,
- "active": 397,
+ "count": 493,
+ "active": 493,
  "questions": [
   {
    "id": "aws-000001",
@@ -7115,6 +7115,1701 @@
    "difficulty": 1,
    "status": "active",
    "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-data-engineer-associate.md"
+  },
+  {
+   "id": "aws-000398",
+   "area": "compute",
+   "t": "In an Elastic Beanstalk worker environment, a daemon on each instance reads messages from an Amazon SQS queue and passes each one to the application.",
+   "f": "In an Elastic Beanstalk worker environment, a daemon on each instance reads messages from an Amazon SNS topic and passes each one to the application.",
+   "x": "Worker environments are built around an SQS queue, which Elastic Beanstalk creates if you don't provide one, and a per-instance daemon pulls from it. SNS pushes notifications to subscribers and is not the queue a worker tier polls.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner",
+    "kt:aws-certified-developer-associate"
+   ],
+   "concepts": [
+    "kt:aws-elastic-beanstalk",
+    "kt:amazon-sqs"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/aws-elastic-beanstalk.md"
+  },
+  {
+   "id": "aws-000399",
+   "area": "compute",
+   "t": "Elastic Beanstalk's rolling with additional batch policy launches an extra batch first so capacity stays full, while the plain rolling policy reduces capacity by one batch.",
+   "f": "Elastic Beanstalk's plain rolling policy launches an extra batch first so capacity stays full, while the rolling with additional batch policy reduces capacity by one batch.",
+   "x": "The extra batch is what keeps full capacity during a rolling-with-additional-batch deployment. Plain rolling just takes one batch at a time out of service, so capacity dips by that batch.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner",
+    "kt:aws-certified-developer-associate"
+   ],
+   "concepts": [
+    "kt:aws-elastic-beanstalk",
+    "kt:amazon-ec2-auto-scaling"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/aws-elastic-beanstalk.md"
+  },
+  {
+   "id": "aws-000400",
+   "area": "compute",
+   "t": "Elastic Beanstalk's default quota of 1,000 application versions is shared by all applications in an account's Region, not counted per application.",
+   "f": "Elastic Beanstalk's default quota of 1,000 application versions is counted per application, not shared by all applications in an account's Region.",
+   "x": "The application-version limit is a single Regional pool for the account. An account that hits it must delete versions by hand, because the version lifecycle policy only runs after a new version is created.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner",
+    "kt:aws-certified-developer-associate"
+   ],
+   "concepts": [
+    "kt:aws-elastic-beanstalk",
+    "kt:elastic-beanstalk-quotas"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/aws-elastic-beanstalk.md"
+  },
+  {
+   "id": "aws-000401",
+   "area": "compute",
+   "t": "EC2 Flex instances such as M7i-flex have a 40% CPU baseline and can burst to 100% for 95% of a 24-hour window.",
+   "f": "EC2 Flex instances such as M7i-flex have a 20% CPU baseline and can burst to 100% for 95% of a 24-hour window.",
+   "x": "Flex variants guarantee a 40% CPU baseline, with bursting to full CPU allowed for most of the day. Long stretches above baseline can slowly reduce how much they can burst.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:ec2-instance-types"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/ec2-instance-types.md"
+  },
+  {
+   "id": "aws-000402",
+   "area": "compute",
+   "t": "EC2 dedicates CPU, memory and instance storage to each instance, while network and disk subsystems are shared among instances on the same host.",
+   "f": "EC2 dedicates network and disk subsystems to each instance, while CPU, memory and instance storage are shared among instances on the same host.",
+   "x": "Compute, memory and local instance storage belong to the instance alone. The I/O paths for network and disk are shared, and types rated for higher I/O get a bigger and steadier share.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:ec2-instance-types",
+    "kt:amazon-ec2"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/ec2-instance-types.md"
+  },
+  {
+   "id": "aws-000403",
+   "area": "compute",
+   "t": "An Arm-based Graviton EC2 instance can change only to another Arm instance type, because a type change must keep the same processor architecture.",
+   "f": "An Arm-based Graviton EC2 instance can change to an x86 instance type, because a type change only has to keep the same virtualization type.",
+   "x": "Resizing an instance requires matching processor architecture as well as compatible virtualization. Moving between Arm and x86 means launching a new instance from a suitable AMI instead.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:ec2-instance-types",
+    "kt:aws-graviton"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/ec2-instance-types.md"
+  },
+  {
+   "id": "aws-000404",
+   "area": "containers",
+   "t": "When an Amazon ECS task definition on Linux sets no network mode, the task uses bridge mode, even though AWS recommends awsvpc.",
+   "f": "When an Amazon ECS task definition on Linux sets no network mode, the task uses awsvpc mode, which is also the mode AWS recommends.",
+   "x": "Docker's bridge network is the Linux default when networkMode is omitted. AWS recommends choosing awsvpc explicitly so each task gets its own ENI and VPC address.",
+   "verified": "2026-11-14",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:container-networking-on-aws",
+    "kt:amazon-ecs"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/container-networking-on-aws.md"
+  },
+  {
+   "id": "aws-000405",
+   "area": "containers",
+   "t": "With VPC CNI prefix delegation on Amazon EKS, each ENI slot receives a /28 IPv4 prefix of 16 addresses instead of a single secondary IP.",
+   "f": "With VPC CNI prefix delegation on Amazon EKS, each ENI slot receives a /24 IPv4 prefix of 256 addresses instead of a single secondary IP.",
+   "x": "Prefix delegation hands out /28 blocks, 16 addresses each, which raises pod density without more ENIs. It needs contiguous /28 space, so fragmented subnets can fail with InsufficientCidrBlocks.",
+   "verified": "2026-11-14",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:container-networking-on-aws",
+    "kt:amazon-eks"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/container-networking-on-aws.md"
+  },
+  {
+   "id": "aws-000406",
+   "area": "containers",
+   "t": "ECS tasks in awsvpc mode on EC2 container instances get no public IP, so IPv4 internet access goes through a private subnet and a NAT gateway.",
+   "f": "ECS tasks in awsvpc mode on EC2 container instances get a public IP in a public subnet, so IPv4 internet access goes straight through an internet gateway.",
+   "x": "Task ENIs on EC2 container instances are never given public addresses. For outbound IPv4 they rely on NAT from a private subnet; dual-stack tasks can use IPv6 through an internet or egress-only gateway.",
+   "verified": "2026-11-14",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:container-networking-on-aws",
+    "kt:amazon-ecs",
+    "kt:subnets-and-route-tables"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/container-networking-on-aws.md"
+  },
+  {
+   "id": "aws-000407",
+   "area": "containers",
+   "t": "Among Amazon ECS resource quotas, only clusters per account (10,000) is adjustable, while services per cluster is fixed at 5,000 (as of 2026-11).",
+   "f": "Among Amazon ECS resource quotas, only services per cluster (5,000) is adjustable, while clusters per account is fixed at 10,000 (as of 2026-11).",
+   "x": "The cluster count is the one ECS resource quota you can raise. Services per cluster, tasks per service and the other resource counts are fixed, so they shape how you split workloads across clusters.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:ecs-quotas",
+    "kt:amazon-ecs",
+    "kt:service-quotas"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/ecs-quotas.md"
+  },
+  {
+   "id": "aws-000408",
+   "area": "containers",
+   "t": "An ECS service that uses service discovery is capped at 1,000 tasks, because AWS Cloud Map allows only 1,000 instances per service and that quota can't be raised.",
+   "f": "An ECS service that uses service discovery can reach 5,000 tasks, because AWS Cloud Map's 1,000 instances-per-service quota can be raised to match ECS.",
+   "x": "The Cloud Map per-service instance limit is fixed at 1,000, so it becomes the ceiling for a service-discovery-enabled ECS service. ECS's own 5,000 tasks-per-service limit is never reached in that case.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:ecs-quotas",
+    "kt:aws-cloud-map"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/ecs-quotas.md"
+  },
+  {
+   "id": "aws-000409",
+   "area": "containers",
+   "t": "ECS service-modify calls such as UpdateService share a token bucket with a burst of 50 and a sustained rate of 5 per second (as of 2026-11).",
+   "f": "ECS service-modify calls such as UpdateService share a token bucket with a burst of 100 and a sustained rate of 40 per second (as of 2026-11).",
+   "x": "Service create, update and delete calls refill at only 5 per second after a 50-call burst, which slows pipelines that touch many services. The 100/40 bucket belongs to cluster resource calls such as RunTask and StopTask.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:ecs-quotas",
+    "kt:amazon-ecs"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/ecs-quotas.md"
+  },
+  {
+   "id": "aws-000410",
+   "area": "cost-management",
+   "t": "A saved AWS Pricing Calculator estimate is not auto-updated: every change creates a new link, and links created since 31 May 2023 stay valid for one year.",
+   "f": "A saved AWS Pricing Calculator estimate is not auto-updated: every change creates a new link, and links created since 31 May 2023 stay valid for three years.",
+   "x": "Shared estimates are frozen snapshots behind a unique link, and newer links expire after one year. Anyone with the link can open it, so it should be handled as shared content.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-pricing-calculator"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/cost-management/aws-pricing-calculator.md"
+  },
+  {
+   "id": "aws-000411",
+   "area": "cost-management",
+   "t": "In the in-console Pricing Calculator, workload estimates are free, while bill estimates are free for five per calendar month and then cost $2 each (as of 2026-11).",
+   "f": "In the in-console Pricing Calculator, bill estimates are free, while workload estimates are free for five per calendar month and then cost $2 each (as of 2026-11).",
+   "x": "Only the whole-bill estimate type carries a charge after the monthly free allowance; failed ones aren't billed. Workload estimates for a single application or change cost nothing.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-pricing-calculator",
+    "kt:aws-cost-management-services"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/cost-management/aws-pricing-calculator.md"
+  },
+  {
+   "id": "aws-000412",
+   "area": "cost-management",
+   "t": "AWS Pricing Calculator estimates assume a month of 730 hours and report results in US dollars.",
+   "f": "AWS Pricing Calculator estimates assume a month of 744 hours and report results in US dollars.",
+   "x": "The calculator standardises on 730 hours per month, an average month, rather than the longest month. Its other assumptions include no Spot modelling and no taxes or third-party fees.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-pricing-calculator",
+    "kt:aws-pricing-fundamentals"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/cost-management/aws-pricing-calculator.md"
+  },
+  {
+   "id": "aws-000413",
+   "area": "cost-management",
+   "t": "A cost allocation tag backfill applies a key's current activation status to up to 12 months of past cost data, and only one backfill can run at a time.",
+   "f": "A cost allocation tag backfill applies a key's current activation status to up to 3 months of past cost data, and only one backfill can run at a time.",
+   "x": "Since 2024 the management account can backfill activation over the previous 12 months, at most once every 24 hours. It only helps for months in which resources actually carried the tag.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:cost-allocation-tags",
+    "kt:aws-cost-explorer"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/cost-management/cost-allocation-tags.md"
+  },
+  {
+   "id": "aws-000414",
+   "area": "cost-management",
+   "t": "Activating an AWS-generated cost allocation tag in an organization's management account also turns it on for every member account.",
+   "f": "Activating an AWS-generated cost allocation tag in an organization's management account turns it on there only, so each member account must activate it too.",
+   "x": "Member accounts can't use the cost allocation tags manager; the management account (or a standalone account) controls activation, and its choice for AWS-generated tags propagates to members.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:cost-allocation-tags",
+    "kt:aws-organizations"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/cost-management/cost-allocation-tags.md"
+  },
+  {
+   "id": "aws-000415",
+   "area": "cost-management",
+   "t": "The AWS-generated aws:createdBy tag is applied only to resources created after the tag is activated, and only for a listed set of create events.",
+   "f": "The AWS-generated aws:createdBy tag is applied retroactively to existing resources once activated, and only for a listed set of create events.",
+   "x": "aws:createdBy is stamped on resources at creation time, built from CloudTrail records, so older resources stay without it. It is also best-effort and limited to certain events and Regions.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:cost-allocation-tags",
+    "kt:aws-cloudtrail"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/cost-management/cost-allocation-tags.md"
+  },
+  {
+   "id": "aws-000416",
+   "area": "databases",
+   "t": "Adding a read replica to an Amazon DocumentDB instance-based cluster copies no data, because the primary and up to 15 replicas share one cluster volume.",
+   "f": "Adding a read replica to an Amazon DocumentDB instance-based cluster copies the full data set, because the primary and up to 15 replicas each keep their own volume.",
+   "x": "DocumentDB separates compute from a shared, six-copy storage volume, so replicas attach to the same data. That is also why a replica can be promoted quickly when the primary fails.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-documentdb",
+    "kt:availability-zones"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/databases/amazon-documentdb.md"
+  },
+  {
+   "id": "aws-000417",
+   "area": "databases",
+   "t": "A single Amazon DocumentDB document can be at most 16 MiB, and that document limit is fixed rather than adjustable (as of 2026-11).",
+   "f": "A single Amazon DocumentDB document can be at most 4 MiB, and that document limit is fixed rather than adjustable (as of 2026-11).",
+   "x": "DocumentDB allows documents up to 16 MiB. Document-level limits such as size, nesting depth and indexes per collection can't be raised, unlike the Regional cluster and instance quotas.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-documentdb",
+    "kt:documentdb-quotas"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/databases/amazon-documentdb.md"
+  },
+  {
+   "id": "aws-000418",
+   "area": "databases",
+   "t": "Amazon DocumentDB elastic clusters hash-partition data by a shard key across up to 32 shards, each with its own writer and up to 15 replicas.",
+   "f": "Amazon DocumentDB elastic clusters hash-partition data by a shard key across up to 32 shards, all sending writes through one cluster-wide primary.",
+   "x": "Elastic clusters scale writes by giving every shard its own writer instance. They are meant for workloads whose write rate or data volume is too much for a single primary.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-documentdb"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/databases/amazon-documentdb.md"
+  },
+  {
+   "id": "aws-000419",
+   "area": "databases",
+   "t": "An Aurora Global Database has one primary Region for writes and up to 10 read-only secondary Regions (as of 2026-11).",
+   "f": "An Aurora Global Database has one primary Region for writes and up to 3 read-only secondary Regions (as of 2026-11).",
+   "x": "AWS raised the secondary-Region limit from five to ten in 2025, so older material may still say five. All writes still go to the single primary Region.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aurora-global-database",
+    "kt:aws-regions",
+    "kt:aurora-quotas"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/databases/aurora-global-database.md"
+  },
+  {
+   "id": "aws-000420",
+   "area": "databases",
+   "t": "Aurora Global Database switchover is for healthy clusters and loses no data, while managed failover promotes a secondary without waiting for sync, so RPO is non-zero.",
+   "f": "Aurora Global Database managed failover is for healthy clusters and loses no data, while switchover promotes a secondary without waiting for sync, so RPO is non-zero.",
+   "x": "Switchover waits for the target secondary to catch up before swapping roles. Managed failover is the outage path: it promotes immediately and accepts losing the last seconds of writes.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aurora-global-database",
+    "kt:disaster-recovery-strategies"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/databases/aurora-global-database.md"
+  },
+  {
+   "id": "aws-000421",
+   "area": "databases",
+   "t": "Aurora Global Database replicates in the cluster storage layer, so replication barely uses the primary's compute and typically lags by under one second.",
+   "f": "Aurora Global Database replicates through the database engine's binlog, so replication uses the primary's compute and typically lags by under one second.",
+   "x": "Cross-Region copies are shipped by dedicated storage-layer infrastructure rather than by the engine. Replication is asynchronous, so primary commits don't wait for the secondaries.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aurora-global-database",
+    "kt:amazon-aurora"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/databases/aurora-global-database.md"
+  },
+  {
+   "id": "aws-000422",
+   "area": "devops-and-iac",
+   "t": "OneAtATime is the default CodeDeploy deployment configuration for the EC2/On-Premises compute platform.",
+   "f": "HalfAtATime is the default CodeDeploy deployment configuration for the EC2/On-Premises compute platform.",
+   "x": "Unless you choose otherwise, CodeDeploy updates EC2 or on-premises hosts one at a time. HalfAtATime and AllAtOnce are the other predefined options, each defined by a minimum healthy host count.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-developer-associate"
+   ],
+   "concepts": [
+    "kt:aws-codedeploy"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/devops-and-iac/aws-codedeploy.md"
+  },
+  {
+   "id": "aws-000423",
+   "area": "devops-and-iac",
+   "t": "CodeDeploy adds no charge for deployments to Amazon EC2, while deployments to on-premises instances cost $0.02 per instance update (as of 2026-11).",
+   "f": "CodeDeploy adds no charge for deployments to on-premises instances, while deployments to Amazon EC2 cost $0.02 per instance update (as of 2026-11).",
+   "x": "Using CodeDeploy with EC2 is free beyond the instances themselves. Each update to an on-premises server is billed at two cents.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-developer-associate"
+   ],
+   "concepts": [
+    "kt:aws-codedeploy"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/devops-and-iac/aws-codedeploy.md"
+  },
+  {
+   "id": "aws-000424",
+   "area": "devops-and-iac",
+   "t": "Each CodeDeploy deployment group can run only one deployment at a time, a fixed limit, while an account allows 1,300 concurrent deployments by default.",
+   "f": "Each CodeDeploy account can run only one deployment at a time, a fixed limit, while a deployment group allows 1,300 concurrent deployments by default.",
+   "x": "The one-at-a-time rule applies per deployment group and can't be raised. The account-wide figure of 1,300 concurrent deployments is the adjustable one.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-developer-associate"
+   ],
+   "concepts": [
+    "kt:aws-codedeploy",
+    "kt:codedeploy-quotas"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/devops-and-iac/aws-codedeploy.md"
+  },
+  {
+   "id": "aws-000425",
+   "area": "global-infrastructure",
+   "t": "If an Outpost loses its service link, running EC2 instances keep serving local traffic, but control-plane calls such as launching or stopping instances fail.",
+   "f": "If an Outpost loses its service link, running EC2 instances keep serving local traffic, and a local control plane keeps launching and stopping instances.",
+   "x": "Outposts depend on the parent Region for control-plane operations, so they aren't designed to run disconnected. Existing instances and EBS volumes keep working, and metrics and logs are cached for up to 7 days.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-outposts",
+    "kt:aws-global-infrastructure"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/aws-outposts.md"
+  },
+  {
+   "id": "aws-000426",
+   "area": "global-infrastructure",
+   "t": "Each AWS Outpost is an extension of a single Availability Zone in its parent Region, linked back to that Region by a service link.",
+   "f": "Each AWS Outpost is an extension of every Availability Zone in its parent Region, linked back to that Region by a service link.",
+   "x": "An Outpost is anchored to one AZ of its parent Region, and you create VPC subnets on it from that Region's VPC. The service link carries its management and control traffic.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-outposts",
+    "kt:availability-zones",
+    "kt:amazon-vpc"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/aws-outposts.md"
+  },
+  {
+   "id": "aws-000427",
+   "area": "global-infrastructure",
+   "t": "Data sent from an Outpost to its parent Region is free, while data sent from the Region into the Outpost is charged at Region transfer rates.",
+   "f": "Data sent from the parent Region into an Outpost is free, while data sent from the Outpost to the Region is charged at Region transfer rates.",
+   "x": "Outposts follow the usual AWS pattern of charging traffic that leaves the Region, so Region-to-Outpost transfer is billed. Outpost-to-Region traffic and traffic out through the local gateway cost nothing.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-outposts"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/aws-outposts.md"
+  },
+  {
+   "id": "aws-000428",
+   "area": "governance-and-operations",
+   "t": "A closed AWS Organizations member account keeps counting against the organization's account quota throughout its 90-day post-closure period.",
+   "f": "A closed AWS Organizations member account keeps counting against the organization's account quota throughout a 7-day post-closure period.",
+   "x": "Closed accounts occupy a slot until AWS permanently closes them after 90 days. Removing an account from the organization before closing it frees the slot straight away.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:organizations-quotas",
+    "kt:aws-organizations"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/governance-and-operations/organizations-quotas.md"
+  },
+  {
+   "id": "aws-000429",
+   "area": "governance-and-operations",
+   "t": "Each root, OU or account can have at most 5 resource control policies attached directly, and the undetachable RCPFullAWSAccess policy uses one of them.",
+   "f": "Each root, OU or account can have at most 10 resource control policies attached directly, and the undetachable RCPFullAWSAccess policy uses one of them.",
+   "x": "RCPs have a fixed limit of five direct attachments per target, half the SCP limit. Because AWS attaches RCPFullAWSAccess everywhere RCPs are on, only four slots remain for your own RCPs.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:organizations-quotas",
+    "kt:resource-control-policies"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/governance-and-operations/organizations-quotas.md"
+  },
+  {
+   "id": "aws-000430",
+   "area": "governance-and-operations",
+   "t": "In a rolling 30-day window an organization can close 250 member accounts or 20% of them, whichever is higher, up to 1,000, and this limit is fixed.",
+   "f": "In a rolling 30-day window an organization can close 250 member accounts or 20% of them, whichever is lower, up to 1,000, and this limit is fixed.",
+   "x": "The closure allowance takes the larger of the two figures, capped at 1,000, and can't be raised. The window starts at the first closure rather than at the start of a calendar month.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:organizations-quotas",
+    "kt:aws-organizations"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/governance-and-operations/organizations-quotas.md"
+  },
+  {
+   "id": "aws-000431",
+   "area": "governance-and-operations",
+   "t": "AWS service quotas are Regional unless a quota says otherwise, so an increase approved in one Region does not carry over to other Regions.",
+   "f": "AWS service quotas are global unless a quota says otherwise, so an increase approved in one Region carries over to every other Region.",
+   "x": "Most quotas, such as VPCs per Region, are tracked separately in each Region, and defaults can differ between Regions. Only quotas marked global, such as IAM roles per account, apply account-wide.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:service-quotas",
+    "kt:aws-regions"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/governance-and-operations/service-quotas.md"
+  },
+  {
+   "id": "aws-000432",
+   "area": "governance-and-operations",
+   "t": "In the commercial partition, increases to global service quotas must be requested from the US East (N. Virginia) Region.",
+   "f": "In the commercial partition, increases to global service quotas must be requested from the US West (Oregon) Region.",
+   "x": "Global quota requests are made in us-east-1 for commercial accounts. GovCloud uses GovCloud (US-West) and the China partition uses China (Beijing).",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:service-quotas",
+    "kt:aws-regions"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/governance-and-operations/service-quotas.md"
+  },
+  {
+   "id": "aws-000433",
+   "area": "governance-and-operations",
+   "t": "A Service Quotas request template holds up to 10 quota increases and applies them to accounts created in the organization afterwards, not to existing accounts.",
+   "f": "A Service Quotas request template holds up to 10 quota increases and applies them to every existing account in the organization as well as new ones.",
+   "x": "Templates automate increase requests only for new accounts. They require Organizations with all features and work only in commercial, non-opt-in Regions.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:service-quotas",
+    "kt:aws-organizations"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/governance-and-operations/service-quotas.md"
+  },
+  {
+   "id": "aws-000434",
+   "area": "identity-and-access",
+   "t": "An IAM role's maximum session duration setting can range from 1 to 12 hours, while a session lasts at least 15 minutes and defaults to 1 hour.",
+   "f": "An IAM role's maximum session duration setting can range from 1 to 36 hours, while a session lasts at least 15 minutes and defaults to 1 hour.",
+   "x": "Role sessions can be requested for 15 minutes up to the role's configured maximum, which tops out at 12 hours. Role chaining lowers the ceiling further to one hour.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:iam-roles",
+    "kt:aws-sts"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/identity-and-access/iam-roles.md"
+  },
+  {
+   "id": "aws-000435",
+   "area": "identity-and-access",
+   "t": "Administrators can edit the permissions of an IAM service role, but can only view the permissions of a service-linked role, which the service itself owns.",
+   "f": "Administrators can edit the permissions of an IAM service-linked role, but can only view the permissions of a service role, which the service itself owns.",
+   "x": "A service role is an ordinary role you create for a service to assume, so you control its policies. A service-linked role is defined and owned by the service, and its resources must be removed before the role can be deleted.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:iam-roles",
+    "kt:aws-iam"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/identity-and-access/iam-roles.md"
+  },
+  {
+   "id": "aws-000436",
+   "area": "identity-and-access",
+   "t": "To stop a confused deputy, a cross-account role for a third party checks a per-customer external ID with an sts:ExternalId condition in the role's trust policy.",
+   "f": "To stop a confused deputy, a cross-account role for a third party checks a per-customer external ID with an sts:ExternalId condition in the role's permissions policy.",
+   "x": "The external ID check belongs in the trust policy, which controls who may assume the role. Permissions policies only decide what the session can do after it has been assumed.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:iam-roles",
+    "kt:multi-account-strategy"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/identity-and-access/iam-roles.md"
+  },
+  {
+   "id": "aws-000437",
+   "area": "migration-and-hybrid",
+   "t": "AWS Transform's assessments and its VMware, Windows and mainframe agents are free, while the custom transformation agent costs $0.035 per agent minute (as of 2026-11).",
+   "f": "AWS Transform's custom transformation agent is free, while its assessments and its VMware, Windows and mainframe agents cost $0.035 per agent minute (as of 2026-11).",
+   "x": "The migration and modernization agents carry no charge today, though AWS says future capabilities may be paid. Per-minute billing applies to the custom transformation agent and continuous modernization analyses.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-transform"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/migration-and-hybrid/aws-transform.md"
+  },
+  {
+   "id": "aws-000438",
+   "area": "migration-and-hybrid",
+   "t": "AWS Transform's Windows modernization ports .NET Framework apps to cross-platform .NET and converts SQL Server databases to Aurora PostgreSQL.",
+   "f": "AWS Transform's Windows modernization ports .NET Framework apps to cross-platform .NET and converts SQL Server databases to Amazon DynamoDB.",
+   "x": "The Windows agent targets .NET 8 or .NET 10 for code and Aurora PostgreSQL for SQL Server data, using DMS Schema Conversion for storage objects. It does not move relational schemas into a NoSQL store.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-transform",
+    "kt:aws-database-migration-service"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/migration-and-hybrid/aws-transform.md"
+  },
+  {
+   "id": "aws-000439",
+   "area": "migration-and-hybrid",
+   "t": "AWS Transform's mainframe modernization analyses COBOL, PL/I and JCL and can refactor the code to Java.",
+   "f": "AWS Transform's mainframe modernization analyses COBOL, PL/I and JCL and can refactor the code to Python.",
+   "x": "For mainframe estates the service extracts business rules, generates documentation and tests, and refactors to Java or reimagines the application as cloud-native. Python appears only among its custom upgrade transformations.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-transform"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/migration-and-hybrid/aws-transform.md"
+  },
+  {
+   "id": "aws-000440",
+   "area": "migration-and-hybrid",
+   "t": "Since April 30, 2024, AWS and its channel partners no longer resell VMware Cloud on AWS, which customers can still buy from Broadcom.",
+   "f": "Since April 30, 2024, Broadcom no longer sells VMware Cloud on AWS, which customers can still buy from AWS and its channel partners.",
+   "x": "AWS stopped reselling VMware Cloud on AWS in 2024, and Broadcom is now the place to buy it. AWS's own VMware relocation option is Amazon EVS.",
+   "verified": "2026-11-14",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:vmware-migration-to-aws"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/migration-and-hybrid/vmware-migration-to-aws.md"
+  },
+  {
+   "id": "aws-000441",
+   "area": "migration-and-hybrid",
+   "t": "EC2 security group rules are not enforced on Amazon EVS network interfaces in VLAN subnets, so traffic there is filtered with network ACLs.",
+   "f": "Network ACL rules are not enforced on Amazon EVS network interfaces in VLAN subnets, so traffic there is filtered with EC2 security groups.",
+   "x": "EVS VLAN subnets are a case where security groups don't apply to the interfaces. AWS's guidance is to rely on network ACLs to control that traffic.",
+   "verified": "2026-11-14",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:vmware-migration-to-aws",
+    "kt:amazon-elastic-vmware-service"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/migration-and-hybrid/vmware-migration-to-aws.md"
+  },
+  {
+   "id": "aws-000442",
+   "area": "migration-and-hybrid",
+   "t": "On Amazon EVS you bring your own VMware Cloud Foundation licence bought from Broadcom, while AWS bills hourly for the EC2 bare metal hosts and the EVS control plane.",
+   "f": "On Amazon EVS the VMware Cloud Foundation licence is included in AWS's hourly price, which also covers the EC2 bare metal hosts and the EVS control plane.",
+   "x": "EVS is a bring-your-own-licence service: the VCF licence comes from Broadcom. AWS charges separately for hosts, VPC Route Server endpoints and the control plane.",
+   "verified": "2026-11-14",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:vmware-migration-to-aws",
+    "kt:amazon-elastic-vmware-service"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/migration-and-hybrid/vmware-migration-to-aws.md"
+  },
+  {
+   "id": "aws-000443",
+   "area": "networking-and-content-delivery",
+   "t": "Gateway endpoints for Amazon S3 and DynamoDB don't use PrivateLink and are free, while PrivateLink interface endpoints are billed per endpoint network interface-hour.",
+   "f": "Interface endpoints for Amazon S3 and DynamoDB don't use PrivateLink and are free, while PrivateLink gateway endpoints are billed per endpoint network interface-hour.",
+   "x": "Gateway endpoints are route-table targets for just S3 and DynamoDB and carry no charge. Interface endpoints place PrivateLink network interfaces in your subnets and cost $0.01 per interface-hour plus data processing in AWS's us-east-1 example.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:aws-privatelink",
+    "kt:vpc-endpoints"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/networking-and-content-delivery/aws-privatelink.md"
+  },
+  {
+   "id": "aws-000444",
+   "area": "networking-and-content-delivery",
+   "t": "A PrivateLink endpoint service must sit behind a load balancer, while a resource configuration exposed through a resource gateway needs no load balancer.",
+   "f": "A PrivateLink resource configuration must sit behind a load balancer, while an endpoint service exposed through a resource gateway needs no load balancer.",
+   "x": "Service providers front their endpoint service with a Network or Gateway Load Balancer. Resource owners instead describe a resource, group or CIDR range in a resource configuration and expose it through a resource gateway.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:aws-privatelink",
+    "kt:elastic-load-balancing"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/networking-and-content-delivery/aws-privatelink.md"
+  },
+  {
+   "id": "aws-000445",
+   "area": "networking-and-content-delivery",
+   "t": "Each PrivateLink VPC endpoint starts at 10 Gbps per Availability Zone and scales automatically to 100 Gbps (as of 2026-11).",
+   "f": "Each PrivateLink VPC endpoint starts at 1 Gbps per Availability Zone and scales automatically to 10 Gbps (as of 2026-11).",
+   "x": "Endpoint bandwidth begins at 10 Gbps in each AZ and grows to 100 Gbps without action from you. Packets larger than the 8,500-byte MTU are dropped.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:aws-privatelink",
+    "kt:vpc-endpoints"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/networking-and-content-delivery/aws-privatelink.md"
+  },
+  {
+   "id": "aws-000446",
+   "area": "public-sector-and-compliance",
+   "t": "NIST SP 800-53 Revision 5 groups its security and privacy controls into 20 families, from Access Control to Supply Chain Risk Management.",
+   "f": "NIST SP 800-53 Revision 5 groups its security and privacy controls into 12 families, from Access Control to Supply Chain Risk Management.",
+   "x": "Revision 5 has 20 control families, including newer ones such as PII Processing and Transparency and Supply Chain Risk Management. Individual controls carry family-based identifiers like AC-2.",
+   "verified": "2026-11-14",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:nist-sp-800-53"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/public-sector-and-compliance/nist-sp-800-53.md"
+  },
+  {
+   "id": "aws-000447",
+   "area": "public-sector-and-compliance",
+   "t": "For NIST SP 800-53 Revision 5, the low, moderate and high baselines are published in SP 800-53B, while assessment procedures are in SP 800-53A.",
+   "f": "For NIST SP 800-53 Revision 5, the low, moderate and high baselines are published in SP 800-53A, while assessment procedures are in SP 800-53B.",
+   "x": "Revision 5 split the baselines out of the catalog into SP 800-53B, which also has a privacy baseline and tailoring guidance. SP 800-53A is the companion that describes how to assess the controls.",
+   "verified": "2026-11-14",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:nist-sp-800-53"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/public-sector-and-compliance/nist-sp-800-53.md"
+  },
+  {
+   "id": "aws-000448",
+   "area": "public-sector-and-compliance",
+   "t": "Security Hub CSPM's NIST SP 800-53 Rev 5 standard relies on AWS Config recording, which must be on for the checked resource types before you enable it.",
+   "f": "Security Hub CSPM's NIST SP 800-53 Rev 5 standard relies on AWS CloudTrail data events, which must be on for the checked resource types before you enable it.",
+   "x": "The standard's automated controls are evaluated from AWS Config data, so recording has to be in place first. Even then they cover only the requirements that can be checked automatically.",
+   "verified": "2026-11-14",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:nist-sp-800-53",
+    "kt:aws-security-hub",
+    "kt:aws-config"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/public-sector-and-compliance/nist-sp-800-53.md"
+  },
+  {
+   "id": "aws-000449",
+   "area": "security",
+   "t": "AWS Secrets Manager costs $0.40 per secret per month plus $0.05 per 10,000 API calls, and versions created by rotation are not charged (as of 2026-11).",
+   "f": "AWS Secrets Manager costs $0.05 per secret per month plus $0.40 per 10,000 API calls, and versions created by rotation are not charged (as of 2026-11).",
+   "x": "The per-secret fee is the larger part, at 40 cents a month, with API calls billed at five cents per 10,000. Secrets scheduled for deletion are also free, but replicas are billed.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-secrets-manager"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/security/aws-secrets-manager.md"
+  },
+  {
+   "id": "aws-000450",
+   "area": "security",
+   "t": "When one account reads another account's secret, the API call counts against the requesting account's Secrets Manager quota rather than the owner's.",
+   "f": "When one account reads another account's secret, the API call counts against the owning account's Secrets Manager quota rather than the requester's.",
+   "x": "Secrets Manager throttling falls on the caller, so heavy cross-account readers use up their own request rate. AWS recommends exponential backoff with jitter and client-side caching.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-secrets-manager",
+    "kt:secrets-manager-quotas"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/security/aws-secrets-manager.md"
+  },
+  {
+   "id": "aws-000451",
+   "area": "security",
+   "t": "The alternating-users rotation strategy in Secrets Manager keeps the previous database credentials valid during the switch, unlike the single-user strategy.",
+   "f": "The single-user rotation strategy in Secrets Manager keeps the previous database credentials valid during the switch, unlike the alternating-users strategy.",
+   "x": "Alternating users rotates between two database users, so the old login still works while clients pick up the new one. Single-user rotation changes the password of one user in place.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-secrets-manager",
+    "kt:amazon-rds"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/security/aws-secrets-manager.md"
+  },
+  {
+   "id": "aws-000452",
+   "area": "serverless-and-integration",
+   "t": "An AWS AppSync request can execute for at most 30 seconds, a fixed limit, so long-running work should be started asynchronously and the resolver should return at once.",
+   "f": "An AWS AppSync request can execute for at most 15 minutes, a fixed limit, so long-running work should be started asynchronously and the resolver should return at once.",
+   "x": "AppSync caps request execution at 30 seconds and the quota can't be raised. Longer jobs should be handed off, for example to Lambda or EventBridge, instead of blocking the resolver.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-developer-associate"
+   ],
+   "concepts": [
+    "kt:aws-appsync",
+    "kt:appsync-quotas"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/serverless-and-integration/aws-appsync.md"
+  },
+  {
+   "id": "aws-000453",
+   "area": "serverless-and-integration",
+   "t": "AWS AppSync meters real-time messages in 5 KB units, so delivering one 8 KB message is billed as two operations.",
+   "f": "AWS AppSync meters real-time messages in 64 KB units, so delivering one 8 KB message is billed as a single operation.",
+   "x": "Real-time updates are counted per 5 KB increment, which makes larger messages cost proportionally more. Requests rejected by authentication or authorization are not billed.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-developer-associate"
+   ],
+   "concepts": [
+    "kt:aws-appsync"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/serverless-and-integration/aws-appsync.md"
+  },
+  {
+   "id": "aws-000454",
+   "area": "serverless-and-integration",
+   "t": "In AppSync Events, a namespace sets the authorization rules and handler code shared by all of its channels.",
+   "f": "In AppSync Events, each channel sets its own authorization rules and handler code, and a namespace only groups channels by name.",
+   "x": "Namespaces are the unit of configuration in AppSync Events: auth modes and onPublish or onSubscribe handlers apply to every channel inside. Clients can subscribe to many of those channels with a wildcard path.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-developer-associate"
+   ],
+   "concepts": [
+    "kt:aws-appsync"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/serverless-and-integration/aws-appsync.md"
+  },
+  {
+   "id": "aws-000455",
+   "area": "storage",
+   "t": "Amazon S3 Files needs a general purpose bucket in the same Region with S3 Versioning enabled before a file system can be linked to it.",
+   "f": "Amazon S3 Files needs an S3 directory bucket in the same Region with S3 Versioning enabled before a file system can be linked to it.",
+   "x": "S3 Files works on general purpose buckets that have versioning turned on and use SSE-S3 or SSE-KMS. Directory buckets are a different bucket type and are not the prerequisite.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-s3-files",
+    "kt:amazon-s3"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/storage/amazon-s3-files.md"
+  },
+  {
+   "id": "aws-000456",
+   "area": "storage",
+   "t": "In Amazon S3 Files, large reads of 1 MiB or more are streamed straight from the bucket, while small files are imported onto the file system's high-performance storage.",
+   "f": "In Amazon S3 Files, small reads under 1 MiB are streamed straight from the bucket, while large files are imported onto the file system's high-performance storage.",
+   "x": "S3 Files caches small files (under 128 KiB by default) on its fast tier for low-latency repeat reads. Big sequential reads bypass that tier and come directly from S3, billed as normal GET requests.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-s3-files",
+    "kt:amazon-efs"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/storage/amazon-s3-files.md"
+  },
+  {
+   "id": "aws-000457",
+   "area": "storage",
+   "t": "Writes through Amazon S3 Files are typically exported to the bucket within minutes, while changes made directly in the bucket usually appear in the file system within seconds.",
+   "f": "Writes through Amazon S3 Files are typically exported to the bucket within seconds, while changes made directly in the bucket usually appear in the file system within minutes.",
+   "x": "File-system writes first land on the high-performance tier and are pushed to S3 as new objects or versions some minutes later. In the other direction, bucket changes are picked up quickly through EventBridge-driven synchronization.",
+   "verified": "2026-11-14",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-s3-files",
+    "kt:amazon-s3"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/storage/amazon-s3-files.md"
+  },
+  {
+   "id": "aws-000458",
+   "area": "ai-and-ml",
+   "t": "Amazon Q Developer's IDE plugins reach end of support on April 30, 2027, and AWS names Kiro as their successor.",
+   "f": "Amazon Q Developer's IDE plugins reach end of support on April 30, 2027, and AWS names Amazon Q Business as their successor.",
+   "x": "AWS points developers to Kiro, its agentic IDE and CLI, as the replacement for the Q Developer plugins and subscriptions. Amazon Q Business is a separate employee-assistant product, not a coding tool.",
+   "verified": "2026-11-15",
+   "featureStatus": "closed-to-new-customers",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-q-developer",
+    "kt:kiro"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/ai-and-ml/amazon-q-developer.md"
+  },
+  {
+   "id": "aws-000459",
+   "area": "ai-and-ml",
+   "t": "Amazon Q Developer Pro costs $19 per user per month and includes 4,000 lines of Java transformation a month, pooled at the account level.",
+   "f": "Amazon Q Developer Pro costs $19 per user per month and includes 4,000 lines of Java transformation a month for each individual user.",
+   "x": "Pro's Java transformation allowance is a shared account-level pool, with extra lines billed at $0.003 each. The Free tier's 1,000 lines, by contrast, apply per user.",
+   "verified": "2026-11-15",
+   "featureStatus": "closed-to-new-customers",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-q-developer"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/ai-and-ml/amazon-q-developer.md"
+  },
+  {
+   "id": "aws-000460",
+   "area": "ai-and-ml",
+   "t": "Since November 2026 the Q Developer chat in the AWS Management Console is called the AWS assistant, while the Slack and Teams integration keeps the Q Developer name.",
+   "f": "Since November 2026 the Q Developer integration in Slack and Teams is called the AWS assistant, while the chat in the AWS Management Console keeps the Q Developer name.",
+   "x": "AWS renamed the console and Console Mobile App experience to the AWS assistant. The chat-app integration continues as Amazon Q Developer in chat applications.",
+   "verified": "2026-11-15",
+   "featureStatus": "closed-to-new-customers",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-q-developer",
+    "kt:generative-ai-on-aws"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/ai-and-ml/amazon-q-developer.md"
+  },
+  {
+   "id": "aws-000461",
+   "area": "analytics",
+   "t": "In Amazon OpenSearch Service, UltraWarm and cold storage keep read-only indexes on Amazon S3-backed managed storage, while hot data sits on EBS or instance storage.",
+   "f": "In Amazon OpenSearch Service, hot data sits on Amazon S3-backed managed storage, while UltraWarm and cold storage keep read-only indexes on EBS or instance storage.",
+   "x": "The warm and cold tiers lower cost for less-accessed, read-only indexes by keeping them on S3-backed storage. Actively written and queried data stays on the nodes' EBS volumes or instance storage.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-opensearch-service",
+    "kt:amazon-s3"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/analytics/amazon-opensearch-service.md"
+  },
+  {
+   "id": "aws-000462",
+   "area": "analytics",
+   "t": "OpenSearch Service Multi-AZ with Standby needs OpenSearch 1.3 or later and a data-node count that is a multiple of three.",
+   "f": "OpenSearch Service Multi-AZ with Standby needs OpenSearch 1.3 or later and a data-node count that is a multiple of two.",
+   "x": "The standby option spreads nodes across three Availability Zones with one zone on standby, so data nodes must come in threes. It lets standby nodes take over in under a minute for some failures.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-opensearch-service"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/analytics/amazon-opensearch-service.md"
+  },
+  {
+   "id": "aws-000463",
+   "area": "analytics",
+   "t": "Service control policies for OpenSearch Service must list both old and new action names, such as es:CreateElasticsearchDomain and es:CreateDomain, because SCPs get no automatic mapping.",
+   "f": "Identity-based policies for OpenSearch Service must list both old and new action names, such as es:CreateElasticsearchDomain and es:CreateDomain, because they get no automatic mapping.",
+   "x": "After the 2021 rename, AWS maps old action names to new ones for identity policies. SCPs don't receive that mapping, so they need both names to be effective.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:amazon-opensearch-service",
+    "kt:aws-iam"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/analytics/amazon-opensearch-service.md"
+  },
+  {
+   "id": "aws-000464",
+   "area": "architecture-practice",
+   "t": "Of the AWS CAF's six perspectives, Platform, Security and Operations cover technical readiness, while Business, People and Governance cover organizational change.",
+   "f": "Of the AWS CAF's six perspectives, Business, People and Governance cover technical readiness, while Platform, Security and Operations cover organizational change.",
+   "x": "CAF groups its foundational capabilities into six perspectives split between technical and organizational concerns. The Business, People and Governance side is the part stalled cloud programs often neglect.",
+   "verified": "2026-11-15",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-cloud-adoption-framework"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/architecture-practice/aws-cloud-adoption-framework.md"
+  },
+  {
+   "id": "aws-000465",
+   "area": "architecture-practice",
+   "t": "In the AWS CAF, the Align phase finds capability gaps and cross-team dependencies, while the Launch phase delivers production pilots that show incremental value.",
+   "f": "In the AWS CAF, the Launch phase finds capability gaps and cross-team dependencies, while the Align phase delivers production pilots that show incremental value.",
+   "x": "CAF's phases run Envision, Align, Launch and Scale. Align is where stakeholders agree on gaps to close; Launch puts pilots into production before Scale expands them.",
+   "verified": "2026-11-15",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-cloud-adoption-framework"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/architecture-practice/aws-cloud-adoption-framework.md"
+  },
+  {
+   "id": "aws-000466",
+   "area": "architecture-practice",
+   "t": "In the AWS CAF value chain, technology transformation enables process change, which enables organizational change, which in turn enables product change.",
+   "f": "In the AWS CAF value chain, product transformation enables organizational change, which enables process change, which in turn enables technology change.",
+   "x": "CAF's four transformation domains build upward from technology, such as migrating and modernizing workloads, through process and organization to new products and revenue models.",
+   "verified": "2026-11-15",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-cloud-adoption-framework",
+    "kt:cloud-architecture"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/architecture-practice/aws-cloud-adoption-framework.md"
+  },
+  {
+   "id": "aws-000467",
+   "area": "certifications",
+   "t": "December 31, 2026 is the last day to sit the ANS-C01 Advanced Networking – Specialty exam, and AWS has not named a successor certification.",
+   "f": "December 31, 2026 is the last day to sit the ANS-C01 Advanced Networking – Specialty exam, and AWS names an ANS-C02 version as its successor.",
+   "x": "The networking specialty is being retired with no replacement; AWS points networking learners to Skill Builder. Credentials earned before the cut-off stay active for their three-year term.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-certified-advanced-networking-specialty",
+    "kt:aws-certification-program"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-advanced-networking-specialty.md"
+  },
+  {
+   "id": "aws-000468",
+   "area": "certifications",
+   "t": "Of the 65 questions on the ANS-C01 exam, 50 are scored and 15 are unscored items that are not identified to the candidate.",
+   "f": "Of the 65 questions on the ANS-C01 exam, 55 are scored and 10 are unscored items that are not identified to the candidate.",
+   "x": "ANS-C01 includes 15 hidden unscored questions alongside 50 that count. Unanswered questions are marked wrong and there is no penalty for guessing.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-certified-advanced-networking-specialty"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-advanced-networking-specialty.md"
+  },
+  {
+   "id": "aws-000469",
+   "area": "certifications",
+   "t": "AWS Specialty certifications sit outside the Foundational–Associate–Professional hierarchy, so renewing a Professional certification does not renew a Specialty one.",
+   "f": "AWS Specialty certifications sit inside the Foundational–Associate–Professional hierarchy, so renewing a Professional certification also renews a Specialty one.",
+   "x": "Specialty credentials are renewed on their own, normally by passing the latest version of that exam. A Professional renewal doesn't carry over to them, and the reverse is also true.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:aws-certified-advanced-networking-specialty",
+    "kt:aws-certified-solutions-architect-professional"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/certifications/aws-certified-advanced-networking-specialty.md"
+  },
+  {
+   "id": "aws-000470",
+   "area": "compute",
+   "t": "AWS Batch has no charge of its own; you pay only for the EC2 instances, Fargate tasks or other resources it launches to run your jobs.",
+   "f": "AWS Batch charges a fee per submitted job on top of the EC2 instances, Fargate tasks or other resources it launches to run your jobs.",
+   "x": "Batch is a free scheduler in every Region. Costs come from the underlying compute, where Spot, Savings Plans, Reserved Instances and Fargate pricing apply as usual.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:aws-batch",
+    "kt:aws-compute-services"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/aws-batch.md"
+  },
+  {
+   "id": "aws-000471",
+   "area": "compute",
+   "t": "AWS Batch's default BEST_FIT allocation strategy waits when the cheapest fitting instance type is unavailable, while BEST_FIT_PROGRESSIVE moves on to other types.",
+   "f": "AWS Batch's default BEST_FIT_PROGRESSIVE allocation strategy waits when the cheapest fitting instance type is unavailable, while BEST_FIT moves on to other types.",
+   "x": "BEST_FIT is the default and sticks to the cheapest type that fits, so jobs can wait for capacity. BEST_FIT_PROGRESSIVE tries additional types instead, and may overshoot maxvCpus by up to one instance.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:aws-batch",
+    "kt:amazon-ec2"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/aws-batch.md"
+  },
+  {
+   "id": "aws-000472",
+   "area": "compute",
+   "t": "A single AWS Batch job queue cannot mix Fargate compute environments with EC2 or EC2 Spot compute environments.",
+   "f": "A single AWS Batch job queue cannot mix On-Demand EC2 compute environments with EC2 Spot compute environments.",
+   "x": "Fargate and Fargate Spot environments must sit in their own queues apart from EC2-based ones. EC2 On-Demand and Spot environments can share a queue in priority order.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-solutions-architect-associate"
+   ],
+   "concepts": [
+    "kt:aws-batch",
+    "kt:aws-fargate",
+    "kt:spot-instances"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/compute/aws-batch.md"
+  },
+  {
+   "id": "aws-000473",
+   "area": "containers",
+   "t": "AWS Fargate's concurrent capacity quotas count the vCPUs requested by running tasks and pods, rather than the number of running tasks and pods.",
+   "f": "AWS Fargate's concurrent capacity quotas count the number of running tasks and pods, rather than the vCPUs those tasks and pods request.",
+   "x": "Since 2022 Fargate limits concurrent usage in vCPUs, so sixteen quarter-vCPU tasks use the same quota as one 4-vCPU task. The older task-count quotas and their metrics were retired.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:fargate-quotas",
+    "kt:aws-fargate",
+    "kt:service-quotas"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/fargate-quotas.md"
+  },
+  {
+   "id": "aws-000474",
+   "area": "containers",
+   "t": "An Amazon EKS pod on Fargate that requests 1 vCPU and 8 GB is provisioned and billed as 2 vCPU and 9 GB, after Fargate adds memory for Kubernetes components and rounds up.",
+   "f": "An Amazon EKS pod on Fargate that requests 1 vCPU and 8 GB is provisioned and billed as exactly 1 vCPU and 8 GB, because Fargate uses the pod's request as given.",
+   "x": "Fargate adds 256 MB for kubelet, kube-proxy and containerd and then rounds up to the next supported size, which here requires 2 vCPU. The CapacityProvisioned annotation shows the enforced size.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:fargate-quotas",
+    "kt:amazon-eks"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/fargate-quotas.md"
+  },
+  {
+   "id": "aws-000475",
+   "area": "containers",
+   "t": "Fargate On-Demand launch-rate quotas cover both ECS tasks and EKS pods, while the Fargate Spot launch-rate quotas apply to ECS tasks only.",
+   "f": "Fargate Spot launch-rate quotas cover both ECS tasks and EKS pods, while the Fargate On-Demand launch-rate quotas apply to ECS tasks only.",
+   "x": "EKS pods on Fargate draw on the On-Demand launch buckets. The Spot launch-rate quotas are defined only for ECS tasks running on Fargate Spot.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:fargate-quotas",
+    "kt:amazon-ecs",
+    "kt:amazon-eks"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/containers/fargate-quotas.md"
+  },
+  {
+   "id": "aws-000476",
+   "area": "cost-management",
+   "t": "AWS Organizations consolidated billing has no extra fee and pools usage across accounts, so volume discounts, Reserved Instances and Savings Plans are shared.",
+   "f": "AWS Organizations consolidated billing has no extra fee but prices each account's usage separately, so volume discounts, Reserved Instances and Savings Plans are not shared.",
+   "x": "Consolidated billing produces one bill and treats the organization's usage as a pool, which helps accounts reach volume tiers and lets commitments apply across accounts.",
+   "verified": "2026-11-15",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-cost-management-services",
+    "kt:aws-organizations"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/cost-management/aws-cost-management-services.md"
+  },
+  {
+   "id": "aws-000477",
+   "area": "cost-management",
+   "t": "IAM users and roles can't open the Billing and Cost Management console until the account turns on its Activate IAM Access setting.",
+   "f": "IAM users and roles can't open the Billing and Cost Management console until the organization attaches an SCP that allows billing actions.",
+   "x": "Billing console access for IAM identities is gated by an account-level setting called Activate IAM Access, which new accounts often miss. SCPs only cap permissions and can't grant this access.",
+   "verified": "2026-11-15",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-cost-management-services",
+    "kt:aws-billing-and-cost-management"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/cost-management/aws-cost-management-services.md"
+  },
+  {
+   "id": "aws-000478",
+   "area": "cost-management",
+   "t": "AWS Billing Conductor builds a separate, custom version of monthly billing data for showback and chargeback without changing what AWS actually charges.",
+   "f": "AWS Billing Conductor rewrites the amounts AWS actually charges each account, so showback and chargeback rates appear on the official invoice.",
+   "x": "Billing Conductor produces pro forma billing data, for example to present custom rates to internal teams or customers. The real AWS bill is unaffected.",
+   "verified": "2026-11-15",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-cost-management-services",
+    "kt:aws-billing-and-cost-management"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/cost-management/aws-cost-management-services.md"
+  },
+  {
+   "id": "aws-000479",
+   "area": "databases",
+   "t": "Any SQL statement larger than 16 KB pins an RDS Proxy client session to one database connection, which removes the multiplexing benefit for that session.",
+   "f": "Any SQL statement larger than 64 KB pins an RDS Proxy client session to one database connection, which removes the multiplexing benefit for that session.",
+   "x": "RDS Proxy pins a session when it can't safely move its state, and oversized statements over 16 KB are one trigger. The DatabaseConnectionsCurrentlySessionPinned metric shows how often pinning happens.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:rds-proxy",
+    "kt:amazon-cloudwatch"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/databases/rds-proxy.md"
+  },
+  {
+   "id": "aws-000480",
+   "area": "databases",
+   "t": "During a Multi-AZ failover, RDS Proxy keeps its IP address and holds idle client connections open, cancelling only connections that are mid-transaction or mid-statement.",
+   "f": "During a Multi-AZ failover, RDS Proxy changes its IP address and drops every client connection, so all clients must reconnect to the new writer.",
+   "x": "The proxy queues new requests and routes them to the new writer while idle connections stay up. AWS says this can cut failover times for RDS and Aurora Multi-AZ databases by up to 66%.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:rds-proxy",
+    "kt:amazon-rds"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/databases/rds-proxy.md"
+  },
+  {
+   "id": "aws-000481",
+   "area": "databases",
+   "t": "RDS Proxy is billed per vCPU-hour of the underlying provisioned database instances, or per ACU-hour for Aurora Serverless (as of 2026-11).",
+   "f": "RDS Proxy is billed per client connection-hour through the proxy, whatever the size of the underlying database instances (as of 2026-11).",
+   "x": "Proxy cost scales with the capacity of the database it fronts, billed in 1-second increments with a 10-minute minimum. Extra endpoints add separately billed PrivateLink interface endpoints.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [],
+   "concepts": [
+    "kt:rds-proxy",
+    "kt:aurora-serverless-v2"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/databases/rds-proxy.md"
+  },
+  {
+   "id": "aws-000482",
+   "area": "devops-and-iac",
+   "t": "AWS CodeCommit, de-emphasized in July 2024, was returned to full general availability and reopened to new customers in November 2025.",
+   "f": "AWS Cloud9, closed to new customers in July 2024, was returned to full general availability and reopened to new customers in November 2025.",
+   "x": "AWS reversed course on CodeCommit, citing customers' use of its IAM, VPC endpoint and pipeline integration, and published a roadmap. Cloud9 remains closed to new customers, with IDE Toolkits and CloudShell as the suggested path.",
+   "verified": "2026-11-15",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-developer-tools",
+    "kt:aws-codecommit"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/devops-and-iac/aws-developer-tools.md"
+  },
+  {
+   "id": "aws-000483",
+   "area": "devops-and-iac",
+   "t": "Amazon CodeCatalyst closed to new customers in November 2025, and AWS recommends GitLab Duo with Amazon Q as the alternative.",
+   "f": "Amazon CodeCatalyst closed to new customers in November 2025, and AWS recommends AWS Cloud9 as the alternative.",
+   "x": "Existing CodeCatalyst spaces keep running without new features, and AWS documents mirroring repositories to GitLab or GitHub. Cloud9 is itself closed to new customers, so it isn't the suggested replacement.",
+   "verified": "2026-11-15",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-developer-tools"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/devops-and-iac/aws-developer-tools.md"
+  },
+  {
+   "id": "aws-000484",
+   "area": "devops-and-iac",
+   "t": "AWS X-Ray traces requests as they move through distributed applications, while AWS Fault Injection Service runs controlled experiments to test resilience.",
+   "f": "AWS Fault Injection Service traces requests as they move through distributed applications, while AWS X-Ray runs controlled experiments to test resilience.",
+   "x": "X-Ray is the tracing tool for microservices and other distributed systems. Fault Injection Service deliberately injects faults so teams can see how a workload copes.",
+   "verified": "2026-11-15",
+   "featureStatus": "concept",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-developer-tools",
+    "kt:aws-x-ray"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/devops-and-iac/aws-developer-tools.md"
+  },
+  {
+   "id": "aws-000485",
+   "area": "global-infrastructure",
+   "t": "One of the six advantages of cloud computing that AWS cites is trading upfront capital expense for variable expense.",
+   "f": "One of the six advantages of cloud computing that AWS cites is trading variable expense for upfront capital expense.",
+   "x": "AWS's pitch is that you stop buying servers ahead of time and instead pay for what you use as you go. Turning pay-as-you-go spend back into upfront purchases is the opposite of that model.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-web-services",
+    "kt:aws-pricing-fundamentals",
+    "kt:cloud-computing"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/amazon-web-services.md"
+  },
+  {
+   "id": "aws-000486",
+   "area": "global-infrastructure",
+   "t": "Most AWS services are Regional, so a service or price available in one Region can't be assumed to exist in another.",
+   "f": "Most AWS services are global, so a service or price available in one Region can be assumed to exist in every other Region.",
+   "x": "Customers choose a Region for each workload, and availability and pricing vary between Regions. That is why Region choice affects latency, data residency and cost.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-web-services",
+    "kt:aws-global-infrastructure"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/amazon-web-services.md"
+  },
+  {
+   "id": "aws-000487",
+   "area": "global-infrastructure",
+   "t": "As of 2026-11, AWS lists 39 geographic Regions containing 124 Availability Zones, with more Regions and AZs announced.",
+   "f": "As of 2026-11, AWS lists 124 geographic Regions containing 39 Availability Zones, with more Regions and AZs announced.",
+   "x": "Each Region contains several Availability Zones, so AZs far outnumber Regions. The counts change as new Regions open, so the global infrastructure page is the place to check.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:amazon-web-services",
+    "kt:aws-global-infrastructure"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/amazon-web-services.md"
+  },
+  {
+   "id": "aws-000488",
+   "area": "global-infrastructure",
+   "t": "AWS encrypts all data that crosses its global network between Regions at the physical layer before the data leaves AWS-secured facilities.",
+   "f": "AWS encrypts data that crosses its global network between Regions only when the customer applies TLS or a VPN before it leaves AWS facilities.",
+   "x": "Inter-Region backbone traffic is encrypted by AWS automatically, and inter-AZ traffic is encrypted too. Customer TLS or VPN adds another layer on top rather than being the only protection.",
+   "verified": "2026-11-15",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:aws-global-network",
+    "kt:aws-regions"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/aws-global-network.md"
+  },
+  {
+   "id": "aws-000490",
+   "area": "global-infrastructure",
+   "t": "Data sent out over AWS Direct Connect to a remote Region is billed at the rate of the Region the data leaves, not the connection's associated Region.",
+   "f": "Data sent out over AWS Direct Connect to a remote Region is billed at the rate of the connection's associated Region, not the Region the data leaves.",
+   "x": "A Direct Connect location can reach other public Regions over the backbone, but outbound transfer is still metered by the source Region. Backbone transport does not make that traffic free.",
+   "verified": "2026-11-15",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:aws-global-network",
+    "kt:aws-direct-connect"
+   ],
+   "difficulty": 3,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/aws-global-network.md"
+  },
+  {
+   "id": "aws-000491",
+   "area": "governance-and-operations",
+   "t": "On Basic Support, Trusted Advisor gives every service-limits check plus a few core security checks, while the full check set and its API need a plan such as Business Support+.",
+   "f": "On Basic Support, Trusted Advisor gives every cost-optimization check plus a few core security checks, while the full check set and its API need a plan such as Business Support+.",
+   "x": "Basic and Developer customers see all service-limits checks and a short security list, such as root MFA and public snapshots. Cost-optimization checks are part of the full set that higher support plans unlock.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-trusted-advisor",
+    "kt:aws-support-plans"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/governance-and-operations/aws-trusted-advisor.md"
+  },
+  {
+   "id": "aws-000492",
+   "area": "governance-and-operations",
+   "t": "A red Trusted Advisor check status means action is recommended, while a yellow status means investigation is recommended.",
+   "f": "A yellow Trusted Advisor check status means action is recommended, while a red status means investigation is recommended.",
+   "x": "Trusted Advisor reports four states: red for action recommended, yellow for investigation recommended, green for no problems and gray for excluded items.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-trusted-advisor"
+   ],
+   "difficulty": 1,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/governance-and-operations/aws-trusted-advisor.md"
+  },
+  {
+   "id": "aws-000493",
+   "area": "governance-and-operations",
+   "t": "Trusted Advisor organizational view needs AWS Organizations with all features enabled and a qualifying support plan on the management account.",
+   "f": "Trusted Advisor organizational view needs AWS Organizations with only consolidated billing enabled and a qualifying support plan on each member account.",
+   "x": "The organization-wide report is built from the management account, which must have all features turned on and an eligible plan. It keeps up to 50 downloadable JSON or CSV reports.",
+   "verified": "2026-11-15",
+   "featureStatus": "current",
+   "certs": [
+    "kt:aws-certified-cloud-practitioner"
+   ],
+   "concepts": [
+    "kt:aws-trusted-advisor",
+    "kt:aws-organizations"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/governance-and-operations/aws-trusted-advisor.md"
+  },
+  {
+   "id": "aws-000503",
+   "area": "global-infrastructure",
+   "t": "Inter-Region VPC peering traffic travels over the AWS global backbone rather than the public internet, with built-in redundancy and encryption.",
+   "f": "Inter-Region VPC peering traffic travels over the public internet rather than the AWS global backbone, with built-in redundancy and encryption.",
+   "x": "Peering between Regions rides AWS's private backbone with AEAD encryption and no single point of failure. If the peering connection fails, traffic has no internet fallback path.",
+   "verified": "2026-11-15",
+   "featureStatus": "concept",
+   "certs": [],
+   "concepts": [
+    "kt:aws-global-network",
+    "kt:amazon-vpc"
+   ],
+   "difficulty": 2,
+   "status": "active",
+   "source": "https://github.com/john1hsu/aws-graph/blob/main/articles/global-infrastructure/aws-global-network.md"
   }
  ]
 }

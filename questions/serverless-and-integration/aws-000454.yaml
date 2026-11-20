@@ -1,0 +1,19 @@
+id: aws-000454
+product_area: serverless-and-integration
+true_statement: In AppSync Events, a namespace sets the authorization rules and handler code shared by all of its channels.
+false_statement: In AppSync Events, each channel sets its own authorization rules and handler code, and a namespace only groups channels by name.
+explanation: 'Namespaces are the unit of configuration in AppSync Events: auth modes and onPublish or onSubscribe handlers apply to every channel inside. Clients can subscribe to many of those channels with a wildcard path.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/aws-appsync.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 7f85438dff3b9ecf6599049c630258a594280292
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-developer-associate
+concepts:
+- kt:aws-appsync
+difficulty: 2
+created: '2026-11-20'
+status: active

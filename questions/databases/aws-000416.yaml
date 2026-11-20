@@ -1,0 +1,18 @@
+id: aws-000416
+product_area: databases
+true_statement: Adding a read replica to an Amazon DocumentDB instance-based cluster copies no data, because the primary and up to 15 replicas share one cluster volume.
+false_statement: Adding a read replica to an Amazon DocumentDB instance-based cluster copies the full data set, because the primary and up to 15 replicas each keep their own volume.
+explanation: DocumentDB separates compute from a shared, six-copy storage volume, so replicas attach to the same data. That is also why a replica can be promoted quickly when the primary fails.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-documentdb.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: ddc97b1ad845441514d0ad3c23b6e124e358d510
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:amazon-documentdb
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-20'
+status: active

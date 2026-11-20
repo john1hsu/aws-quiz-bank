@@ -1,0 +1,17 @@
+id: aws-000447
+product_area: public-sector-and-compliance
+true_statement: For NIST SP 800-53 Revision 5, the low, moderate and high baselines are published in SP 800-53B, while assessment procedures are in SP 800-53A.
+false_statement: For NIST SP 800-53 Revision 5, the low, moderate and high baselines are published in SP 800-53A, while assessment procedures are in SP 800-53B.
+explanation: Revision 5 split the baselines out of the catalog into SP 800-53B, which also has a privacy baseline and tailoring guidance. SP 800-53A is the companion that describes how to assess the controls.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/nist-sp-800-53.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: bf5d0afee586dedd2c27fb96adbf97ef8bc9cee9
+verified_on: '2026-11-14'
+feature_status: concept
+concepts:
+- kt:nist-sp-800-53
+difficulty: 2
+created: '2026-11-20'
+status: active

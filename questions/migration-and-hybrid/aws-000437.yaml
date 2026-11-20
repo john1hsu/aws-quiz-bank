@@ -1,0 +1,17 @@
+id: aws-000437
+product_area: migration-and-hybrid
+true_statement: AWS Transform's assessments and its VMware, Windows and mainframe agents are free, while the custom transformation agent costs $0.035 per agent minute (as of 2026-11).
+false_statement: AWS Transform's custom transformation agent is free, while its assessments and its VMware, Windows and mainframe agents cost $0.035 per agent minute (as of 2026-11).
+explanation: The migration and modernization agents carry no charge today, though AWS says future capabilities may be paid. Per-minute billing applies to the custom transformation agent and continuous modernization analyses.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-transform.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 3517cb63dd9ab8eb7c1e528178fe846cf755b11c
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:aws-transform
+difficulty: 2
+created: '2026-11-20'
+status: active

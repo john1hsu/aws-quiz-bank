@@ -1,0 +1,18 @@
+id: aws-000404
+product_area: containers
+true_statement: When an Amazon ECS task definition on Linux sets no network mode, the task uses bridge mode, even though AWS recommends awsvpc.
+false_statement: When an Amazon ECS task definition on Linux sets no network mode, the task uses awsvpc mode, which is also the mode AWS recommends.
+explanation: Docker's bridge network is the Linux default when networkMode is omitted. AWS recommends choosing awsvpc explicitly so each task gets its own ENI and VPC address.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/container-networking-on-aws.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: ffb376d76256c0ac95fd81ca736e6f0fabf3c1e2
+verified_on: '2026-11-14'
+feature_status: concept
+concepts:
+- kt:container-networking-on-aws
+- kt:amazon-ecs
+difficulty: 2
+created: '2026-11-20'
+status: active

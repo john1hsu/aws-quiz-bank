@@ -1,0 +1,18 @@
+id: aws-000420
+product_area: databases
+true_statement: Aurora Global Database switchover is for healthy clusters and loses no data, while managed failover promotes a secondary without waiting for sync, so RPO is non-zero.
+false_statement: Aurora Global Database managed failover is for healthy clusters and loses no data, while switchover promotes a secondary without waiting for sync, so RPO is non-zero.
+explanation: 'Switchover waits for the target secondary to catch up before swapping roles. Managed failover is the outage path: it promotes immediately and accepts losing the last seconds of writes.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/aurora-global-database.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: d2d2221c48c004cb0ea32e42d46e1baf6e1ff804
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:aurora-global-database
+- kt:disaster-recovery-strategies
+difficulty: 3
+created: '2026-11-20'
+status: active

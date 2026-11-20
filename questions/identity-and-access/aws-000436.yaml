@@ -1,0 +1,18 @@
+id: aws-000436
+product_area: identity-and-access
+true_statement: To stop a confused deputy, a cross-account role for a third party checks a per-customer external ID with an sts:ExternalId condition in the role's trust policy.
+false_statement: To stop a confused deputy, a cross-account role for a third party checks a per-customer external ID with an sts:ExternalId condition in the role's permissions policy.
+explanation: The external ID check belongs in the trust policy, which controls who may assume the role. Permissions policies only decide what the session can do after it has been assumed.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/iam-roles.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 62517f13e93dc41aa3f3a7de09f27748f7d2939f
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:iam-roles
+- kt:multi-account-strategy
+difficulty: 3
+created: '2026-11-20'
+status: active

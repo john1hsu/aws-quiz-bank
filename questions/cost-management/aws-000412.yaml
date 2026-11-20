@@ -1,0 +1,20 @@
+id: aws-000412
+product_area: cost-management
+true_statement: AWS Pricing Calculator estimates assume a month of 730 hours and report results in US dollars.
+false_statement: AWS Pricing Calculator estimates assume a month of 744 hours and report results in US dollars.
+explanation: The calculator standardises on 730 hours per month, an average month, rather than the longest month. Its other assumptions include no Spot modelling and no taxes or third-party fees.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-pricing-calculator.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: e1316ee1dae19466cfc592813236ee7b70b238d8
+verified_on: '2026-11-14'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-pricing-calculator
+- kt:aws-pricing-fundamentals
+difficulty: 2
+created: '2026-11-20'
+status: active

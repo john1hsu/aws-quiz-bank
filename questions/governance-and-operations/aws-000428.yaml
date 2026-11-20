@@ -1,0 +1,18 @@
+id: aws-000428
+product_area: governance-and-operations
+true_statement: A closed AWS Organizations member account keeps counting against the organization's account quota throughout its 90-day post-closure period.
+false_statement: A closed AWS Organizations member account keeps counting against the organization's account quota throughout a 7-day post-closure period.
+explanation: Closed accounts occupy a slot until AWS permanently closes them after 90 days. Removing an account from the organization before closing it frees the slot straight away.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/organizations-quotas.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 67a542892aa8120edd59497f135ecf5250325ae1
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:organizations-quotas
+- kt:aws-organizations
+difficulty: 2
+created: '2026-11-20'
+status: active

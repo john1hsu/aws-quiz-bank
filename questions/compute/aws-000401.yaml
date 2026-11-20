@@ -1,0 +1,17 @@
+id: aws-000401
+product_area: compute
+true_statement: EC2 Flex instances such as M7i-flex have a 40% CPU baseline and can burst to 100% for 95% of a 24-hour window.
+false_statement: EC2 Flex instances such as M7i-flex have a 20% CPU baseline and can burst to 100% for 95% of a 24-hour window.
+explanation: Flex variants guarantee a 40% CPU baseline, with bursting to full CPU allowed for most of the day. Long stretches above baseline can slowly reduce how much they can burst.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/ec2-instance-types.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 2de33892ce6465de72fcb3a1e53f60241e6e69a9
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:ec2-instance-types
+difficulty: 2
+created: '2026-11-20'
+status: active

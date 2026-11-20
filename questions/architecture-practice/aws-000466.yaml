@@ -1,0 +1,20 @@
+id: aws-000466
+product_area: architecture-practice
+true_statement: In the AWS CAF value chain, technology transformation enables process change, which enables organizational change, which in turn enables product change.
+false_statement: In the AWS CAF value chain, product transformation enables organizational change, which enables process change, which in turn enables technology change.
+explanation: CAF's four transformation domains build upward from technology, such as migrating and modernizing workloads, through process and organization to new products and revenue models.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/aws-cloud-adoption-framework.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: c722f06276858419cfa5eec98eaf087416140833
+verified_on: '2026-11-15'
+feature_status: concept
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-cloud-adoption-framework
+- kt:cloud-architecture
+difficulty: 2
+created: '2026-11-20'
+status: active

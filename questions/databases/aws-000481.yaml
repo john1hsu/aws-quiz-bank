@@ -1,0 +1,18 @@
+id: aws-000481
+product_area: databases
+true_statement: RDS Proxy is billed per vCPU-hour of the underlying provisioned database instances, or per ACU-hour for Aurora Serverless (as of 2026-11).
+false_statement: RDS Proxy is billed per client connection-hour through the proxy, whatever the size of the underlying database instances (as of 2026-11).
+explanation: Proxy cost scales with the capacity of the database it fronts, billed in 1-second increments with a 10-minute minimum. Extra endpoints add separately billed PrivateLink interface endpoints.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/rds-proxy.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: f7eee840e4c107e3abd76738e4a52eb7704c3437
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:rds-proxy
+- kt:aurora-serverless-v2
+difficulty: 2
+created: '2026-11-20'
+status: active

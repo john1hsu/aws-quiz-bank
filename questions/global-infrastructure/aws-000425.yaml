@@ -1,0 +1,18 @@
+id: aws-000425
+product_area: global-infrastructure
+true_statement: If an Outpost loses its service link, running EC2 instances keep serving local traffic, but control-plane calls such as launching or stopping instances fail.
+false_statement: If an Outpost loses its service link, running EC2 instances keep serving local traffic, and a local control plane keeps launching and stopping instances.
+explanation: Outposts depend on the parent Region for control-plane operations, so they aren't designed to run disconnected. Existing instances and EBS volumes keep working, and metrics and logs are cached for up to 7 days.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-outposts.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: c4ec70cdce7df079899775bfd1daece52dc964ea
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:aws-outposts
+- kt:aws-global-infrastructure
+difficulty: 3
+created: '2026-11-20'
+status: active

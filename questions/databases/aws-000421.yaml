@@ -1,0 +1,18 @@
+id: aws-000421
+product_area: databases
+true_statement: Aurora Global Database replicates in the cluster storage layer, so replication barely uses the primary's compute and typically lags by under one second.
+false_statement: Aurora Global Database replicates through the database engine's binlog, so replication uses the primary's compute and typically lags by under one second.
+explanation: Cross-Region copies are shipped by dedicated storage-layer infrastructure rather than by the engine. Replication is asynchronous, so primary commits don't wait for the secondaries.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/aurora-global-database.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: d2d2221c48c004cb0ea32e42d46e1baf6e1ff804
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:aurora-global-database
+- kt:amazon-aurora
+difficulty: 3
+created: '2026-11-20'
+status: active

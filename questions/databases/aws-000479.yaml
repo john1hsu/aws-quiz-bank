@@ -1,0 +1,18 @@
+id: aws-000479
+product_area: databases
+true_statement: Any SQL statement larger than 16 KB pins an RDS Proxy client session to one database connection, which removes the multiplexing benefit for that session.
+false_statement: Any SQL statement larger than 64 KB pins an RDS Proxy client session to one database connection, which removes the multiplexing benefit for that session.
+explanation: RDS Proxy pins a session when it can't safely move its state, and oversized statements over 16 KB are one trigger. The DatabaseConnectionsCurrentlySessionPinned metric shows how often pinning happens.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/rds-proxy.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: f7eee840e4c107e3abd76738e4a52eb7704c3437
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:rds-proxy
+- kt:amazon-cloudwatch
+difficulty: 3
+created: '2026-11-20'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000432
+product_area: governance-and-operations
+true_statement: In the commercial partition, increases to global service quotas must be requested from the US East (N. Virginia) Region.
+false_statement: In the commercial partition, increases to global service quotas must be requested from the US West (Oregon) Region.
+explanation: Global quota requests are made in us-east-1 for commercial accounts. GovCloud uses GovCloud (US-West) and the China partition uses China (Beijing).
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/service-quotas.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 0d6226b6c7f7da3f497c27530f47a75df8208332
+verified_on: '2026-11-14'
+feature_status: current
+concepts:
+- kt:service-quotas
+- kt:aws-regions
+difficulty: 2
+created: '2026-11-20'
+status: active

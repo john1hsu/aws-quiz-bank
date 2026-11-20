@@ -1,0 +1,20 @@
+id: aws-000487
+product_area: global-infrastructure
+true_statement: As of 2026-11, AWS lists 39 geographic Regions containing 124 Availability Zones, with more Regions and AZs announced.
+false_statement: As of 2026-11, AWS lists 124 geographic Regions containing 39 Availability Zones, with more Regions and AZs announced.
+explanation: Each Region contains several Availability Zones, so AZs far outnumber Regions. The counts change as new Regions open, so the global infrastructure page is the place to check.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/amazon-web-services.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: 948c205ff65df3b48de7931c7345180c80b39b28
+verified_on: '2026-11-15'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:amazon-web-services
+- kt:aws-global-infrastructure
+difficulty: 1
+created: '2026-11-20'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000442
+product_area: migration-and-hybrid
+true_statement: On Amazon EVS you bring your own VMware Cloud Foundation licence bought from Broadcom, while AWS bills hourly for the EC2 bare metal hosts and the EVS control plane.
+false_statement: On Amazon EVS the VMware Cloud Foundation licence is included in AWS's hourly price, which also covers the EC2 bare metal hosts and the EVS control plane.
+explanation: 'EVS is a bring-your-own-licence service: the VCF licence comes from Broadcom. AWS charges separately for hosts, VPC Route Server endpoints and the control plane.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/vmware-migration-to-aws.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: d81c38abae62eedf801dd101edf4f5880fb20e77
+verified_on: '2026-11-14'
+feature_status: concept
+concepts:
+- kt:vmware-migration-to-aws
+- kt:amazon-elastic-vmware-service
+difficulty: 2
+created: '2026-11-20'
+status: active

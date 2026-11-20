@@ -1,0 +1,18 @@
+id: aws-000460
+product_area: ai-and-ml
+true_statement: Since November 2026 the Q Developer chat in the AWS Management Console is called the AWS assistant, while the Slack and Teams integration keeps the Q Developer name.
+false_statement: Since November 2026 the Q Developer integration in Slack and Teams is called the AWS assistant, while the chat in the AWS Management Console keeps the Q Developer name.
+explanation: AWS renamed the console and Console Mobile App experience to the AWS assistant. The chat-app integration continues as Amazon Q Developer in chat applications.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-q-developer.md
+  commit: 691343815ee22168f0105292f701b79d845e596e
+  blob: f6c056ca29399a8520ae2adb2cf8aeb9beafa51a
+verified_on: '2026-11-15'
+feature_status: closed-to-new-customers
+concepts:
+- kt:amazon-q-developer
+- kt:generative-ai-on-aws
+difficulty: 2
+created: '2026-11-20'
+status: active
