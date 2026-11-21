@@ -1,0 +1,18 @@
+id: aws-000591
+product_area: identity-and-access
+true_statement: 'AWS RAM resource shares are Regional: a Regional resource is shared only within its own Region, and global resources are shared from US East (N. Virginia).'
+false_statement: 'AWS RAM resource shares are global: one share covers a Regional resource in every Region, and global resources are shared from any Region.'
+explanation: Each share lives in one Region and can include only that Region's resources. Global resources are the exception and are shared from us-east-1.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/aws-resource-access-manager.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: c8856f491d9291b9b61165842a9729c30694dbc6
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-resource-access-manager
+- kt:aws-regions
+difficulty: 2
+created: '2026-11-21'
+status: active

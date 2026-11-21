@@ -1,0 +1,17 @@
+id: aws-000537
+product_area: storage
+true_statement: Amazon S3 allows up to 50 tags per bucket but only 10 tags per object, and neither limit can be raised (as of 2026-11).
+false_statement: Amazon S3 allows up to 10 tags per bucket but as many as 50 tags per object, and neither limit can be raised (as of 2026-11).
+explanation: Buckets take 50 tags and objects 10, both fixed quotas. Cost-allocation and retention schemes therefore have to fit inside those hard limits.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-s3-quotas.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 045b97740735818ccf5fb631231eae0e439ee009
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:amazon-s3-quotas
+difficulty: 2
+created: '2026-11-21'
+status: active

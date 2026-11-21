@@ -1,0 +1,18 @@
+id: aws-000532
+product_area: serverless-and-integration
+true_statement: An on-demand AWS Lambda Init phase is capped at 10 seconds, while provisioned concurrency or SnapStart functions get 130 seconds or the function timeout, whichever is higher.
+false_statement: An on-demand AWS Lambda Init phase is capped at 30 seconds, while provisioned concurrency or SnapStart functions get 130 seconds or the function timeout, whichever is higher.
+explanation: On-demand initialization must finish within 10 seconds, after which Lambda retries Init on the first invocation under the function timeout. The longer limit applies only to pre-initialized or snapshot-based setups.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/lambda-cold-starts.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 0a51c1ff5c9a5fc80c4c1df1165d899cf3f134d0
+verified_on: '2026-11-15'
+feature_status: concept
+concepts:
+- kt:lambda-cold-starts
+- kt:aws-lambda
+difficulty: 3
+created: '2026-11-21'
+status: active

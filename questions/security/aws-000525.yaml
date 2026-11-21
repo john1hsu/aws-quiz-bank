@@ -1,0 +1,18 @@
+id: aws-000525
+product_area: security
+true_statement: For production, AWS strongly recommends at least two AWS CloudHSM HSMs in different Availability Zones; high availability is the customer's design job.
+false_statement: For production, AWS strongly recommends at least four AWS CloudHSM HSMs in different Availability Zones; high availability is the customer's design job.
+explanation: The production baseline is two HSMs in separate AZs, rising to at least three across two or more AZs for mission-critical work. Four is not the documented minimum.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-cloudhsm.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: e1c85bef4b9ea8c63e95e66dfc44452edd24207d
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:aws-cloudhsm
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-21'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000598
+product_area: public-sector-and-compliance
+true_statement: Existing AWS accounts cannot be used in the AWS European Sovereign Cloud; customers create new ESC accounts, and no EU residency is required to sign up.
+false_statement: Existing AWS accounts can be enabled for the AWS European Sovereign Cloud like an opt-in Region, and no EU residency is required to sign up.
+explanation: ESC is a separate partition, so commercial accounts do not carry over and new ESC accounts do not interoperate with other Regions. It is not an opt-in Region inside the commercial partition.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/aws-european-sovereign-cloud.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: a646646582b3a2f9b683820f8d76380c407de938
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-european-sovereign-cloud
+- kt:aws-partitions
+difficulty: 2
+created: '2026-11-21'
+status: active

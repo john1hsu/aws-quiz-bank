@@ -1,0 +1,17 @@
+id: aws-000550
+product_area: analytics
+true_statement: AWS Quick organization plans add a $250 per account per month infrastructure fee on top of per-user prices, while individual plans carry no such fee (as of 2026-11).
+false_statement: AWS Quick individual plans add a $250 per account per month infrastructure fee on top of per-user prices, while organization plans carry no such fee (as of 2026-11).
+explanation: The infrastructure fee applies to organization plans (Essentials, Professional, Enterprise). Individual Free, Plus and Max plans skip it, which is why tiny organizational deployments look relatively expensive.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-quick.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 8ea2708b3854aac9828e44c46011aa4aef105089
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:amazon-quick
+difficulty: 2
+created: '2026-11-21'
+status: active

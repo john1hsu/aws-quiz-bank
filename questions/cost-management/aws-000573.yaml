@@ -1,0 +1,18 @@
+id: aws-000573
+product_area: cost-management
+true_statement: AWS Compute Optimizer can take EC2 memory metrics from third-party observability tools such as Datadog and Dynatrace to improve rightsizing accuracy.
+false_statement: AWS Compute Optimizer can take EC2 memory metrics only from AWS Trusted Advisor checks to improve rightsizing accuracy.
+explanation: Memory is not in default EC2 metrics, so Compute Optimizer accepts it from external observability tools as well as CloudWatch. Trusted Advisor is a separate checking service, not a metrics source for it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-compute-optimizer.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: a72f0e04e402186d888ff42d1b3e52431dbc5670
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-compute-optimizer
+- kt:amazon-ec2
+difficulty: 2
+created: '2026-11-21'
+status: active

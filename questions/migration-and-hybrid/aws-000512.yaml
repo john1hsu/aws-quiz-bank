@@ -1,0 +1,18 @@
+id: aws-000512
+product_area: migration-and-hybrid
+true_statement: DMS Schema Conversion is a managed, web-based feature built on the AWS SCT engine, while AWS SCT itself is a desktop application you install.
+false_statement: AWS SCT is a managed, web-based feature built on the DMS Schema Conversion engine, while DMS Schema Conversion is a desktop application you install.
+explanation: SCT runs on your own workstation and needs network reach to both databases. DMS Schema Conversion reuses SCT's conversion engine but is driven from the DMS console, CLI or API with nothing to install.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-schema-conversion-tool.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: bc4f3793c1f8d274172a72b6fb00766b9dec441d
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:aws-schema-conversion-tool
+- kt:dms-schema-conversion
+difficulty: 2
+created: '2026-11-21'
+status: active

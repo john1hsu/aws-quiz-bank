@@ -1,65 +1,68 @@
 {
  "totals": {
-  "active": 493
+  "active": 589
  },
  "areas": {
   "ai-and-ml": {
-   "active": 30
+   "active": 36
   },
   "analytics": {
-   "active": 30
+   "active": 36
   },
   "architecture-practice": {
-   "active": 30
+   "active": 36
   },
   "certifications": {
-   "active": 28
+   "active": 31
   },
   "compute": {
-   "active": 30
+   "active": 33
   },
   "containers": {
-   "active": 28
+   "active": 31
   },
   "cost-management": {
-   "active": 30
+   "active": 36
   },
   "databases": {
-   "active": 30
+   "active": 33
   },
   "devops-and-iac": {
-   "active": 30
+   "active": 33
   },
   "global-infrastructure": {
-   "active": 30
+   "active": 33
   },
   "governance-and-operations": {
-   "active": 30
+   "active": 36
   },
   "identity-and-access": {
-   "active": 24
+   "active": 33
   },
   "migration-and-hybrid": {
-   "active": 27
+   "active": 33
   },
   "networking-and-content-delivery": {
-   "active": 22
+   "active": 31
   },
   "public-sector-and-compliance": {
-   "active": 24
+   "active": 33
   },
   "security": {
-   "active": 24
+   "active": 30
   },
   "serverless-and-integration": {
-   "active": 22
+   "active": 25
   },
   "storage": {
-   "active": 24
+   "active": 30
   }
  },
  "articles": {
   "articles/ai-and-ml/amazon-bedrock-agentcore.md": {
+   "active": 3
+  },
+  "articles/ai-and-ml/amazon-bedrock-agents.md": {
    "active": 3
   },
   "articles/ai-and-ml/amazon-bedrock-guardrails.md": {
@@ -78,6 +81,9 @@
    "active": 3
   },
   "articles/ai-and-ml/amazon-q-developer.md": {
+   "active": 3
+  },
+  "articles/ai-and-ml/amazon-rekognition.md": {
    "active": 3
   },
   "articles/ai-and-ml/amazon-sagemaker-ai.md": {
@@ -101,7 +107,13 @@
   "articles/analytics/amazon-kinesis-data-streams.md": {
    "active": 3
   },
+  "articles/analytics/amazon-msk.md": {
+   "active": 3
+  },
   "articles/analytics/amazon-opensearch-service.md": {
+   "active": 3
+  },
+  "articles/analytics/amazon-quick.md": {
    "active": 3
   },
   "articles/analytics/amazon-redshift.md": {
@@ -125,6 +137,9 @@
   "articles/architecture-practice/aws-well-architected-framework.md": {
    "active": 3
   },
+  "articles/architecture-practice/cell-based-architecture.md": {
+   "active": 3
+  },
   "articles/architecture-practice/cost-optimization-pillar.md": {
    "active": 3
   },
@@ -132,6 +147,9 @@
    "active": 3
   },
   "articles/architecture-practice/event-driven-architecture.md": {
+   "active": 3
+  },
+  "articles/architecture-practice/multi-region-architecture.md": {
    "active": 3
   },
   "articles/architecture-practice/operational-excellence-pillar.md": {
@@ -167,6 +185,9 @@
   "articles/certifications/aws-certified-developer-associate.md": {
    "active": 3
   },
+  "articles/certifications/aws-certified-devops-engineer-professional.md": {
+   "active": 3
+  },
   "articles/certifications/aws-certified-machine-learning-engineer-associate.md": {
    "active": 3
   },
@@ -183,6 +204,9 @@
    "active": 3
   },
   "articles/compute/amazon-ec2.md": {
+   "active": 3
+  },
+  "articles/compute/amazon-machine-images.md": {
    "active": 3
   },
   "articles/compute/aws-batch.md": {
@@ -236,10 +260,19 @@
   "articles/containers/eks-auto-mode.md": {
    "active": 1
   },
+  "articles/containers/eks-quotas.md": {
+   "active": 3
+  },
   "articles/containers/fargate-quotas.md": {
    "active": 3
   },
+  "articles/cost-management/aws-billing-and-cost-management.md": {
+   "active": 3
+  },
   "articles/cost-management/aws-budgets.md": {
+   "active": 3
+  },
+  "articles/cost-management/aws-compute-optimizer.md": {
    "active": 3
   },
   "articles/cost-management/aws-cost-explorer.md": {
@@ -287,6 +320,9 @@
   "articles/databases/aurora-global-database.md": {
    "active": 3
   },
+  "articles/databases/aurora-quotas.md": {
+   "active": 3
+  },
   "articles/databases/aurora-serverless-v2.md": {
    "active": 3
   },
@@ -326,6 +362,9 @@
   "articles/devops-and-iac/ci-cd.md": {
    "active": 3
   },
+  "articles/devops-and-iac/cloudformation-drift-detection.md": {
+   "active": 3
+  },
   "articles/devops-and-iac/infrastructure-as-code.md": {
    "active": 3
   },
@@ -350,6 +389,9 @@
   "articles/global-infrastructure/aws-regions.md": {
    "active": 3
   },
+  "articles/global-infrastructure/aws-wavelength.md": {
+   "active": 3
+  },
   "articles/global-infrastructure/edge-locations.md": {
    "active": 3
   },
@@ -368,10 +410,16 @@
   "articles/governance-and-operations/aws-control-tower.md": {
    "active": 3
   },
+  "articles/governance-and-operations/aws-health-dashboard.md": {
+   "active": 3
+  },
   "articles/governance-and-operations/aws-management-and-governance-services.md": {
    "active": 3
   },
   "articles/governance-and-operations/aws-organizations.md": {
+   "active": 3
+  },
+  "articles/governance-and-operations/aws-support-plans.md": {
    "active": 3
   },
   "articles/governance-and-operations/aws-systems-manager.md": {
@@ -389,7 +437,13 @@
   "articles/governance-and-operations/service-quotas.md": {
    "active": 3
   },
+  "articles/identity-and-access/attribute-based-access-control.md": {
+   "active": 3
+  },
   "articles/identity-and-access/aws-iam.md": {
+   "active": 3
+  },
+  "articles/identity-and-access/aws-resource-access-manager.md": {
    "active": 3
   },
   "articles/identity-and-access/aws-sts.md": {
@@ -410,6 +464,9 @@
   "articles/identity-and-access/permissions-boundaries.md": {
    "active": 3
   },
+  "articles/identity-and-access/resource-control-policies.md": {
+   "active": 3
+  },
   "articles/identity-and-access/service-control-policies.md": {
    "active": 3
   },
@@ -419,10 +476,16 @@
   "articles/migration-and-hybrid/aws-datasync.md": {
    "active": 3
   },
+  "articles/migration-and-hybrid/aws-elastic-disaster-recovery.md": {
+   "active": 3
+  },
   "articles/migration-and-hybrid/aws-migration-acceleration-program.md": {
    "active": 3
   },
   "articles/migration-and-hybrid/aws-migration-and-transfer-services.md": {
+   "active": 3
+  },
+  "articles/migration-and-hybrid/aws-schema-conversion-tool.md": {
    "active": 3
   },
   "articles/migration-and-hybrid/aws-transfer-family.md": {
@@ -440,6 +503,9 @@
   "articles/migration-and-hybrid/vmware-migration-to-aws.md": {
    "active": 3
   },
+  "articles/networking-and-content-delivery/amazon-application-recovery-controller.md": {
+   "active": 3
+  },
   "articles/networking-and-content-delivery/amazon-cloudfront.md": {
    "active": 3
   },
@@ -452,7 +518,13 @@
   "articles/networking-and-content-delivery/application-load-balancer.md": {
    "active": 3
   },
+  "articles/networking-and-content-delivery/aws-cloud-map.md": {
+   "active": 3
+  },
   "articles/networking-and-content-delivery/aws-direct-connect.md": {
+   "active": 3
+  },
+  "articles/networking-and-content-delivery/aws-global-accelerator.md": {
    "active": 3
   },
   "articles/networking-and-content-delivery/aws-networking-and-content-delivery.md": {
@@ -470,10 +542,16 @@
   "articles/public-sector-and-compliance/aws-compliance-programs.md": {
    "active": 3
   },
+  "articles/public-sector-and-compliance/aws-european-sovereign-cloud.md": {
+   "active": 3
+  },
   "articles/public-sector-and-compliance/aws-govcloud-us.md": {
    "active": 3
   },
   "articles/public-sector-and-compliance/aws-secret-and-top-secret-regions.md": {
+   "active": 3
+  },
+  "articles/public-sector-and-compliance/data-residency-on-aws.md": {
    "active": 3
   },
   "articles/public-sector-and-compliance/dod-cloud-computing-srg-impact-levels.md": {
@@ -485,6 +563,9 @@
   "articles/public-sector-and-compliance/hipaa-eligible-services.md": {
    "active": 3
   },
+  "articles/public-sector-and-compliance/itar-on-aws.md": {
+   "active": 3
+  },
   "articles/public-sector-and-compliance/nist-sp-800-53.md": {
    "active": 3
   },
@@ -492,6 +573,9 @@
    "active": 3
   },
   "articles/security/amazon-inspector.md": {
+   "active": 3
+  },
+  "articles/security/aws-cloudhsm.md": {
    "active": 3
   },
   "articles/security/aws-cloudtrail.md": {
@@ -507,6 +591,9 @@
    "active": 3
   },
   "articles/security/aws-security-services.md": {
+   "active": 3
+  },
+  "articles/security/aws-shield.md": {
    "active": 3
   },
   "articles/security/aws-waf.md": {
@@ -536,6 +623,9 @@
   "articles/serverless-and-integration/aws-step-functions.md": {
    "active": 3
   },
+  "articles/serverless-and-integration/lambda-cold-starts.md": {
+   "active": 3
+  },
   "articles/storage/amazon-ebs.md": {
    "active": 3
   },
@@ -548,6 +638,9 @@
   "articles/storage/amazon-s3-files.md": {
    "active": 3
   },
+  "articles/storage/amazon-s3-quotas.md": {
+   "active": 3
+  },
   "articles/storage/amazon-s3.md": {
    "active": 3
   },
@@ -558,6 +651,9 @@
    "active": 3
   },
   "articles/storage/aws-storage-services.md": {
+   "active": 3
+  },
+  "articles/storage/s3-storage-classes.md": {
    "active": 3
   }
  }

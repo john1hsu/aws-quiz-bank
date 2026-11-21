@@ -1,0 +1,18 @@
+id: aws-000543
+product_area: ai-and-ml
+true_statement: With return control, a Bedrock agent hands the chosen action and its parameters back in the InvokeAgent response so your own application runs it.
+false_statement: With return control, a Bedrock agent hands the chosen action and its parameters to an AWS Step Functions workflow, which runs it for your application.
+explanation: 'Return control is the alternative to attaching a Lambda function to an action group: the agent returns its predicted action to the caller, which executes it. Step Functions plays no part.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock-agents.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 34ea3ec14ccb0e47e9169080cf7bc86a4f76a717
+verified_on: '2026-11-16'
+feature_status: closed-to-new-customers
+concepts:
+- kt:amazon-bedrock-agents
+- kt:aws-lambda
+difficulty: 2
+created: '2026-11-21'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000567
+product_area: containers
+true_statement: EKS Pod Identity allows up to 5,000 associations per cluster, and each Kubernetes service account can be tied to only one IAM role.
+false_statement: EKS Pod Identity allows up to 5,000 associations per cluster, and each Kubernetes service account can be tied to up to five IAM roles.
+explanation: A service account maps to a single IAM role through Pod Identity. The 5,000-association limit is also one that Service Quotas cannot change.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/eks-quotas.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: a303c6c2ac5538866bc24aa0b14cb949da5545db
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:eks-quotas
+- kt:iam-quotas
+difficulty: 2
+created: '2026-11-21'
+status: active

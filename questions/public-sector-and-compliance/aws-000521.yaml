@@ -1,0 +1,18 @@
+id: aws-000521
+product_area: public-sector-and-compliance
+true_statement: The AWS European Sovereign Cloud's first Region is in Brandenburg, Germany, with day-to-day operations controlled by EU residents located in the EU.
+false_statement: The AWS European Sovereign Cloud's first Region is in Dublin, Ireland, with day-to-day operations controlled by EU residents located in the EU.
+explanation: AWS placed the first sovereign cloud Region in Brandenburg, Germany. It targets cases where residency alone is not enough and the requirement covers who operates the cloud.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/data-residency-on-aws.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 6ec95f77bdd71d93972e9b862d06fac04bc03a64
+verified_on: '2026-11-15'
+feature_status: concept
+concepts:
+- kt:data-residency-on-aws
+- kt:aws-european-sovereign-cloud
+difficulty: 2
+created: '2026-11-21'
+status: active

@@ -1,0 +1,17 @@
+id: aws-000554
+product_area: architecture-practice
+true_statement: Consistent hashing lets a cell-based workload add cells without a full rebalance, whereas hash-modulo mapping reshuffles almost every key when the cell count changes.
+false_statement: Hash-modulo mapping lets a cell-based workload add cells without a full rebalance, whereas consistent hashing reshuffles almost every key when the cell count changes.
+explanation: Consistent hashing maps keys to many logical buckets and buckets to cells, so a new cell takes over only some buckets. Hash-modulo spreads keys evenly but moves nearly all of them when the divisor changes.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/cell-based-architecture.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: f66ad18ea9a66ca574088959447e1893d271dbba
+verified_on: '2026-11-16'
+feature_status: concept
+concepts:
+- kt:cell-based-architecture
+difficulty: 3
+created: '2026-11-21'
+status: active

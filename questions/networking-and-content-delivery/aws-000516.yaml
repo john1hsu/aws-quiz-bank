@@ -1,0 +1,21 @@
+id: aws-000516
+product_area: networking-and-content-delivery
+true_statement: An IPv4 accelerator in AWS Global Accelerator receives two static IPv4 addresses, while a dual-stack accelerator receives four.
+false_statement: An IPv4 accelerator in AWS Global Accelerator receives one static IPv4 address, while a dual-stack accelerator receives two.
+explanation: IPv4 accelerators get two addresses, drawn from different network zones at the edge, and dual-stack accelerators get two IPv4 plus two IPv6. A single address would lose that zone-level redundancy.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-global-accelerator.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 786445ec3a17b092490c932c45a179de83929c7e
+verified_on: '2026-11-15'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+- kt:aws-certified-advanced-networking-specialty
+concepts:
+- kt:aws-global-accelerator
+- kt:edge-locations
+difficulty: 2
+created: '2026-11-21'
+status: active

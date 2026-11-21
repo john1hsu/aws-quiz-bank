@@ -1,0 +1,18 @@
+id: aws-000519
+product_area: public-sector-and-compliance
+true_statement: The AWS Control Tower Region deny control is enabled in the landing zone settings and then applies to every OU, not to selected OUs.
+false_statement: The AWS Control Tower Region deny control is enabled on individual OUs, so it can apply to selected OUs rather than every OU.
+explanation: Region deny is an elective preventive control switched on at the landing zone level, so it covers all OUs at once. That is why AWS advises checking the approved Region list against every workload before enabling it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/data-residency-on-aws.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 6ec95f77bdd71d93972e9b862d06fac04bc03a64
+verified_on: '2026-11-15'
+feature_status: concept
+concepts:
+- kt:data-residency-on-aws
+- kt:aws-control-tower
+difficulty: 3
+created: '2026-11-21'
+status: active

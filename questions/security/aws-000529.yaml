@@ -1,0 +1,20 @@
+id: aws-000529
+product_area: security
+true_statement: Shield Advanced covers EC2 instances and Network Load Balancers only through an attached Elastic IP address.
+false_statement: Shield Advanced covers EC2 instances and Application Load Balancers only through an attached Elastic IP address.
+explanation: Application Load Balancers can be enrolled directly as Shield Advanced resources. EC2 instances and NLBs are protected by enrolling the Elastic IP attached to them.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-shield.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: fe035de04e75b963a50191aee23c7b929015bf35
+verified_on: '2026-11-15'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-shield
+- kt:elastic-load-balancing
+difficulty: 3
+created: '2026-11-21'
+status: active

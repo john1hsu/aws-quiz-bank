@@ -1,0 +1,19 @@
+id: aws-000568
+product_area: cost-management
+true_statement: On the AWS Bills page, a Pending billing period shows estimated totals for a period still open, while an Issued period has a final invoice.
+false_statement: On the AWS Bills page, an Issued billing period shows estimated totals for a period still open, while a Pending period has a final invoice.
+explanation: Pending means usage is still being metered, so the figures are estimates. Once the period closes the invoice is issued and the totals become final.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-billing-and-cost-management.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 8f82f887c20127e81b32a8ba09f789c3f22ded28
+verified_on: '2026-11-16'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-billing-and-cost-management
+difficulty: 1
+created: '2026-11-21'
+status: active

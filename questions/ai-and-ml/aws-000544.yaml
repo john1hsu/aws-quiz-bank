@@ -1,0 +1,20 @@
+id: aws-000544
+product_area: ai-and-ml
+true_statement: An Amazon Rekognition face collection stores face vectors rather than the images themselves, and holds up to 20 million face vectors.
+false_statement: An Amazon Rekognition face collection stores the indexed face images themselves, and holds up to 20 million face images.
+explanation: IndexFaces extracts a vector for each face and keeps only that in the server-side collection; the source images stay wherever you store them. Searches then compare new faces against those vectors.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-rekognition.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: a97cf45e038d1d9cdfc925bb032e0a9ab2654719
+verified_on: '2026-11-16'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-rekognition
+- kt:rekognition-quotas
+difficulty: 2
+created: '2026-11-21'
+status: active

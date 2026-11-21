@@ -1,0 +1,18 @@
+id: aws-000560
+product_area: certifications
+true_statement: AWS Certified DevOps Engineer – Professional can be maintained for one year through paid AWS Skill Builder, but only while active and within 90 days of expiry.
+false_statement: AWS Certified DevOps Engineer – Professional can be maintained for one year through paid AWS Skill Builder, but only while active and within 180 days of expiry.
+explanation: The Skill Builder route opens only in the last 90 days before the credential expires and needs a paid subscription. Otherwise you renew by passing the latest exam version.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-devops-engineer-professional.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: f71b35601d7bc012ddea546d2e9ffe815e66e7c5
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-certified-devops-engineer-professional
+- kt:aws-certification-program
+difficulty: 2
+created: '2026-11-21'
+status: active

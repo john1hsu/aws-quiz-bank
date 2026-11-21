@@ -1,0 +1,18 @@
+id: aws-000508
+product_area: identity-and-access
+true_statement: A single resource control policy can be at most 5,120 characters, and whitespace counts toward that limit (as of 2026-11).
+false_statement: A single resource control policy can be at most 10,240 characters, and whitespace counts toward that limit (as of 2026-11).
+explanation: AWS Organizations caps each RCP at 5,120 characters, counting every character including spaces. The doubled figure is not the limit; the organization can hold up to 2,000 RCPs in total.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/resource-control-policies.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: a45bb98db22fcd239057be4f8ea29e6ede722873
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:resource-control-policies
+- kt:organizations-quotas
+difficulty: 2
+created: '2026-11-21'
+status: active

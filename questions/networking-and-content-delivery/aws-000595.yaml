@@ -1,0 +1,18 @@
+id: aws-000595
+product_area: networking-and-content-delivery
+true_statement: An AWS Cloud Map HTTP namespace supports discovery only through the DiscoverInstances API, while a private DNS namespace also answers DNS queries from within a VPC.
+false_statement: An AWS Cloud Map private DNS namespace supports discovery only through the DiscoverInstances API, while an HTTP namespace also answers DNS queries from within a VPC.
+explanation: HTTP namespaces are API-only. A private DNS namespace requires a VPC and creates a private Route 53 hosted zone, so clients can resolve service names by DNS as well.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-cloud-map.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: ea03fcb52bc77431f36c3d6a13da47e48d4947ee
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-cloud-map
+- kt:amazon-route-53
+difficulty: 2
+created: '2026-11-21'
+status: active

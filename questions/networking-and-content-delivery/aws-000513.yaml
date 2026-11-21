@@ -1,0 +1,18 @@
+id: aws-000513
+product_area: networking-and-content-delivery
+true_statement: Every ARC zonal shift must have an expiry, initially set between 1 minute and 3 days, which you can later extend or cancel.
+false_statement: Every ARC zonal shift must have an expiry, initially set between 1 minute and 7 days, which you can later extend or cancel.
+explanation: Zonal shifts are temporary by design, with a starting duration of up to 3 days (72 hours). A week is beyond that initial maximum, though a shift can be extended afterwards.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/amazon-application-recovery-controller.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 2111797051d6aac1f1900b914eb157831bc05568
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:amazon-application-recovery-controller
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-21'
+status: active

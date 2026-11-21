@@ -1,0 +1,18 @@
+id: aws-000566
+product_area: containers
+true_statement: An EKS control plane in Standard mode supports a cluster database of up to 8 GB, while Provisioned Control Plane tiers support 16 GB.
+false_statement: An EKS control plane in Standard mode supports a cluster database of up to 2 GB, while Provisioned Control Plane tiers support 8 GB.
+explanation: Standard mode scales automatically but caps the etcd database at 8 GB; paid Provisioned tiers raise it to 16 GB. A cluster that grows past 8 GB cannot return to Standard until usage shrinks.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/eks-quotas.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: a303c6c2ac5538866bc24aa0b14cb949da5545db
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:eks-quotas
+- kt:amazon-eks
+difficulty: 3
+created: '2026-11-21'
+status: active

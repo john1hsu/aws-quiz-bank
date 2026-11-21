@@ -1,0 +1,18 @@
+id: aws-000506
+product_area: identity-and-access
+true_statement: IAM Identity Center attributes for access control pass user attributes from the identity source into the session, so one permission set can serve many teams.
+false_statement: IAM Identity Center attributes for access control copy user attributes onto each AWS resource as tags, so one permission set can serve many teams.
+explanation: The feature sends directory attributes into the user's session, where ABAC policies compare them with resource tags. It does not tag resources; a user changing teams in the directory changes access without editing AWS permissions.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/attribute-based-access-control.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: c01d5dfc9f2f45ca45cc3fda762e84f6ed4c1b33
+verified_on: '2026-11-15'
+feature_status: concept
+concepts:
+- kt:attribute-based-access-control
+- kt:iam-identity-center
+difficulty: 2
+created: '2026-11-21'
+status: active

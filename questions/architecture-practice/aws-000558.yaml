@@ -1,0 +1,18 @@
+id: aws-000558
+product_area: architecture-practice
+true_statement: In a write-partitioned multi-Region design, each record has a home Region chosen by a key such as user ID, which avoids write conflicts.
+false_statement: In a write-local multi-Region design, each record has a home Region chosen by a key such as user ID, which avoids write conflicts.
+explanation: Write partitioned assigns every record a home Region, at the cost of repartitioning if a Region is lost. Write local lets every Region accept writes to any record, which is why it needs conflict resolution such as last writer wins.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/multi-region-architecture.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 4a4d997888a917c20a78121b134c9e938379478f
+verified_on: '2026-11-16'
+feature_status: concept
+concepts:
+- kt:multi-region-architecture
+- kt:dynamodb-global-tables
+difficulty: 3
+created: '2026-11-21'
+status: active

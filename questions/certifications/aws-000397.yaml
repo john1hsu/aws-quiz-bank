@@ -6,8 +6,8 @@ explanation: The data engineer exam arrived as Data Analytics – Specialty reti
 source:
   repo: john1hsu/aws-graph
   path: articles/certifications/aws-certified-data-engineer-associate.md
-  commit: cbc55bd30cc136537cf4807406630bc6e5524689
-  blob: 23e1db0054fe07d9d7a67a42699f7eb11e06015b
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 01e7d7c57ea7e2312459aad97c61b8bf0bdc1a66
 verified_on: '2026-11-14'
 feature_status: current
 concepts:

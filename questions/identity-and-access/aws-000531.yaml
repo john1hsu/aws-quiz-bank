@@ -1,0 +1,18 @@
+id: aws-000531
+product_area: identity-and-access
+true_statement: Resource control policies never apply to resources in the organization's management account, while delegated administrator member accounts remain subject to them.
+false_statement: Resource control policies never apply to resources in delegated administrator member accounts, while the organization's management account remains subject to them.
+explanation: The management account's resources sit outside RCP evaluation, but a member account stays bound even when it acts as a delegated administrator. The false version swaps which account is exempt.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/resource-control-policies.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: a45bb98db22fcd239057be4f8ea29e6ede722873
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:resource-control-policies
+- kt:aws-organizations
+difficulty: 3
+created: '2026-11-21'
+status: active

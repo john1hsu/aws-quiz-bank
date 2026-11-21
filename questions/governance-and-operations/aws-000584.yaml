@@ -1,0 +1,20 @@
+id: aws-000584
+product_area: governance-and-operations
+true_statement: The AWS Health Dashboard and its EventBridge delivery are free for every customer, while the AWS Health API needs a plan such as Business Support+ or Enterprise Support.
+false_statement: The AWS Health API is free for every customer, while the AWS Health Dashboard and its EventBridge delivery need a plan such as Business Support+ or Enterprise Support.
+explanation: Anyone can use the dashboard and receive events in EventBridge at no extra cost. Programmatic API access is gated by a qualifying support plan, and other accounts get SubscriptionRequiredException.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-health-dashboard.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: f96385bcb9e47976943b983abaffe44ea7193f62
+verified_on: '2026-11-16'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-health-dashboard
+- kt:aws-support-plans
+difficulty: 2
+created: '2026-11-21'
+status: active

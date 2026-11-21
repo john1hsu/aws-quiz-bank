@@ -1,0 +1,20 @@
+id: aws-000545
+product_area: ai-and-ml
+true_statement: Amazon Rekognition streaming video analysis closed to new customers on 30 April 2026, and AWS recommends sending sampled frames to the Image API instead.
+false_statement: Amazon Rekognition streaming video analysis closed to new customers on 30 April 2026, and AWS recommends sending the streams to SageMaker AI endpoints instead.
+explanation: AWS's suggested replacement for streaming and bulk analysis is to sample stream frames, or batch S3 images, into the Rekognition Image API. Accounts that used the feature in the prior 12 months keep access.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-rekognition.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: a97cf45e038d1d9cdfc925bb032e0a9ab2654719
+verified_on: '2026-11-16'
+feature_status: current
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:amazon-rekognition
+- kt:amazon-kinesis-video-streams
+difficulty: 2
+created: '2026-11-21'
+status: active

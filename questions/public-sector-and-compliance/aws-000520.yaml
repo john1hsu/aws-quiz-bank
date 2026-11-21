@@ -1,0 +1,18 @@
+id: aws-000520
+product_area: public-sector-and-compliance
+true_statement: AWS Prescriptive Guidance notes that most AWS Control Tower data residency controls are detective, flagging problems rather than blocking them.
+false_statement: AWS Prescriptive Guidance notes that most AWS Control Tower data residency controls are preventive, blocking problems rather than flagging them.
+explanation: Only a few residency controls are preventive, such as blocking VPC internet access or cross-Region networking; the majority detect issues like public IPs or public endpoints. None of them is enabled by default.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/data-residency-on-aws.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 6ec95f77bdd71d93972e9b862d06fac04bc03a64
+verified_on: '2026-11-15'
+feature_status: concept
+concepts:
+- kt:data-residency-on-aws
+- kt:aws-control-tower
+difficulty: 2
+created: '2026-11-21'
+status: active

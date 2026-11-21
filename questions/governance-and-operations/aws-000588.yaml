@@ -1,0 +1,19 @@
+id: aws-000588
+product_area: governance-and-operations
+true_statement: The legacy Developer, Business and Enterprise On-Ramp support plans end on January 1, 2027, but stay available in the AWS GovCloud (US) Region.
+false_statement: The legacy Developer, Business and Enterprise On-Ramp support plans end on January 1, 2027, in AWS GovCloud (US) as well as in commercial Regions.
+explanation: The retirement applies outside GovCloud; all three legacy plans remain offered in the GovCloud (US) Region. Enterprise On-Ramp customers elsewhere are moved to Enterprise Support during 2026.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-support-plans.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 571f544a9df26a7be89a8aea278856ad3387356e
+verified_on: '2026-11-16'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-support-plans
+difficulty: 2
+created: '2026-11-21'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000579
+product_area: devops-and-iac
+true_statement: The AWS Config rule cloudformation-stack-drift-detection-check marks drifted stacks NON_COMPLIANT, and each run is capped at 15 minutes.
+false_statement: The AWS Config rule cloudformation-stack-drift-detection-check marks drifted stacks NON_COMPLIANT, and each run is capped at 60 minutes.
+explanation: The 15-minute cap on each evaluation is why AWS suggests several tag-scoped instances of the rule in accounts with many stacks.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/cloudformation-drift-detection.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 7ad0cec26f9164dc65ee26a8b80f0641d3c06d33
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:cloudformation-drift-detection
+- kt:aws-config
+difficulty: 3
+created: '2026-11-21'
+status: active

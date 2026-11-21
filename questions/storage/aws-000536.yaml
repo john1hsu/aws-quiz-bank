@@ -1,0 +1,18 @@
+id: aws-000536
+product_area: storage
+true_statement: Amazon S3 multipart uploads use parts of 5 MB to 5 GB, apart from a smaller final part, and can have at most 10,000 parts.
+false_statement: Amazon S3 multipart uploads use parts of 5 MB to 5 GB, apart from a smaller final part, and can have at most 1,000 parts.
+explanation: The fixed multipart limits are a 5 MB to 5 GB part size and up to 10,000 parts per upload. A 1,000-part cap would make 50 TB objects impossible to upload.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/amazon-s3-quotas.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 045b97740735818ccf5fb631231eae0e439ee009
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:amazon-s3-quotas
+- kt:amazon-s3
+difficulty: 2
+created: '2026-11-21'
+status: active

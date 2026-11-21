@@ -1,0 +1,18 @@
+id: aws-000562
+product_area: compute
+true_statement: A deprecated AMI can still be launched by anyone who knows its ID, while a disabled AMI blocks all new launches until it is re-enabled.
+false_statement: A disabled AMI can still be launched by anyone who knows its ID, while a deprecated AMI blocks all new launches until it is re-enabled.
+explanation: Deprecation only hides the image from listings, so launch templates and Auto Scaling groups that reference it keep working. Disabling stops every new launch and makes a shared AMI private, reversibly.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/amazon-machine-images.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 5f12876805128c3f376de0720763b2ea90fd52b1
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:amazon-machine-images
+- kt:amazon-ec2-auto-scaling
+difficulty: 2
+created: '2026-11-21'
+status: active

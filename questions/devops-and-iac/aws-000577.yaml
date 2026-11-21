@@ -1,0 +1,18 @@
+id: aws-000577
+product_area: devops-and-iac
+true_statement: Stack-level CloudFormation drift detection skips nested stacks, so each nested stack has to be checked on its own.
+false_statement: Stack-level CloudFormation drift detection covers nested stacks too, so one check on the parent stack is enough.
+explanation: Detection on a parent stack does not walk into its nested stacks. You run it separately on each nested stack to see their drift.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/cloudformation-drift-detection.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 7ad0cec26f9164dc65ee26a8b80f0641d3c06d33
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:cloudformation-drift-detection
+- kt:aws-cloudformation
+difficulty: 2
+created: '2026-11-21'
+status: active

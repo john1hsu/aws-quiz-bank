@@ -1,0 +1,19 @@
+id: aws-000590
+product_area: identity-and-access
+true_statement: AWS RAM can share VPC subnets only with accounts in your own organization, while transit gateways and Route 53 Resolver rules can also go to outside accounts.
+false_statement: AWS RAM can share transit gateways and Route 53 Resolver rules only with accounts in your own organization, while VPC subnets can also go to outside accounts.
+explanation: Subnet sharing is limited to your organization, never to IAM roles or users, and default subnets cannot be shared. Transit gateways and Resolver rules may be shared with external accounts.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/aws-resource-access-manager.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: c8856f491d9291b9b61165842a9729c30694dbc6
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-resource-access-manager
+- kt:amazon-vpc
+- kt:aws-transit-gateway
+difficulty: 3
+created: '2026-11-21'
+status: active

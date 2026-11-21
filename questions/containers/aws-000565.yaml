@@ -1,0 +1,18 @@
+id: aws-000565
+product_area: containers
+true_statement: An Amazon EKS cluster allows at most 3,000 access entries, a quota that cannot be raised, so large organizations map access through a few IAM roles (as of 2026-11).
+false_statement: An Amazon EKS cluster allows at most 300 access entries, a quota that cannot be raised, so large organizations map access through a few IAM roles (as of 2026-11).
+explanation: The fixed ceiling is 3,000 access entries per cluster. It is high but still caps per-user mappings, which is why role-based access is the usual pattern at scale.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/eks-quotas.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: a303c6c2ac5538866bc24aa0b14cb949da5545db
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:eks-quotas
+- kt:amazon-eks
+difficulty: 2
+created: '2026-11-21'
+status: active

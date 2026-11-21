@@ -1,0 +1,17 @@
+id: aws-000592
+product_area: migration-and-hybrid
+true_statement: AWS Elastic Disaster Recovery charges a flat $0.028 per replicating source server per hour, the same whichever Region you replicate to (as of 2026-11).
+false_statement: AWS Elastic Disaster Recovery charges a flat $0.028 per GB of replicated data per month, the same whichever Region you replicate to (as of 2026-11).
+explanation: DRS bills per source server-hour, with no upfront fee. Staging EBS volumes, snapshots, replication servers and any drill or recovery instances are billed separately at standard rates.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/aws-elastic-disaster-recovery.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 12c8a04801f5e11295e4b7a2800e6626212e10c5
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-elastic-disaster-recovery
+difficulty: 2
+created: '2026-11-21'
+status: active

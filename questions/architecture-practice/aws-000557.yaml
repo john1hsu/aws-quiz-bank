@@ -1,0 +1,18 @@
+id: aws-000557
+product_area: architecture-practice
+true_statement: Synchronous multi-Region replication avoids data loss but typically needs three Regions with a two-of-three quorum, and can raise write latency by an order of magnitude.
+false_statement: Synchronous multi-Region replication avoids data loss and typically needs only two Regions with no quorum, while adding no noticeable write latency.
+explanation: Synchronous writes must be acknowledged across Regions, so latency rises sharply and a quorum across three Regions is the usual design. Asynchronous replication keeps writes fast but can lose in-flight data on failover.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/multi-region-architecture.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 4a4d997888a917c20a78121b134c9e938379478f
+verified_on: '2026-11-16'
+feature_status: concept
+concepts:
+- kt:multi-region-architecture
+- kt:aws-regions
+difficulty: 3
+created: '2026-11-21'
+status: active

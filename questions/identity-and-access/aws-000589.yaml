@@ -1,0 +1,17 @@
+id: aws-000589
+product_area: identity-and-access
+true_statement: AWS RAM invitations for types such as VPC subnets and transit gateways expire after seven days, while invitations for most other resource types expire after 12 hours.
+false_statement: AWS RAM invitations for types such as VPC subnets and transit gateways expire after 12 hours, while invitations for most other resource types expire after seven days.
+explanation: A listed set of types, including subnets, transit gateways, Resolver forwarding rules and Capacity Reservations, gets a seven-day window; everything else lapses after 12 hours. Accounts inside the organization need no invitation at all.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/aws-resource-access-manager.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: c8856f491d9291b9b61165842a9729c30694dbc6
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-resource-access-manager
+difficulty: 3
+created: '2026-11-21'
+status: active

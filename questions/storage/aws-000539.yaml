@@ -1,0 +1,17 @@
+id: aws-000539
+product_area: storage
+true_statement: S3 Glacier Deep Archive has no Expedited retrieval option; its Standard restores finish within 12 hours and Bulk restores within 48 hours.
+false_statement: S3 Glacier Flexible Retrieval has no Expedited retrieval option; its Standard restores finish within 12 hours and Bulk restores within 48 hours.
+explanation: Deep Archive is the class without Expedited restores. Flexible Retrieval does offer Expedited (typically 1-5 minutes), with Standard in 3-5 hours and free Bulk in 5-12 hours.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/s3-storage-classes.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: c64197313fdaabdcecc42533dd63750aecc787a9
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:s3-storage-classes
+difficulty: 2
+created: '2026-11-21'
+status: active

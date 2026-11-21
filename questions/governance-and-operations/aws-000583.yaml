@@ -1,0 +1,20 @@
+id: aws-000583
+product_area: governance-and-operations
+true_statement: AWS Health events remain viewable in the dashboard and API for up to 90 days, so a longer record has to be exported through EventBridge (as of 2026-11).
+false_statement: AWS Health events remain viewable in the dashboard and API for up to 2 years, so a longer record has to be exported through EventBridge (as of 2026-11).
+explanation: Health keeps events for 90 days, including in organizational view. Teams that need a longer audit trail route events through EventBridge to their own storage.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/governance-and-operations/aws-health-dashboard.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: f96385bcb9e47976943b983abaffe44ea7193f62
+verified_on: '2026-11-16'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-health-dashboard
+- kt:amazon-eventbridge
+difficulty: 2
+created: '2026-11-21'
+status: active

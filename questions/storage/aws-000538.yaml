@@ -1,0 +1,17 @@
+id: aws-000538
+product_area: storage
+true_statement: S3 Intelligent-Tiering moves objects not accessed for 30 consecutive days to its Infrequent Access tier and those untouched for 90 days to Archive Instant Access.
+false_statement: S3 Intelligent-Tiering moves objects not accessed for 60 consecutive days to its Infrequent Access tier and those untouched for 180 days to Archive Instant Access.
+explanation: The automatic instant tiers kick in at 30 and 90 days without access, and an accessed object returns to Frequent Access with no tiering charge. The 180-day figure belongs to the opt-in Deep Archive Access tier.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/s3-storage-classes.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: c64197313fdaabdcecc42533dd63750aecc787a9
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:s3-storage-classes
+difficulty: 2
+created: '2026-11-21'
+status: active

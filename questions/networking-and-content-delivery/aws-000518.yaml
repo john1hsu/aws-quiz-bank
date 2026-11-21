@@ -1,0 +1,20 @@
+id: aws-000518
+product_area: networking-and-content-delivery
+true_statement: If a Region has no healthy endpoints, Global Accelerator fails open and sends that Region's traffic to all of its endpoints.
+false_statement: If a Region has no healthy endpoints, Global Accelerator fails closed and drops that Region's traffic until an endpoint recovers.
+explanation: Global Accelerator normally routes only to healthy endpoints, but when none in a Region pass it sends traffic to all of them rather than to none. Dropping the traffic is not its documented behaviour.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-global-accelerator.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 786445ec3a17b092490c932c45a179de83929c7e
+verified_on: '2026-11-15'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+- kt:aws-certified-advanced-networking-specialty
+concepts:
+- kt:aws-global-accelerator
+difficulty: 3
+created: '2026-11-21'
+status: active

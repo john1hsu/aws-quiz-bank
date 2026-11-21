@@ -1,0 +1,18 @@
+id: aws-000515
+product_area: networking-and-content-delivery
+true_statement: ARC zonal autoshift requires weekly practice runs that move traffic away from one Availability Zone for about 30 minutes.
+false_statement: ARC zonal autoshift requires monthly practice runs that move traffic away from one Availability Zone for about 30 minutes.
+explanation: Practice runs happen weekly to prove the remaining AZs can carry the load, and each records a SUCCEEDED or FAILED outcome. You can block out windows, but the cadence is weekly, not monthly.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/amazon-application-recovery-controller.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 2111797051d6aac1f1900b914eb157831bc05568
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:amazon-application-recovery-controller
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-21'
+status: active

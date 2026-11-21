@@ -1,0 +1,17 @@
+id: aws-000561
+product_area: certifications
+true_statement: When DOP-C02 replaced DOP-C01 in March 2023, AWS removed no content and instead reordered the outline to align with the Well-Architected Framework.
+false_statement: When DOP-C02 replaced DOP-C01 in March 2023, AWS removed the high availability content and reordered the outline to align with the Well-Architected Framework.
+explanation: 'The revision dropped nothing: high availability and disaster recovery moved into the Resilient Cloud Solutions domain, and provisioning security moved into Security and Compliance.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-devops-engineer-professional.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: f71b35601d7bc012ddea546d2e9ffe815e66e7c5
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-certified-devops-engineer-professional
+difficulty: 2
+created: '2026-11-21'
+status: active

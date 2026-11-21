@@ -1,0 +1,20 @@
+id: aws-000517
+product_area: networking-and-content-delivery
+true_statement: A Global Accelerator custom routing accelerator supports only VPC subnet endpoints and maps each user deterministically to a specific private IP and port.
+false_statement: A Global Accelerator standard accelerator supports only VPC subnet endpoints and maps each user deterministically to a specific private IP and port.
+explanation: Deterministic mapping to subnet destinations is the custom routing type. Standard accelerators send clients to the nearest healthy endpoint, which can be an NLB, ALB, EC2 instance or Elastic IP.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-global-accelerator.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 786445ec3a17b092490c932c45a179de83929c7e
+verified_on: '2026-11-15'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+- kt:aws-certified-advanced-networking-specialty
+concepts:
+- kt:aws-global-accelerator
+difficulty: 3
+created: '2026-11-21'
+status: active

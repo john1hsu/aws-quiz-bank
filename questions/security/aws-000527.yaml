@@ -1,0 +1,17 @@
+id: aws-000527
+product_area: security
+true_statement: AWS CloudHSM charges an hourly fee for each provisioned HSM, while a cluster with zero HSMs and its automatic backups are not billed.
+false_statement: AWS CloudHSM charges an hourly fee for each cluster, even one with zero HSMs, while its automatic backups are not billed.
+explanation: Billing follows provisioned HSM hours, regardless of how much they are used. An empty cluster costs nothing, though data transfer is billed separately and there is no free tier.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-cloudhsm.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: e1c85bef4b9ea8c63e95e66dfc44452edd24207d
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:aws-cloudhsm
+difficulty: 2
+created: '2026-11-21'
+status: active

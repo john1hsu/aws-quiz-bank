@@ -1,0 +1,18 @@
+id: aws-000523
+product_area: public-sector-and-compliance
+true_statement: Because AWS cannot see what customers upload, it treats all customer data in AWS GovCloud (US) as ITAR data and applies the same controls to all of it.
+false_statement: Because AWS cannot see what customers upload, it applies ITAR controls in AWS GovCloud (US) only to data that customers tag as export-controlled.
+explanation: With no visibility into content, AWS assumes everything in GovCloud could be ITAR-regulated and handles it uniformly. There is no tag-driven scoping of those controls.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/itar-on-aws.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 8e5cd0948ee1792128518228ccf00d79acb3c582
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:itar-on-aws
+- kt:aws-govcloud-us
+difficulty: 2
+created: '2026-11-21'
+status: active

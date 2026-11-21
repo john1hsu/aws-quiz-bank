@@ -1,0 +1,18 @@
+id: aws-000575
+product_area: databases
+true_statement: The RDS API token bucket that Aurora shares holds up to 300 tokens per account per Region and refills at 12 tokens per second.
+false_statement: The RDS API token bucket that Aurora shares holds up to 300 tokens per account per Region and refills at 1 token per second.
+explanation: A drained bucket refills at 12 tokens a second, taking about 25 seconds. The limit sits outside Service Quotas, so raising it means a Support case with measured peak rates.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/aurora-quotas.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: d0edbdf92e2e6010b0856700fc09daf912fdb349
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aurora-quotas
+- kt:amazon-rds
+difficulty: 3
+created: '2026-11-21'
+status: active

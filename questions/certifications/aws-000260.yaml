@@ -6,8 +6,8 @@ explanation: The CloudOps title goes only to people who pass SOA-C03. Holders of
 source:
   repo: john1hsu/aws-graph
   path: articles/certifications/aws-certification-program.md
-  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
-  blob: 743d929073777b883c498fae32a48a5e27d21a13
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 105644980544ab9a2ec7c8073529ce27fcfb00ea
 verified_on: '2026-11-12'
 feature_status: concept
 concepts:

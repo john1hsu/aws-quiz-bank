@@ -1,0 +1,17 @@
+id: aws-000551
+product_area: analytics
+true_statement: Despite the renames from QuickSight to AWS Quick, the service's APIs still use the quicksight namespace and endpoints.
+false_statement: With the renames from QuickSight to AWS Quick, the service's APIs moved to a new quick namespace and endpoints.
+explanation: 'The product name changed but the API surface did not: SDK calls and endpoints keep the quicksight prefix, and existing integrations keep working.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-quick.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 8ea2708b3854aac9828e44c46011aa4aef105089
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:amazon-quick
+difficulty: 2
+created: '2026-11-21'
+status: active

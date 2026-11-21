@@ -1,0 +1,18 @@
+id: aws-000552
+product_area: analytics
+true_statement: Individuals can sign up for AWS Quick with an email or social login and no AWS account, while organizations provision it through the AWS Management Console.
+false_statement: Individuals need an AWS account to sign up for AWS Quick, while organizations can provision it with an email or social login and no AWS account.
+explanation: The individual route skips AWS accounts entirely. Organizations set Quick up in the console with IAM Identity Center or IAM federation and pay through normal AWS billing.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-quick.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 8ea2708b3854aac9828e44c46011aa4aef105089
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:amazon-quick
+- kt:iam-identity-center
+difficulty: 1
+created: '2026-11-21'
+status: active

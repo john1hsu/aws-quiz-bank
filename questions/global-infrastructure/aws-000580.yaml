@@ -1,0 +1,18 @@
+id: aws-000580
+product_area: global-infrastructure
+true_statement: An AWS Wavelength carrier gateway accepts inbound traffic from the carrier network but not inbound connections from the internet, apart from select partners.
+false_statement: An AWS Wavelength carrier gateway accepts inbound connections from the internet but not inbound traffic from the carrier network, apart from select partners.
+explanation: 'The carrier gateway is built for devices on the telco network: it takes their inbound traffic and NATs instance traffic outward. Internet-originated inbound connections are not accepted except for multi-access Wavelength partners.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-wavelength.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 28fbcff49b565cda463e33c655da6abb180b7176
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-wavelength
+- kt:amazon-vpc
+difficulty: 2
+created: '2026-11-21'
+status: active

@@ -1,0 +1,17 @@
+id: aws-000597
+product_area: networking-and-content-delivery
+true_statement: AWS Cloud Map charges $0.10 per registered resource per month and $1.00 per million discovery API calls (as of 2026-11).
+false_statement: AWS Cloud Map charges $1.00 per registered resource per month and $0.10 per million discovery API calls (as of 2026-11).
+explanation: Registry entries cost ten cents a month each and discovery calls a dollar per million. DNS namespaces add Route 53 hosted zone and query charges on top.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-cloud-map.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: ea03fcb52bc77431f36c3d6a13da47e48d4947ee
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-cloud-map
+difficulty: 2
+created: '2026-11-21'
+status: active

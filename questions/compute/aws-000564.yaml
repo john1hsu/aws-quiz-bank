@@ -1,0 +1,18 @@
+id: aws-000564
+product_area: compute
+true_statement: An AMI copy can encrypt an unencrypted image with an AWS KMS key, but an encrypted AMI can never be copied to an unencrypted one.
+false_statement: An AMI copy can decrypt an encrypted image into an unencrypted one, but an unencrypted AMI can never be encrypted during a copy.
+explanation: Encryption can be added when copying, not removed. Copying a shared encrypted AMI across accounts also needs the owner to share both the snapshots and the KMS key.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/amazon-machine-images.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 5f12876805128c3f376de0720763b2ea90fd52b1
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:amazon-machine-images
+- kt:aws-kms
+difficulty: 2
+created: '2026-11-21'
+status: active

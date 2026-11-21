@@ -1,0 +1,21 @@
+id: aws-000570
+product_area: cost-management
+true_statement: AWS billing transfer lets one external management account receive and pay the consolidated bills of several organizations, while each keeps its own security governance.
+false_statement: AWS billing transfer lets one external management account receive and pay the consolidated bills of several organizations, and also moves their security governance to it.
+explanation: 'Billing transfer separates who pays from who governs: the paying account takes over invoices, but each organization keeps control of its own security. Bill source accounts stay liable for charges from before the transfer.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-billing-and-cost-management.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 8f82f887c20127e81b32a8ba09f789c3f22ded28
+verified_on: '2026-11-16'
+feature_status: current
+certs:
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-billing-and-cost-management
+- kt:aws-billing-transfer
+- kt:aws-organizations
+difficulty: 2
+created: '2026-11-21'
+status: active

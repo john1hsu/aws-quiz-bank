@@ -1,0 +1,18 @@
+id: aws-000526
+product_area: security
+true_statement: An AWS KMS CloudHSM key store supports only symmetric AES-256 encryption keys, with no asymmetric, HMAC, imported or multi-Region keys.
+false_statement: An AWS KMS CloudHSM key store supports symmetric, asymmetric and HMAC keys, but no imported or multi-Region keys.
+explanation: Keys in a CloudHSM-backed custom key store are limited to symmetric AES-256 encryption keys whose material stays in your HSMs. Asymmetric and HMAC keys are among the types it cannot hold.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-cloudhsm.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: e1c85bef4b9ea8c63e95e66dfc44452edd24207d
+verified_on: '2026-11-15'
+feature_status: current
+concepts:
+- kt:aws-cloudhsm
+- kt:aws-kms
+difficulty: 3
+created: '2026-11-21'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000541
+product_area: ai-and-ml
+true_statement: Since 30 July 2026, Bedrock Agents Classic blocks CreateAgent and InvokeInlineAgent only for accounts with no Bedrock Agents usage in the previous 12 months.
+false_statement: Since 30 July 2026, Bedrock Agents Classic blocks CreateAgent and InvokeInlineAgent only for accounts with no Bedrock Agents usage in the previous 90 days.
+explanation: The closed-to-new-customers rule looks back 12 months of usage, and affected accounts get an AccessDeniedException with no exception process. Other APIs such as InvokeAgent keep working.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock-agents.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 34ea3ec14ccb0e47e9169080cf7bc86a4f76a717
+verified_on: '2026-11-16'
+feature_status: closed-to-new-customers
+concepts:
+- kt:amazon-bedrock-agents
+- kt:amazon-bedrock
+difficulty: 3
+created: '2026-11-21'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000542
+product_area: ai-and-ml
+true_statement: Amazon Bedrock Agents Classic is closed to new customers but has no planned end-of-life date or migration deadline (as of 2026-11).
+false_statement: Amazon Bedrock Agents Classic is closed to new customers and has a planned end-of-life date that sets the migration deadline (as of 2026-11).
+explanation: AWS keeps operating and supporting Agents Classic for existing users and has announced no shutdown date. It recommends AgentCore for new work rather than forcing a migration.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-bedrock-agents.md
+  commit: 5565a7f533e74ad2c450eb9a20e6fa1ebc966770
+  blob: 34ea3ec14ccb0e47e9169080cf7bc86a4f76a717
+verified_on: '2026-11-16'
+feature_status: closed-to-new-customers
+concepts:
+- kt:amazon-bedrock-agents
+- kt:amazon-bedrock-agentcore
+difficulty: 2
+created: '2026-11-21'
+status: active
