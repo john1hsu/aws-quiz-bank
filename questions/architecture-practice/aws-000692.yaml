@@ -1,0 +1,18 @@
+id: aws-000692
+product_area: architecture-practice
+true_statement: Shuffle sharding works only if clients retry against the other workers in their combination when some of them are degraded.
+false_statement: Shuffle sharding works only if clients send each request to a single fixed worker and never retry when that worker is degraded.
+explanation: A customer's combination may overlap with an impaired one, so callers must route around the bad workers. The retry count also sets how many workers a shard can usefully hold.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/shuffle-sharding.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: b1071f42f38ef174bc42497dac9b1659cf91c762
+verified_on: '2026-11-18'
+feature_status: concept
+concepts:
+- kt:shuffle-sharding
+- kt:retry-with-backoff
+difficulty: 2
+created: '2026-11-23'
+status: active

@@ -1,0 +1,17 @@
+id: aws-000640
+product_area: cost-management
+true_statement: A new AWS Cost Anomaly Detection monitor needs at least 10 days of usage data before it can find anomalies.
+false_statement: A new AWS Cost Anomaly Detection monitor needs at least 90 days of usage data before it can find anomalies.
+explanation: The models need about ten days of history to learn expected spend, and a newly used service waits for the same ten days. Three months of history isn't required.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-cost-anomaly-detection.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: e9f5f9a68b621e81e5053d3632daa351e608554e
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-cost-anomaly-detection
+difficulty: 2
+created: '2026-11-23'
+status: active

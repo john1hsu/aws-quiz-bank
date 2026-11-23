@@ -1,0 +1,17 @@
+id: aws-000667
+product_area: networking-and-content-delivery
+true_statement: In AWS Cloud WAN each attachment lands in exactly one segment, and by default only attachments in the same segment can reach each other.
+false_statement: In AWS Cloud WAN each attachment can join several segments, and by default attachments in every segment can reach each other.
+explanation: A segment is an isolated routing domain, much like a global VRF. Routes cross segments only when the policy shares them, for example for shared services or central egress.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-cloud-wan.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: e3084ef3c7ba7877cbdc48b68a108f63ca997f7a
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-cloud-wan
+difficulty: 2
+created: '2026-11-23'
+status: active

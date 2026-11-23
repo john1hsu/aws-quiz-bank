@@ -1,0 +1,18 @@
+id: aws-000626
+product_area: certifications
+true_statement: As of 2026-11, AWS Certified Generative AI Developer – Professional can be renewed only by passing the latest exam; no one-year Skill Builder maintenance option is listed.
+false_statement: As of 2026-11, AWS Certified Generative AI Developer – Professional can be renewed by passing the latest exam or extended one year through Skill Builder maintenance.
+explanation: Some AWS credentials offer a paid Skill Builder route that adds a year, but this one doesn't list it. Retaking the current exam version is the only renewal path.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-generative-ai-developer-professional.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 0ada7978ccd686050e234d5c8684c57b7108a2fc
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-certified-generative-ai-developer-professional
+- kt:aws-skill-builder
+difficulty: 2
+created: '2026-11-23'
+status: active

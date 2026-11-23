@@ -1,0 +1,18 @@
+id: aws-000633
+product_area: compute
+true_statement: On-Demand Capacity Reservations have no count limit of their own; they draw on the Region's On-Demand Instance quota, whether or not instances fill them.
+false_statement: On-Demand Capacity Reservations have a count limit of their own per Availability Zone, separate from the Region's On-Demand Instance quota.
+explanation: Reserved capacity, used or idle, counts against the same On-Demand Instance quota that running instances use. There is no separate reservation quota to raise.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/on-demand-capacity-reservations.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 939dd3214c7b5407773f8142dc0685cba8419a89
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:on-demand-capacity-reservations
+- kt:service-quotas
+difficulty: 2
+created: '2026-11-23'
+status: active

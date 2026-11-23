@@ -1,0 +1,18 @@
+id: aws-000642
+product_area: cost-management
+true_statement: Cost Anomaly Detection monitors on linked accounts, tags or cost categories can be created only in the Organizations management account; member accounts get only the AWS services monitor.
+false_statement: Cost Anomaly Detection monitors on linked accounts, tags or cost categories can be created in any member account; the Organizations management account gets only the AWS services monitor.
+explanation: Organization-wide dimensions are reserved for the management account, and anomalies show only in the account that owns the monitor. Member accounts are limited to watching AWS services.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-cost-anomaly-detection.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: e9f5f9a68b621e81e5053d3632daa351e608554e
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-cost-anomaly-detection
+- kt:aws-organizations
+difficulty: 3
+created: '2026-11-23'
+status: active

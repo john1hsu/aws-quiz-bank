@@ -1,0 +1,18 @@
+id: aws-000612
+product_area: storage
+true_statement: Since 2026-09-01, AWS Backup can protect every S3 general purpose bucket up to the account's S3 bucket quota, replacing the earlier cap of 1,000 buckets.
+false_statement: Since 2026-09-01, AWS Backup can protect at most 1,000 S3 general purpose buckets per account, regardless of the account's S3 bucket quota.
+explanation: The old 1,000-bucket ceiling on AWS Backup's S3 coverage was lifted, so the S3 bucket quota now sets the limit. Custom IAM policies may need new permissions for it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/aws-backup-quotas.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: a93347d81472b31d192e3891a43f39bd9ffefd77
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-backup-quotas
+- kt:amazon-s3-quotas
+difficulty: 3
+created: '2026-11-23'
+status: active

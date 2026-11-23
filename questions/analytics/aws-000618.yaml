@@ -1,0 +1,20 @@
+id: aws-000618
+product_area: analytics
+true_statement: Stateful stream jobs such as windowed aggregations suit Managed Service for Apache Flink, while landing a stream in a destination with no stateful logic is simpler with Amazon Data Firehose.
+false_statement: Stateful stream jobs such as windowed aggregations suit Amazon Data Firehose, while landing a stream in a destination with no stateful logic is simpler with Managed Service for Apache Flink.
+explanation: Flink is built for stateful, low-latency processing like joins and windowed aggregates. Firehose is a delivery service for moving a stream into a destination, and it's often a sink for Flink jobs.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-managed-service-for-apache-flink.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 26890687f20856ecc5e81064834b39eb38ee7a1d
+verified_on: '2026-11-17'
+feature_status: current
+certs:
+- kt:aws-certified-data-engineer-associate
+concepts:
+- kt:amazon-managed-service-for-apache-flink
+- kt:amazon-data-firehose
+difficulty: 2
+created: '2026-11-23'
+status: active

@@ -1,0 +1,17 @@
+id: aws-000650
+product_area: devops-and-iac
+true_statement: Amazon's two-pizza team rule caps a team at the size two pizzas can feed, on the view that smaller teams collaborate better and ship faster.
+false_statement: Amazon's two-pizza team rule requires every team to include two operations engineers, on the view that shared on-call duty makes teams ship faster.
+explanation: 'The rule is about team size: keep teams small enough that two pizzas feed them, since more people add coordination overhead. It says nothing about a fixed number of operations staff.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/devops.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 98e8be7d13d9e482b135f57883327d14503174f7
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:devops
+difficulty: 1
+created: '2026-11-23'
+status: active

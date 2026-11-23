@@ -1,0 +1,17 @@
+id: aws-000688
+product_area: analytics
+true_statement: In an AWS Clean Rooms collaboration, exactly one member can run queries and exactly one can receive results, and those roles can't be changed after creation.
+false_statement: In an AWS Clean Rooms collaboration, every member can run queries and receive results, and those roles can be reassigned at any time after creation.
+explanation: Clean Rooms fixes a single querying member and a single result receiver when the collaboration is created. Because they can't be changed later, they need planning up front; only payer candidates can be several.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/aws-clean-rooms.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 045ac85ceb06f16e7f9cf4fb6d5913c6cd93270a
+verified_on: '2026-11-18'
+feature_status: current
+concepts:
+- kt:aws-clean-rooms
+difficulty: 2
+created: '2026-11-23'
+status: active

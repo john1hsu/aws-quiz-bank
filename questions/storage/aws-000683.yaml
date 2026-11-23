@@ -1,0 +1,18 @@
+id: aws-000683
+product_area: storage
+true_statement: EBS quotas on in-flight Elastic Volumes changes count the combined current size or IOPS of the volumes being modified, not the number of modification requests.
+false_statement: EBS quotas on in-flight Elastic Volumes changes count the number of modification requests in progress, not the combined size or IOPS of the volumes being modified.
+explanation: Because the limit is measured in TiB or IOPS, resizing a few very large volumes at once can use it all up, while many small volumes would not.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/ebs-quotas.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 4c3aff0aee5de7040269216dfd626a788d83abe3
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:ebs-quotas
+- kt:amazon-ebs
+difficulty: 3
+created: '2026-11-23'
+status: active

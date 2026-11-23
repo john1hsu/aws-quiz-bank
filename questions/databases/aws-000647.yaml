@@ -1,0 +1,18 @@
+id: aws-000647
+product_area: databases
+true_statement: A calculated DynamoDB shard suffix, such as a hash of an order ID, lets a point read recompute the key and use GetItem, while a random suffix forces reads across every suffix.
+false_statement: A random DynamoDB shard suffix, such as 1–200 picked at write time, lets a point read recompute the key and use GetItem, while a calculated suffix forces reads across every suffix.
+explanation: When the suffix is derived from a queried attribute, the reader can work it out again and fetch one item directly. A random suffix spreads writes just as well but leaves the reader querying all shards and merging.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/dynamodb-partition-key-design.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 58b5f25526ceb5db077f4c410668068fe16687f5
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:dynamodb-partition-key-design
+- kt:dynamodb-hot-partitions
+difficulty: 3
+created: '2026-11-23'
+status: active

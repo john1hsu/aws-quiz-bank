@@ -1,0 +1,22 @@
+id: aws-000671
+product_area: networking-and-content-delivery
+true_statement: A Site-to-Site VPN Large Bandwidth Tunnel carries up to 5 Gbps but is available only on transit gateway and Cloud WAN attachments, not on a virtual private gateway.
+false_statement: A Site-to-Site VPN Large Bandwidth Tunnel carries up to 5 Gbps but is available only on a virtual private gateway, not on transit gateway or Cloud WAN attachments.
+explanation: Large tunnels need a transit gateway or Cloud WAN target. A virtual private gateway is limited to standard tunnels of up to 1.25 Gbps.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-site-to-site-vpn.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 91b41c68ded47d30a4bfc7dbfc84cd1ad5a132ab
+verified_on: '2026-11-17'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-site-to-site-vpn
+- kt:aws-transit-gateway
+- kt:aws-cloud-wan
+difficulty: 3
+created: '2026-11-23'
+status: active

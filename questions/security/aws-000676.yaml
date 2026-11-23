@@ -1,0 +1,18 @@
+id: aws-000676
+product_area: security
+true_statement: KMS calls that S3, EBS and other services make on your behalf for server-side encryption count against your account's KMS request quotas.
+false_statement: KMS calls that S3, EBS and other services make on your behalf for server-side encryption count against the calling service's own quota, not your account's.
+explanation: Integrated services spend your account's KMS request budget, which is why request quotas usually bite in production. Only AWS owned keys never count against it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/kms-quotas.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: ec0b82078bfd2d88145d51a0a9cd183e7933f6e4
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:kms-quotas
+- kt:aws-kms
+difficulty: 2
+created: '2026-11-23'
+status: active

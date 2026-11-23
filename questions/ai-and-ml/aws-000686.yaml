@@ -1,0 +1,17 @@
+id: aws-000686
+product_area: ai-and-ml
+true_statement: An Amazon Kendra index's edition is chosen when the index is created and can't be changed afterwards.
+false_statement: An Amazon Kendra index's edition can be upgraded in place, for example from Basic Developer to Basic Enterprise, without recreating the index.
+explanation: The Edition parameter is set in CreateIndex and is fixed for the life of the index. Moving to another edition means building a new index.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-kendra.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 39c24e88ead680bab1029b65c830844f068ffe25
+verified_on: '2026-11-18'
+feature_status: closed-to-new-customers
+concepts:
+- kt:amazon-kendra
+difficulty: 2
+created: '2026-11-23'
+status: active

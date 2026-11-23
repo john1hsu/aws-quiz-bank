@@ -1,0 +1,18 @@
+id: aws-000675
+product_area: public-sector-and-compliance
+true_statement: Because AWS is not a Shared Hosting Provider under PCI DSS, requirement A1.4 doesn't apply, and customers run their own forensic investigations.
+false_statement: Because AWS is a Shared Hosting Provider under PCI DSS, requirement A1.4 applies, and AWS runs forensic investigations for its customers.
+explanation: Requirement A1.4 places forensic duties on shared hosting providers, a category AWS doesn't fall into. Investigating an incident in a CDE stays with the customer.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/pci-dss-on-aws.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 44de9a9ba4f4ad1a5fd9311b2834c03b08227de5
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:pci-dss-on-aws
+- kt:shared-responsibility-model
+difficulty: 3
+created: '2026-11-23'
+status: active

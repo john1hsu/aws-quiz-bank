@@ -1,0 +1,18 @@
+id: aws-000627
+product_area: certifications
+true_statement: 'AIP-C01 is a developer exam: model development and training, advanced ML techniques, and feature engineering are out of scope for the candidate.'
+false_statement: 'AIP-C01 is a data-science exam: model development and training, advanced ML techniques, and feature engineering are core in-scope tasks for the candidate.'
+explanation: The Generative AI Developer exam is about integrating foundation models into production apps with RAG, agents and guardrails. Training and tuning custom models is the territory of Machine Learning Engineer – Associate.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-generative-ai-developer-professional.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 0ada7978ccd686050e234d5c8684c57b7108a2fc
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-certified-generative-ai-developer-professional
+- kt:aws-certified-machine-learning-engineer-associate
+difficulty: 2
+created: '2026-11-23'
+status: active

@@ -1,0 +1,18 @@
+id: aws-000646
+product_area: databases
+true_statement: As of 2026-11, each DynamoDB partition can serve at most 3,000 read units and 1,000 write units per second.
+false_statement: As of 2026-11, each DynamoDB partition can serve at most 1,000 read units and 3,000 write units per second.
+explanation: The per-partition ceiling is higher for reads (3,000) than for writes (1,000). Traffic concentrated on one key hits that ceiling even when the table has spare capacity.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/dynamodb-partition-key-design.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 58b5f25526ceb5db077f4c410668068fe16687f5
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:dynamodb-partition-key-design
+- kt:dynamodb-quotas
+difficulty: 2
+created: '2026-11-23'
+status: active

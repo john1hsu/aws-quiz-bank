@@ -1,0 +1,17 @@
+id: aws-000680
+product_area: serverless-and-integration
+true_statement: An Amazon SWF workflow execution can run for at most one year and record at most 25,000 history events, and both are hard quotas.
+false_statement: An Amazon SWF workflow execution can run for at most one year and record at most 25,000 history events, and both can be raised through Service Quotas.
+explanation: Execution duration and history size are fixed limits; only account-level API throttles can be raised. AWS advises keeping executions under 10,000 events.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-swf.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 0abf590eff19da8ac311b694490b58eefbdbcc70
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:amazon-swf
+difficulty: 2
+created: '2026-11-23'
+status: active

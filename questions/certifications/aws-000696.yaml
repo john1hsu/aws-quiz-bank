@@ -1,0 +1,17 @@
+id: aws-000696
+product_area: certifications
+true_statement: AWS Builder Labs run guided exercises in a real AWS console inside a sandbox account, so learners don't pay for the resources they use.
+false_statement: AWS Builder Labs run guided exercises in the learner's own AWS account, so learners pay for the resources they use at normal rates.
+explanation: Builder Labs, part of paid Skill Builder subscriptions, provide a sandbox account for hands-on practice. That's why AWS pitches them as realistic practice without spending money in your own account.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-skill-builder.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 754f3859e3332dffc4d9342d05cd5955dbcfd140
+verified_on: '2026-11-18'
+feature_status: current
+concepts:
+- kt:aws-skill-builder
+difficulty: 1
+created: '2026-11-23'
+status: active

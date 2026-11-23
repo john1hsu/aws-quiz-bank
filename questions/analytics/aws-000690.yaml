@@ -1,0 +1,17 @@
+id: aws-000690
+product_area: analytics
+true_statement: When two AWS Clean Rooms data owners set different aggregation thresholds, the higher threshold applies and rows below it are silently dropped from results.
+false_statement: When two AWS Clean Rooms data owners set different aggregation thresholds, the lower threshold applies and rows below it are returned with a warning.
+explanation: The most restrictive rule wins when tables are joined. Rows that miss the higher threshold just disappear, which can make small segments look empty.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/aws-clean-rooms.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 045ac85ceb06f16e7f9cf4fb6d5913c6cd93270a
+verified_on: '2026-11-18'
+feature_status: current
+concepts:
+- kt:aws-clean-rooms
+difficulty: 3
+created: '2026-11-23'
+status: active

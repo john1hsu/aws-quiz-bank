@@ -1,0 +1,18 @@
+id: aws-000661
+product_area: migration-and-hybrid
+true_statement: In AWS portfolio assessment, portfolio-level work gathers high-level data on the whole estate, while application-level work details each app's architecture in small batches aligned to waves.
+false_statement: In AWS portfolio assessment, application-level work gathers high-level data on the whole estate, while portfolio-level work details each app's architecture in small batches aligned to waves.
+explanation: 'Breadth comes first: names, environments, criticality and utilization for everything. Depth, the slow per-app target design, is done just ahead of each wave rather than for the whole estate at once.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/application-portfolio-assessment.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 733000294f2616804f2cb107d80040b48e49bf1e
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:application-portfolio-assessment
+- kt:migration-wave-planning
+difficulty: 2
+created: '2026-11-23'
+status: active

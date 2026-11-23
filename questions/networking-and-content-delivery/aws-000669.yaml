@@ -1,0 +1,17 @@
+id: aws-000669
+product_area: networking-and-content-delivery
+true_statement: As of 2026-11, AWS Cloud WAN's $0.50 per hour core network edge charge and $0.02 per GB data processing are the same in every Region.
+false_statement: As of 2026-11, AWS Cloud WAN's $0.50 per hour core network edge charge and $0.02 per GB data processing apply only in US East (N. Virginia), with other Regions priced differently.
+explanation: The edge and data-processing rates are uniform across Regions. What varies by Region is the hourly fee per attachment and per transit gateway peering.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-cloud-wan.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: e3084ef3c7ba7877cbdc48b68a108f63ca997f7a
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-cloud-wan
+difficulty: 2
+created: '2026-11-23'
+status: active

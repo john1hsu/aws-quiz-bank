@@ -1,0 +1,20 @@
+id: aws-000605
+product_area: serverless-and-integration
+true_statement: Amazon MQ bills per broker-instance hour, so an idle broker still costs money, while Amazon SQS charges per request.
+false_statement: Amazon MQ bills per message request, so an idle broker costs nothing, while Amazon SQS charges per queue-instance hour.
+explanation: With Amazon MQ you pay for the broker instances you run (plus storage and data transfer) whether or not messages flow. SQS has no brokers and charges for the requests you make.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-mq.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 958832557034e81e3409d5fd722b97d636b3c250
+verified_on: '2026-11-16'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-mq
+- kt:amazon-sqs
+difficulty: 2
+created: '2026-11-23'
+status: active

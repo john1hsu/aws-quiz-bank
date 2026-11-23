@@ -1,0 +1,18 @@
+id: aws-000663
+product_area: migration-and-hybrid
+true_statement: AWS describes the cost estimates from an AWS Transform assessment as directional, not quotes or guarantees, and suggests an account team or Partner for precise planning.
+false_statement: AWS describes the cost estimates from an AWS Transform assessment as binding quotes that AWS guarantees, so no account team or Partner is needed for precise planning.
+explanation: The assessment's TCO output is meant to steer early decisions and the business case. For firm numbers, AWS points customers to their account team or a Partner.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/application-portfolio-assessment.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 733000294f2616804f2cb107d80040b48e49bf1e
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:application-portfolio-assessment
+- kt:aws-transform
+difficulty: 1
+created: '2026-11-23'
+status: active

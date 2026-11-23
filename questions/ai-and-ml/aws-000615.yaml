@@ -1,0 +1,20 @@
+id: aws-000615
+product_area: ai-and-ml
+true_statement: AWS suggests starting generative AI inference on Amazon Bedrock and moving to SageMaker AI or self-managed hosting only when Bedrock can't meet a specific need.
+false_statement: AWS suggests starting generative AI inference on self-managed EC2 hosting and moving to Amazon Bedrock only when self-hosting can't meet a specific need.
+explanation: 'The guidance runs from least to most operational ownership: begin with managed Bedrock, then go down the stack for reasons like a missing model, deeper serving control, Region gaps or steady high volume.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/generative-ai-on-aws.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 67017e9cd67780673aeccae0ac53a28f7fb15706
+verified_on: '2026-11-17'
+feature_status: concept
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:generative-ai-on-aws
+- kt:amazon-bedrock
+difficulty: 1
+created: '2026-11-23'
+status: active

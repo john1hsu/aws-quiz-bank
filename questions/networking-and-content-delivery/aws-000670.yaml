@@ -1,0 +1,20 @@
+id: aws-000670
+product_area: networking-and-content-delivery
+true_statement: Each AWS Site-to-Site VPN connection contains two encrypted tunnels that can carry traffic at the same time, for redundancy on the AWS side.
+false_statement: Each AWS Site-to-Site VPN connection contains one encrypted tunnel, and redundancy on the AWS side requires creating a second VPN connection.
+explanation: Two tunnels come with every Site-to-Site VPN connection, and both can be active together. A second connection isn't needed for AWS-side redundancy.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-site-to-site-vpn.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 91b41c68ded47d30a4bfc7dbfc84cd1ad5a132ab
+verified_on: '2026-11-17'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-site-to-site-vpn
+difficulty: 1
+created: '2026-11-23'
+status: active

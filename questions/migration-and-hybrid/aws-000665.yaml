@@ -1,0 +1,17 @@
+id: aws-000665
+product_area: migration-and-hybrid
+true_statement: AWS's migration assessment guide recommends 6–10 weeks per migration wave, and work that needs longer, such as a full rewrite, runs outside the wave cadence.
+false_statement: AWS's migration assessment guide recommends 6–10 months per migration wave, and work that needs longer, such as a full rewrite, runs outside the wave cadence.
+explanation: Waves are meant to be short, repeatable increments of a few weeks each. Long refactoring efforts are kept separate so they don't stall the rhythm.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/migration-wave-planning.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 2a6b5f300e427858b870e5e7ffd2a15f16915153
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:migration-wave-planning
+difficulty: 2
+created: '2026-11-23'
+status: active

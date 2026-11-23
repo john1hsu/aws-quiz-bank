@@ -1,0 +1,20 @@
+id: aws-000652
+product_area: devops-and-iac
+true_statement: A failed Elastic Beanstalk immutable update is undone by deleting its temporary Auto Scaling group, so the fleet is never left half-deployed, unlike a failed rolling update.
+false_statement: A failed Elastic Beanstalk rolling update is undone by deleting its temporary Auto Scaling group, so the fleet is never left half-deployed, unlike a failed immutable update.
+explanation: Immutable updates build the new version in a separate, temporary group and only move it in after health checks pass. Rolling updates change existing instances batch by batch, so a failure can leave a mix of versions.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/immutable-infrastructure.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: ea8a774142882265192146cdc65ea3def493bc8f
+verified_on: '2026-11-17'
+feature_status: concept
+certs:
+- kt:aws-certified-devops-engineer-professional
+concepts:
+- kt:immutable-infrastructure
+- kt:aws-elastic-beanstalk
+difficulty: 2
+created: '2026-11-23'
+status: active

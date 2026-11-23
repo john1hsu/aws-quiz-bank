@@ -1,0 +1,18 @@
+id: aws-000659
+product_area: identity-and-access
+true_statement: Amazon Cognito is for the customers of your web and mobile apps, while IAM Identity Center is for employees signing in to AWS accounts and business applications.
+false_statement: IAM Identity Center is for the customers of your web and mobile apps, while Amazon Cognito is for employees signing in to AWS accounts and business applications.
+explanation: Cognito is AWS's customer identity service, with its own sign-up and sign-in for app users. Workforce access to AWS accounts belongs to IAM Identity Center.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/amazon-cognito.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 42024cd21972c414fa25e352e5db452281f0bff5
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:amazon-cognito
+- kt:iam-identity-center
+difficulty: 1
+created: '2026-11-23'
+status: active

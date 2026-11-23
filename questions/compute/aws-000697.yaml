@@ -1,0 +1,17 @@
+id: aws-000697
+product_area: compute
+true_statement: With IMDSv2, a caller first sends a PUT request to get a session token, then includes that token in a header on each GET for instance metadata.
+false_statement: With IMDSv2, a caller first sends a GET request to get a session token, then includes that token in the query string of each PUT for instance metadata.
+explanation: 'IMDSv2 is session-based: a PUT to the token path returns a token with a TTL, which goes in the X-aws-ec2-metadata-token header on later GETs. Many open WAFs and proxies don''t forward PUT, which helps block abuse.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/ec2-instance-metadata-service.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: ed7676321b70ccc25162f4c09107b53e284e1060
+verified_on: '2026-11-18'
+feature_status: current
+concepts:
+- kt:ec2-instance-metadata-service
+difficulty: 2
+created: '2026-11-23'
+status: active

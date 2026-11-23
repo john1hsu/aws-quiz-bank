@@ -1,0 +1,18 @@
+id: aws-000619
+product_area: architecture-practice
+true_statement: A workload that launches replacement capacity in another AZ only after a failure is bimodal, while a statically stable one already has that capacity running.
+false_statement: A workload that already has replacement capacity running in another AZ is bimodal, while a statically stable one launches that capacity only after a failure.
+explanation: Bimodal means acting one way normally and another way in a failure. Static stability avoids that by pre-provisioning, so nothing has to change mode or call a control plane when a zone is lost.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/static-stability.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 5054c7d1b31300b27d2e92a1b80d65d551f7620f
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:static-stability
+- kt:bimodal-behavior
+difficulty: 2
+created: '2026-11-23'
+status: active

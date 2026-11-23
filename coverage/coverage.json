@@ -1,61 +1,61 @@
 {
  "totals": {
-  "active": 589
+  "active": 686
  },
  "areas": {
   "ai-and-ml": {
-   "active": 36
+   "active": 42
   },
   "analytics": {
-   "active": 36
+   "active": 42
   },
   "architecture-practice": {
-   "active": 36
+   "active": 42
   },
   "certifications": {
-   "active": 31
+   "active": 40
   },
   "compute": {
-   "active": 33
+   "active": 40
   },
   "containers": {
-   "active": 31
+   "active": 37
   },
   "cost-management": {
-   "active": 36
+   "active": 39
   },
   "databases": {
-   "active": 33
+   "active": 39
   },
   "devops-and-iac": {
-   "active": 33
+   "active": 39
   },
   "global-infrastructure": {
-   "active": 33
+   "active": 36
   },
   "governance-and-operations": {
    "active": 36
   },
   "identity-and-access": {
-   "active": 33
+   "active": 36
   },
   "migration-and-hybrid": {
-   "active": 33
+   "active": 39
   },
   "networking-and-content-delivery": {
-   "active": 31
+   "active": 37
   },
   "public-sector-and-compliance": {
-   "active": 33
+   "active": 36
   },
   "security": {
-   "active": 30
+   "active": 36
   },
   "serverless-and-integration": {
-   "active": 25
+   "active": 34
   },
   "storage": {
-   "active": 30
+   "active": 36
   }
  },
  "articles": {
@@ -77,6 +77,9 @@
   "articles/ai-and-ml/amazon-comprehend.md": {
    "active": 3
   },
+  "articles/ai-and-ml/amazon-kendra.md": {
+   "active": 3
+  },
   "articles/ai-and-ml/amazon-q-business.md": {
    "active": 3
   },
@@ -95,6 +98,9 @@
   "articles/ai-and-ml/aws-trainium-and-inferentia.md": {
    "active": 3
   },
+  "articles/ai-and-ml/generative-ai-on-aws.md": {
+   "active": 3
+  },
   "articles/analytics/amazon-athena.md": {
    "active": 3
   },
@@ -105,6 +111,9 @@
    "active": 3
   },
   "articles/analytics/amazon-kinesis-data-streams.md": {
+   "active": 3
+  },
+  "articles/analytics/amazon-managed-service-for-apache-flink.md": {
    "active": 3
   },
   "articles/analytics/amazon-msk.md": {
@@ -120,6 +129,9 @@
    "active": 3
   },
   "articles/analytics/aws-analytics-services.md": {
+   "active": 3
+  },
+  "articles/analytics/aws-clean-rooms.md": {
    "active": 3
   },
   "articles/analytics/aws-glue.md": {
@@ -164,6 +176,12 @@
   "articles/architecture-practice/security-pillar.md": {
    "active": 3
   },
+  "articles/architecture-practice/shuffle-sharding.md": {
+   "active": 3
+  },
+  "articles/architecture-practice/static-stability.md": {
+   "active": 3
+  },
   "articles/architecture-practice/sustainability-pillar.md": {
    "active": 3
   },
@@ -179,6 +197,9 @@
   "articles/certifications/aws-certified-cloud-practitioner.md": {
    "active": 3
   },
+  "articles/certifications/aws-certified-cloudops-engineer-associate.md": {
+   "active": 3
+  },
   "articles/certifications/aws-certified-data-engineer-associate.md": {
    "active": 1
   },
@@ -186,6 +207,9 @@
    "active": 3
   },
   "articles/certifications/aws-certified-devops-engineer-professional.md": {
+   "active": 3
+  },
+  "articles/certifications/aws-certified-generative-ai-developer-professional.md": {
    "active": 3
   },
   "articles/certifications/aws-certified-machine-learning-engineer-associate.md": {
@@ -198,6 +222,9 @@
    "active": 3
   },
   "articles/certifications/aws-certified-solutions-architect-professional.md": {
+   "active": 3
+  },
+  "articles/certifications/aws-skill-builder.md": {
    "active": 3
   },
   "articles/compute/amazon-ec2-auto-scaling.md": {
@@ -224,6 +251,12 @@
   "articles/compute/aws-nitro-system.md": {
    "active": 3
   },
+  "articles/compute/ec2-image-builder.md": {
+   "active": 3
+  },
+  "articles/compute/ec2-instance-metadata-service.md": {
+   "active": 1
+  },
   "articles/compute/ec2-instance-types.md": {
    "active": 3
   },
@@ -231,6 +264,9 @@
    "active": 3
   },
   "articles/compute/elastic-load-balancing.md": {
+   "active": 3
+  },
+  "articles/compute/on-demand-capacity-reservations.md": {
    "active": 3
   },
   "articles/containers/amazon-ecr.md": {
@@ -246,6 +282,9 @@
    "active": 3
   },
   "articles/containers/aws-fargate.md": {
+   "active": 3
+  },
+  "articles/containers/bottlerocket.md": {
    "active": 3
   },
   "articles/containers/container-networking-on-aws.md": {
@@ -266,6 +305,9 @@
   "articles/containers/fargate-quotas.md": {
    "active": 3
   },
+  "articles/containers/karpenter.md": {
+   "active": 3
+  },
   "articles/cost-management/aws-billing-and-cost-management.md": {
    "active": 3
   },
@@ -273,6 +315,9 @@
    "active": 3
   },
   "articles/cost-management/aws-compute-optimizer.md": {
+   "active": 3
+  },
+  "articles/cost-management/aws-cost-anomaly-detection.md": {
    "active": 3
   },
   "articles/cost-management/aws-cost-explorer.md": {
@@ -314,6 +359,9 @@
   "articles/databases/amazon-elasticache.md": {
    "active": 3
   },
+  "articles/databases/amazon-neptune.md": {
+   "active": 3
+  },
   "articles/databases/amazon-rds.md": {
    "active": 3
   },
@@ -327,6 +375,9 @@
    "active": 3
   },
   "articles/databases/dynamodb-global-tables.md": {
+   "active": 3
+  },
+  "articles/databases/dynamodb-partition-key-design.md": {
    "active": 3
   },
   "articles/databases/purpose-built-databases.md": {
@@ -365,6 +416,12 @@
   "articles/devops-and-iac/cloudformation-drift-detection.md": {
    "active": 3
   },
+  "articles/devops-and-iac/devops.md": {
+   "active": 3
+  },
+  "articles/devops-and-iac/immutable-infrastructure.md": {
+   "active": 3
+  },
   "articles/devops-and-iac/infrastructure-as-code.md": {
    "active": 3
   },
@@ -372,6 +429,9 @@
    "active": 3
   },
   "articles/global-infrastructure/availability-zones.md": {
+   "active": 3
+  },
+  "articles/global-infrastructure/aws-ai-factories.md": {
    "active": 3
   },
   "articles/global-infrastructure/aws-global-infrastructure.md": {
@@ -437,6 +497,9 @@
   "articles/governance-and-operations/service-quotas.md": {
    "active": 3
   },
+  "articles/identity-and-access/amazon-cognito.md": {
+   "active": 3
+  },
   "articles/identity-and-access/attribute-based-access-control.md": {
    "active": 3
   },
@@ -470,6 +533,9 @@
   "articles/identity-and-access/service-control-policies.md": {
    "active": 3
   },
+  "articles/migration-and-hybrid/application-portfolio-assessment.md": {
+   "active": 3
+  },
   "articles/migration-and-hybrid/aws-database-migration-service.md": {
    "active": 3
   },
@@ -497,6 +563,9 @@
   "articles/migration-and-hybrid/aws-transform.md": {
    "active": 3
   },
+  "articles/migration-and-hybrid/migration-wave-planning.md": {
+   "active": 3
+  },
   "articles/migration-and-hybrid/seven-rs-migration-strategies.md": {
    "active": 3
   },
@@ -521,6 +590,9 @@
   "articles/networking-and-content-delivery/aws-cloud-map.md": {
    "active": 3
   },
+  "articles/networking-and-content-delivery/aws-cloud-wan.md": {
+   "active": 3
+  },
   "articles/networking-and-content-delivery/aws-direct-connect.md": {
    "active": 3
   },
@@ -531,6 +603,9 @@
    "active": 3
   },
   "articles/networking-and-content-delivery/aws-privatelink.md": {
+   "active": 3
+  },
+  "articles/networking-and-content-delivery/aws-site-to-site-vpn.md": {
    "active": 3
   },
   "articles/networking-and-content-delivery/aws-transit-gateway.md": {
@@ -569,6 +644,9 @@
   "articles/public-sector-and-compliance/nist-sp-800-53.md": {
    "active": 3
   },
+  "articles/public-sector-and-compliance/pci-dss-on-aws.md": {
+   "active": 3
+  },
   "articles/security/amazon-guardduty.md": {
    "active": 3
   },
@@ -579,6 +657,9 @@
    "active": 3
   },
   "articles/security/aws-cloudtrail.md": {
+   "active": 3
+  },
+  "articles/security/aws-firewall-manager.md": {
    "active": 3
   },
   "articles/security/aws-kms.md": {
@@ -599,16 +680,25 @@
   "articles/security/aws-waf.md": {
    "active": 3
   },
+  "articles/security/kms-quotas.md": {
+   "active": 3
+  },
   "articles/serverless-and-integration/amazon-api-gateway.md": {
    "active": 3
   },
   "articles/serverless-and-integration/amazon-eventbridge.md": {
    "active": 3
   },
+  "articles/serverless-and-integration/amazon-mq.md": {
+   "active": 3
+  },
   "articles/serverless-and-integration/amazon-sns.md": {
    "active": 3
   },
   "articles/serverless-and-integration/amazon-sqs.md": {
+   "active": 3
+  },
+  "articles/serverless-and-integration/amazon-swf.md": {
    "active": 3
   },
   "articles/serverless-and-integration/aws-appsync.md": {
@@ -624,6 +714,9 @@
    "active": 3
   },
   "articles/serverless-and-integration/lambda-cold-starts.md": {
+   "active": 3
+  },
+  "articles/serverless-and-integration/sqs-vs-sns-vs-eventbridge.md": {
    "active": 3
   },
   "articles/storage/amazon-ebs.md": {
@@ -644,6 +737,9 @@
   "articles/storage/amazon-s3.md": {
    "active": 3
   },
+  "articles/storage/aws-backup-quotas.md": {
+   "active": 3
+  },
   "articles/storage/aws-backup.md": {
    "active": 3
   },
@@ -651,6 +747,9 @@
    "active": 3
   },
   "articles/storage/aws-storage-services.md": {
+   "active": 3
+  },
+  "articles/storage/ebs-quotas.md": {
    "active": 3
   },
   "articles/storage/s3-storage-classes.md": {

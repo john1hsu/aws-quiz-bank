@@ -1,0 +1,18 @@
+id: aws-000677
+product_area: security
+true_statement: An AWS KMS key allows 25 on-demand rotations, a quota that neither Service Quotas nor AWS Support can raise (as of 2026-11).
+false_statement: An AWS KMS key allows 25 on-demand rotations, a quota that can be raised through Service Quotas or AWS Support (as of 2026-11).
+explanation: The on-demand rotation limit is one of the few fixed KMS quotas. AWS recommends automatic rotation for keys that need regular rotation.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/kms-quotas.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: ec0b82078bfd2d88145d51a0a9cd183e7933f6e4
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:kms-quotas
+- kt:service-quotas
+difficulty: 2
+created: '2026-11-23'
+status: active

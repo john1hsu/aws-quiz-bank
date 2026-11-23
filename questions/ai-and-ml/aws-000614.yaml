@@ -1,0 +1,21 @@
+id: aws-000614
+product_area: ai-and-ml
+true_statement: Amazon Bedrock on-demand pricing has no idle cost and suits spiky traffic, while instance-based model hosting bills provisioned capacity and pays off at sustained use.
+false_statement: Instance-based model hosting has no idle cost and suits spiky traffic, while Amazon Bedrock on-demand pricing bills provisioned capacity and pays off at sustained use.
+explanation: Bedrock on-demand charges for what you invoke, so quiet periods cost nothing. Hosting on instances charges for capacity whether or not it is busy, which favours steady, high utilization.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/generative-ai-on-aws.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 67017e9cd67780673aeccae0ac53a28f7fb15706
+verified_on: '2026-11-17'
+feature_status: concept
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:generative-ai-on-aws
+- kt:amazon-bedrock
+- kt:amazon-sagemaker-ai
+difficulty: 2
+created: '2026-11-23'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000620
+product_area: architecture-practice
+true_statement: AWS Lambda pre-provisions capacity in every Availability Zone so the healthy zones can absorb an impaired zone's traffic without scaling up.
+false_statement: AWS Lambda keeps capacity in one Availability Zone at a time and launches more in a healthy zone after the active zone is impaired.
+explanation: 'Lambda is built to be statically stable: spare capacity already sits in each AZ, accepting extra cost so a zone failure needs no scale-out. Launching capacity after the fact is the control plane approach it avoids.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/static-stability.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 5054c7d1b31300b27d2e92a1b80d65d551f7620f
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:static-stability
+- kt:aws-lambda
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-23'
+status: active

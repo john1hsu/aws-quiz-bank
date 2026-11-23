@@ -1,0 +1,17 @@
+id: aws-000655
+product_area: global-infrastructure
+true_statement: For an AWS AI Factory, the customer supplies the data center floor space and power, while AWS deploys, operates and manages the accelerators, network, storage and services.
+false_statement: For an AWS AI Factory, AWS supplies the data center floor space and power, while the customer deploys, operates and manages the accelerators, network, storage and services.
+explanation: AI Factories go into a facility the customer owns or leases, and the customer handles power and space for growth. AWS runs everything installed there, and only AWS personnel operate it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-ai-factories.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: b3c7b4e4c1dbccbcf6fb7cf78b0b34e597918659
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-ai-factories
+difficulty: 1
+created: '2026-11-23'
+status: active

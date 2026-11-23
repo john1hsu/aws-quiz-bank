@@ -1,0 +1,18 @@
+id: aws-000634
+product_area: containers
+true_statement: 'Bottlerocket has no package manager: it ships as a prebuilt image with a read-only root filesystem, and updates are written to a second partition with the old image kept for rollback.'
+false_statement: 'Bottlerocket uses a package manager: it ships as a minimal image with a writable root filesystem, and updates patch individual packages in place with no previous image kept for rollback.'
+explanation: Bottlerocket is image-based. A whole new release goes onto a spare partition and the bootloader switches to it, so a host is either fully updated or can roll back in one step.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/bottlerocket.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 962548f524c4ddb00a754a23c31b4adcd34231e4
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:bottlerocket
+- kt:amazon-machine-images
+difficulty: 2
+created: '2026-11-23'
+status: active

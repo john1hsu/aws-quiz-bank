@@ -1,0 +1,19 @@
+id: aws-000662
+product_area: migration-and-hybrid
+true_statement: AWS Transform's assessment is the fast, self-service TCO path, while Migration Evaluator is the expert-led option guided by AWS Solutions Architects.
+false_statement: Migration Evaluator is the fast, self-service TCO path, while AWS Transform's assessment is the expert-led option guided by AWS Solutions Architects.
+explanation: AWS Transform takes existing exports such as RVTools or CMDB data and builds a business case on its own. Migration Evaluator is the separate engagement with deeper data collection and SQL Server analysis led by AWS experts.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/application-portfolio-assessment.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 733000294f2616804f2cb107d80040b48e49bf1e
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:application-portfolio-assessment
+- kt:aws-transform
+- kt:migration-evaluator
+difficulty: 2
+created: '2026-11-23'
+status: active

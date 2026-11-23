@@ -1,0 +1,18 @@
+id: aws-000624
+product_area: certifications
+true_statement: CloudOps Engineer – Associate targets operating and troubleshooting existing workloads, while Solutions Architect – Associate tests designing them.
+false_statement: Solutions Architect – Associate targets operating and troubleshooting existing workloads, while CloudOps Engineer – Associate tests designing them.
+explanation: The CloudOps certification is the operations-track associate, focused on running what's already built. Designing workloads is the Solutions Architect associate's job, and the CloudOps guide lists architecture design as out of scope.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-cloudops-engineer-associate.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 5781d9496f34bbcf74cb43fadb6e781dae0b2d51
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-certified-cloudops-engineer-associate
+- kt:aws-certified-solutions-architect-associate
+difficulty: 1
+created: '2026-11-23'
+status: active

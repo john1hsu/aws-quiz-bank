@@ -1,0 +1,19 @@
+id: aws-000637
+product_area: containers
+true_statement: Karpenter launches EC2 instances directly from a flexible NodePool, while Cluster Autoscaler resizes EC2 Auto Scaling groups or managed node groups.
+false_statement: Cluster Autoscaler launches EC2 instances directly from a flexible NodePool, while Karpenter resizes EC2 Auto Scaling groups or managed node groups.
+explanation: Karpenter reads pending pods' requirements and picks right-sized instances itself. Cluster Autoscaler works through pre-built groups, so instance diversity means creating many of them.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/karpenter.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: ffedfca11a1db6f38fcfb0a2279ded98606ca22b
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:karpenter
+- kt:cluster-autoscaler
+- kt:amazon-ec2-auto-scaling
+difficulty: 2
+created: '2026-11-23'
+status: active

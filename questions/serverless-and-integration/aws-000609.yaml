@@ -1,0 +1,18 @@
+id: aws-000609
+product_area: serverless-and-integration
+true_statement: As of 2026-11, an SNS topic raised to a 1 MiB maximum message size is limited to 100 subscriptions and to Firehose, SQS and Lambda endpoints.
+false_statement: As of 2026-11, an SNS topic raised to a 1 MiB maximum message size is limited to 100 subscriptions and to email, SMS and HTTP/S endpoints.
+explanation: 'Raising MaximumMessageSize above the 256 KiB default trades away endpoint choice: only Firehose, SQS and Lambda can subscribe. Email, SMS and HTTP/S subscribers aren''t allowed on such topics.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/sqs-vs-sns-vs-eventbridge.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 128a2f23d973fd053b6ecefff1fe5e13643b28d1
+verified_on: '2026-11-16'
+feature_status: concept
+concepts:
+- kt:sqs-vs-sns-vs-eventbridge
+- kt:amazon-sns
+difficulty: 3
+created: '2026-11-23'
+status: active

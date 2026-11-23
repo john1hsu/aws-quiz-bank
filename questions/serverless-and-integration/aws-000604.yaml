@@ -1,0 +1,20 @@
+id: aws-000604
+product_area: serverless-and-integration
+true_statement: For high availability, Amazon MQ for ActiveMQ runs an active/standby broker pair across two AZs, while Amazon MQ for RabbitMQ runs a three-node cluster.
+false_statement: For high availability, Amazon MQ for RabbitMQ runs an active/standby broker pair across two AZs, while Amazon MQ for ActiveMQ runs a three-node cluster.
+explanation: ActiveMQ brokers get redundancy from a standby broker in a second AZ that shares storage with the active one. RabbitMQ brokers get it from a three-node cluster; the false statement swaps the engines.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-mq.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 958832557034e81e3409d5fd722b97d636b3c250
+verified_on: '2026-11-16'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+concepts:
+- kt:amazon-mq
+- kt:availability-zones
+difficulty: 2
+created: '2026-11-23'
+status: active

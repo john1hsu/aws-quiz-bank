@@ -1,0 +1,17 @@
+id: aws-000622
+product_area: certifications
+true_statement: On the SOA-C03 CloudOps exam, Security and Compliance is the lightest domain at 16%, while three of the other domains carry 22% each.
+false_statement: On the SOA-C03 CloudOps exam, Networking and Content Delivery is the lightest domain at 16%, while three of the other domains carry 22% each.
+explanation: Security and Compliance has the smallest share at 16%; Networking and Content Delivery sits at 18%. Monitoring, Reliability and Deployment are the three 22% domains.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-cloudops-engineer-associate.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 5781d9496f34bbcf74cb43fadb6e781dae0b2d51
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-certified-cloudops-engineer-associate
+difficulty: 2
+created: '2026-11-23'
+status: active

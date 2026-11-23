@@ -1,0 +1,18 @@
+id: aws-000648
+product_area: databases
+true_statement: High-cardinality values such as user IDs make good DynamoDB partition keys, while status codes or creation dates rounded to a day concentrate traffic.
+false_statement: Low-cardinality values such as status codes make good DynamoDB partition keys, while user IDs or other unique identifiers concentrate traffic.
+explanation: Capacity spreads evenly when the workload touches many distinct key values. A handful of statuses or a single day's date funnels requests onto few partitions and invites throttling.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/dynamodb-partition-key-design.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 58b5f25526ceb5db077f4c410668068fe16687f5
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:dynamodb-partition-key-design
+- kt:amazon-dynamodb
+difficulty: 1
+created: '2026-11-23'
+status: active

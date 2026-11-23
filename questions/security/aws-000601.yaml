@@ -1,0 +1,18 @@
+id: aws-000601
+product_area: security
+true_statement: 'AWS Firewall Manager policies are Regional: a policy covers resources only in its own Region, so a multi-Region estate needs a policy per Region.'
+false_statement: 'AWS Firewall Manager policies are global: one policy covers resources in every Region of the organization, so a multi-Region estate needs a single policy.'
+explanation: Each Firewall Manager policy is tied to one Region and can only include resources there. Covering several Regions means creating a policy in each of them.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-firewall-manager.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 25fa18beb36cfa5dccc90a3937114da611429ef3
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-firewall-manager
+- kt:aws-regions
+difficulty: 2
+created: '2026-11-23'
+status: active

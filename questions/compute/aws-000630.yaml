@@ -1,0 +1,20 @@
+id: aws-000630
+product_area: compute
+true_statement: EC2 Image Builder checks that Amazon Inspector is activated only when a pipeline or image is created or updated, so deactivating Inspector later silently drops findings.
+false_statement: EC2 Image Builder checks that Amazon Inspector is activated on every build, so deactivating Inspector later makes each following build fail.
+explanation: The activation check runs only at create or update time. If Inspector is turned off afterwards, builds keep succeeding but no longer get vulnerability findings.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/ec2-image-builder.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 87d81e4acddfc25e59ef5a1360a9f1a55ffe7dfe
+verified_on: '2026-11-17'
+feature_status: current
+certs:
+- kt:aws-certified-devops-engineer-professional
+concepts:
+- kt:ec2-image-builder
+- kt:amazon-inspector
+difficulty: 3
+created: '2026-11-23'
+status: active

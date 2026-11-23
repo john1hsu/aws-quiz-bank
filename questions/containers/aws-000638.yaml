@@ -1,0 +1,17 @@
+id: aws-000638
+product_area: containers
+true_statement: With no disruption budget defined, Karpenter disrupts at most 10% of a NodePool's nodes at a time.
+false_statement: With no disruption budget defined, Karpenter disrupts at most 50% of a NodePool's nodes at a time.
+explanation: The default budget caps voluntary disruption, such as consolidation or drift replacement, at a tenth of a NodePool's nodes at once. Pods can also opt out with the do-not-disrupt annotation.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/karpenter.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: ffedfca11a1db6f38fcfb0a2279ded98606ca22b
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:karpenter
+difficulty: 2
+created: '2026-11-23'
+status: active

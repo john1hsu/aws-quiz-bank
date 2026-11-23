@@ -1,0 +1,17 @@
+id: aws-000656
+product_area: global-infrastructure
+true_statement: AWS estimates roughly 3–6 months from data center handover to a running AWS AI Factory, after a site readiness assessment.
+false_statement: AWS estimates roughly 3–6 days from data center handover to a running AWS AI Factory, after a site readiness assessment.
+explanation: An AI Factory is a physical build-out of accelerators and networking in the customer's site, so lead time is measured in months and depends on configuration and component availability.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-ai-factories.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: b3c7b4e4c1dbccbcf6fb7cf78b0b34e597918659
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-ai-factories
+difficulty: 2
+created: '2026-11-23'
+status: active

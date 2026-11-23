@@ -1,0 +1,18 @@
+id: aws-000658
+product_area: identity-and-access
+true_statement: Amazon Cognito user pools authenticate users and issue JSON Web Tokens, while identity pools exchange trusted tokens for temporary AWS credentials.
+false_statement: Amazon Cognito identity pools authenticate users and issue JSON Web Tokens, while user pools exchange trusted tokens for temporary AWS credentials.
+explanation: A user pool is the directory and token issuer that answers who the user is. An identity pool answers which AWS resources they may reach by trading a token for STS credentials.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/identity-and-access/amazon-cognito.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 42024cd21972c414fa25e352e5db452281f0bff5
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:amazon-cognito
+- kt:aws-sts
+difficulty: 1
+created: '2026-11-23'
+status: active

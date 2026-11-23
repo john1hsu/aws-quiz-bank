@@ -1,0 +1,17 @@
+id: aws-000687
+product_area: ai-and-ml
+true_statement: Amazon Kendra bills every provisioned index by the hour from creation to deletion, even when the index is empty or idle.
+false_statement: Amazon Kendra bills an index only for the hours in which it serves queries, so an empty or idle index costs nothing.
+explanation: Kendra charges hourly for each index's provisioned storage and query capacity whether or not it is used, which is its most common cost surprise.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-kendra.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 39c24e88ead680bab1029b65c830844f068ffe25
+verified_on: '2026-11-18'
+feature_status: closed-to-new-customers
+concepts:
+- kt:amazon-kendra
+difficulty: 1
+created: '2026-11-23'
+status: active

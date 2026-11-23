@@ -1,0 +1,18 @@
+id: aws-000651
+product_area: devops-and-iac
+true_statement: AWS's DevOps Guidance became the DevOps Lens in the AWS Well-Architected Tool in March 2024, so teams can self-assess workloads against it.
+false_statement: AWS's DevOps Guidance became a paid DevOps assessment service in AWS Trusted Advisor in March 2024, so teams can self-assess workloads against it.
+explanation: The guidance, first published in October 2023, was added to the Well-Architected Tool as a lens, which gives improvement plans from a self-assessment. Trusted Advisor isn't where it lives.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/devops.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 98e8be7d13d9e482b135f57883327d14503174f7
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:devops
+- kt:aws-well-architected-framework
+difficulty: 2
+created: '2026-11-23'
+status: active

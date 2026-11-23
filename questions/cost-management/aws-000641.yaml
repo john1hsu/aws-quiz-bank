@@ -1,0 +1,18 @@
+id: aws-000641
+product_area: cost-management
+true_statement: AWS Cost Anomaly Detection learns what normal spend looks like and flags deviations, while AWS Budgets checks spend against limits you set.
+false_statement: AWS Budgets learns what normal spend looks like and flags deviations, while AWS Cost Anomaly Detection checks spend against limits you set.
+explanation: Anomaly detection uses machine learning on an account's own history to spot unusual spikes. Budgets compares actual or forecast spend with fixed thresholds you define.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/cost-management/aws-cost-anomaly-detection.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: e9f5f9a68b621e81e5053d3632daa351e608554e
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-cost-anomaly-detection
+- kt:aws-budgets
+difficulty: 1
+created: '2026-11-23'
+status: active

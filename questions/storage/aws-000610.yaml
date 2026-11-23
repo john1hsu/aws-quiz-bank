@@ -1,0 +1,18 @@
+id: aws-000610
+product_area: storage
+true_statement: As of 2026-11, an AWS Backup plan can have at most 10 rules, and that limit is fixed, so larger schedules need more plans.
+false_statement: As of 2026-11, an AWS Backup plan can have at most 10 rules, and that limit is adjustable through Service Quotas, so larger schedules need a quota increase.
+explanation: The rule count belongs to the fixed plan-structure limits, which shape plan design rather than being raised by request. Counts such as vaults and plans per Region are the adjustable ones.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/aws-backup-quotas.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: a93347d81472b31d192e3891a43f39bd9ffefd77
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-backup-quotas
+- kt:service-quotas
+difficulty: 2
+created: '2026-11-23'
+status: active

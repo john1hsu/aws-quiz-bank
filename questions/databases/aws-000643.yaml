@@ -1,0 +1,17 @@
+id: aws-000643
+product_area: databases
+true_statement: In Amazon Neptune, property graphs are queried with Gremlin or openCypher, while RDF graphs are queried with SPARQL.
+false_statement: In Amazon Neptune, RDF graphs are queried with Gremlin or openCypher, while property graphs are queried with SPARQL.
+explanation: 'Neptune''s two graph models have their own languages: Gremlin and openCypher both work on the same property graph, and SPARQL is the W3C language for RDF. The false statement swaps them.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/databases/amazon-neptune.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: dc1e47134895a3c116519cadf0bd197250e7eea1
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:amazon-neptune
+difficulty: 2
+created: '2026-11-23'
+status: active

@@ -1,0 +1,20 @@
+id: aws-000654
+product_area: devops-and-iac
+true_statement: Instance refresh skip matching compares only launch template versions and AMI IDs, so a change in code pulled by a user-data script goes unnoticed.
+false_statement: Instance refresh skip matching compares application code as well as launch template versions and AMI IDs, so a change in code pulled by a user-data script is detected.
+explanation: Skip matching decides which instances already match the target configuration by looking at the template version and AMI only. AWS advises turning it off when instances fetch their code at boot.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/immutable-infrastructure.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: ea8a774142882265192146cdc65ea3def493bc8f
+verified_on: '2026-11-17'
+feature_status: concept
+certs:
+- kt:aws-certified-devops-engineer-professional
+concepts:
+- kt:immutable-infrastructure
+- kt:amazon-ec2-auto-scaling
+difficulty: 3
+created: '2026-11-23'
+status: active

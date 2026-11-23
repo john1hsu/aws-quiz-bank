@@ -1,0 +1,18 @@
+id: aws-000657
+product_area: global-infrastructure
+true_statement: An AWS AI Factory is managed through its parent Region's console and API endpoints, where it appears next to that Region's Availability Zones.
+false_statement: An AWS AI Factory is managed through its own local console and API endpoints on site, with no dependency on a parent AWS Region.
+explanation: Each factory attaches to a parent Region the customer picks, and teams use that Region's normal endpoints. That's why link resilience to the Region matters even when data stays local.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/global-infrastructure/aws-ai-factories.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: b3c7b4e4c1dbccbcf6fb7cf78b0b34e597918659
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-ai-factories
+- kt:aws-regions
+difficulty: 2
+created: '2026-11-23'
+status: active

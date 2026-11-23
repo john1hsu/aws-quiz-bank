@@ -1,0 +1,19 @@
+id: aws-000607
+product_area: serverless-and-integration
+true_statement: Amazon SQS keeps a message until a consumer deletes it or it expires, while Amazon SNS pushes each publish to subscribers and stores nothing for later retrieval.
+false_statement: Amazon SNS keeps a message until a consumer deletes it or it expires, while Amazon SQS pushes each publish to subscribers and stores nothing for later retrieval.
+explanation: 'SQS is a pull-based queue that holds work until a consumer is ready. SNS is push-based pub/sub: it delivers a copy to every subscriber immediately and has no store to poll later.'
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/sqs-vs-sns-vs-eventbridge.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 128a2f23d973fd053b6ecefff1fe5e13643b28d1
+verified_on: '2026-11-16'
+feature_status: concept
+concepts:
+- kt:sqs-vs-sns-vs-eventbridge
+- kt:amazon-sqs
+- kt:amazon-sns
+difficulty: 1
+created: '2026-11-23'
+status: active

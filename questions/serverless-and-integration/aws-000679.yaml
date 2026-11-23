@@ -1,0 +1,18 @@
+id: aws-000679
+product_area: serverless-and-integration
+true_statement: In Amazon SWF the orchestration logic lives in a decider program you write, while in AWS Step Functions a JSON state machine defines the flow.
+false_statement: In AWS Step Functions the orchestration logic lives in a decider program you write, while in Amazon SWF a JSON state machine defines the flow.
+explanation: SWF hands each decision task to your own code, which picks the next steps from the execution history. Step Functions uses a declarative state machine instead, which is one reason AWS recommends it for new work.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/serverless-and-integration/amazon-swf.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 0abf590eff19da8ac311b694490b58eefbdbcc70
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:amazon-swf
+- kt:aws-step-functions
+difficulty: 2
+created: '2026-11-23'
+status: active

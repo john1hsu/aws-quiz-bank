@@ -1,0 +1,18 @@
+id: aws-000685
+product_area: ai-and-ml
+true_statement: Amazon Kendra stopped accepting new customers on July 30, 2026, and AWS recommends Amazon Bedrock knowledge bases for new search and RAG applications.
+false_statement: Amazon Kendra stopped accepting new customers on July 30, 2026, and AWS recommends Amazon OpenSearch Serverless collections as the named successor for new RAG applications.
+explanation: Kendra went into maintenance mode on June 30, 2026 and closed to new customers a month later. AWS's migration guide maps it to Bedrock's managed knowledge bases; OpenSearch is only an option for keyword-heavy search.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/amazon-kendra.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 39c24e88ead680bab1029b65c830844f068ffe25
+verified_on: '2026-11-18'
+feature_status: closed-to-new-customers
+concepts:
+- kt:amazon-kendra
+- kt:amazon-bedrock-knowledge-bases
+difficulty: 2
+created: '2026-11-23'
+status: active

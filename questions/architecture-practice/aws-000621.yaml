@@ -1,0 +1,18 @@
+id: aws-000621
+product_area: architecture-practice
+true_statement: A statically stable client refreshes its configuration on a fixed schedule and, if a refresh fails, keeps using the cached value and raises an alarm.
+false_statement: A statically stable client refreshes its configuration on a fixed schedule and, if a refresh fails, discards the cached value and retries until a refresh succeeds.
+explanation: Constant-work refreshes avoid a burst of load after a network blip, and falling back on the last known good value keeps the client serving. Dropping the cache would make it depend on the failed source.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/static-stability.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 5054c7d1b31300b27d2e92a1b80d65d551f7620f
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:static-stability
+- kt:control-plane-and-data-plane
+difficulty: 3
+created: '2026-11-23'
+status: active

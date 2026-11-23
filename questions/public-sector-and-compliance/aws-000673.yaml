@@ -1,0 +1,18 @@
+id: aws-000673
+product_area: public-sector-and-compliance
+true_statement: AWS is assessed as a PCI DSS Level 1 Service Provider, but each customer still has to validate and certify the cardholder data environment it builds on AWS.
+false_statement: AWS is assessed as a PCI DSS Level 1 Service Provider, so a cardholder data environment built on AWS is certified through AWS's attestation without separate customer validation.
+explanation: AWS's AOC covers the infrastructure layer only. Merchants still validate their own CDE each year through a ROC or SAQ, and their QSA can rely on the AOC for the AWS portion.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/pci-dss-on-aws.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 44de9a9ba4f4ad1a5fd9311b2834c03b08227de5
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:pci-dss-on-aws
+- kt:shared-responsibility-model
+difficulty: 1
+created: '2026-11-23'
+status: active

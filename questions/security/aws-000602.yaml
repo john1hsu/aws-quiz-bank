@@ -1,0 +1,18 @@
+id: aws-000602
+product_area: security
+true_statement: As of 2026-11, an organization can have at most 10 Firewall Manager administrators, one default plus up to nine more, and that limit is fixed.
+false_statement: As of 2026-11, an organization can have at most 10 Firewall Manager administrators, one default plus up to nine more, and that limit is adjustable.
+explanation: The ten-administrator ceiling (a default administrator and nine others) cannot be raised. Other Firewall Manager quotas, such as policies per organization, are the adjustable ones.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/security/aws-firewall-manager.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 25fa18beb36cfa5dccc90a3937114da611429ef3
+verified_on: '2026-11-16'
+feature_status: current
+concepts:
+- kt:aws-firewall-manager
+- kt:firewall-manager-quotas
+difficulty: 2
+created: '2026-11-23'
+status: active

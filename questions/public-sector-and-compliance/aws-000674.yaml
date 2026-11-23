@@ -1,0 +1,17 @@
+id: aws-000674
+product_area: public-sector-and-compliance
+true_statement: 'There is no special PCI environment or API on AWS: any resource in a service on the PCI tab of Services in Scope sits in a PCI DSS compliant environment.'
+false_statement: AWS runs a separate PCI environment with its own API endpoints, and only resources created there sit in a PCI DSS compliant environment.
+explanation: PCI scope is decided per service, not by a dedicated partition. The multi-tenant environment was validated by the QSA to keep customers segregated.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/public-sector-and-compliance/pci-dss-on-aws.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 44de9a9ba4f4ad1a5fd9311b2834c03b08227de5
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:pci-dss-on-aws
+difficulty: 2
+created: '2026-11-23'
+status: active

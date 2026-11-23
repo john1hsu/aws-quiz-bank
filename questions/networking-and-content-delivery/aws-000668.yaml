@@ -1,0 +1,19 @@
+id: aws-000668
+product_area: networking-and-content-delivery
+true_statement: AWS Cloud WAN carries an 8,500-byte MTU between VPCs but only 1,500 bytes over VPN, and packets larger than the MTU are dropped.
+false_statement: AWS Cloud WAN carries an 8,500-byte MTU over VPN but only 1,500 bytes between VPCs, and packets larger than the MTU are dropped.
+explanation: Jumbo frames work on VPC-to-VPC paths, while VPN paths are limited to the standard 1,500 bytes. Path MTU Discovery only helps traffic entering through VPC attachments.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-cloud-wan.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: e3084ef3c7ba7877cbdc48b68a108f63ca997f7a
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-cloud-wan
+- kt:aws-site-to-site-vpn
+- kt:amazon-vpc
+difficulty: 3
+created: '2026-11-23'
+status: active

@@ -6,8 +6,8 @@ explanation: Keyspaces is AWS's managed Cassandra-compatible wide-column store, 
 source:
   repo: john1hsu/aws-graph
   path: articles/databases/purpose-built-databases.md
-  commit: c15f8f276d717cfba5e6c968d72d3b6c38cdf2c6
-  blob: d497e5810dcefae4c0197e8282f6690b1258cfa7
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 4651b2fcc2c5e4f7f0d2395dafdadb98f4119fe7
 verified_on: '2026-11-11'
 feature_status: concept
 certs:

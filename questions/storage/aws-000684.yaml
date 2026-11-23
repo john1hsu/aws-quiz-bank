@@ -1,0 +1,18 @@
+id: aws-000684
+product_area: storage
+true_statement: An operating system can use EBS space beyond 2 TiB only with GPT partitioning, because MBR partitioning tops out at 2 TiB.
+false_statement: An operating system can use EBS space beyond 16 TiB only with GPT partitioning, because MBR partitioning tops out at 16 TiB.
+explanation: MBR's 2 TiB ceiling is an OS-level limit separate from the EBS volume size. Larger volumes need GPT, and large boot volumes also need GRUB2 or UEFI boot.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/storage/ebs-quotas.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 4c3aff0aee5de7040269216dfd626a788d83abe3
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:ebs-quotas
+- kt:amazon-ebs
+difficulty: 2
+created: '2026-11-23'
+status: active

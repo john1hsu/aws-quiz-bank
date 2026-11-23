@@ -1,0 +1,20 @@
+id: aws-000613
+product_area: ai-and-ml
+true_statement: SageMaker AI Serverless Inference is CPU-only, so large foundation models usually need GPU-backed real-time endpoints instead.
+false_statement: SageMaker AI real-time inference is CPU-only, so large foundation models usually need GPU-backed Serverless Inference endpoints instead.
+explanation: Serverless Inference runs without GPUs, which rules it out for most large models. Real-time endpoints can use GPU instances, so they're the usual home for big FMs on SageMaker AI.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/ai-and-ml/generative-ai-on-aws.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 67017e9cd67780673aeccae0ac53a28f7fb15706
+verified_on: '2026-11-17'
+feature_status: concept
+certs:
+- kt:aws-certified-ai-practitioner
+concepts:
+- kt:generative-ai-on-aws
+- kt:amazon-sagemaker-ai
+difficulty: 3
+created: '2026-11-23'
+status: active

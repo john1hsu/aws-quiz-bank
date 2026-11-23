@@ -1,0 +1,18 @@
+id: aws-000693
+product_area: architecture-practice
+true_statement: Shuffle sharding may be used inside a cell of a cell-based architecture but not across cells, because cells must not share state.
+false_statement: Shuffle sharding may be used across the cells of a cell-based architecture but not inside one, because a cell must not share workers.
+explanation: Assigning a customer a combination of workers drawn from several cells would couple those cells together. Within a single cell, shuffle sharding can add another layer of isolation.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/shuffle-sharding.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: b1071f42f38ef174bc42497dac9b1659cf91c762
+verified_on: '2026-11-18'
+feature_status: concept
+concepts:
+- kt:shuffle-sharding
+- kt:cell-based-architecture
+difficulty: 3
+created: '2026-11-23'
+status: active

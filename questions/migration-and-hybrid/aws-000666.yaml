@@ -1,0 +1,17 @@
+id: aws-000666
+product_area: migration-and-hybrid
+true_statement: AWS advises filtering shared services such as Active Directory, backup and monitoring out of dependency maps and building them in AWS before the first wave.
+false_statement: AWS advises keeping shared services such as Active Directory, backup and monitoring in dependency maps and migrating them in the final wave.
+explanation: Shared services connect to nearly everything, so leaving them in the map would merge the whole estate into one group. Standing them up in AWS first lets every wave rely on them.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/migration-wave-planning.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 2a6b5f300e427858b870e5e7ffd2a15f16915153
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:migration-wave-planning
+difficulty: 3
+created: '2026-11-23'
+status: active

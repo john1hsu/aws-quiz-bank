@@ -1,0 +1,20 @@
+id: aws-000653
+product_area: devops-and-iac
+true_statement: Setting both minimum and maximum healthy percentages to 100% makes an EC2 Auto Scaling instance refresh launch each replacement before terminating an old instance.
+false_statement: Setting both minimum and maximum healthy percentages to 100% makes an EC2 Auto Scaling instance refresh terminate each old instance before launching its replacement.
+explanation: With the minimum at 100%, the group may never drop below full healthy capacity, so a new instance must come up first. Terminating first would briefly reduce capacity below that floor.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/immutable-infrastructure.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: ea8a774142882265192146cdc65ea3def493bc8f
+verified_on: '2026-11-17'
+feature_status: concept
+certs:
+- kt:aws-certified-devops-engineer-professional
+concepts:
+- kt:immutable-infrastructure
+- kt:amazon-ec2-auto-scaling
+difficulty: 3
+created: '2026-11-23'
+status: active

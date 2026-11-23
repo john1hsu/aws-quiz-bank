@@ -1,0 +1,19 @@
+id: aws-000631
+product_area: compute
+true_statement: Savings Plans and Regional Reserved Instances discount On-Demand Capacity Reservations automatically, but zonal Reserved Instance discounts don't apply to them.
+false_statement: Savings Plans and zonal Reserved Instances discount On-Demand Capacity Reservations automatically, but Regional Reserved Instance discounts don't apply to them.
+explanation: A Capacity Reservation is billed at the On-Demand rate, and Savings Plans or Regional RIs bring that rate down, first for instance usage and then unused slots. Zonal RIs are the exception that doesn't apply.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/on-demand-capacity-reservations.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 939dd3214c7b5407773f8142dc0685cba8419a89
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:on-demand-capacity-reservations
+- kt:savings-plans
+- kt:reserved-instances
+difficulty: 3
+created: '2026-11-23'
+status: active

@@ -1,0 +1,19 @@
+id: aws-000616
+product_area: analytics
+true_statement: One Kinesis Processing Unit in Managed Service for Apache Flink is 1 vCPU and 4 GB of memory, plus 50 GB of running application storage.
+false_statement: One Kinesis Processing Unit in Managed Service for Apache Flink is 1 vCPU and 16 GB of memory, plus 50 GB of running application storage.
+explanation: The KPU is the service's capacity and billing unit, and each one pairs a single vCPU with 4 GB of memory and 50 GB of application storage. 16 GB overstates the memory.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/analytics/amazon-managed-service-for-apache-flink.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 26890687f20856ecc5e81064834b39eb38ee7a1d
+verified_on: '2026-11-17'
+feature_status: current
+certs:
+- kt:aws-certified-data-engineer-associate
+concepts:
+- kt:amazon-managed-service-for-apache-flink
+difficulty: 2
+created: '2026-11-23'
+status: active

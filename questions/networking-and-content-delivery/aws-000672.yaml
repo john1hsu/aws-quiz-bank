@@ -1,0 +1,21 @@
+id: aws-000672
+product_area: networking-and-content-delivery
+true_statement: A single flow over Site-to-Site VPN is pinned to one tunnel, so aggregating bandwidth needs ECMP across tunnels, which works only with BGP dynamic routing.
+false_statement: A single flow over Site-to-Site VPN is split across both tunnels, so aggregating bandwidth needs no ECMP and works with static routing as well as BGP.
+explanation: Per-flow throughput is capped by one tunnel. To use several tunnels at once, a transit gateway or Cloud WAN spreads flows with ECMP, and that requires dynamic routing.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/networking-and-content-delivery/aws-site-to-site-vpn.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 91b41c68ded47d30a4bfc7dbfc84cd1ad5a132ab
+verified_on: '2026-11-17'
+feature_status: current
+certs:
+- kt:aws-certified-solutions-architect-associate
+- kt:aws-certified-cloud-practitioner
+concepts:
+- kt:aws-site-to-site-vpn
+- kt:aws-transit-gateway
+difficulty: 3
+created: '2026-11-23'
+status: active

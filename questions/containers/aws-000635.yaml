@@ -1,0 +1,19 @@
+id: aws-000635
+product_area: containers
+true_statement: Bottlerocket's control container, on by default, runs the Systems Manager agent and must stay enabled for Amazon Inspector to scan the host.
+false_statement: Bottlerocket's admin container, on by default, runs the Systems Manager agent and must stay enabled for Amazon Inspector to scan the host.
+explanation: The control container provides SSM commands and Session Manager access, and Inspector relies on it. The privileged admin container with debugging tools is off by default and meant for development and testing.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/bottlerocket.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 962548f524c4ddb00a754a23c31b4adcd34231e4
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:bottlerocket
+- kt:aws-systems-manager
+- kt:amazon-inspector
+difficulty: 3
+created: '2026-11-23'
+status: active

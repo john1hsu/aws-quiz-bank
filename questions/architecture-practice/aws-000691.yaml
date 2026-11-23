@@ -1,0 +1,17 @@
+id: aws-000691
+product_area: architecture-practice
+true_statement: With eight workers and two per customer, shuffle sharding gives 28 combinations, so one bad customer affects about 1/28 of the service, versus 1/4 with four fixed shards.
+false_statement: With eight workers and two per customer, shuffle sharding gives 4 combinations, so one bad customer affects about 1/4 of the service, the same as with four fixed shards.
+explanation: Any two of eight workers can form a shard, which gives 28 distinct pairs. Impact scales with 1 over the number of combinations, so isolation is about seven times better than plain sharding on the same hardware.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/architecture-practice/shuffle-sharding.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: b1071f42f38ef174bc42497dac9b1659cf91c762
+verified_on: '2026-11-18'
+feature_status: concept
+concepts:
+- kt:shuffle-sharding
+difficulty: 3
+created: '2026-11-23'
+status: active

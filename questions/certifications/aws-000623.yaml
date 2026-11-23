@@ -1,0 +1,17 @@
+id: aws-000623
+product_area: certifications
+true_statement: The current SOA-C03 exam guide lists only multiple-choice and multiple-response items, with no hands-on lab questions.
+false_statement: The current SOA-C03 exam guide lists hands-on lab questions alongside multiple-choice and multiple-response items.
+explanation: The guide for the CloudOps exam describes just the two selected-response formats. Study plans built around lab tasks reflect older material rather than the current exam.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/certifications/aws-certified-cloudops-engineer-associate.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 5781d9496f34bbcf74cb43fadb6e781dae0b2d51
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:aws-certified-cloudops-engineer-associate
+difficulty: 2
+created: '2026-11-23'
+status: active

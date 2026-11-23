@@ -1,0 +1,18 @@
+id: aws-000649
+product_area: devops-and-iac
+true_statement: 'AWS''s DevOps Guidance groups DevOps into five Sagas: organizational adoption, development lifecycle, quality assurance, automated governance and observability.'
+false_statement: 'AWS''s DevOps Guidance groups DevOps into six pillars: organizational adoption, development lifecycle, quality assurance, automated governance, observability and cost.'
+explanation: The DevOps Guidance uses five Sagas, each with capabilities, metrics and anti-patterns. Six pillars belong to the Well-Architected Framework itself, which the guidance is meant to be paired with.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/devops-and-iac/devops.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 98e8be7d13d9e482b135f57883327d14503174f7
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:devops
+- kt:aws-well-architected-framework
+difficulty: 2
+created: '2026-11-23'
+status: active

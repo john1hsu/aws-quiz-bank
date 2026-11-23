@@ -1,0 +1,17 @@
+id: aws-000632
+product_area: compute
+true_statement: An open Capacity Reservation, the default, absorbs any matching instance automatically, while a targeted one serves only instances that name it or its resource group.
+false_statement: A targeted Capacity Reservation, the default, absorbs any matching instance automatically, while an open one serves only instances that name it or its resource group.
+explanation: Open matching is the default and lets any instance with the same attributes consume the reservation. Targeted matching keeps capacity for instances that explicitly point at it.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/on-demand-capacity-reservations.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 939dd3214c7b5407773f8142dc0685cba8419a89
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:on-demand-capacity-reservations
+difficulty: 2
+created: '2026-11-23'
+status: active

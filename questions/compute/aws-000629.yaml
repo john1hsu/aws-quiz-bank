@@ -1,0 +1,20 @@
+id: aws-000629
+product_area: compute
+true_statement: EC2 Image Builder distributes a new image only after every configured test passes in the test stage, which runs on an instance launched from that image.
+false_statement: EC2 Image Builder distributes a new image as soon as the build stage finishes, and runs the configured tests afterwards on the instances that launch from it.
+explanation: Each pipeline run builds on a temporary instance, then launches a fresh instance from the new image to run test components. Distribution waits for all tests to pass.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/compute/ec2-image-builder.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 87d81e4acddfc25e59ef5a1360a9f1a55ffe7dfe
+verified_on: '2026-11-17'
+feature_status: current
+certs:
+- kt:aws-certified-devops-engineer-professional
+concepts:
+- kt:ec2-image-builder
+- kt:amazon-machine-images
+difficulty: 2
+created: '2026-11-23'
+status: active

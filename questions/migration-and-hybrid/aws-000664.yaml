@@ -1,0 +1,17 @@
+id: aws-000664
+product_area: migration-and-hybrid
+true_statement: In AWS migration planning, a hard dependency depends on location, so the pair must move together, while a soft dependency lets the two sides migrate separately.
+false_statement: In AWS migration planning, a soft dependency depends on location, so the pair must move together, while a hard dependency lets the two sides migrate separately.
+explanation: Hard dependencies would break if one side ran on premises and the other in AWS, so they belong in the same move group. Soft ones tolerate the split, and hard ones can also be nontechnical, such as a shared maintenance window.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/migration-and-hybrid/migration-wave-planning.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 2a6b5f300e427858b870e5e7ffd2a15f16915153
+verified_on: '2026-11-17'
+feature_status: concept
+concepts:
+- kt:migration-wave-planning
+difficulty: 2
+created: '2026-11-23'
+status: active

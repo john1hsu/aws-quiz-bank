@@ -1,0 +1,18 @@
+id: aws-000636
+product_area: containers
+true_statement: AWS-provided Bottlerocket builds carry no extra charge, so you pay only for the EC2 instances that run them.
+false_statement: AWS-provided Bottlerocket builds carry an hourly license fee per node on top of the EC2 instances that run them.
+explanation: AWS's own Bottlerocket AMIs are free to use and covered by AWS Support plans. Only third-party Marketplace products built on Bottlerocket may add an hourly fee.
+source:
+  repo: john1hsu/aws-graph
+  path: articles/containers/bottlerocket.md
+  commit: 8da0d9e84ca79e8b7305a5e0f1827b8d20070936
+  blob: 962548f524c4ddb00a754a23c31b4adcd34231e4
+verified_on: '2026-11-17'
+feature_status: current
+concepts:
+- kt:bottlerocket
+- kt:amazon-ec2
+difficulty: 1
+created: '2026-11-23'
+status: active
